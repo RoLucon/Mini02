@@ -15,6 +15,10 @@
 		89E3EAB9242E98D5007C2CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAB7242E98D5007C2CFC /* LaunchScreen.storyboard */; };
 		89E3EAC4242E98D6007C2CFC /* Mini02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAC3242E98D6007C2CFC /* Mini02Tests.swift */; };
 		89E3EACF242E98D6007C2CFC /* Mini02UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EACE242E98D6007C2CFC /* Mini02UITests.swift */; };
+		89E3EAE7243261B7007C2CFC /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAE6243261B7007C2CFC /* Intro.storyboard */; };
+		89E3EAE924326209007C2CFC /* Banco.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAE824326209007C2CFC /* Banco.storyboard */; };
+		89E3EAEB24326226007C2CFC /* Investimento.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAEA24326226007C2CFC /* Investimento.storyboard */; };
+		89E3EAED24326E35007C2CFC /* Principal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAEC24326E35007C2CFC /* Principal.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		89E3EACA242E98D6007C2CFC /* Mini02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mini02UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E3EACE242E98D6007C2CFC /* Mini02UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini02UITests.swift; sourceTree = "<group>"; };
 		89E3EAD0242E98D6007C2CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89E3EAE6243261B7007C2CFC /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		89E3EAE824326209007C2CFC /* Banco.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Banco.storyboard; sourceTree = "<group>"; };
+		89E3EAEA24326226007C2CFC /* Investimento.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Investimento.storyboard; sourceTree = "<group>"; };
+		89E3EAEC24326E35007C2CFC /* Principal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Principal.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				89E3EAB5242E98D5007C2CFC /* Assets.xcassets */,
 				89E3EAB7242E98D5007C2CFC /* LaunchScreen.storyboard */,
 				89E3EABA242E98D5007C2CFC /* Info.plist */,
+				89E3EAE6243261B7007C2CFC /* Intro.storyboard */,
+				89E3EAE824326209007C2CFC /* Banco.storyboard */,
+				89E3EAEA24326226007C2CFC /* Investimento.storyboard */,
+				89E3EAEC24326E35007C2CFC /* Principal.storyboard */,
 			);
 			path = Mini02;
 			sourceTree = "<group>";
@@ -234,7 +246,11 @@
 			files = (
 				89E3EAB9242E98D5007C2CFC /* LaunchScreen.storyboard in Resources */,
 				89E3EAB6242E98D5007C2CFC /* Assets.xcassets in Resources */,
+				89E3EAE924326209007C2CFC /* Banco.storyboard in Resources */,
+				89E3EAED24326E35007C2CFC /* Principal.storyboard in Resources */,
 				89E3EAB4242E98D3007C2CFC /* Main.storyboard in Resources */,
+				89E3EAE7243261B7007C2CFC /* Intro.storyboard in Resources */,
+				89E3EAEB24326226007C2CFC /* Investimento.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
