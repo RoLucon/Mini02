@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JKZ-Ck-7Mg">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,12 +12,11 @@
             <objects>
                 <viewController id="HgW-zM-8oZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Jn-1s-UBW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvA-k6-OVr">
-                                <rect key="frame" x="128" y="317" width="159" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvA-k6-OVr">
+                                <rect key="frame" x="128" y="379" width="158" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Mudar de Tela"/>
                                 <connections>
@@ -27,6 +26,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EvA-k6-OVr" firstAttribute="leading" secondItem="i3t-Vb-gdP" secondAttribute="leading" constant="128" id="CX2-w6-k3m"/>
+                            <constraint firstItem="EvA-k6-OVr" firstAttribute="top" secondItem="i3t-Vb-gdP" secondAttribute="top" constant="291" id="SEe-O3-Yer"/>
+                            <constraint firstItem="EvA-k6-OVr" firstAttribute="centerX" secondItem="3Jn-1s-UBW" secondAttribute="centerX" id="UcB-s9-N1W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="i3t-Vb-gdP"/>
                     </view>
                     <navigationItem key="navigationItem" id="7kd-Gk-zKe"/>
@@ -35,21 +39,6 @@
                 <exit id="5vR-fp-XH0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="-7.3660714285714279"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9eO-hc-f4l">
-            <objects>
-                <viewController id="f1F-rD-oDx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mMD-R6-VK4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="bQC-SJ-NnP"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c0C-A2-fgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2014" y="7"/>
         </scene>
         <!--Principal-->
         <scene sceneID="KiL-fd-OuY">
@@ -65,7 +54,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="JKZ-Ck-7Mg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Hr-3I-4Pf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
