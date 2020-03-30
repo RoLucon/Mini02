@@ -19,6 +19,8 @@
 		89E3EAE924326209007C2CFC /* Banco.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAE824326209007C2CFC /* Banco.storyboard */; };
 		89E3EAEB24326226007C2CFC /* Investimento.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAEA24326226007C2CFC /* Investimento.storyboard */; };
 		89E3EAED24326E35007C2CFC /* Principal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAEC24326E35007C2CFC /* Principal.storyboard */; };
+		89E3EAF024328755007C2CFC /* IntroducaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */; };
+		89E3EAF524328D7C007C2CFC /* CustomizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		89E3EAE824326209007C2CFC /* Banco.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Banco.storyboard; sourceTree = "<group>"; };
 		89E3EAEA24326226007C2CFC /* Investimento.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Investimento.storyboard; sourceTree = "<group>"; };
 		89E3EAEC24326E35007C2CFC /* Principal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Principal.storyboard; sourceTree = "<group>"; };
+		89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducaoViewController.swift; sourceTree = "<group>"; };
+		89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizacaoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		89E3EAAB242E98D3007C2CFC /* Mini02 */ = {
 			isa = PBXGroup;
 			children = (
+				89E3EAEE24328716007C2CFC /* ViewController */,
 				89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */,
 				89E3EAAE242E98D3007C2CFC /* SceneDelegate.swift */,
 				89E3EAB0242E98D3007C2CFC /* ViewController.swift */,
@@ -138,6 +143,15 @@
 				89E3EAD0242E98D6007C2CFC /* Info.plist */,
 			);
 			path = Mini02UITests;
+			sourceTree = "<group>";
+		};
+		89E3EAEE24328716007C2CFC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */,
+				89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E3EAF524328D7C007C2CFC /* CustomizacaoViewController.swift in Sources */,
+				89E3EAF024328755007C2CFC /* IntroducaoViewController.swift in Sources */,
 				89E3EAB1242E98D3007C2CFC /* ViewController.swift in Sources */,
 				89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */,
 				89E3EAAF242E98D3007C2CFC /* SceneDelegate.swift in Sources */,
