@@ -107,7 +107,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&quot;Uma Frase da personagem Principal&quot;" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="h6z-AT-5zW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="&quot;Uma Frase da personagem Principal&quot;" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6z-AT-5zW">
                                 <rect key="frame" x="20" y="663" width="374" height="130"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -120,17 +120,53 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Personagem1" translatesAutoresizingMaskIntoConstraints="NO" id="uJ6-wU-sig">
                                 <rect key="frame" x="30" y="137" width="212" height="526"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" NOME " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rk-os-sVg">
+                                <rect key="frame" x="252" y="280" width="67" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Ics-tW-1VU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" X Semestre " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QW-iz-3Zu">
+                                <rect key="frame" x="252" y="310" width="109.5" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="JII-K1-x7L"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Jfg-jJ-AOb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Situacao " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4C-mT-OGQ">
+                                <rect key="frame" x="252" y="340" width="85.5" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="KNI-Az-RVh"/>
+                                    <constraint firstAttribute="height" constant="40" id="UU1-Rr-VMv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1QW-iz-3Zu" firstAttribute="top" secondItem="2rk-os-sVg" secondAttribute="bottom" constant="5" id="0fq-Ho-H2Z"/>
                             <constraint firstItem="7Rk-Wq-8sN" firstAttribute="leading" secondItem="nne-Vg-GkN" secondAttribute="leading" constant="20" id="74r-kA-xy3"/>
                             <constraint firstItem="nne-Vg-GkN" firstAttribute="trailing" secondItem="7Rk-Wq-8sN" secondAttribute="trailing" constant="20" id="F2n-jZ-lzr"/>
+                            <constraint firstItem="2rk-os-sVg" firstAttribute="leading" secondItem="uJ6-wU-sig" secondAttribute="trailing" constant="10" id="KeB-94-gta"/>
+                            <constraint firstItem="1QW-iz-3Zu" firstAttribute="leading" secondItem="uJ6-wU-sig" secondAttribute="trailing" constant="10" id="TkZ-JR-bwM"/>
+                            <constraint firstItem="T4C-mT-OGQ" firstAttribute="leading" secondItem="uJ6-wU-sig" secondAttribute="trailing" constant="10" id="U5Z-DM-eYT"/>
                             <constraint firstItem="nne-Vg-GkN" firstAttribute="trailing" secondItem="h6z-AT-5zW" secondAttribute="trailing" constant="20" id="cEO-fa-m63"/>
                             <constraint firstItem="7Rk-Wq-8sN" firstAttribute="top" secondItem="Jod-eX-8QI" secondAttribute="top" constant="60" id="cxP-f7-Lza"/>
                             <constraint firstItem="h6z-AT-5zW" firstAttribute="top" secondItem="uJ6-wU-sig" secondAttribute="bottom" id="dRe-5s-1tY"/>
                             <constraint firstItem="nne-Vg-GkN" firstAttribute="bottom" secondItem="h6z-AT-5zW" secondAttribute="bottom" constant="20" id="glA-HA-ryp"/>
+                            <constraint firstItem="2rk-os-sVg" firstAttribute="top" secondItem="7Rk-Wq-8sN" secondAttribute="bottom" constant="180" id="h4W-Y4-BdW"/>
                             <constraint firstItem="uJ6-wU-sig" firstAttribute="leading" secondItem="nne-Vg-GkN" secondAttribute="leading" constant="30" id="i49-jV-Fqu"/>
                             <constraint firstItem="h6z-AT-5zW" firstAttribute="leading" secondItem="nne-Vg-GkN" secondAttribute="leading" constant="20" id="jLG-bH-a8M"/>
+                            <constraint firstItem="T4C-mT-OGQ" firstAttribute="top" secondItem="1QW-iz-3Zu" secondAttribute="bottom" constant="5" id="y55-1q-Yjm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nne-Vg-GkN"/>
                     </view>
@@ -138,6 +174,9 @@
                     <connections>
                         <outlet property="Dinheiro" destination="WzB-wL-99l" id="9q3-HE-64S"/>
                         <outlet property="FalaPrsonagem" destination="h6z-AT-5zW" id="CQv-MD-ARE"/>
+                        <outlet property="NomePersonagem" destination="2rk-os-sVg" id="X2P-Yt-zUj"/>
+                        <outlet property="Semestre" destination="1QW-iz-3Zu" id="7G1-F9-DIf"/>
+                        <outlet property="Situacao" destination="T4C-mT-OGQ" id="Myv-Og-iQM"/>
                         <outlet property="dinheiro" destination="WzB-wL-99l" id="auK-hY-j2M"/>
                     </connections>
                 </viewController>

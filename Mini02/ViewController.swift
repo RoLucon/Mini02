@@ -8,22 +8,33 @@
 
 import UIKit
 
+var nome = "Kleytinho"
+var dindin = 0.00
+var fala = "Oi, Eu sou o " + nome
+var nSemestre = 5
+var semestre = String(nSemestre) + " Semestre"
+var situacao = " Pendente "
+
 class ViewController: UIViewController {
-    
-    
-    
-    var dindin = 0.00
-    var fala = "Oi, Eu sou o Kleytinho"
     
     //Fala da personagem no campo da tela de intro
     @IBOutlet weak var FalaPrsonagem: UITextView!
     //A quantidade de dinheiro da personagem no jogo
     @IBOutlet weak var Dinheiro: UILabel!
+    //O nome da personagem
+    @IBOutlet weak var NomePersonagem: UILabel!
+    //Semestre o qual a personagem esta
+    @IBOutlet weak var Semestre: UILabel!
+    //A situacao financeira da personagem
+    @IBOutlet weak var Situacao: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         atualizaSaldo()
         atualizaFala()
+        atualizaNome()
+        atualizaSemestre()
+        atualizaSituacao()
         // Do any additional setup after loading the view.
     }
     //Funcao para atualizar o saldo ao iniciar a tela
@@ -33,6 +44,15 @@ class ViewController: UIViewController {
     //Funcao para atualizar a fala da personagem ao carregar a tela
     func atualizaFala(){
         FalaPrsonagem.text=fala
+    }
+    func atualizaNome(){
+        NomePersonagem.text = nome
+    }
+    func atualizaSemestre(){
+        Semestre.text = semestre
+    }
+    func atualizaSituacao(){
+        Situacao.text = situacao
     }
 
     
