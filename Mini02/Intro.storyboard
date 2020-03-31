@@ -74,14 +74,19 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Personagem1" translatesAutoresizingMaskIntoConstraints="NO" id="LUs-cZ-hsB">
+                                <rect key="frame" x="30" y="137" width="212" height="526"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HVp-PI-vsZ" firstAttribute="leading" secondItem="kYc-db-sH2" secondAttribute="leading" constant="20" id="93d-Wl-eIJ"/>
+                            <constraint firstItem="HVp-PI-vsZ" firstAttribute="top" secondItem="LUs-cZ-hsB" secondAttribute="bottom" id="9sq-Wz-lJz"/>
                             <constraint firstItem="kYc-db-sH2" firstAttribute="bottom" secondItem="HVp-PI-vsZ" secondAttribute="bottom" constant="20" id="IqR-hh-E2P"/>
                             <constraint firstItem="fOw-Yb-7fg" firstAttribute="centerX" secondItem="HVp-PI-vsZ" secondAttribute="centerX" id="NQL-4A-6vJ"/>
                             <constraint firstItem="fOw-Yb-7fg" firstAttribute="top" secondItem="kYc-db-sH2" secondAttribute="top" constant="20" id="PTJ-DD-mHQ"/>
                             <constraint firstItem="fOw-Yb-7fg" firstAttribute="leading" secondItem="HVp-PI-vsZ" secondAttribute="leading" id="aK2-64-aKL"/>
+                            <constraint firstItem="LUs-cZ-hsB" firstAttribute="leading" secondItem="kYc-db-sH2" secondAttribute="leading" constant="30" id="nEy-Xj-ILa"/>
                             <constraint firstItem="kYc-db-sH2" firstAttribute="trailing" secondItem="HVp-PI-vsZ" secondAttribute="trailing" constant="20" id="oUn-L6-jR3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kYc-db-sH2"/>
@@ -147,6 +152,7 @@
     <resources>
         <image name="Banco1" width="44" height="38"/>
         <image name="C1" width="178" height="146"/>
+        <image name="Personagem1" width="212" height="526"/>
         <image name="Score1" width="338" height="124"/>
     </resources>
 </document>
