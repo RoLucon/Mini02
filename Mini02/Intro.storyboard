@@ -14,120 +14,14 @@
                     <view key="view" contentMode="scaleToFill" id="gP5-U4-c0Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="fOw-Yb-7fg">
-                                <rect key="frame" x="20" y="64" width="374" height="40"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcZ-1h-19y">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqp-ec-20I">
-                                                <rect key="frame" x="0.0" y="0.0" width="45.5" height="40"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="9Gc-El-FQv"/>
-                                                </constraints>
-                                                <state key="normal" backgroundImage="Banco1"/>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ XX.XX " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKH-TO-nvx">
-                                                <rect key="frame" x="45.5" y="0.0" width="84.5" height="40"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="iRL-Bg-MRt"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe0-fK-0ic" userLabel="SerasaScore">
-                                        <rect key="frame" x="182" y="0.0" width="100" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="Nr1-pZ-gZ7"/>
-                                            <constraint firstAttribute="height" constant="40" id="rMz-IV-sbO"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="Score1"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbE-2Z-qhY">
-                                        <rect key="frame" x="334" y="0.0" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="PUQ-VA-ase"/>
-                                            <constraint firstAttribute="width" constant="40" id="c1A-kp-CJs"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="C1"/>
-                                        <connections>
-                                            <segue destination="H5N-Zp-9ZZ" kind="popoverPresentation" popoverAnchorView="gbE-2Z-qhY" id="Pe0-mL-S6O">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&quot;Uma Frase da personagem Principal&quot;" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HVp-PI-vsZ">
-                                <rect key="frame" x="20" y="663" width="374" height="130"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="ec1-8d-voC"/>
-                                </constraints>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Personagem1" translatesAutoresizingMaskIntoConstraints="NO" id="LUs-cZ-hsB">
-                                <rect key="frame" x="30" y="137" width="212" height="526"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="HVp-PI-vsZ" firstAttribute="leading" secondItem="kYc-db-sH2" secondAttribute="leading" constant="20" id="93d-Wl-eIJ"/>
-                            <constraint firstItem="HVp-PI-vsZ" firstAttribute="top" secondItem="LUs-cZ-hsB" secondAttribute="bottom" id="9sq-Wz-lJz"/>
-                            <constraint firstItem="kYc-db-sH2" firstAttribute="bottom" secondItem="HVp-PI-vsZ" secondAttribute="bottom" constant="20" id="IqR-hh-E2P"/>
-                            <constraint firstItem="fOw-Yb-7fg" firstAttribute="centerX" secondItem="HVp-PI-vsZ" secondAttribute="centerX" id="NQL-4A-6vJ"/>
-                            <constraint firstItem="fOw-Yb-7fg" firstAttribute="top" secondItem="kYc-db-sH2" secondAttribute="top" constant="20" id="PTJ-DD-mHQ"/>
-                            <constraint firstItem="fOw-Yb-7fg" firstAttribute="leading" secondItem="HVp-PI-vsZ" secondAttribute="leading" id="aK2-64-aKL"/>
-                            <constraint firstItem="LUs-cZ-hsB" firstAttribute="leading" secondItem="kYc-db-sH2" secondAttribute="leading" constant="30" id="nEy-Xj-ILa"/>
-                            <constraint firstItem="kYc-db-sH2" firstAttribute="trailing" secondItem="HVp-PI-vsZ" secondAttribute="trailing" constant="20" id="oUn-L6-jR3"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kYc-db-sH2"/>
                     </view>
                     <navigationItem key="navigationItem" id="dPB-Qd-EG4"/>
-                    <connections>
-                        <outlet property="FalaPrsonagem" destination="HVp-PI-vsZ" id="m9S-cA-D7J"/>
-                        <outlet property="dinheiro" destination="kKH-TO-nvx" id="A4a-ja-A7T"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1E-CX-31G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-107.24637681159422" y="-297.32142857142856"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Fu6-a8-vZZ">
-            <objects>
-                <viewController id="H5N-Zp-9ZZ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NYD-8J-PvY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuracoes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAN-JF-FbV">
-                                <rect key="frame" x="151" y="410.5" width="112" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="eAN-JF-FbV" firstAttribute="centerY" secondItem="NYD-8J-PvY" secondAttribute="centerY" id="Pt1-cS-aqz"/>
-                            <constraint firstItem="eAN-JF-FbV" firstAttribute="centerX" secondItem="NYD-8J-PvY" secondAttribute="centerX" id="nFi-1C-cWj"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="eSr-WI-1aa"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Tzd-pv-Z38"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5xE-lR-cb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="752" y="-331"/>
         </scene>
         <!--Intro-->
         <scene sceneID="VoD-bq-7pL">
@@ -149,10 +43,4 @@
             <point key="canvasLocation" x="-1083" y="-331"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Banco1" width="44" height="38"/>
-        <image name="C1" width="178" height="146"/>
-        <image name="Personagem1" width="212" height="526"/>
-        <image name="Score1" width="338" height="124"/>
-    </resources>
 </document>

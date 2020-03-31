@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     //Fala da personagem no campo da tela de intro
     @IBOutlet weak var FalaPrsonagem: UITextView!
     //A quantidade de dinheiro da personagem no jogo
-    @IBOutlet weak var dinheiro: UILabel!
+    @IBOutlet weak var Dinheiro: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     //Funcao para atualizar o saldo ao iniciar a tela
     func atualizaSaldo(){
-        dinheiro.text = "R$"+String(dindin)+"0 "
+        Dinheiro.text = "R$"+String(dindin)+"0 "
     }
     //Funcao para atualizar a fala da personagem ao carregar a tela
     func atualizaFala(){
