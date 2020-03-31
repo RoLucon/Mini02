@@ -84,6 +84,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="my8-Oy-bW9"/>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="H1J-DK-1Cc" id="hye-Fw-ODh"/>
+                        <outlet property="nextBtt" destination="sJ6-cn-63x" id="t0Z-ix-l2e"/>
+                        <outlet property="previous" destination="rbq-70-VnE" id="exz-Rx-w67"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ma1-tG-9Jw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
