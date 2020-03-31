@@ -12,22 +12,27 @@ class ViewController: UIViewController {
     
     
     
-    var dindin = 100.00
+    var dindin = 0.00
+    
+    
+    @IBOutlet weak var FalaPrsonagem: UITextView!
     
     @IBOutlet weak var dinheiro: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        atualizaSaldo()
         // Do any additional setup after loading the view.
     }
 
-    
-        @IBAction func Add(_ sender: Any) {
-            
-            let din : String = "R$"+String(dindin)+"0 "
-            dinheiro.text = din
-            dindin += 100.00
-        
+    func atualizaSaldo(){
+        dinheiro.text = "R$"+String(dindin)+"0 "
     }
+    
+    @IBAction func DigaOi(_ sender: UIButton) {
+        
+        FalaPrsonagem.text=" Oi, Eu sou o Kleytinho"
+    }
+    
 
 }
