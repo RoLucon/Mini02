@@ -15,25 +15,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvA-k6-OVr">
-                                <rect key="frame" x="128" y="379" width="158" height="41"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvA-k6-OVr">
+                                <rect key="frame" x="40" y="454" width="334" height="188"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Mudar de Tela"/>
+                                <state key="normal" backgroundImage="Start1"/>
                                 <connections>
                                     <action selector="MudaTela:" destination="5vR-fp-XH0" eventType="touchUpInside" id="Ily-qD-rbK"/>
                                     <segue destination="obU-yU-Wxd" kind="presentation" id="U6j-bm-YLi"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="EvA-k6-OVr" firstAttribute="leading" secondItem="i3t-Vb-gdP" secondAttribute="leading" constant="128" id="CX2-w6-k3m"/>
-                            <constraint firstItem="EvA-k6-OVr" firstAttribute="top" secondItem="i3t-Vb-gdP" secondAttribute="top" constant="291" id="SEe-O3-Yer"/>
-                            <constraint firstItem="EvA-k6-OVr" firstAttribute="centerX" secondItem="3Jn-1s-UBW" secondAttribute="centerX" id="UcB-s9-N1W"/>
+                            <constraint firstItem="EvA-k6-OVr" firstAttribute="leading" secondItem="3Jn-1s-UBW" secondAttribute="leading" constant="40" id="5V1-0Q-ZQ4"/>
+                            <constraint firstItem="EvA-k6-OVr" firstAttribute="centerX" secondItem="3Jn-1s-UBW" secondAttribute="centerX" id="76e-1h-DGf"/>
+                            <constraint firstAttribute="trailing" secondItem="EvA-k6-OVr" secondAttribute="trailing" constant="40" id="PIK-o8-kff"/>
+                            <constraint firstItem="EvA-k6-OVr" firstAttribute="centerY" secondItem="3Jn-1s-UBW" secondAttribute="centerY" constant="100" id="reO-1h-o6L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i3t-Vb-gdP"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7kd-Gk-zKe"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="7kd-Gk-zKe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7q-YC-FWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="5vR-fp-XH0" userLabel="Exit" sceneMemberID="exit"/>
@@ -67,4 +68,7 @@
             <point key="canvasLocation" x="-59.420289855072468" y="-7.3660714285714279"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Start1" width="468" height="188"/>
+    </resources>
 </document>

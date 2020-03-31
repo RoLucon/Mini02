@@ -9,11 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    
+    var dindin = 100.00
+    
+    @IBOutlet weak var dinheiro: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-}
+    
+        @IBAction func Add(_ sender: Any) {
+            
+            let din : String = "R$"+String(dindin)+" "
+            dinheiro.text = din
+            dindin += 100.00
+        
+    }
 
+}
