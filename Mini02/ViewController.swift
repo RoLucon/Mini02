@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
         @IBAction func Add(_ sender: Any) {
             
-            let din : String = "R$"+String(dindin)+" "
+            let din : String = "R$"+String(dindin)+"0 "
             dinheiro.text = din
             dindin += 100.00
         

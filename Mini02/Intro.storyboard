@@ -15,15 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELW-0s-jBl">
-                                <rect key="frame" x="163" y="433" width="88" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="Adiciona 100"/>
-                                <connections>
-                                    <action selector="Add:" destination="x3L-Rp-sRa" eventType="touchUpInside" id="7xx-LM-Xyz"/>
-                                    <action selector="adicionar:" destination="ib2-He-HwI" eventType="touchUpInside" id="3Tr-I2-bnP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbE-2Z-qhY">
                                 <rect key="frame" x="354" y="64" width="40" height="40"/>
                                 <constraints>
@@ -59,11 +50,9 @@
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Tqp-ec-20I" firstAttribute="leading" secondItem="kYc-db-sH2" secondAttribute="leading" constant="20" id="6iQ-c9-KvT"/>
-                            <constraint firstItem="ELW-0s-jBl" firstAttribute="centerY" secondItem="gP5-U4-c0Z" secondAttribute="centerY" id="Byk-8b-fUm"/>
                             <constraint firstAttribute="trailing" secondItem="gbE-2Z-qhY" secondAttribute="trailing" constant="20" id="CMU-RL-GD0"/>
                             <constraint firstItem="kKH-TO-nvx" firstAttribute="top" secondItem="kYc-db-sH2" secondAttribute="top" constant="20" id="I0J-Os-VJA"/>
                             <constraint firstItem="Tqp-ec-20I" firstAttribute="top" secondItem="kYc-db-sH2" secondAttribute="top" constant="20" id="Lab-eJ-sYB"/>
-                            <constraint firstItem="ELW-0s-jBl" firstAttribute="centerX" secondItem="gP5-U4-c0Z" secondAttribute="centerX" id="gh9-V8-ysg"/>
                             <constraint firstItem="kKH-TO-nvx" firstAttribute="leading" secondItem="Tqp-ec-20I" secondAttribute="trailing" id="qOe-fm-N1h"/>
                             <constraint firstItem="gbE-2Z-qhY" firstAttribute="top" secondItem="kYc-db-sH2" secondAttribute="top" constant="20" id="s1e-mW-BIv"/>
                         </constraints>
@@ -75,7 +64,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1E-CX-31G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="ib2-He-HwI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-107.24637681159422" y="-297.32142857142856"/>
         </scene>
