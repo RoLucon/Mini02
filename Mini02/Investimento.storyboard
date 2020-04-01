@@ -34,8 +34,8 @@
                                     <segue destination="jyV-9b-C4o" kind="presentation" id="kbd-KW-um6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investimento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEP-PM-miD">
-                                <rect key="frame" x="137.5" y="64" width="139" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVESTIMENTOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEP-PM-miD">
+                                <rect key="frame" x="111.5" y="64" width="191" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,15 +47,86 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RENDA FIXA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsu-yn-Fb1">
+                                <rect key="frame" x="35" y="129" width="111" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mu1-U9-iIi">
+                                <rect key="frame" x="151" y="129" width="20" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="info.circle.fill" catalog="system"/>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="b34-4q-nxz">
+                                <rect key="frame" x="278" y="177" width="39" height="37"/>
+                            </pageControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Mfd-uO-PmZ">
+                                <rect key="frame" x="35" y="173" width="344" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoL-ww-dED">
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="CDB">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oZ-8R-9PF">
+                                        <rect key="frame" x="65" y="0.0" width="55" height="30"/>
+                                        <state key="normal" title="LCI/LCA">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHh-bC-mwq">
+                                        <rect key="frame" x="154" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="CRI/CRA">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykt-KX-MyA">
+                                        <rect key="frame" x="247" y="0.0" width="97" height="30"/>
+                                        <state key="normal" title="DEBÊNTURES">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="8nS-l5-Mwd">
+                                <rect key="frame" x="35" y="213" width="344" height="2"/>
+                                <color key="progressTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </progressView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnu-l6-NRR">
+                                <rect key="frame" x="35" y="220" width="344" height="250"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="6jj-01-Hwt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="8nS-l5-Mwd" firstAttribute="top" secondItem="Mfd-uO-PmZ" secondAttribute="bottom" constant="10" id="1c0-z2-ZRg"/>
                             <constraint firstItem="vis-kh-gYB" firstAttribute="top" secondItem="xDy-HH-rzV" secondAttribute="top" constant="20" id="2rx-q7-0uY"/>
+                            <constraint firstItem="xDy-HH-rzV" firstAttribute="trailing" secondItem="Mfd-uO-PmZ" secondAttribute="trailing" constant="35" id="2xb-fA-bMr"/>
+                            <constraint firstItem="hsu-yn-Fb1" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="35" id="5Sn-0T-a1O"/>
+                            <constraint firstItem="Mu1-U9-iIi" firstAttribute="top" secondItem="VEP-PM-miD" secondAttribute="bottom" constant="35" id="CMe-7Q-LPY"/>
+                            <constraint firstItem="b34-4q-nxz" firstAttribute="top" secondItem="VEP-PM-miD" secondAttribute="bottom" constant="83" id="KzI-zI-uxM"/>
+                            <constraint firstItem="hsu-yn-Fb1" firstAttribute="top" secondItem="VEP-PM-miD" secondAttribute="bottom" constant="35" id="T0M-4e-faz"/>
+                            <constraint firstItem="bnu-l6-NRR" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="35" id="WYi-pd-ucq"/>
+                            <constraint firstItem="bnu-l6-NRR" firstAttribute="top" secondItem="8nS-l5-Mwd" secondAttribute="bottom" constant="5" id="ZjK-Cn-0WK"/>
+                            <constraint firstItem="8nS-l5-Mwd" firstAttribute="leading" secondItem="bta-Np-5So" secondAttribute="leading" constant="35" id="aGE-c2-LWH"/>
                             <constraint firstItem="VEP-PM-miD" firstAttribute="top" secondItem="xDy-HH-rzV" secondAttribute="top" constant="20" id="aV9-HC-EwO"/>
+                            <constraint firstItem="Mfd-uO-PmZ" firstAttribute="top" secondItem="hsu-yn-Fb1" secondAttribute="bottom" constant="20" id="b0j-gY-f37"/>
+                            <constraint firstItem="bnu-l6-NRR" firstAttribute="centerX" secondItem="bta-Np-5So" secondAttribute="centerX" id="dCY-NW-ghW"/>
                             <constraint firstItem="m85-7V-G4e" firstAttribute="top" secondItem="xDy-HH-rzV" secondAttribute="top" constant="20" id="l2q-9F-xma"/>
+                            <constraint firstItem="xDy-HH-rzV" firstAttribute="trailing" secondItem="bnu-l6-NRR" secondAttribute="trailing" constant="35" id="lbk-0I-swy"/>
+                            <constraint firstItem="b34-4q-nxz" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="278" id="or1-nG-ebq"/>
+                            <constraint firstAttribute="trailing" secondItem="8nS-l5-Mwd" secondAttribute="trailing" constant="35" id="rNW-vS-vuB"/>
+                            <constraint firstItem="Mfd-uO-PmZ" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="35" id="sCj-pp-FTk"/>
+                            <constraint firstItem="Mu1-U9-iIi" firstAttribute="leading" secondItem="hsu-yn-Fb1" secondAttribute="trailing" constant="5" id="sS5-hP-mUC"/>
                             <constraint firstItem="VEP-PM-miD" firstAttribute="centerX" secondItem="bta-Np-5So" secondAttribute="centerX" id="v8x-ZP-2Wv"/>
                             <constraint firstItem="xDy-HH-rzV" firstAttribute="trailing" secondItem="vis-kh-gYB" secondAttribute="trailing" constant="35" id="vNw-pT-K5x"/>
                             <constraint firstItem="m85-7V-G4e" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="35" id="wY0-4a-dzb"/>
+                            <constraint firstItem="bnu-l6-NRR" firstAttribute="top" secondItem="8nS-l5-Mwd" secondAttribute="bottom" constant="5" id="ytw-GW-Wlv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xDy-HH-rzV"/>
                     </view>
@@ -63,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBB-5z-5kU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749" y="163"/>
+            <point key="canvasLocation" x="747.82608695652175" y="162.72321428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DXB-jF-bAd">
@@ -85,5 +156,6 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
