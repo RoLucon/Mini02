@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="660.86956521739137" y="124.55357142857142"/>
         </scene>
-        <!--Banco-->
+        <!--Investimento-->
         <scene sceneID="Nsl-bS-glv">
             <objects>
-                <viewControllerPlaceholder storyboardName="Banco" id="eKD-Yn-BDf" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Investimento" id="eKD-Yn-BDf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Pnx-01-bi8"/>
                     <navigationItem key="navigationItem" id="1Y1-G2-QCm"/>
                 </viewControllerPlaceholder>
