@@ -54,7 +54,4 @@ class ViewController: UIViewController {
     func atualizaSituacao(){
         Situacao.text = situacao
     }
-
-    
-
 }
