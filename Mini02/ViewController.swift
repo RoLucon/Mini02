@@ -72,6 +72,8 @@ class Investimentos: UIViewController {
     
     @IBOutlet weak var lucro: UILabel!
     
+    @IBOutlet weak var trianguloConstraints: NSLayoutConstraint!
+    
     var Explicacao = ["Explicacao de CDB","Explicacao de LCI/LCA","Explicacao de CRI/CRA","Explicacao de DEBÊNTURES"]
     
     
@@ -86,6 +88,7 @@ class Investimentos: UIViewController {
         investimentoSelecionado = 0
         atualizaMsg()
         tipoInvestimento.text = "CDB"
+        trianguloConstraints.constant = 319
         atualizaRendimento()
         
     }
@@ -93,18 +96,21 @@ class Investimentos: UIViewController {
         investimentoSelecionado = 1
         atualizaMsg()
         tipoInvestimento.text = "LCI/LCA"
+        trianguloConstraints.constant = 243
         atualizaRendimento()
     }
     @IBAction func bCRI(_ sender: Any) {
         investimentoSelecionado = 2
         atualizaMsg()
         tipoInvestimento.text = "CRI/CRA"
+        trianguloConstraints.constant = 151
         atualizaRendimento()
     }
     @IBAction func bDEB(_ sender: Any) {
         investimentoSelecionado = 3
         atualizaMsg()
         tipoInvestimento.text = "DEBÊNTURES"
+        trianguloConstraints.constant = 37
         atualizaRendimento()
     }
     

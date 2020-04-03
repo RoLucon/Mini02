@@ -130,6 +130,13 @@
                                             </segue>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangulo" translatesAutoresizingMaskIntoConstraints="NO" id="iJE-3C-rd7">
+                                        <rect key="frame" x="0.0" y="-1" width="25" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="D6C-gM-xTE"/>
+                                            <constraint firstAttribute="width" constant="25" id="WeQ-82-rTw"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -138,6 +145,8 @@
                                     <constraint firstAttribute="height" constant="270" id="6jj-01-Hwt"/>
                                     <constraint firstAttribute="trailing" secondItem="DDr-es-Zzi" secondAttribute="trailing" constant="10" id="BQF-2h-oEq"/>
                                     <constraint firstItem="DDr-es-Zzi" firstAttribute="leading" secondItem="bnu-l6-NRR" secondAttribute="leading" constant="10" id="idr-eU-cyd"/>
+                                    <constraint firstAttribute="trailing" secondItem="iJE-3C-rd7" secondAttribute="trailing" constant="319" id="mIF-fQ-72M"/>
+                                    <constraint firstItem="iJE-3C-rd7" firstAttribute="top" secondItem="bnu-l6-NRR" secondAttribute="top" constant="-1" id="sfc-n2-zcE"/>
                                     <constraint firstItem="DDr-es-Zzi" firstAttribute="top" secondItem="bnu-l6-NRR" secondAttribute="top" constant="20" id="xhk-cu-Qgt"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -276,6 +285,7 @@
                             <constraint firstItem="vis-kh-gYB" firstAttribute="top" secondItem="xDy-HH-rzV" secondAttribute="top" constant="20" id="2rx-q7-0uY"/>
                             <constraint firstItem="xDy-HH-rzV" firstAttribute="trailing" secondItem="Mfd-uO-PmZ" secondAttribute="trailing" constant="35" id="2xb-fA-bMr"/>
                             <constraint firstItem="hsu-yn-Fb1" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="35" id="5Sn-0T-a1O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bnu-l6-NRR" secondAttribute="trailing" constant="15" id="6Em-LU-lcC"/>
                             <constraint firstItem="xDy-HH-rzV" firstAttribute="trailing" secondItem="oEJ-oF-2DZ" secondAttribute="trailing" constant="35" id="Ado-k1-W2W"/>
                             <constraint firstItem="Mu1-U9-iIi" firstAttribute="top" secondItem="VEP-PM-miD" secondAttribute="bottom" constant="35" id="CMe-7Q-LPY"/>
                             <constraint firstItem="b34-4q-nxz" firstAttribute="top" secondItem="VEP-PM-miD" secondAttribute="bottom" constant="83" id="KzI-zI-uxM"/>
@@ -310,6 +320,7 @@
                         <outlet property="imposto" destination="vOC-tc-Keh" id="LpG-HO-a0f"/>
                         <outlet property="lucro" destination="wl7-Ef-wwr" id="s59-KC-eJR"/>
                         <outlet property="tipoInvestimento" destination="Ops-lx-7QJ" id="IMX-PK-ykf"/>
+                        <outlet property="trianguloConstraints" destination="mIF-fQ-72M" id="Ai4-CP-Ckr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBB-5z-5kU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -458,5 +469,6 @@
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="goforward" catalog="system" width="121" height="128"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="triangulo" width="351" height="316"/>
     </resources>
 </document>
