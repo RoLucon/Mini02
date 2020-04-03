@@ -9,7 +9,7 @@
 import UIKit
 
 var nome = "Kleytinho"
-var dindin = 0.00
+var dindin = 10.00
 var fala = "Oi, Eu sou o " + nome
 var nSemestre = 5
 var semestre = String(nSemestre) + " Semestre"
@@ -107,6 +107,12 @@ class Investimentos: UIViewController {
         tipoInvestimento.text = "DEBÊNTURES"
         atualizaRendimento()
     }
+    
+    @IBAction func atualizaRendimentoButton(_ sender: UIButton) {
+        atualizaRendimento()
+    }
+    
+    
     func atualizaRendimento(){
         aplicado.text = "R$ " + String( aplicada[investimentoSelecionado]) + "0"
         bruto.text = "R$ " + String( bruto0[investimentoSelecionado]) + "0"
@@ -124,6 +130,10 @@ class Investe: UIViewController{
     
     @IBOutlet weak var saldoDisp: UILabel!
     
+    @IBOutlet weak var vlrInvestido: UITextField!
+    
+    @IBOutlet weak var saldoIndisponivel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         atualizaSaldoDispo()
@@ -133,6 +143,20 @@ class Investe: UIViewController{
     func atualizaSaldoDispo(){
         saldoDisp.text = "Saldo disponível: R$ " + String(dindin) + "0 "
     }
+    @IBAction func confirmaInvestimento(_ sender: UIButton) {
+        let investido : String = vlrInvestido.text!
+        
+        if (dindin < Double(investido)!) {
+            saldoIndisponivel.textColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.9)
+        }
+        else{
+            aplicada[investimentoSelecionado] = aplicada[investimentoSelecionado] + Double(investido)!
+            bruto0[investimentoSelecionado] = bruto0[investimentoSelecionado] + Double(investido)!
+            dindin = dindin - Double(investido)!
+        }
+        atualizaSaldoDispo()
+    }
+    
 }
 
 

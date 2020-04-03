@@ -154,6 +154,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYL-lR-aCs">
+                                <rect key="frame" x="233" y="620.5" width="20" height="22.5"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="goforward" catalog="system"/>
+                                <connections>
+                                    <action selector="atualizaRendimentoButton:" destination="mSW-eH-V3v" eventType="touchUpInside" id="7La-ls-xH1"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEJ-oF-2DZ">
                                 <rect key="frame" x="35" y="652" width="344" height="153"/>
                                 <subviews>
@@ -263,6 +271,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="oEJ-oF-2DZ" firstAttribute="top" secondItem="uYL-lR-aCs" secondAttribute="bottom" constant="9" id="05Q-TD-ONM"/>
                             <constraint firstItem="oEJ-oF-2DZ" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="35" id="0AH-t0-s7a"/>
                             <constraint firstItem="vis-kh-gYB" firstAttribute="top" secondItem="xDy-HH-rzV" secondAttribute="top" constant="20" id="2rx-q7-0uY"/>
                             <constraint firstItem="xDy-HH-rzV" firstAttribute="trailing" secondItem="Mfd-uO-PmZ" secondAttribute="trailing" constant="35" id="2xb-fA-bMr"/>
@@ -274,6 +283,7 @@
                             <constraint firstItem="hsu-yn-Fb1" firstAttribute="top" secondItem="VEP-PM-miD" secondAttribute="bottom" constant="35" id="T0M-4e-faz"/>
                             <constraint firstItem="IEt-xg-mLf" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="35" id="TH3-F1-vkj"/>
                             <constraint firstItem="bnu-l6-NRR" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="35" id="WYi-pd-ucq"/>
+                            <constraint firstItem="uYL-lR-aCs" firstAttribute="leading" secondItem="IEt-xg-mLf" secondAttribute="trailing" constant="5" id="ZcN-i1-VPO"/>
                             <constraint firstItem="VEP-PM-miD" firstAttribute="top" secondItem="xDy-HH-rzV" secondAttribute="top" constant="20" id="aV9-HC-EwO"/>
                             <constraint firstItem="oEJ-oF-2DZ" firstAttribute="top" secondItem="IEt-xg-mLf" secondAttribute="bottom" constant="8" symbolic="YES" id="ajR-jh-002"/>
                             <constraint firstItem="Mfd-uO-PmZ" firstAttribute="top" secondItem="hsu-yn-Fb1" secondAttribute="bottom" constant="20" id="b0j-gY-f37"/>
@@ -358,6 +368,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="confirmaInvestimento:" destination="aoU-Qn-GU2" eventType="touchUpInside" id="807-Oz-yzG"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fO-pS-7E1">
                                 <rect key="frame" x="102.5" y="390.5" width="209.5" height="61.5"/>
@@ -381,16 +394,24 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SALDO INDISPONÍVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klg-zP-dqT">
+                                <rect key="frame" x="121" y="350" width="172.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6fO-pS-7E1" firstAttribute="centerY" secondItem="eJn-Pn-ARz" secondAttribute="centerY" id="1dm-RR-Ba9"/>
+                            <constraint firstItem="6fO-pS-7E1" firstAttribute="top" secondItem="Klg-zP-dqT" secondAttribute="bottom" constant="20" id="2OT-I4-nm5"/>
                             <constraint firstItem="frb-Wn-QIB" firstAttribute="top" secondItem="la4-2F-eNY" secondAttribute="top" constant="124" id="92M-y4-ZDv"/>
                             <constraint firstItem="oae-sx-Ls2" firstAttribute="leading" secondItem="3gt-Hj-Smq" secondAttribute="trailing" constant="8" id="EHZ-uM-ePu"/>
                             <constraint firstItem="6fO-pS-7E1" firstAttribute="centerX" secondItem="eJn-Pn-ARz" secondAttribute="centerX" id="En1-Mv-OuD"/>
                             <constraint firstItem="jQA-7g-Ago" firstAttribute="top" secondItem="la4-2F-eNY" secondAttribute="top" constant="124" id="Pp5-IT-C01"/>
                             <constraint firstItem="la4-2F-eNY" firstAttribute="trailing" secondItem="JBe-Ja-MD6" secondAttribute="trailing" constant="81" id="Va9-SA-cgv"/>
                             <constraint firstItem="oae-sx-Ls2" firstAttribute="top" secondItem="la4-2F-eNY" secondAttribute="top" constant="80" id="YAS-oN-bxt"/>
+                            <constraint firstItem="Klg-zP-dqT" firstAttribute="centerX" secondItem="eJn-Pn-ARz" secondAttribute="centerX" id="YGB-nh-5ht"/>
                             <constraint firstItem="la4-2F-eNY" firstAttribute="bottom" secondItem="UrB-g5-9p0" secondAttribute="bottom" constant="46" id="Yfx-tD-OnS"/>
                             <constraint firstItem="3gt-Hj-Smq" firstAttribute="leading" secondItem="la4-2F-eNY" secondAttribute="leading" constant="84" id="bi9-b7-06I"/>
                             <constraint firstItem="JBe-Ja-MD6" firstAttribute="leading" secondItem="frb-Wn-QIB" secondAttribute="trailing" constant="1" id="bst-bP-ll1"/>
@@ -407,6 +428,8 @@
                     <navigationItem key="navigationItem" id="3ah-xa-LGF"/>
                     <connections>
                         <outlet property="saldoDisp" destination="ZYx-xO-5nK" id="6NB-H2-SGB"/>
+                        <outlet property="saldoIndisponivel" destination="Klg-zP-dqT" id="krw-u2-9X4"/>
+                        <outlet property="vlrInvestido" destination="ghg-0Y-dgr" id="A2V-X7-WCn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFJ-bu-OAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -433,6 +456,7 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="goforward" catalog="system" width="121" height="128"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
