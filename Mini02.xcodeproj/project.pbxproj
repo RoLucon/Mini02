@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89DF46A92437B75200FB36EB /* Personagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF46A82437B75200FB36EB /* Personagem.swift */; };
 		89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */; };
 		89E3EAAF242E98D3007C2CFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAAE242E98D3007C2CFC /* SceneDelegate.swift */; };
-		89E3EAB1242E98D3007C2CFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAB0242E98D3007C2CFC /* ViewController.swift */; };
+		89E3EAB1242E98D3007C2CFC /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAB0242E98D3007C2CFC /* PrincipalViewController.swift */; };
 		89E3EAB4242E98D3007C2CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAB2242E98D3007C2CFC /* Main.storyboard */; };
 		89E3EAB6242E98D5007C2CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAB5242E98D5007C2CFC /* Assets.xcassets */; };
 		89E3EAB9242E98D5007C2CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAB7242E98D5007C2CFC /* LaunchScreen.storyboard */; };
@@ -41,10 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89DF46A82437B75200FB36EB /* Personagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personagem.swift; sourceTree = "<group>"; };
 		89E3EAA9242E98D3007C2CFC /* Mini02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mini02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89E3EAAE242E98D3007C2CFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		89E3EAB0242E98D3007C2CFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89E3EAB0242E98D3007C2CFC /* PrincipalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
 		89E3EAB3242E98D3007C2CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89E3EAB5242E98D5007C2CFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89E3EAB8242E98D5007C2CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 				89E3EAEE24328716007C2CFC /* ViewController */,
 				89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */,
 				89E3EAAE242E98D3007C2CFC /* SceneDelegate.swift */,
-				89E3EAB0242E98D3007C2CFC /* ViewController.swift */,
+				89E3EAB0242E98D3007C2CFC /* PrincipalViewController.swift */,
 				89E3EAB2242E98D3007C2CFC /* Main.storyboard */,
 				89E3EAB5242E98D5007C2CFC /* Assets.xcassets */,
 				89E3EAB7242E98D5007C2CFC /* LaunchScreen.storyboard */,
@@ -123,6 +125,7 @@
 				89E3EAE824326209007C2CFC /* Banco.storyboard */,
 				89E3EAEA24326226007C2CFC /* Investimento.storyboard */,
 				89E3EAEC24326E35007C2CFC /* Principal.storyboard */,
+				89DF46A82437B75200FB36EB /* Personagem.swift */,
 			);
 			path = Mini02;
 			sourceTree = "<group>";
@@ -291,8 +294,9 @@
 			files = (
 				89E3EAF524328D7C007C2CFC /* CustomizacaoViewController.swift in Sources */,
 				89E3EAF024328755007C2CFC /* IntroducaoViewController.swift in Sources */,
-				89E3EAB1242E98D3007C2CFC /* ViewController.swift in Sources */,
+				89E3EAB1242E98D3007C2CFC /* PrincipalViewController.swift in Sources */,
 				89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */,
+				89DF46A92437B75200FB36EB /* Personagem.swift in Sources */,
 				89E3EAAF242E98D3007C2CFC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

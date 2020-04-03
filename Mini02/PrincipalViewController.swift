@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var Semestre: UILabel!
     //A situacao financeira da personagem
     @IBOutlet weak var Situacao: UILabel!
+     
+    let personagem: Personagem = Personagem()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +52,10 @@ class ViewController: UIViewController {
         FalaPrsonagem.text=fala
     }
     func atualizaNome(){
-        NomePersonagem.text = nome
+        NomePersonagem.text = personagem.nome
     }
     func atualizaSemestre(){
-        Semestre.text = semestre
+        Semestre.text = "\(personagem.semestreAtual()) Semestre"
     }
     func atualizaSituacao(){
         Situacao.text = situacao

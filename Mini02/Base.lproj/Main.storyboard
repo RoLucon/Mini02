@@ -22,6 +22,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Changed:" destination="atY-iD-7Sm" eventType="editingChanged" id="0HI-W4-95l"/>
+                                    <action selector="txtFieldDidChange:" destination="atY-iD-7Sm" eventType="editingDidEnd" id="1GC-HY-6IY"/>
+                                    <action selector="txtFieldValueChange:" destination="atY-iD-7Sm" eventType="valueChanged" id="tyo-cT-eyT"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zr-dr-txK">
                                 <rect key="frame" x="32" y="786" width="350" height="44"/>
@@ -30,6 +35,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="confirm:" destination="atY-iD-7Sm" eventType="touchUpInside" id="RNG-wZ-kLP"/>
                                     <segue destination="oTi-xH-I7W" kind="presentation" modalPresentationStyle="fullScreen" id="pac-8M-3OV"/>
                                 </connections>
                             </button>
@@ -85,9 +91,11 @@
                         <viewLayoutGuide key="safeArea" id="my8-Oy-bW9"/>
                     </view>
                     <connections>
+                        <outlet property="confirmBtt" destination="6zr-dr-txK" id="eNF-CE-9oi"/>
                         <outlet property="imgView" destination="H1J-DK-1Cc" id="hye-Fw-ODh"/>
                         <outlet property="nextBtt" destination="sJ6-cn-63x" id="t0Z-ix-l2e"/>
                         <outlet property="previous" destination="rbq-70-VnE" id="exz-Rx-w67"/>
+                        <outlet property="txtField" destination="0QM-pi-016" id="xoY-PA-Bru"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ma1-tG-9Jw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
