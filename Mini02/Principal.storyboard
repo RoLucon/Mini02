@@ -51,7 +51,7 @@
         <!--Item-->
         <scene sceneID="NoK-kU-yFS">
             <objects>
-                <viewController id="AsA-4X-mir" customClass="ViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Principal" id="AsA-4X-mir" customClass="ViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jod-eX-8QI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
