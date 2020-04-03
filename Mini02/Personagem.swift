@@ -17,7 +17,6 @@ class Personagem {
     init() {
         if (UserDefaults.standard.object(forKey: "personagem.nome") != nil) {
             nome = (UserDefaults.standard.object(forKey: "personagem.nome") as? String)!
-            print("Personagem com nome: \(nome)")
             save = true
         } else {
             print("Personagem sem nome")
