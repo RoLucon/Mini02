@@ -10,8 +10,8 @@
 		40BAA40E2437DAC4002FA0CE /* FeedBack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */; };
 		40BAA40F2437DAC4002FA0CE /* Fase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BAA4082437DAC4002FA0CE /* Fase.storyboard */; };
 		40BAA4102437DAC4002FA0CE /* VisualNovel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BAA4092437DAC4002FA0CE /* VisualNovel.storyboard */; };
-		40BAA4122437DAC4002FA0CE /* Mapa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BAA40B2437DAC4002FA0CE /* Mapa.storyboard */; };
 		40BAA4132437DAC4002FA0CE /* aviso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAA40D2437DAC4002FA0CE /* aviso.swift */; };
+		8932CD48243BAB0C00E2BCA4 /* Mapa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8932CD46243BAA8800E2BCA4 /* Mapa.storyboard */; };
 		89DF46A92437B75200FB36EB /* Personagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF46A82437B75200FB36EB /* Personagem.swift */; };
 		89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */; };
 		89E3EAAF242E98D3007C2CFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAAE242E98D3007C2CFC /* SceneDelegate.swift */; };
@@ -47,11 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeedBack.storyboard; sourceTree = "<group>"; };
-		40BAA4082437DAC4002FA0CE /* Fase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fase.storyboard; sourceTree = "<group>"; };
-		40BAA4092437DAC4002FA0CE /* VisualNovel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VisualNovel.storyboard; sourceTree = "<group>"; };
-		40BAA40C2437DAC4002FA0CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Mapa.storyboard; sourceTree = "<group>"; };
-		40BAA40D2437DAC4002FA0CE /* aviso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aviso.swift; sourceTree = "<group>"; };
+		40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FeedBack.storyboard; path = "../Mapa e Fases/FeedBack.storyboard"; sourceTree = "<group>"; };
+		40BAA4082437DAC4002FA0CE /* Fase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Fase.storyboard; path = "../Mapa e Fases/Fase.storyboard"; sourceTree = "<group>"; };
+		40BAA4092437DAC4002FA0CE /* VisualNovel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = VisualNovel.storyboard; path = "../Mapa e Fases/VisualNovel.storyboard"; sourceTree = "<group>"; };
+		40BAA40D2437DAC4002FA0CE /* aviso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = aviso.swift; path = "../Mapa e Fases/aviso.swift"; sourceTree = "<group>"; };
+		8932CD46243BAA8800E2BCA4 /* Mapa.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mapa.storyboard; sourceTree = "<group>"; };
 		89DF46A82437B75200FB36EB /* Personagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personagem.swift; sourceTree = "<group>"; };
 		89E3EAA9242E98D3007C2CFC /* Mini02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mini02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,19 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		40BAA4062437DAC4002FA0CE /* Mapa e Fases */ = {
-			isa = PBXGroup;
-			children = (
-				40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */,
-				40BAA4082437DAC4002FA0CE /* Fase.storyboard */,
-				40BAA4092437DAC4002FA0CE /* VisualNovel.storyboard */,
-				40BAA40B2437DAC4002FA0CE /* Mapa.storyboard */,
-				40BAA40D2437DAC4002FA0CE /* aviso.swift */,
-			);
-			name = "Mapa e Fases";
-			path = "../Mapa/Mapa e Fases";
-			sourceTree = "<group>";
-		};
 		89E3EAA0242E98D3007C2CFC = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +107,6 @@
 				89E3EAC2242E98D6007C2CFC /* Mini02Tests */,
 				89E3EACD242E98D6007C2CFC /* Mini02UITests */,
 				89E3EAAA242E98D3007C2CFC /* Products */,
-				40BAA4062437DAC4002FA0CE /* Mapa e Fases */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +123,7 @@
 		89E3EAAB242E98D3007C2CFC /* Mini02 */ = {
 			isa = PBXGroup;
 			children = (
+				8932CD46243BAA8800E2BCA4 /* Mapa.storyboard */,
 				89E3EAEE24328716007C2CFC /* ViewController */,
 				89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */,
 				89E3EAAE242E98D3007C2CFC /* SceneDelegate.swift */,
@@ -150,6 +137,10 @@
 				89E3EAEA24326226007C2CFC /* Investimento.storyboard */,
 				89E3EAEC24326E35007C2CFC /* Principal.storyboard */,
 				89DF46A82437B75200FB36EB /* Personagem.swift */,
+				40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */,
+				40BAA4082437DAC4002FA0CE /* Fase.storyboard */,
+				40BAA4092437DAC4002FA0CE /* VisualNovel.storyboard */,
+				40BAA40D2437DAC4002FA0CE /* aviso.swift */,
 			);
 			path = Mini02;
 			sourceTree = "<group>";
@@ -285,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8932CD48243BAB0C00E2BCA4 /* Mapa.storyboard in Resources */,
 				89E3EAB9242E98D5007C2CFC /* LaunchScreen.storyboard in Resources */,
 				89E3EAB6242E98D5007C2CFC /* Assets.xcassets in Resources */,
 				89E3EAE924326209007C2CFC /* Banco.storyboard in Resources */,
@@ -293,7 +285,6 @@
 				40BAA4102437DAC4002FA0CE /* VisualNovel.storyboard in Resources */,
 				89E3EAE7243261B7007C2CFC /* Intro.storyboard in Resources */,
 				89E3EAEB24326226007C2CFC /* Investimento.storyboard in Resources */,
-				40BAA4122437DAC4002FA0CE /* Mapa.storyboard in Resources */,
 				40BAA40E2437DAC4002FA0CE /* FeedBack.storyboard in Resources */,
 				40BAA40F2437DAC4002FA0CE /* Fase.storyboard in Resources */,
 			);
@@ -362,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		40BAA40B2437DAC4002FA0CE /* Mapa.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				40BAA40C2437DAC4002FA0CE /* Base */,
-			);
-			name = Mapa.storyboard;
-			sourceTree = "<group>";
-		};
 		89E3EAB2242E98D3007C2CFC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

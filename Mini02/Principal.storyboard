@@ -10,7 +10,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="nix-FM-ziG">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Xm2-Ad-2bH" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Principal" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Xm2-Ad-2bH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VYP-ND-1Rx">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -19,8 +19,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="eKD-Yn-BDf" kind="relationship" relationship="viewControllers" id="kFo-kc-r00"/>
-                        <segue destination="TSa-hJ-tZR" kind="relationship" relationship="viewControllers" id="iXD-R6-cvG"/>
                         <segue destination="AsA-4X-mir" kind="relationship" relationship="viewControllers" id="o0M-Vk-mid"/>
+                        <segue destination="kau-xd-lud" kind="relationship" relationship="viewControllers" id="xdZ-Fl-xdk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNR-J1-BK4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -39,19 +39,20 @@
             <point key="canvasLocation" x="1503" y="-42"/>
         </scene>
         <!--Mapa-->
-        <scene sceneID="z8M-MS-fv9">
+        <scene sceneID="15Q-2v-eu9">
             <objects>
-                <viewControllerPlaceholder storyboardName="Mapa" id="TSa-hJ-tZR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="KPh-Uc-JUw"/>
+                <viewControllerPlaceholder storyboardName="Mapa" id="kau-xd-lud" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="D0t-DY-Emn"/>
+                    <navigationItem key="navigationItem" id="02z-c8-CFo"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6ro-qC-kYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YhW-XM-KNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="254"/>
+            <point key="canvasLocation" x="1469" y="263"/>
         </scene>
         <!--Item-->
         <scene sceneID="NoK-kU-yFS">
             <objects>
-                <viewController storyboardIdentifier="Principal" id="AsA-4X-mir" customClass="ViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AsA-4X-mir" customClass="ViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jod-eX-8QI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,7 +215,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kFo-kc-r00"/>
+        <segue reference="EnH-U6-gi6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Banco1" width="44" height="38"/>
