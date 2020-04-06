@@ -27,6 +27,7 @@
 		89E3EAED24326E35007C2CFC /* Principal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAEC24326E35007C2CFC /* Principal.storyboard */; };
 		89E3EAF024328755007C2CFC /* IntroducaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */; };
 		89E3EAF524328D7C007C2CFC /* CustomizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */; };
+		C0CDCA00243BCBEB0057014D /* BancoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		89E3EAEC24326E35007C2CFC /* Principal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Principal.storyboard; sourceTree = "<group>"; };
 		89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducaoViewController.swift; sourceTree = "<group>"; };
 		89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizacaoViewController.swift; sourceTree = "<group>"; };
+		C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BancoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				40BAA4082437DAC4002FA0CE /* Fase.storyboard */,
 				40BAA4092437DAC4002FA0CE /* VisualNovel.storyboard */,
 				40BAA40D2437DAC4002FA0CE /* aviso.swift */,
+				C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */,
 			);
 			path = Mini02;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				40BAA4132437DAC4002FA0CE /* aviso.swift in Sources */,
 				89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */,
 				89DF46A92437B75200FB36EB /* Personagem.swift in Sources */,
+				C0CDCA00243BCBEB0057014D /* BancoViewController.swift in Sources */,
 				89E3EAAF242E98D3007C2CFC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
