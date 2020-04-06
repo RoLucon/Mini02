@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="1503" y="-42"/>
         </scene>
-        <!--Intro-->
+        <!--Mapa-->
         <scene sceneID="z8M-MS-fv9">
             <objects>
-                <viewControllerPlaceholder storyboardName="Intro" id="TSa-hJ-tZR" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Mapa" id="TSa-hJ-tZR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="KPh-Uc-JUw"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ro-qC-kYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -214,7 +214,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EnH-U6-gi6"/>
+        <segue reference="kFo-kc-r00"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Banco1" width="44" height="38"/>
