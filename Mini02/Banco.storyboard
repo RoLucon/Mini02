@@ -4,20 +4,191 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Banco-->
         <scene sceneID="zb4-Bp-DyD">
             <objects>
                 <viewController id="k1o-wQ-zpY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="buo-pj-IUe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWn-j5-BCc">
+                                <rect key="frame" x="32" y="120" width="350" height="130"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="B9t-Of-Q0P" userLabel="Foto">
+                                        <rect key="frame" x="5" y="5.5" width="65" height="64"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="RCB-eY-eb6"/>
+                                            <constraint firstAttribute="height" constant="65" id="hqf-VN-Pnr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kleytinho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNm-xX-q0A" userLabel="Nome">
+                                        <rect key="frame" x="78" y="27" width="85.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 100,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTB-xb-Vat" userLabel="Saldo">
+                                        <rect key="frame" x="10" y="79.5" width="175" height="45.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OTB-xb-Vat" secondAttribute="bottom" constant="5" id="GeU-6d-ktj"/>
+                                    <constraint firstItem="RNm-xX-q0A" firstAttribute="leading" secondItem="B9t-Of-Q0P" secondAttribute="trailing" constant="8" id="JsF-an-yoZ"/>
+                                    <constraint firstItem="B9t-Of-Q0P" firstAttribute="leading" secondItem="XWn-j5-BCc" secondAttribute="leading" constant="5" id="KFl-hl-uyY"/>
+                                    <constraint firstItem="OTB-xb-Vat" firstAttribute="leading" secondItem="XWn-j5-BCc" secondAttribute="leading" constant="10" id="Qym-C5-QXz"/>
+                                    <constraint firstItem="B9t-Of-Q0P" firstAttribute="top" secondItem="XWn-j5-BCc" secondAttribute="top" constant="5" id="Ste-iJ-Gts"/>
+                                    <constraint firstAttribute="height" constant="130" id="Uej-hD-PTt"/>
+                                    <constraint firstItem="RNm-xX-q0A" firstAttribute="top" secondItem="XWn-j5-BCc" secondAttribute="top" constant="27" id="emI-Wv-lPc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lWX-IV-lb2" userLabel="Poupança Stack View">
+                                <rect key="frame" x="42" y="282" width="330" height="61.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tortoise" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jNS-jP-iW8">
+                                        <rect key="frame" x="0.0" y="3" width="65" height="58"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61.5" id="bI5-GV-smp"/>
+                                            <constraint firstAttribute="width" constant="65" id="qKY-6K-LNz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MJK-Ps-Iw4" userLabel="Saldo Stack View">
+                                        <rect key="frame" x="73" y="4.5" width="149" height="53"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poupança" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uv8-aO-0gb">
+                                                <rect key="frame" x="0.0" y="0.0" width="80.5" height="21.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 500,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCm-c4-ji3">
+                                                <rect key="frame" x="0.0" y="31.5" width="85.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jo-IC-uHZ">
+                                        <rect key="frame" x="230" y="13.5" width="100" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="hus-zI-6Na"/>
+                                            <constraint firstAttribute="height" constant="35" id="qDr-Hb-wdX"/>
+                                        </constraints>
+                                        <state key="normal" title="Gerenciar">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PEt-H6-UbM">
+                                <rect key="frame" x="32" y="545" width="350" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6P-m6-6hJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="169" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Investimentos" image="dollarsign.square" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxP-Vg-jFv">
+                                        <rect key="frame" x="181" y="0.0" width="169" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Contas" image="barcode" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="EEl-Mw-byB"/>
+                                    <constraint firstItem="J6P-m6-6hJ" firstAttribute="top" secondItem="PEt-H6-UbM" secondAttribute="top" id="gkg-Rb-Fvf"/>
+                                    <constraint firstAttribute="bottom" secondItem="J6P-m6-6hJ" secondAttribute="bottom" id="lO1-kw-Xu9"/>
+                                    <constraint firstItem="yxP-Vg-jFv" firstAttribute="top" secondItem="PEt-H6-UbM" secondAttribute="top" id="u4V-Id-Gnc"/>
+                                    <constraint firstAttribute="bottom" secondItem="yxP-Vg-jFv" secondAttribute="bottom" id="vRk-9Y-nT4"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxF-iM-qox">
+                                <rect key="frame" x="32" y="717" width="350" height="64"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="i72-kq-ljK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Extrato"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ooL-IQ-92i" firstAttribute="bottom" secondItem="cxF-iM-qox" secondAttribute="bottom" constant="32" id="1KW-Sx-dGf"/>
+                            <constraint firstItem="ooL-IQ-92i" firstAttribute="trailing" secondItem="cxF-iM-qox" secondAttribute="trailing" constant="32" id="1Ty-y1-jrs"/>
+                            <constraint firstItem="XWn-j5-BCc" firstAttribute="top" secondItem="ooL-IQ-92i" secondAttribute="top" constant="32" id="7Wa-Qf-Ggt"/>
+                            <constraint firstItem="cxF-iM-qox" firstAttribute="leading" secondItem="ooL-IQ-92i" secondAttribute="leading" constant="32" id="A1T-WS-oZh"/>
+                            <constraint firstItem="ooL-IQ-92i" firstAttribute="trailing" secondItem="PEt-H6-UbM" secondAttribute="trailing" constant="32" id="HEU-EJ-yow"/>
+                            <constraint firstItem="PEt-H6-UbM" firstAttribute="leading" secondItem="ooL-IQ-92i" secondAttribute="leading" constant="32" id="Ifr-w4-by1"/>
+                            <constraint firstItem="ooL-IQ-92i" firstAttribute="trailing" secondItem="XWn-j5-BCc" secondAttribute="trailing" constant="32" id="MeG-aS-A3Y"/>
+                            <constraint firstItem="ooL-IQ-92i" firstAttribute="trailing" secondItem="lWX-IV-lb2" secondAttribute="trailing" constant="42" id="OGJ-2s-A0h"/>
+                            <constraint firstItem="lWX-IV-lb2" firstAttribute="top" secondItem="XWn-j5-BCc" secondAttribute="bottom" constant="32" id="n99-uK-ber"/>
+                            <constraint firstItem="XWn-j5-BCc" firstAttribute="leading" secondItem="ooL-IQ-92i" secondAttribute="leading" constant="32" id="nxF-Wg-Pas"/>
+                            <constraint firstItem="lWX-IV-lb2" firstAttribute="leading" secondItem="ooL-IQ-92i" secondAttribute="leading" constant="42" id="tKH-EO-fde"/>
+                            <constraint firstItem="cxF-iM-qox" firstAttribute="top" secondItem="PEt-H6-UbM" secondAttribute="bottom" constant="72" id="xsU-Ui-OIq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ooL-IQ-92i"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9Yf-vT-PUl"/>
+                    <navigationItem key="navigationItem" title="Banco" id="9Yf-vT-PUl">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="L9M-eY-oXK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zpc-ou-F8b" userLabel="Dicas">
+                                <rect key="frame" x="326" y="11" width="68" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="questionmark" catalog="system"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqS-Bj-a1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,11 +197,13 @@
         <!--Banco-->
         <scene sceneID="wRK-rv-j4h">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="LfF-N0-uim" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="LfF-N0-uim" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Banco" id="bdo-0l-Hpq"/>
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f32-JL-fKj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -43,4 +216,11 @@
             <point key="canvasLocation" x="444.92753623188412" y="154.6875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="barcode" catalog="system" width="128" height="93"/>
+        <image name="dollarsign.square" catalog="system" width="128" height="114"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="questionmark" catalog="system" width="96" height="128"/>
+        <image name="tortoise" catalog="system" width="128" height="68"/>
+    </resources>
 </document>
