@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mSW-eH-V3v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eJk-59-TAO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -7,18 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Banco-->
-        <scene sceneID="Qgg-uE-Ytc">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Banco" id="jyV-9b-C4o" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g2p-lS-UG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1272" y="-409"/>
-        </scene>
-        <!--Investimentos-->
+        <!--Investimento-->
         <scene sceneID="vNv-bt-K8A">
             <objects>
-                <viewController id="mSW-eH-V3v" customClass="Investimentos" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="mSW-eH-V3v" customClass="Investimentos" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bta-Np-5So">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +23,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jyV-9b-C4o" kind="presentation" id="kbd-KW-um6"/>
+                                    <action selector="backBtt:" destination="mSW-eH-V3v" eventType="touchUpInside" id="Bwx-T5-sMT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVESTIMENTOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEP-PM-miD">
@@ -312,7 +304,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xDy-HH-rzV"/>
                     </view>
-                    <navigationItem key="navigationItem" id="a2B-el-w4P"/>
+                    <navigationItem key="navigationItem" title="Investimento" leftItemsSupplementBackButton="YES" id="xD9-rL-CLU"/>
                     <connections>
                         <outlet property="aplicado" destination="GRR-dN-87d" id="nWm-eH-n1I"/>
                         <outlet property="bruto" destination="aHh-oO-Uph" id="ePn-va-DDy"/>
@@ -325,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBB-5z-5kU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="747.82608695652175" y="162.72321428571428"/>
+            <point key="canvasLocation" x="1657.9710144927537" y="162.72321428571428"/>
         </scene>
         <!--Investe-->
         <scene sceneID="hxv-IZ-Ejj">
@@ -445,7 +437,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFJ-bu-OAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1557.9710144927537" y="152.67857142857142"/>
+            <point key="canvasLocation" x="2468.1159420289855" y="152.67857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cf9-Gb-RGe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="eJk-59-TAO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KZs-qc-HlA">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mSW-eH-V3v" kind="relationship" relationship="rootViewController" id="HTB-4S-9gk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6v-yp-FBt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="162.72321428571428"/>
         </scene>
     </scenes>
     <resources>
