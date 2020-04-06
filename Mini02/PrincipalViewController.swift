@@ -120,6 +120,9 @@ class Investimentos: UIViewController {
         atualizaRendimento()
     }
     
+    @IBAction func backBtt(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     func atualizaRendimento(){
         aplicado.text = "R$ " + String( aplicada[investimentoSelecionado]) + "0"
