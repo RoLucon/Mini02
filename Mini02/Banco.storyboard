@@ -299,6 +299,12 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="rPy-d4-uTf" kind="presentation" modalPresentationStyle="fullScreen" id="Usl-gZ-DIe">
+                                                <segue key="commit" inheritsFrom="parent" id="LPT-XB-ZMx"/>
+                                                <segue key="preview" inheritsFrom="commit" id="FJC-lF-u21"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxP-Vg-jFv">
                                         <rect key="frame" x="181" y="0.0" width="169" height="100"/>
@@ -384,6 +390,7 @@
             </objects>
             <point key="canvasLocation" x="1355.072463768116" y="154.6875"/>
         </scene>
+
         <!--Extrato-->
         <scene sceneID="HhW-P0-SPu">
             <objects>
@@ -605,6 +612,17 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1355" y="863"/>
+
+        <!--Investimento-->
+        <scene sceneID="MxL-qZ-zzk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Investimento" id="rPy-d4-uTf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DES-QA-f6C"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4h-Z1-kil" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089" y="573"/>
+
         </scene>
         <!--Banco-->
         <scene sceneID="wRK-rv-j4h">
@@ -1073,6 +1091,9 @@
             <point key="canvasLocation" x="3210" y="155"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Usl-gZ-DIe"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
         <image name="barcode" catalog="system" width="128" height="93"/>

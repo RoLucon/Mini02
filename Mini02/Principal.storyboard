@@ -18,25 +18,35 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="eKD-Yn-BDf" kind="relationship" relationship="viewControllers" id="kFo-kc-r00"/>
                         <segue destination="AsA-4X-mir" kind="relationship" relationship="viewControllers" id="o0M-Vk-mid"/>
                         <segue destination="kau-xd-lud" kind="relationship" relationship="viewControllers" id="xdZ-Fl-xdk"/>
+                        <segue destination="tWK-r4-HKN" kind="relationship" relationship="viewControllers" id="PZG-CC-qXr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNR-J1-BK4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660.86956521739137" y="124.55357142857142"/>
         </scene>
-        <!--Investimento-->
+        <!--Banco-->
         <scene sceneID="Nsl-bS-glv">
             <objects>
-                <viewControllerPlaceholder storyboardName="Investimento" id="eKD-Yn-BDf" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Banco" id="eKD-Yn-BDf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Pnx-01-bi8"/>
                     <navigationItem key="navigationItem" id="1Y1-G2-QCm"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDD-Cg-MdT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1503" y="-42"/>
+        </scene>
+        <!--SideQuest-->
+        <scene sceneID="5oo-eT-yXn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SideQuest" id="tWK-r4-HKN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="3G1-YS-9fc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRe-G9-BIN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1434" y="23"/>
         </scene>
         <!--Mapa-->
         <scene sceneID="15Q-2v-eu9">
@@ -49,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="1469" y="263"/>
         </scene>
-        <!--Item-->
+        <!--Principal-->
         <scene sceneID="NoK-kU-yFS">
             <objects>
                 <viewController id="AsA-4X-mir" customClass="ViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
@@ -171,7 +181,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nne-Vg-GkN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="4UI-1Q-pal"/>
+                    <tabBarItem key="tabBarItem" title="Principal" id="4UI-1Q-pal"/>
                     <connections>
                         <outlet property="Dinheiro" destination="WzB-wL-99l" id="9q3-HE-64S"/>
                         <outlet property="FalaPrsonagem" destination="h6z-AT-5zW" id="CQv-MD-ARE"/>
@@ -214,9 +224,6 @@
             <point key="canvasLocation" x="3204" y="119"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="EnH-U6-gi6"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Banco1" width="44" height="38"/>
         <image name="C1" width="178" height="146"/>
