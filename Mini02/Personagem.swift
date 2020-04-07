@@ -9,10 +9,10 @@ import Foundation
 
 class Personagem {
     let nome: String
-    private var dinheiro: Float = 0
-    private var semestre:  Int = 1
-    private var score: Int = 1000
-    private var save: Bool =  false
+    private var dinheiro: Float = 0 { didSet {UserDefaults.standard.set(dinheiro, forKey: "personagem.dinheiro")}}
+    private var semestre:  Int = 1 { didSet {UserDefaults.standard.set(semestre, forKey: "personagem.semestre")}}
+    private var score: Int = 1000 { didSet {UserDefaults.standard.set(score, forKey: "personagem.score")}}
+    private var save: Bool = false
     
     init() {
         if (UserDefaults.standard.object(forKey: "personagem.nome") != nil) {
@@ -47,5 +47,27 @@ class Personagem {
         UserDefaults.standard.removeObject(forKey: "personagem.dinheiro")
         UserDefaults.standard.removeObject(forKey: "personagem.semestre")
         UserDefaults.standard.removeObject(forKey: "personagem.score")
+    }
+    
+    func proximoSemetre(){
+        semestre += 1
+    }
+    
+    func mexerDinheiro(valor: Float?) -> Float? {
+        if let valor = valor {
+            dinheiro += valor
+            return nil
+        } else {
+            return dinheiro
+        }
+    }
+    
+    func mexerScore(valor: Int?) -> Int?{
+        if let valor = valor {
+            score += valor
+            return nil
+        } else {
+            return score
+        }
     }
 }
