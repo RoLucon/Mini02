@@ -10,6 +10,7 @@ import Foundation
 class Personagem {
     let nome: String
     private var dinheiro: Float = 0 { didSet {UserDefaults.standard.set(dinheiro, forKey: "personagem.dinheiro")}}
+    private var poupanca: Float = 0 { didSet {UserDefaults.standard.set(poupanca, forKey: "personagem.poupanca")}}
     private var semestre:  Int = 1 { didSet {UserDefaults.standard.set(semestre, forKey: "personagem.semestre")}}
     private var score: Int = 1000 { didSet {UserDefaults.standard.set(score, forKey: "personagem.score")}}
     private var save: Bool = false
@@ -24,6 +25,9 @@ class Personagem {
         }
         if (UserDefaults.standard.object(forKey: "personagem.dinheiro") != nil){
             dinheiro = (UserDefaults.standard.object(forKey: "personagem.dinheiro") as? Float)!
+        }
+        if (UserDefaults.standard.object(forKey: "personagem.poupanca") != nil){
+            poupanca = (UserDefaults.standard.object(forKey: "personagem.poupanca") as? Float)!
         }
         if (UserDefaults.standard.object(forKey: "personagem.semestre") != nil){
             semestre = (UserDefaults.standard.object(forKey: "personagem.semestre") as? Int)!
@@ -59,6 +63,15 @@ class Personagem {
             return nil
         } else {
             return dinheiro
+        }
+    }
+    
+    func poupanca(valor: Float?) -> Float? {
+        if let valor = valor {
+            poupanca += valor
+            return nil
+        } else {
+            return poupanca
         }
     }
     
