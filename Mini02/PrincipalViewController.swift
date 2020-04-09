@@ -8,16 +8,12 @@
 
 import UIKit
 
-var nome = "Kleytinho"
-var dindin = 10.00
-var fala = "Oi, Eu sou o " + nome
-var nSemestre = 5
-var semestre = String(nSemestre) + " Semestre"
 var situacao = " Pendente "
-var investimentoSelecionado = 0 //1-CDB, 2-LCI, 3-CRI, 4-Deb
+var investimentoSelecionado = 0 //0-CDB, 1-LCI, 2-CRI, 3-Deb
 var aplicada = [10.00,20.00,30.00,40.00]
 var imposto0 = [2.00,0.00,1.00,2.00]
 var bruto0 = [15.00,23.00,35.00,30.00]
+var lucro0 = [0.0,0.0,0.0,0.0]
 
 class ViewController: UIViewController {
     
@@ -45,11 +41,20 @@ class ViewController: UIViewController {
     }
     //Funcao para atualizar o saldo ao iniciar a tela
     func atualizaSaldo(){
-        Dinheiro.text = "R$"+String(dindin)+"0 "
+        let temp:Float? = personagem.mexerDinheiro(valor: nil)
+        //_ = personagem.mexerDinheiro(valor: 60.0)
+        Dinheiro.text = String(format:"R$ %.2f",temp!)
     }
     //Funcao para atualizar a fala da personagem ao carregar a tela
     func atualizaFala(){
-        FalaPrsonagem.text=fala
+        let temp:Int? = personagem.mexerScore(valor: nil)
+        if(temp!>650){
+            FalaPrsonagem.text = "Está na situação boa!"
+        }else if(temp!>350){
+            FalaPrsonagem.text = "Está na situação Mais ou menos!"
+        }else{
+            FalaPrsonagem.text = "Está na situação Ruim!"
+        }
     }
     func atualizaNome(){
         NomePersonagem.text = personagem.nome
@@ -62,6 +67,8 @@ class ViewController: UIViewController {
     }
 }
 class Investimentos: UIViewController {
+    
+    var investimento: Investimento = Investimento()
     
     @IBOutlet weak var explicacao: UILabel!
    
@@ -80,13 +87,14 @@ class Investimentos: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        investimento.investimentoSelecionado = 0
         atualizaRendimento()
         atualizaMsg()
         
         // Do any additional setup after loading the view.
     }
     @IBAction func bCDB(_ sender: UIButton) {
-        investimentoSelecionado = 0
+        investimento.investimentoSelecionado = 0
         atualizaMsg()
         tipoInvestimento.text = "CDB"
         trianguloConstraints.constant = 319
@@ -94,21 +102,21 @@ class Investimentos: UIViewController {
         
     }
     @IBAction func bLCI(_ sender: Any) {
-        investimentoSelecionado = 1
+        investimento.investimentoSelecionado = 1
         atualizaMsg()
         tipoInvestimento.text = "LCI/LCA"
         trianguloConstraints.constant = 243
         atualizaRendimento()
     }
     @IBAction func bCRI(_ sender: Any) {
-        investimentoSelecionado = 2
+        investimento.investimentoSelecionado = 2
         atualizaMsg()
         tipoInvestimento.text = "CRI/CRA"
         trianguloConstraints.constant = 151
         atualizaRendimento()
     }
     @IBAction func bDEB(_ sender: Any) {
-        investimentoSelecionado = 3
+        investimento.investimentoSelecionado = 3
         atualizaMsg()
         tipoInvestimento.text = "DEBÊNTURES"
         trianguloConstraints.constant = 37
@@ -124,25 +132,34 @@ class Investimentos: UIViewController {
     }
     
     func atualizaRendimento(){
-        aplicado.text = "R$ " + String( aplicada[investimentoSelecionado]) + "0"
-        bruto.text = "R$ " + String( bruto0[investimentoSelecionado]) + "0"
-        imposto.text = "R$ " + String( imposto0[investimentoSelecionado]) + "0"
-        lucro.text = "R$ " + String(( bruto0[investimentoSelecionado] - imposto0[investimentoSelecionado])-aplicada[investimentoSelecionado]) + "0"
+        investimento = Investimento()
+        aplicado.text = String(format: "R$ %.2f",investimento.getAplicada())
+        bruto.text = String(format:"R$ %.2f ",investimento.getBruto())
+        imposto.text = String(format:"R$ %.2f",investimento.getImposto())
+        investimento.setLucro(investimento.getBruto() - investimento.getImposto()-investimento.getAplicada())
+        lucro.text = String(format: "R$ %.2f",investimento.getLucro())
     }
     func atualizaMsg(){
-        explicacao.text = Explicacao[investimentoSelecionado]
+        explicacao.text = Explicacao[investimento.investimentoSelecionado]
     }
     
-    
 }
+
 class Investe: UIViewController{
     
+    let investimento: Investimento = Investimento()
+    
+    let personagem: Personagem = Personagem()
     
     @IBOutlet weak var saldoDisp: UILabel!
     
     @IBOutlet weak var vlrInvestido: UITextField!
     
     @IBOutlet weak var saldoIndisponivel: UILabel!
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,20 +168,62 @@ class Investe: UIViewController{
         // Do any additional setup after loading the view.
     }
     func atualizaSaldoDispo(){
-        saldoDisp.text = "Saldo disponível: R$ " + String(dindin) + "0 "
+        let temp:Float? = personagem.mexerDinheiro(valor: nil)
+        saldoDisp.text = String(format: "Saldo disponível: R$ %.2f", temp!)
     }
     @IBAction func confirmaInvestimento(_ sender: UIButton) {
         let investido : String = vlrInvestido.text!
+        let temp:Float? = personagem.mexerDinheiro(valor: nil)
         
-        if (dindin < Double(investido)!) {
+        if (temp! < Float(investido)!) {
             saldoIndisponivel.textColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.9)
         }
         else{
-            aplicada[investimentoSelecionado] = aplicada[investimentoSelecionado] + Double(investido)!
-            bruto0[investimentoSelecionado] = bruto0[investimentoSelecionado] + Double(investido)!
-            dindin = dindin - Double(investido)!
+            investimento.setAplicada(investimento.getAplicada() + Double(investido)!)
+            investimento.setBruto(investimento.getBruto() + Double(investido)!)
+            _ = personagem.mexerDinheiro(valor: -1 * Float(investido)!)
+            self.dismiss(animated: true, completion: nil)
         }
         atualizaSaldoDispo()
+    }
+    
+}
+
+class saque: UIViewController{
+    
+    @IBOutlet weak var SaldoIndisp: UILabel!
+    @IBOutlet weak var SaldoSaque: UILabel!
+    @IBOutlet weak var VlrSaque: UITextField!
+    
+    let investimento: Investimento = Investimento()
+    
+    let personagem: Personagem = Personagem()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        atualizaSaldoDispo()
+        // Do any additional setup after loading the view.
+    }
+    func atualizaSaldoDispo(){
+        SaldoSaque.text = String(format:"Saldo disponível: R$ %.2f",investimento.getBruto() - investimento.getImposto())
+    }
+    @IBAction func ConfirmaSaque(_ sender: UIButton) {
+        let Saque : String = VlrSaque.text!
+        let disp = investimento.getBruto() - investimento.getImposto()
+        if (disp < Double(Saque)!) {
+            SaldoIndisp.textColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.9)
+        }
+        else{
+            let percent = 1 - Double(Saque)!/(disp)
+            investimento.setBruto(investimento.getBruto() * percent)
+            investimento.setImposto(investimento.getImposto() * percent)
+            investimento.setAplicada(investimento.getAplicada() * percent)
+            investimento.setLucro(investimento.getLucro() * percent)
+    
+            _=personagem.mexerDinheiro(valor: Float(Saque)!)
+        }
+        atualizaSaldoDispo()
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

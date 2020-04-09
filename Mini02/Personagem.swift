@@ -9,7 +9,7 @@ import Foundation
 
 class Personagem {
     let nome: String
-    private var dinheiro: Float = 0 { didSet {UserDefaults.standard.set(dinheiro, forKey: "personagem.dinheiro")}}
+    private var dinheiro: Float = 0 {didSet {UserDefaults.standard.set(dinheiro, forKey: "personagem.dinheiro")}}
     private var semestre:  Int = 1 { didSet {UserDefaults.standard.set(semestre, forKey: "personagem.semestre")}}
     private var score: Int = 1000 { didSet {UserDefaults.standard.set(score, forKey: "personagem.score")}}
     private var save: Bool = false
