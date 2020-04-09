@@ -181,6 +181,7 @@
                                                 <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             </state>
                                             <connections>
+                                                <action selector="volta:" destination="aqG-Qv-6pd" eventType="touchUpInside" id="bbt-JK-rn8"/>
                                                 <segue destination="ikZ-Zv-12I" kind="show" id="bvV-1q-PMZ"/>
                                             </connections>
                                         </button>
@@ -220,6 +221,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nZB-7h-e1c"/>
                     <connections>
+                        <outlet property="ajuda" destination="qkq-9j-lQg" id="vzH-D3-8Ju"/>
                         <outlet property="efeito" destination="BtI-9d-bDf" id="uqg-xM-cIO"/>
                         <outlet property="pop" destination="E2M-VY-Qtj" id="i2c-Ut-WBm"/>
                     </connections>
