@@ -160,7 +160,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="goforward" catalog="system"/>
                                 <connections>
-                                    <action selector="atualizaRendimentoButton:" destination="mSW-eH-V3v" eventType="touchUpInside" id="7La-ls-xH1"/>
+                                    <action selector="atualizaRendimentoButton:" destination="mSW-eH-V3v" eventType="touchUpInside" id="p4i-cl-7WP"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEJ-oF-2DZ">
@@ -269,6 +269,24 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ox1-lH-c7G">
+                                <rect key="frame" x="311" y="613" width="68" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="  Sacar  ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="1AX-JT-mP3" kind="presentation" id="N0y-d1-4bZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -373,6 +391,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="confirmaInvestimento:" destination="aoU-Qn-GU2" eventType="touchUpInside" id="807-Oz-yzG"/>
+                                    <segue destination="mSW-eH-V3v" kind="show" id="kXm-7t-eNX"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fO-pS-7E1">
@@ -437,7 +456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFJ-bu-OAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2468.1159420289855" y="152.67857142857142"/>
+            <point key="canvasLocation" x="2812" y="-94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cf9-Gb-RGe">
@@ -456,7 +475,129 @@
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="162.72321428571428"/>
         </scene>
+        <!--Saque-->
+        <scene sceneID="xcf-wH-Sah">
+            <objects>
+                <viewController id="1AX-JT-mP3" customClass="saque" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TyW-oT-NsI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quanto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQd-hF-gdL">
+                                <rect key="frame" x="84" y="80" width="137.5" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sacar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ4-b1-DRA">
+                                <rect key="frame" x="209" y="124" width="103" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="você" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bic-hh-Q4Y">
+                                <rect key="frame" x="229.5" y="80" width="82" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYf-Ob-XIK">
+                                <rect key="frame" x="116.5" y="124" width="77.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV3-XU-bjw">
+                                <rect key="frame" x="313" y="124" width="20" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HL3-Dm-LSV">
+                                <rect key="frame" x="107" y="390.5" width="200.5" height="61.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKE-wg-KOu">
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="61.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-Kc-kba">
+                                        <rect key="frame" x="69" y="0.0" width="131.5" height="61.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo disponível: R$ X.XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa3-Ra-lP0">
+                                <rect key="frame" x="94" y="472" width="226" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0V-Kn-eUd">
+                                <rect key="frame" x="136.5" y="726" width="141" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="   CONFIRMAR   ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ConfirmaSaque:" destination="1AX-JT-mP3" eventType="touchUpInside" id="teo-oo-3ck"/>
+                                    <segue destination="mSW-eH-V3v" kind="show" id="5FE-yG-3zf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SALDO INDISPONÍVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYE-C5-UMz">
+                                <rect key="frame" x="121" y="350" width="172.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kcL-l5-xft" firstAttribute="trailing" secondItem="yV3-XU-bjw" secondAttribute="trailing" constant="81" id="1EA-bJ-vEy"/>
+                            <constraint firstItem="vQd-hF-gdL" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="80" id="2I0-w4-P2P"/>
+                            <constraint firstItem="yV3-XU-bjw" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="124" id="8uQ-xn-wZ9"/>
+                            <constraint firstItem="HL3-Dm-LSV" firstAttribute="top" secondItem="YYE-C5-UMz" secondAttribute="bottom" constant="20" id="AG2-cP-cqs"/>
+                            <constraint firstItem="iJ4-b1-DRA" firstAttribute="leading" secondItem="aYf-Ob-XIK" secondAttribute="trailing" constant="15" id="IRk-g3-DwQ"/>
+                            <constraint firstItem="bic-hh-Q4Y" firstAttribute="leading" secondItem="vQd-hF-gdL" secondAttribute="trailing" constant="8" id="IUD-WI-6bV"/>
+                            <constraint firstItem="vQd-hF-gdL" firstAttribute="leading" secondItem="kcL-l5-xft" secondAttribute="leading" constant="84" id="Ivq-mO-k1R"/>
+                            <constraint firstItem="HL3-Dm-LSV" firstAttribute="centerY" secondItem="TyW-oT-NsI" secondAttribute="centerY" id="L0a-uY-74I"/>
+                            <constraint firstItem="HL3-Dm-LSV" firstAttribute="centerX" secondItem="TyW-oT-NsI" secondAttribute="centerX" id="LVD-16-ItH"/>
+                            <constraint firstItem="Xa3-Ra-lP0" firstAttribute="centerX" secondItem="TyW-oT-NsI" secondAttribute="centerX" id="OxU-Cu-KUD"/>
+                            <constraint firstItem="aYf-Ob-XIK" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="124" id="SUE-4N-qgP"/>
+                            <constraint firstItem="YYE-C5-UMz" firstAttribute="centerX" secondItem="TyW-oT-NsI" secondAttribute="centerX" id="U5b-Dr-2rg"/>
+                            <constraint firstItem="C0V-Kn-eUd" firstAttribute="centerX" secondItem="TyW-oT-NsI" secondAttribute="centerX" id="Uc8-TH-dPE"/>
+                            <constraint firstItem="kcL-l5-xft" firstAttribute="bottom" secondItem="C0V-Kn-eUd" secondAttribute="bottom" constant="46" id="fix-gn-e7t"/>
+                            <constraint firstItem="yV3-XU-bjw" firstAttribute="leading" secondItem="iJ4-b1-DRA" secondAttribute="trailing" constant="1" id="rk6-MW-EPc"/>
+                            <constraint firstItem="iJ4-b1-DRA" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="124" id="sqD-dR-0uP"/>
+                            <constraint firstItem="bic-hh-Q4Y" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="80" id="uiy-LU-899"/>
+                            <constraint firstItem="Xa3-Ra-lP0" firstAttribute="top" secondItem="HL3-Dm-LSV" secondAttribute="bottom" constant="20" id="xpV-0B-XFq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kcL-l5-xft"/>
+                    </view>
+                    <connections>
+                        <outlet property="SaldoIndisp" destination="YYE-C5-UMz" id="vgO-3k-ZWX"/>
+                        <outlet property="SaldoSaque" destination="Xa3-Ra-lP0" id="M2K-kA-XLk"/>
+                        <outlet property="VlrSaque" destination="eMt-Kc-kba" id="rEZ-J2-g5O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wMV-vF-KV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2812" y="579"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5FE-yG-3zf"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="goforward" catalog="system" width="121" height="128"/>
