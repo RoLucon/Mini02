@@ -20,35 +20,24 @@ class ConfigView: UIView {
         return view
     }()
     
-    let header: UIView = {
-        let view = UIView()
-        view.backgroundColor = .purple
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    let body: UIView = {
-        let view = UIView()
-        view.backgroundColor = .green
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    let suporteBtt: UIButton = {
-        let btt = UIButton()
-        btt.translatesAutoresizingMaskIntoConstraints = false
-        btt.backgroundColor = .red
-        return btt
-    }()
-    
-    let resetBtt: UIButton = {
+    let quitBtt: UIButton = {
         let btt = UIButton(frame: .init(x: 200, y: 200, width: 50, height: 50))
         btt.translatesAutoresizingMaskIntoConstraints = false
-        btt.backgroundColor = .orange
+        btt.backgroundColor = .yellow
+        btt.layer.cornerRadius = 22
         btt.addTarget(self, action: #selector(dismiss), for: .touchUpInside)
         return btt
     }()
     
+    let versionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "v0.0"
+        label.textColor = .white
+        label.backgroundColor = .green
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     init(frame: CGRect, viewController: UIViewController) {
         vc = viewController
@@ -56,10 +45,40 @@ class ConfigView: UIView {
         
         backgroundColor = .clear
         
+        let resetBtt = buttons(name: "Reset Button")
+        let suporteBtt = buttons(name: "Suporte Button")
+        
+        bg.addSubview(quitBtt)
+        bg.addSubview(suporteBtt)
         bg.addSubview(resetBtt)
+        bg.addSubview(versionLabel)
+        
+        audioConfig()
+        pushConfig()
         efeitoBlur()
+        
         mostrarTabBar(value: false)
         
+        quitBtt.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        quitBtt.widthAnchor.constraint(equalToConstant: 44).isActive = true
+        quitBtt.topAnchor.constraint(equalTo: bg.topAnchor, constant: -22).isActive = true
+//        quitBtt.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
+        quitBtt.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: 22).isActive = true
+        
+        versionLabel.heightAnchor.constraint(equalToConstant: 31).isActive = true
+        versionLabel.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -8).isActive = true
+        versionLabel.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
+        versionLabel.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
+        
+        resetBtt.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        resetBtt.bottomAnchor.constraint(equalTo: versionLabel.topAnchor, constant: -32).isActive = true
+        resetBtt.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
+        resetBtt.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
+
+        suporteBtt.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        suporteBtt.bottomAnchor.constraint(equalTo: resetBtt.topAnchor, constant: -16).isActive = true
+        suporteBtt.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
+        suporteBtt.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
     }
     
     required init?(coder: NSCoder) {
@@ -77,6 +96,97 @@ class ConfigView: UIView {
     @objc func dismiss(){
         mostrarTabBar(value: true)
         animacaoDeSaida()
+    }
+    
+    private func audioConfig(){
+        let view = self.subConfig(name: "AUDIO ----------", switcheNames: ["Musica","Efeito Sonoro"])
+        
+        view.backgroundColor = .cyan
+        let bttSize = 62
+        let space = 8
+        let nBtt = 2
+        let size: CGFloat = CGFloat (bttSize * nBtt + space * (nBtt - 1))
+        view.heightAnchor.constraint(equalToConstant: size).isActive = true
+//        view.topAnchor.constraint(equalTo: bg.topAnchor, constant: 40).isActive = true
+        view.bottomAnchor.constraint(equalTo: bg.centerYAnchor, constant: -8).isActive = true
+        view.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
+        view.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
+    }
+    
+    private func pushConfig(){
+            let view = self.subConfig(name: "PUSH ----------", switcheNames: ["Campanha", "Sidequest"])
+            
+            view.backgroundColor = .cyan
+            let bttSize = 62
+            let space = 8
+            let nBtt = 2
+            let size: CGFloat = CGFloat (bttSize * nBtt + space * (nBtt - 1))
+            view.heightAnchor.constraint(equalToConstant: size).isActive = true
+    //        view.topAnchor.constraint(equalTo: bg.topAnchor, constant: 40).isActive = true
+            view.topAnchor.constraint(equalTo: bg.centerYAnchor, constant: 8).isActive = true
+            view.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
+            view.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
+        }
+    
+    private func switchesBtt(name: String) -> UIStackView {
+        let btt = UISwitch(frame: .init(x: 0, y: 0, width: 51, height: 31))
+        
+        let label = UILabel()
+        label.text = name
+        label.textColor = .white
+        
+        let stackView = UIStackView(arrangedSubviews: [label, UIView(), btt])
+        stackView.axis = .horizontal
+        stackView.distribution = .equalCentering
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }
+    
+    private func subConfig(name: String, switcheNames: [String]) -> UIView {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        bg.addSubview(view)
+        //Label - Text
+        let label = UILabel()
+        label.backgroundColor = .red
+        label.text = name
+        label.textColor = .white
+        view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 8).isActive = true
+        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+        label.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        //Switches
+        var switchs: [UIStackView] = []
+        for btt in switcheNames {
+            let aux = switchesBtt(name: btt)
+            switchs.append(aux)
+        }
+        
+        let stackView = UIStackView(arrangedSubviews: switchs)
+        stackView.axis = . vertical
+        stackView.distribution = .equalCentering
+        view.addSubview(stackView)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+        stackView.topAnchor.constraint(equalTo: label.topAnchor, constant: 39).isActive = true
+        return view
+    }
+    
+    private func buttons(name: String) -> UIButton {
+        let btt = UIButton()
+        btt.setTitle(name, for: .normal)
+        btt.tintColor = .white
+        btt.layer.borderWidth = 3
+        btt.layer.borderColor = UIColor.white.cgColor
+        btt.layer.cornerRadius = 32
+        btt.translatesAutoresizingMaskIntoConstraints = false
+        btt.backgroundColor = .black
+        btt.addTarget(self, action: #selector(reset), for: .touchUpInside)
+        return btt
     }
     
     private func efeitoBlur(){
@@ -105,7 +215,6 @@ class ConfigView: UIView {
     }
     
     private func mostrarTabBar(value: Bool) {
-        
         if let bar = vc?.tabBarController {
             bar.setTabBar(hidden: !value, animated: true, viewController: vc!)
         }
