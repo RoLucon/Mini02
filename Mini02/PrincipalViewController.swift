@@ -11,6 +11,7 @@ import UIKit
 var situacao = " Pendente "
 
 let atualizaRendimentosNotificationKey = "co.gusrigor.atualizaRendimento"
+let atualizaFalaNotificationKey = "co.gusrigor.atualizaFala"
 
 class ViewController: UIViewController {
     
@@ -24,8 +25,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var Semestre: UILabel!
     //A situacao financeira da personagem
     @IBOutlet weak var Situacao: UILabel!
+    let notificacao = Notification.Name(rawValue: atualizaFalaNotificationKey)
      
-    let personagem: Personagem = Personagem()
+    var personagem: Personagem = Personagem()
+    
+    deinit {
+           NotificationCenter.default.removeObserver(self)
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,14 +42,23 @@ class ViewController: UIViewController {
         atualizaSituacao()
         // Do any additional setup after loading the view.
     }
+    func observer(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.atualizarFala(notificacao:)), name: notificacao, object: nil)
+    }
+    @objc func atualizarFala(notificacao: NSNotification){
+        atualizaSaldo()
+        atualizaFala()
+    }
     //Funcao para atualizar o saldo ao iniciar a tela
     func atualizaSaldo(){
+        personagem = Personagem()
         let temp:Float? = personagem.mexerDinheiro(valor: nil)
         //_ = personagem.mexerDinheiro(valor: 60.0)
         Dinheiro.text = String(format:"R$ %.2f",temp!)
     }
     //Funcao para atualizar a fala da personagem ao carregar a tela
     func atualizaFala(){
+        personagem = Personagem()
         let temp:Int? = personagem.mexerScore(valor: nil)
         if(temp!>650){
             FalaPrsonagem.text = "Está na situação boa!"
