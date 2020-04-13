@@ -161,10 +161,11 @@ class Investimentos: UIViewController {
     
     func atualizaRendimento(){
         investimento = Investimento()
-        aplicado.text = String(format: "R$ %.2f",investimento.getAplicada())
         bruto.text = String(format:"R$ %.2f ",investimento.getBruto())
         imposto.text = String(format:"R$ %.2f",investimento.getImposto())
         investimento.setLucro(investimento.getBruto() - investimento.getImposto()-investimento.getAplicada())
+        investimento.setLiquido( investimento.getBruto()-investimento.getImposto() )
+        aplicado.text = String(format: "R$ %.2f", investimento.getLiquido())
         lucro.text = String(format: "R$ %.2f",investimento.getLucro())
     }
     func atualizaMsg(){
