@@ -20,7 +20,7 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var GuardarTextField: UITextField!
     @IBOutlet weak var RetirarTextField: UITextField!
     
-    let banco = Personagem().mexerDinheiro(valor: nil)
+    var banco = Personagem().mexerDinheiro(valor: nil)
     var valor: String!
     var valor2: String!
     
@@ -30,17 +30,23 @@ class BancoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         atualizarLabel()
-        
-        //SaldoLabel?.text = String(format: "%.2f", poup).replacingOccurrences(of: ".", with: ",")
         GuardarTextField?.attributedPlaceholder = NSAttributedString(string: "0,00", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         RetirarTextField?.attributedPlaceholder = NSAttributedString(string: "0,00", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         GuardarTextField?.delegate = self
         RetirarTextField?.delegate = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(atualizarSaldo(n:)), name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
+        
+    }
+    
+    @objc func atualizarSaldo(n:NSNotification) {
+        atualizarLabel()
+        banco = Personagem().mexerDinheiro(valor: nil)
     }
     
     @IBAction func ConfirmarButton(_ sender: Any) {
         
+                
         if (GuardarTextField.hasText) {
             valor = GuardarTextField.text?.replacingOccurrences(of: ",", with: ".")
             let total = (valor as NSString).floatValue
@@ -48,8 +54,9 @@ class BancoViewController: UIViewController {
             if (total <= banco!) {
                  _ = Personagem().mexerDinheiro(valor: -total)
                  _ = Personagem().poupanca(valor: total)
-                atualizarLabel()
                 GuardarTextField.text = ""
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
+
                 
             } else {
                 let alert = UIAlertController(title: "Saldo insuficiente", message: nil, preferredStyle: .alert)
@@ -66,8 +73,9 @@ class BancoViewController: UIViewController {
             if (total2 <= poup!) {
                  _ = Personagem().mexerDinheiro(valor: total2)
                  _ = Personagem().poupanca(valor: -total2)
-                atualizarLabel()
                 RetirarTextField.text = ""
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
+
                 
             } else {
                 RetirarTextField.clearsOnBeginEditing = true
@@ -115,16 +123,6 @@ class BancoViewController: UIViewController {
             SaldoDisponivel.textColor = .white
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
