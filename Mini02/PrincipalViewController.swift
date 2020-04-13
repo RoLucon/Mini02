@@ -9,11 +9,8 @@
 import UIKit
 
 var situacao = " Pendente "
-var investimentoSelecionado = 0 //0-CDB, 1-LCI, 2-CRI, 3-Deb
-var aplicada = [10.00,20.00,30.00,40.00]
-var imposto0 = [2.00,0.00,1.00,2.00]
-var bruto0 = [15.00,23.00,35.00,30.00]
-var lucro0 = [0.0,0.0,0.0,0.0]
+
+let atualizaRendimentosNotificationKey = "co.gusrigor.atualizaRendimento"
 
 class ViewController: UIViewController {
     
@@ -70,6 +67,8 @@ class Investimentos: UIViewController {
     
     var investimento: Investimento = Investimento()
     
+    let notificacao = Notification.Name(rawValue: atualizaRendimentosNotificationKey)
+    
     @IBOutlet weak var explicacao: UILabel!
    
     @IBOutlet weak var tipoInvestimento: UILabel!
@@ -85,14 +84,28 @@ class Investimentos: UIViewController {
     
     var Explicacao = ["CDB - O Certificado de Depósito Bancário é um tipo de investimento em renda fixa oferecidos por bancos e com a proteção do Fundo Garantidor de Créditos. Este investimento é de baixo risco e sem taxas de administração, mas com a necessidade de ser declarado no imposto de renda. O CDB é, na prática, um empréstimo de dinheiro ao banco, e este te paga com juros. E este juros, o lucro do investimento, é acordado com a instituição financeira quando o CDB é adquirido. (Colocar a regra do jogo, pelo que é apresentado nas pesquisa que fiz, no ano passado o lucro médio de um bom CDB estava em torno 15 a 20% dependendo do tempo do investimento. Eu gostaria de deixar mais ou menos entre 1 e 1,5% ao mês). Sendo que o Imposto de renda é de 15% (na vida real este valor varia com o tempo em que a pessoa fica com o CDB Variando de 22,5 a 15%) em cima do lucro que você tiver neste investimento.","LCI/LCA - Letras de Crédito Imobiliário e Letras de Crédito do Agronegócio é um tipo de investimento em renda fixa oferecidos por bancos e com a proteção do Fundo Garantidor de Créditos. Este investimento é de baixo risco e sem taxas. Os LCI e LCA são na prática, um empréstimo destinado ao setor do agronegócio e do setor imobiliário. O lucro do investimento é acordado com a instituição financeira quando é adquirido. (Colocar a regra do jogo, pelo que é apresentado nas pesquisa que fiz, no ano passado o lucro médio de um bom LCI/LCA estava em torno 5 a 10% dependendo do tempo do investimento. Eu gostaria de deixar mais ou menos entre 0,5 e 1% ao mês). Não há impostos neste tipo de investimento, ou seja, o valor líquido é o mesmo que o valor bruto.","CRI/CRA - Certificado de Recebíveis Imobiliários e Certificado de Recebíveis do Agronegócio é um tipo de investimento em renda fixa oferecidos por securitizadoras. Os CRI e CRA são, na prática, um empréstimo destinado ao agronegócio ao setor imobiliário para que estes setores tenham capital, por exemplo, para realizar o financiamento de um imóvel. O lucro do investimento é acordado com a corretora quando é adquirido. Este investimento  não é protegido pelo Fundo Garantidor de Créditos o que pode significar perdas financeiras caso os devedores não cumpram sua parte no acordo. (Colocar a regra do jogo, pelo que é apresentado nas pesquisa que fiz, não achei um valor certo do valor do lucro, aparentemente porque depende do tempo que está investindo e da confiabilidade que a securitizadora tem, pois pode haver um calote. Os dados que eu encontrei são baseados no CDI, que é um valor que flutua. Eu gostaria de deixar mais ou menos entre 1,5 e 2% ao mês). Não há impostos neste tipo de investimento, mas pode haver uma cobrança de uma taxa administrativa da corretora (Os valores estão na casa de 2% do valor investido).","Debêntures - Debêntures é um tipo de investimento em renda fixa oferecidos por corretoras. As debêntures são, na prática, um empréstimo para empresas que estão arrecadando recursos para financiar o desenvolvimento de seu negócio. O lucro do investimento é acordado com a corretora quando é adquirido. Este investimento  não é protegido pelo Fundo Garantidor de Créditos o que pode significar perdas financeiras caso os devedores não cumpram sua parte no acordo. (Colocar a regra do jogo, pelo que é apresentado nas pesquisa que fiz, no ano passado o lucro médio de um bom Debênture estava em torno 10 a 20% dependendo do tempo do investimento. Eu gostaria de deixar mais ou menos 1,5 % ao mês). Sendo que o Imposto de renda é de 15% (na vida real este valor varia com o tempo em que a pessoa fica com o CDB Variando de 22,5 a 15%) em cima do lucro que você tiver neste investimento."]
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         investimento.investimentoSelecionado = 0
         atualizaRendimento()
         atualizaMsg()
+        observer()
         
         // Do any additional setup after loading the view.
     }
+    
+    func observer(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.atualizaRendimentoVlr(notificacao:)), name: notificacao, object: nil)
+    }
+    @objc func atualizaRendimentoVlr(notificacao: NSNotification){
+        atualizaRendimento()
+    }
+    
     @IBAction func bCDB(_ sender: UIButton) {
         investimento.investimentoSelecionado = 0
         atualizaMsg()
@@ -182,6 +195,8 @@ class Investe: UIViewController{
             investimento.setAplicada(investimento.getAplicada() + Double(investido)!)
             investimento.setBruto(investimento.getBruto() + Double(investido)!)
             _ = personagem.mexerDinheiro(valor: -1 * Float(investido)!)
+            let nome = Notification.Name(rawValue: atualizaRendimentosNotificationKey)
+            NotificationCenter.default.post(name: nome, object: nil)
             self.dismiss(animated: true, completion: nil)
         }
         atualizaSaldoDispo()
@@ -221,6 +236,8 @@ class saque: UIViewController{
             investimento.setLucro(investimento.getLucro() * percent)
     
             _=personagem.mexerDinheiro(valor: Float(Saque)!)
+            let nome = Notification.Name(rawValue: atualizaRendimentosNotificationKey)
+            NotificationCenter.default.post(name: nome, object: nil)
         }
         atualizaSaldoDispo()
         self.dismiss(animated: true, completion: nil)
