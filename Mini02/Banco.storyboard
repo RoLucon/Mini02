@@ -29,7 +29,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ioH-tv-r1g">
-                                                <rect key="frame" x="0.0" y="46" width="208" height="48"/>
+                                                <rect key="frame" x="0.0" y="46" width="107" height="48"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzZ-LW-l0U">
                                                         <rect key="frame" x="0.0" y="0.0" width="49" height="48"/>
@@ -37,8 +37,8 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZP-qA-IvV">
-                                                        <rect key="frame" x="57" y="0.0" width="151" height="48"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZP-qA-IvV">
+                                                        <rect key="frame" x="57" y="0.0" width="50" height="48"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -179,6 +179,7 @@
                     <connections>
                         <outlet property="GuardarTextField" destination="z2t-qP-IWc" id="gk8-nf-sxc"/>
                         <outlet property="RetirarTextField" destination="bNr-Uq-vEF" id="CLY-U9-y88"/>
+                        <outlet property="SaldoDisponivel" destination="RJy-DE-vUc" id="TLc-h6-EHT"/>
                         <outlet property="SaldoLabel" destination="WZP-qA-IvV" id="fjL-CR-UxK"/>
                     </connections>
                 </viewController>
@@ -385,16 +386,18 @@
                             <integer key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="SaldoBanco" destination="OTB-xb-Vat" id="GB3-LM-ngu"/>
+                        <outlet property="SaldoPoupanca" destination="xCm-c4-ji3" id="god-qB-1bU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqS-Bj-a1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1355.072463768116" y="154.6875"/>
         </scene>
-
         <!--Extrato-->
         <scene sceneID="HhW-P0-SPu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z2m-Cq-y2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Extrato" id="zea-1n-9Wa" customClass="BancoViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mPU-Pk-m48">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -609,7 +612,16 @@
                         <viewLayoutGuide key="safeArea" id="JFD-L0-eYX"/>
                     </view>
                     <navigationItem key="navigationItem" id="avk-RX-Oed"/>
+                    <connections>
+                        <outlet property="ExtratoNome1" destination="bHb-1x-OBb" id="rfi-I7-Xk3"/>
+                        <outlet property="ExtratoNome2" destination="JGF-BU-851" id="DwB-9H-QAg"/>
+                        <outlet property="ExtratoNome3" destination="qmd-OO-IEE" id="95t-rF-bmX"/>
+                        <outlet property="ExtratoNome4" destination="VOm-cW-4Ic" id="UNi-u5-bhY"/>
+                        <outlet property="ExtratoNome5" destination="jDb-Y7-xz0" id="YAd-37-bAR"/>
+                        <outlet property="Stack" destination="wxd-3D-7YR" id="zuv-cN-VtE"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2m-Cq-y2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1355" y="863"/>
         </scene>
@@ -621,8 +633,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4h-Z1-kil" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="573"/>
-
+            <point key="canvasLocation" x="811" y="571"/>
         </scene>
         <!--Banco-->
         <scene sceneID="wRK-rv-j4h">
