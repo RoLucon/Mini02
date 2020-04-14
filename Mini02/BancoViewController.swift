@@ -20,27 +20,46 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var GuardarTextField: UITextField!
     @IBOutlet weak var RetirarTextField: UITextField!
     
-    let banco = Personagem().mexerDinheiro(valor: nil)
+    var banco = Personagem().mexerDinheiro(valor: nil)
     var valor: String!
     var valor2: String!
     
+    //Dicas
+    enum Segues {
+        static let dicaFatura = "dicaFatura"
+        static let dicaConta = "dicaConta"
+        static let dicaBanco = "dicaBanco"
+        static let dicaPoupanca = "dicaPoupanca"
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         atualizarLabel()
-        
-        //SaldoLabel?.text = String(format: "%.2f", poup).replacingOccurrences(of: ".", with: ",")
         GuardarTextField?.attributedPlaceholder = NSAttributedString(string: "0,00", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         RetirarTextField?.attributedPlaceholder = NSAttributedString(string: "0,00", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         GuardarTextField?.delegate = self
         RetirarTextField?.delegate = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(atualizarSaldo(n:)), name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
+        
     }
+    
+    @objc func atualizarSaldo(n:NSNotification) {
+        atualizarLabel()
+        banco = Personagem().mexerDinheiro(valor: nil)
+    }
+    
+    @IBAction func BackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     @IBAction func ConfirmarButton(_ sender: Any) {
         
+                
         if (GuardarTextField.hasText) {
             valor = GuardarTextField.text?.replacingOccurrences(of: ",", with: ".")
             let total = (valor as NSString).floatValue
@@ -48,8 +67,9 @@ class BancoViewController: UIViewController {
             if (total <= banco!) {
                  _ = Personagem().mexerDinheiro(valor: -total)
                  _ = Personagem().poupanca(valor: total)
-                atualizarLabel()
                 GuardarTextField.text = ""
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
+
                 
             } else {
                 let alert = UIAlertController(title: "Saldo insuficiente", message: nil, preferredStyle: .alert)
@@ -66,8 +86,9 @@ class BancoViewController: UIViewController {
             if (total2 <= poup!) {
                  _ = Personagem().mexerDinheiro(valor: total2)
                  _ = Personagem().poupanca(valor: -total2)
-                atualizarLabel()
                 RetirarTextField.text = ""
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
+
                 
             } else {
                 RetirarTextField.clearsOnBeginEditing = true
@@ -115,16 +136,27 @@ class BancoViewController: UIViewController {
             SaldoDisponivel.textColor = .white
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == Segues.dicaFatura {
+            let destVC = segue.destination as! DicasView
+            destVC.fatura = "ToFirstChild"
+        }
+        if segue.identifier == Segues.dicaConta {
+            let destVC = segue.destination as! DicasView
+            destVC.contas = "ToFirstChild"
+            
+        }
+        if segue.identifier == Segues.dicaBanco {
+            let destVC = segue.destination as! DicasView
+            destVC.banco = "ToFirstChild"
+        }
+        if segue.identifier == Segues.dicaPoupanca {
+            let destVC = segue.destination as! DicasView
+            destVC.poupanca = "ToFirstChild"
+        }
     }
-    */
+    
 
 }
 
@@ -134,4 +166,88 @@ extension BancoViewController : UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+}
+
+
+class DicasView: UIViewController {
+    
+    enum dicas {
+       static let banco = [
+                            "nome": "Banco",
+                            "desc": "Texto...Banco..."
+                          ]
+       static let poupanca = [
+                                "nome": "Poupança",
+                                "desc": "Texto...Poupança..."
+                             ]
+       static let contas = [
+                            "nome": "Contas",
+                            "desc": "Texto...Contas..."
+                          ]
+       static let fatura = [
+                            "nome": "Fatura",
+                            "desc": "Texto...Fatura..."
+                            ]
+    }
+        
+    var fatura: String = "dicaFatura"
+    var contas: String = "dicaConta"
+    var banco: String = "dicaBanco"
+    var poupanca: String = "dicaPoupanca"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //view.backgroundColor = .red
+        /*let blurEffect = UIBlurEffect(style: .regular)
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+        view.addSubview(visualEffectView)
+        view = visualEffectView*/
+        view.backgroundColor = .none
+    }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == banco {
+            let destVC = segue.destination as! DicasChildView
+            destVC.view.backgroundColor = .lightGray
+            destVC.tituloLabel?.text = dicas.banco["nome"]!
+            destVC.textLabel?.text = dicas.banco["desc"]!
+        }
+        if segue.identifier == poupanca {
+            let destVC = segue.destination as! DicasChildView
+            destVC.view.backgroundColor = .darkGray
+            destVC.tituloLabel?.text = dicas.poupanca["nome"]!
+            destVC.textLabel?.text = dicas.poupanca["desc"]!
+        }
+        if segue.identifier == contas {
+            let destVC = segue.destination as! DicasChildView
+            destVC.view.backgroundColor = .yellow
+            destVC.tituloLabel?.text = dicas.contas["nome"]!
+            destVC.textLabel?.text = dicas.contas["desc"]!
+        }
+        if segue.identifier == fatura {
+            let destVC = segue.destination as! DicasChildView
+            destVC.view.backgroundColor = .green
+            destVC.tituloLabel?.text = dicas.fatura["nome"]!
+            destVC.textLabel?.text = dicas.fatura["desc"]!
+        }
+    }
+    
+}
+
+
+class DicasChildView: UIViewController {
+    @IBOutlet weak var tituloLabel: UILabel!
+    @IBOutlet weak var textLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .blue
+        tituloLabel?.text = "Padrão"
+        textLabel?.backgroundColor = .none
+    }
+    
+    @IBAction func back(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
