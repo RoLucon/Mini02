@@ -53,7 +53,7 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <segue destination="lda-wH-PEg" kind="show" id="Nnp-EP-dCV"/>
+                                                <action selector="r1:" destination="aqG-Qv-6pd" eventType="touchUpInside" id="v38-U8-f3T"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQa-7L-mHv">
@@ -74,7 +74,7 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <segue destination="lda-wH-PEg" kind="show" id="Gvp-xv-cLC"/>
+                                                <action selector="r2:" destination="aqG-Qv-6pd" eventType="touchUpInside" id="Br1-Gx-n0u"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgO-xU-LH8" userLabel="Resp3">
@@ -95,7 +95,7 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <segue destination="lda-wH-PEg" kind="show" id="NVB-rh-c5z"/>
+                                                <action selector="r3:" destination="aqG-Qv-6pd" eventType="touchUpInside" id="pBu-8f-D6t"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8v-Vw-Uey" userLabel="!1">
@@ -224,6 +224,8 @@
                         <outlet property="ajuda" destination="qkq-9j-lQg" id="vzH-D3-8Ju"/>
                         <outlet property="efeito" destination="BtI-9d-bDf" id="uqg-xM-cIO"/>
                         <outlet property="pop" destination="E2M-VY-Qtj" id="i2c-Ut-WBm"/>
+                        <segue destination="lda-wH-PEg" kind="show" identifier="Finaliza" id="H8F-TB-Hab"/>
+                        <segue destination="rZ0-0T-hWv" kind="show" identifier="Continua" id="6q2-Fb-26J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pay-TA-6ox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -265,7 +267,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xj3-Ew-Vfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1799" y="75"/>
+            <point key="canvasLocation" x="1814" y="108"/>
         </scene>
         <!--FeedBack-->
         <scene sceneID="3Dd-Cp-zHg">
@@ -276,6 +278,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuR-v2-NHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1820" y="143"/>
+        </scene>
+        <!--VisualNovel-->
+        <scene sceneID="85k-Kc-Z44">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VisualNovel" id="rZ0-0T-hWv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mXz-hm-3C9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6u-vc-WCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1570" y="200"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lbc-Sg-mE5">
@@ -300,7 +312,4 @@
             <point key="canvasLocation" x="115.94202898550725" y="126.5625"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="NVB-rh-c5z"/>
-    </inferredMetricsTieBreakers>
 </document>

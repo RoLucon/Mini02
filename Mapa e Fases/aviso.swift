@@ -8,11 +8,54 @@
 
 import UIKit
 
-var refaz = 0
-var contador = 0 /*  O contador representa o número de caixas de dialogo que terá na fase menos 1
-                     (caso tenha 1 caixa, o contador valerá 0)
-                     Seleção de contador na classe selecf*/
+var i : intmax_t!
+var c = 0 //Representa a fala inicial da fase
+//Todas as falas do jogo
+let texto = [
+1: "fala1",
+2: "fala2",
+3: "fala3",
+4: "fala4",
+5: "fala5",
+6: "fala6",
+7: "fala7",
+8: "fala8",
+9: "fala9",
+10: "fala10",
+11: "fala11",
+12: "fala12",
+13: "fala13",
+14: "fala14",
+15: "fala15",
+16: "fala16",
+17: "fala17",
+18: "fala18",
+19: "fala19",
+20: "fala20",
+21: "fala21",
+22: "fala22",
+23: "fala23",
+24: "fala24",
+25: "fala25",
+26: "fala26",
+27: "fala27",
+28: "fala28",
+29: "fala29",
+30: "fala30",
+31: "fala31",
+32: "fala32",
+33: "fala33",]
 var prog = 1 // Representa o progresso do jogador
+//Arrays que definem o posicionamento das perguntas durante os dialogos
+var q = Array(repeating: 0, count:4)
+var q1 = [1, 3, 5, 0]
+var q2 = [6, 7, 8, 9]
+var q3 = [10, 11, 12, 13]
+var q4 = [14, 15, 16, 17]
+var q5 = [18, 19, 20, 21]
+var q6 = [22, 23, 24, 25]
+var q7 = [26, 27, 28, 29]
+var q8 = [30, 31, 32, 33]
 
 class popup: UIViewController{
     
@@ -27,7 +70,6 @@ class popup: UIViewController{
         prog += 1
         effect = efeito.effect
         efeito.effect = nil
-        
         pop.layer.cornerRadius = 5
     }
     
@@ -80,6 +122,28 @@ class popup: UIViewController{
         prog -= 1
     }
     
+    func perguntas(){
+        if i >= 3 || q[i+1] == 0{
+            self.performSegue(withIdentifier: "Finaliza", sender: self)
+        }
+        else {
+            self.performSegue(withIdentifier: "Continua", sender: self)
+            i += 1
+            prog -= 1
+        }
+    }
+    
+    @IBAction func r1(_ sender: AnyObject) {
+        perguntas()
+    }
+    
+    @IBAction func r2(_ sender: AnyObject) {
+        perguntas()
+    }
+    
+    @IBAction func r3(_ sender: AnyObject) {
+        perguntas()
+    }
 }
 
 class selecf: UIViewController{
@@ -121,15 +185,15 @@ class selecf: UIViewController{
     }
     //Avanças uma fase
     @IBAction func avanca(_ sender: AnyObject) {
-        //prog += 1
     }
     
     //Vai pra fase 1
     @IBAction func f1(_ sender: AnyObject) {
         switch prog {
         case 1:
-            contador = 2
-            refaz = contador
+            i = 1
+            q = q1
+            c = q[0]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
             print("ERRO")
@@ -140,8 +204,9 @@ class selecf: UIViewController{
     @IBAction func f2(_ sender: Any) {
         switch prog {
         case 2:
-            contador = 2
-            refaz = contador
+            i = 1
+            q = q2
+            c = q[0]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
             print("ERRO")
@@ -152,8 +217,9 @@ class selecf: UIViewController{
     @IBAction func f3(_ sender: AnyObject) {
         switch prog {
         case 3:
-            contador = 2
-            refaz = contador
+            i = 1
+            q = q3
+            c = q[0]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
             print("ERRO")
@@ -164,8 +230,9 @@ class selecf: UIViewController{
     @IBAction func f4(_ sender: AnyObject) {
         switch prog {
         case 4:
-            contador = 1
-            refaz = contador
+            i = 1
+            q = q4
+            c = q[0]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
             print("ERRO")
@@ -176,8 +243,9 @@ class selecf: UIViewController{
     @IBAction func f5(_ sender: AnyObject) {
         switch prog {
         case 5:
-            contador = 4
-            refaz = contador
+            i = 1
+            q = q5
+            c = q[0]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
             print("ERRO")
@@ -188,8 +256,9 @@ class selecf: UIViewController{
     @IBAction func f6(_ sender: AnyObject) {
         switch prog {
         case 6:
-            contador = 0
-            refaz = contador
+            i = 1
+            q = q6
+            c = q[0]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
             print("ERRO")
@@ -200,8 +269,9 @@ class selecf: UIViewController{
     @IBAction func f7(_ sender: AnyObject) {
         switch prog {
         case 7:
-            contador = 1
-            refaz = contador
+            i = 1
+            q = q7
+            c = q[0]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
             print("ERRO")
@@ -212,8 +282,9 @@ class selecf: UIViewController{
     @IBAction func f8(_ sender: AnyObject) {
         switch prog {
         case 8:
-            contador = 3
-            refaz = contador
+            i = 1
+            q = q8
+            c = q[0]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
             print("ERRO")
@@ -222,33 +293,19 @@ class selecf: UIViewController{
     
     //Refaz a fase
     @IBAction func refazer(_ sender: Any) {
-        contador = refaz
         prog -= 1
+        c = q[0]
+        i = 1
     }
     
     //Quantidades de caixa de dialogo terão
     @IBAction func telas(_ sender: Any) {
-        switch contador {
-        case 1:
-            fala?.text = "Ultima fala"
-            contador -= 1
-            
-        case 2:
-            fala?.text = "Penultima fala"
-            contador -= 1
-            
-        case 3:
-            fala?.text = "Ante-penultima fala"
-            contador -= 1
-        
-        case 4:
-            fala?.text = "Segunda fala"
-            contador -= 1
-            
-        case 0:
+        if c <= q[i]{
+            fala?.text = texto[c]
+            c += 1
+        }
+        else{
             self.performSegue(withIdentifier: "Passa", sender: self)
-        default:
-            fala?.text = "erro"
         }
     }
 }
