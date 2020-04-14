@@ -42,9 +42,21 @@ class ViewController: UIViewController {
         atualizaSituacao()
         // Do any additional setup after loading the view.
     }
+  
+    @IBAction func configuracao(_ sender: Any) {
+        let confgView = ConfigView(frame: view.frame, viewController: self)
+        view.addSubview(confgView)
+        confgView.translatesAutoresizingMaskIntoConstraints = false
+        confgView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        confgView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        confgView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        confgView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+    }
+  
     func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.atualizarFala(notificacao:)), name: notificacao, object: nil)
     }
+  
     @objc func atualizarFala(notificacao: NSNotification){
         atualizaSaldo()
         atualizaFala()
