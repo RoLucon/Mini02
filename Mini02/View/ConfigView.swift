@@ -108,6 +108,21 @@ class ConfigView: UIView {
     }
     
     @objc func reset(){
+        let alert = UIAlertController(title: "Reset", message: "Tem certeza que quer resetar seu save?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(UIAlertAction) in
+            let personagem = Personagem()
+            personagem.resetSave()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "Inicio")
+            viewController.modalPresentationStyle = .fullScreen
+            self.vc?.present(viewController, animated: true, completion: {
+                self.dismiss()
+            })
+        }))
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: {(UIAlertAction) in
+            
+        }))
+        vc?.present(alert, animated: true, completion: nil)
         
     }
     
