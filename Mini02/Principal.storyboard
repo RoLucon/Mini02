@@ -195,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="3244.9275362318845" y="124.55357142857142"/>
         </scene>
-        <!--Config View Controller-->
+        <!--View Controller-->
         <scene sceneID="ps8-ag-jZh">
             <objects>
-                <viewController storyboardIdentifier="Configuracao" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="IMR-TE-u5O" customClass="ConfigViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Configuracao" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="IMR-TE-u5O" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GYh-He-y5e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -21,10 +21,15 @@ class ConfigView: UIView {
     }()
     
     let quitBtt: UIButton = {
-        let btt = UIButton(frame: .init(x: 200, y: 200, width: 50, height: 50))
+        let size = 44
+        let btt = UIButton()
+        btt.backgroundColor = .black
+        btt.layer.borderWidth = 3
+        btt.layer.borderColor = UIColor.white.cgColor
+        btt.layer.cornerRadius = CGFloat(size / 2)
         btt.translatesAutoresizingMaskIntoConstraints = false
-        btt.backgroundColor = .yellow
-        btt.layer.cornerRadius = 22
+        btt.heightAnchor.constraint(equalToConstant: CGFloat(size)).isActive = true
+        btt.widthAnchor.constraint(equalToConstant: CGFloat(size)).isActive = true
         btt.addTarget(self, action: #selector(dismiss), for: .touchUpInside)
         return btt
     }()
@@ -33,7 +38,7 @@ class ConfigView: UIView {
         let label = UILabel()
         label.text = "v0.0"
         label.textColor = .white
-        label.backgroundColor = .green
+        label.backgroundColor = .black
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -48,22 +53,28 @@ class ConfigView: UIView {
         let resetBtt = buttons(name: "Reset Button")
         let suporteBtt = buttons(name: "Suporte Button")
         
+        let audioView = subConfig(name: "AUDIO", switcheNames: ["Campanha", "Sidequest"])
+        let pushView = subConfig(name: "PUSH", switcheNames: ["Campanha", "Sidequest"])
+        
+        let stackView = UIStackView(arrangedSubviews: [UIView(),audioView,pushView, UIView()])
+        stackView.axis = .vertical
+        stackView.distribution = .equalCentering
+        stackView.spacing = 16
+        
+        bg.addSubview(stackView)
         bg.addSubview(quitBtt)
         bg.addSubview(suporteBtt)
         bg.addSubview(resetBtt)
         bg.addSubview(versionLabel)
         
-        audioConfig()
-        pushConfig()
+//        audioConfig()
+//        pushConfig()
         efeitoBlur()
         
         mostrarTabBar(value: false)
         
-        quitBtt.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        quitBtt.widthAnchor.constraint(equalToConstant: 44).isActive = true
-        quitBtt.topAnchor.constraint(equalTo: bg.topAnchor, constant: -22).isActive = true
-//        quitBtt.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
-        quitBtt.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: 22).isActive = true
+        quitBtt.topAnchor.constraint(equalTo: bg.topAnchor, constant: 16).isActive = true
+        quitBtt.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
         
         versionLabel.heightAnchor.constraint(equalToConstant: 31).isActive = true
         versionLabel.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -8).isActive = true
@@ -79,6 +90,13 @@ class ConfigView: UIView {
         suporteBtt.bottomAnchor.constraint(equalTo: resetBtt.topAnchor, constant: -16).isActive = true
         suporteBtt.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
         suporteBtt.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.topAnchor.constraint(equalTo: bg.topAnchor, constant: 32).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: suporteBtt.topAnchor, constant: -16).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
+        
     }
     
     required init?(coder: NSCoder) {
@@ -98,38 +116,10 @@ class ConfigView: UIView {
         animacaoDeSaida()
     }
     
-    private func audioConfig(){
-        let view = self.subConfig(name: "AUDIO ----------", switcheNames: ["Musica","Efeito Sonoro"])
-        
-        view.backgroundColor = .cyan
-        let bttSize = 62
-        let space = 8
-        let nBtt = 2
-        let size: CGFloat = CGFloat (bttSize * nBtt + space * (nBtt - 1))
-        view.heightAnchor.constraint(equalToConstant: size).isActive = true
-//        view.topAnchor.constraint(equalTo: bg.topAnchor, constant: 40).isActive = true
-        view.bottomAnchor.constraint(equalTo: bg.centerYAnchor, constant: -8).isActive = true
-        view.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
-        view.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
-    }
-    
-    private func pushConfig(){
-            let view = self.subConfig(name: "PUSH ----------", switcheNames: ["Campanha", "Sidequest"])
-            
-            view.backgroundColor = .cyan
-            let bttSize = 62
-            let space = 8
-            let nBtt = 2
-            let size: CGFloat = CGFloat (bttSize * nBtt + space * (nBtt - 1))
-            view.heightAnchor.constraint(equalToConstant: size).isActive = true
-    //        view.topAnchor.constraint(equalTo: bg.topAnchor, constant: 40).isActive = true
-            view.topAnchor.constraint(equalTo: bg.centerYAnchor, constant: 8).isActive = true
-            view.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
-            view.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
-        }
-    
     private func switchesBtt(name: String) -> UIStackView {
         let btt = UISwitch(frame: .init(x: 0, y: 0, width: 51, height: 31))
+        btt.backgroundColor = .gray
+        btt.layer.cornerRadius = btt.frame.size.height / 2
         
         let label = UILabel()
         label.text = name
@@ -144,11 +134,13 @@ class ConfigView: UIView {
     
     private func subConfig(name: String, switcheNames: [String]) -> UIView {
         let view = UIView()
+        view.backgroundColor = .darkGray
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 10
         bg.addSubview(view)
         //Label - Text
         let label = UILabel()
-        label.backgroundColor = .red
+        label.backgroundColor = view.backgroundColor
         label.text = name
         label.textColor = .white
         view.addSubview(label)
@@ -173,6 +165,12 @@ class ConfigView: UIView {
         stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
         stackView.topAnchor.constraint(equalTo: label.topAnchor, constant: 39).isActive = true
+        
+        let elementsSize = 62 * switchs.count
+        let totalSpacing = 16 * (switchs.count - 1)
+        let size: CGFloat = CGFloat (elementsSize + totalSpacing)
+        view.heightAnchor.constraint(equalToConstant: size).isActive = true
+        
         return view
     }
     
