@@ -173,6 +173,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="questionmark" catalog="system"/>
+                                <connections>
+                                    <segue destination="XrD-7e-aLR" kind="presentation" identifier="dicaPoupanca" modalPresentationStyle="overFullScreen" id="Z3r-Bt-wUZ"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -186,6 +189,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yoA-7g-jD3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1355" y="-541"/>
+        </scene>
+        <!--Dicas View-->
+        <scene sceneID="bLw-3z-D8I">
+            <objects>
+                <viewController id="XrD-7e-aLR" customClass="DicasView" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TK9-vS-3mz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Pt-zk-Xk2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ks9-Ot-0vO">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1V-RJ-q4F">
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="768"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Dvr-bn-GC8">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="768"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="regular"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                        <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-BC-pF8">
+                                            <rect key="frame" x="28" y="64" width="358" height="768"/>
+                                            <connections>
+                                                <segue destination="fpa-70-BwH" kind="embed" identifier="ToFirstChild" id="60E-Au-h9o"/>
+                                            </connections>
+                                        </containerView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yc9-BC-pF8" firstAttribute="leading" secondItem="ks9-Ot-0vO" secondAttribute="leadingMargin" constant="20" id="7dB-V2-wez"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yc9-BC-pF8" secondAttribute="bottom" constant="56" id="8YL-PT-GFd"/>
+                                        <constraint firstItem="yc9-BC-pF8" firstAttribute="top" secondItem="ks9-Ot-0vO" secondAttribute="topMargin" constant="56" id="HVp-f7-2t4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yc9-BC-pF8" secondAttribute="trailing" constant="20" id="uUF-O4-uKX"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="BP0-cc-6kr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HNe-sc-TuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2357" y="-541"/>
         </scene>
         <!--Banco-->
         <scene sceneID="zb4-Bp-DyD">
@@ -372,12 +426,27 @@
                     </view>
                     <navigationItem key="navigationItem" title="Banco" id="9Yf-vT-PUl">
                         <barButtonItem key="backBarButtonItem" title=" " id="83h-mC-kTZ"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="KSP-cs-xZb">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6K8-va-3Zl">
+                                <rect key="frame" x="20" y="0.0" width="128" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <inset key="contentEdgeInsets" minX="-8" minY="-4" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="arrowshape.turn.up.left" catalog="system"/>
+                                <connections>
+                                    <action selector="BackButton:" destination="k1o-wQ-zpY" eventType="touchUpInside" id="vEh-7Z-Jdu"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="L9M-eY-oXK" userLabel="Dicas">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zpc-ou-F8b" userLabel="Dicas">
                                 <rect key="frame" x="326" y="11" width="68" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="questionmark" catalog="system"/>
+                                <connections>
+                                    <segue destination="XrD-7e-aLR" kind="presentation" identifier="dicaBanco" modalPresentationStyle="overFullScreen" id="ENy-2t-sxU"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -612,14 +681,6 @@
                         <viewLayoutGuide key="safeArea" id="JFD-L0-eYX"/>
                     </view>
                     <navigationItem key="navigationItem" id="avk-RX-Oed"/>
-                    <connections>
-                        <outlet property="ExtratoNome1" destination="bHb-1x-OBb" id="rfi-I7-Xk3"/>
-                        <outlet property="ExtratoNome2" destination="JGF-BU-851" id="DwB-9H-QAg"/>
-                        <outlet property="ExtratoNome3" destination="qmd-OO-IEE" id="95t-rF-bmX"/>
-                        <outlet property="ExtratoNome4" destination="VOm-cW-4Ic" id="UNi-u5-bhY"/>
-                        <outlet property="ExtratoNome5" destination="jDb-Y7-xz0" id="YAd-37-bAR"/>
-                        <outlet property="Stack" destination="wxd-3D-7YR" id="zuv-cN-VtE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2m-Cq-y2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -871,6 +932,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="questionmark" catalog="system"/>
+                                <connections>
+                                    <segue destination="XrD-7e-aLR" kind="presentation" identifier="dicaConta" modalPresentationStyle="overFullScreen" id="d73-3l-XYX"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -1093,6 +1157,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="questionmark" catalog="system"/>
+                                <connections>
+                                    <segue destination="XrD-7e-aLR" kind="presentation" identifier="dicaFatura" modalPresentationStyle="overFullScreen" id="yTC-S7-h55"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -1101,9 +1168,68 @@
             </objects>
             <point key="canvasLocation" x="3210" y="155"/>
         </scene>
+        <!--Dicas Child View-->
+        <scene sceneID="Hq5-dO-m3T">
+            <objects>
+                <viewController id="fpa-70-BwH" customClass="DicasChildView" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VYv-mX-U9K">
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIz-oJ-rdK">
+                                <rect key="frame" x="48" y="76" width="262" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-03-xcy">
+                                <rect key="frame" x="146" y="706" width="66" height="30"/>
+                                <state key="normal" title="Fechar"/>
+                                <connections>
+                                    <action selector="back:" destination="fpa-70-BwH" eventType="touchUpInside" id="zqn-mG-mrv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5P3-ws-DWY">
+                                <rect key="frame" x="48" y="136" width="262" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="l6B-1N-ArV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rIz-oJ-rdK" firstAttribute="leading" secondItem="VYv-mX-U9K" secondAttribute="leadingMargin" constant="32" id="0o8-Hj-PIy"/>
+                            <constraint firstItem="5P3-ws-DWY" firstAttribute="leading" secondItem="VYv-mX-U9K" secondAttribute="leadingMargin" constant="32" id="20c-rU-5bC"/>
+                            <constraint firstItem="rIz-oJ-rdK" firstAttribute="top" secondItem="VYv-mX-U9K" secondAttribute="topMargin" constant="32" id="NJu-jL-jz3"/>
+                            <constraint firstItem="CUX-03-xcy" firstAttribute="leading" secondItem="VYv-mX-U9K" secondAttribute="leadingMargin" constant="130" id="Rfd-m3-oec"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CUX-03-xcy" secondAttribute="trailing" constant="130" id="TtG-gO-p91"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5P3-ws-DWY" secondAttribute="trailing" constant="32" id="VRR-Z4-brJ"/>
+                            <constraint firstItem="5P3-ws-DWY" firstAttribute="top" secondItem="rIz-oJ-rdK" secondAttribute="bottom" constant="32" id="k6F-23-bYs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rIz-oJ-rdK" secondAttribute="trailing" constant="32" id="lSJ-qG-mxI"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="CUX-03-xcy" secondAttribute="bottom" constant="32" id="xIW-Q9-oE5"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="5P3-ws-DWY" id="arS-8J-FVY"/>
+                        <outlet property="tituloLabel" destination="rIz-oJ-rdK" id="7QY-WU-nB1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryg-eY-Xbk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3209" y="-541"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Usl-gZ-DIe"/>
+        <segue reference="Z3r-Bt-wUZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>

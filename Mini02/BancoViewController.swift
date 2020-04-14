@@ -24,6 +24,14 @@ class BancoViewController: UIViewController {
     var valor: String!
     var valor2: String!
     
+    //Dicas
+    enum Segues {
+        static let dicaFatura = "dicaFatura"
+        static let dicaConta = "dicaConta"
+        static let dicaBanco = "dicaBanco"
+        static let dicaPoupanca = "dicaPoupanca"
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +51,11 @@ class BancoViewController: UIViewController {
         atualizarLabel()
         banco = Personagem().mexerDinheiro(valor: nil)
     }
+    
+    @IBAction func BackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     @IBAction func ConfirmarButton(_ sender: Any) {
         
@@ -123,6 +136,27 @@ class BancoViewController: UIViewController {
             SaldoDisponivel.textColor = .white
         }
     }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.dicaFatura {
+            let destVC = segue.destination as! DicasView
+            destVC.fatura = "ToFirstChild"
+        }
+        if segue.identifier == Segues.dicaConta {
+            let destVC = segue.destination as! DicasView
+            destVC.contas = "ToFirstChild"
+            
+        }
+        if segue.identifier == Segues.dicaBanco {
+            let destVC = segue.destination as! DicasView
+            destVC.banco = "ToFirstChild"
+        }
+        if segue.identifier == Segues.dicaPoupanca {
+            let destVC = segue.destination as! DicasView
+            destVC.poupanca = "ToFirstChild"
+        }
+    }
+    
 
 }
 
@@ -132,4 +166,88 @@ extension BancoViewController : UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+}
+
+
+class DicasView: UIViewController {
+    
+    enum dicas {
+       static let banco = [
+                            "nome": "Banco",
+                            "desc": "Texto...Banco..."
+                          ]
+       static let poupanca = [
+                                "nome": "Poupança",
+                                "desc": "Texto...Poupança..."
+                             ]
+       static let contas = [
+                            "nome": "Contas",
+                            "desc": "Texto...Contas..."
+                          ]
+       static let fatura = [
+                            "nome": "Fatura",
+                            "desc": "Texto...Fatura..."
+                            ]
+    }
+        
+    var fatura: String = "dicaFatura"
+    var contas: String = "dicaConta"
+    var banco: String = "dicaBanco"
+    var poupanca: String = "dicaPoupanca"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //view.backgroundColor = .red
+        /*let blurEffect = UIBlurEffect(style: .regular)
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+        view.addSubview(visualEffectView)
+        view = visualEffectView*/
+        view.backgroundColor = .none
+    }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == banco {
+            let destVC = segue.destination as! DicasChildView
+            destVC.view.backgroundColor = .lightGray
+            destVC.tituloLabel?.text = dicas.banco["nome"]!
+            destVC.textLabel?.text = dicas.banco["desc"]!
+        }
+        if segue.identifier == poupanca {
+            let destVC = segue.destination as! DicasChildView
+            destVC.view.backgroundColor = .darkGray
+            destVC.tituloLabel?.text = dicas.poupanca["nome"]!
+            destVC.textLabel?.text = dicas.poupanca["desc"]!
+        }
+        if segue.identifier == contas {
+            let destVC = segue.destination as! DicasChildView
+            destVC.view.backgroundColor = .yellow
+            destVC.tituloLabel?.text = dicas.contas["nome"]!
+            destVC.textLabel?.text = dicas.contas["desc"]!
+        }
+        if segue.identifier == fatura {
+            let destVC = segue.destination as! DicasChildView
+            destVC.view.backgroundColor = .green
+            destVC.tituloLabel?.text = dicas.fatura["nome"]!
+            destVC.textLabel?.text = dicas.fatura["desc"]!
+        }
+    }
+    
+}
+
+
+class DicasChildView: UIViewController {
+    @IBOutlet weak var tituloLabel: UILabel!
+    @IBOutlet weak var textLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .blue
+        tituloLabel?.text = "Padrão"
+        textLabel?.backgroundColor = .none
+    }
+    
+    @IBAction func back(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
