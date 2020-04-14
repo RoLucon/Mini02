@@ -71,8 +71,8 @@ class Investimento {
     }
     func resetSave(){
         UserDefaults.standard.removeObject(forKey: "Investimento.investimentoSelecionado")
-        UserDefaults.standard.removeObject(forKey: "nvestimento.aplicada")
-        UserDefaults.standard.removeObject(forKey: "nvestimento.imposto")
+        UserDefaults.standard.removeObject(forKey: "Investimento.aplicada")
+        UserDefaults.standard.removeObject(forKey: "Investimento.imposto")
         UserDefaults.standard.removeObject(forKey: "Investimento.bruto")
         UserDefaults.standard.removeObject(forKey: "Investimento.lucro")
         UserDefaults.standard.removeObject(forKey: "Investimento.liquido")
