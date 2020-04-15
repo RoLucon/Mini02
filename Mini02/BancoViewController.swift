@@ -53,13 +53,16 @@ class BancoViewController: UIViewController {
     }
     
     @IBAction func BackButton(_ sender: Any) {
+        let nome = Notification.Name(rawValue: atualizaFalaNotificationKey)
+        NotificationCenter.default.post(name: nome, object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     
     
     @IBAction func ConfirmarButton(_ sender: Any) {
         
-                
+            let nome = Notification.Name(rawValue: atualizaFalaNotificationKey)
+            NotificationCenter.default.post(name: nome, object: nil)
         if (GuardarTextField.hasText) {
             valor = GuardarTextField.text?.replacingOccurrences(of: ",", with: ".")
             let total = (valor as NSString).floatValue
