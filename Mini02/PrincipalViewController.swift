@@ -258,21 +258,27 @@ class Investe: UIViewController{
         saldoDisp.text = String(format: "Saldo disponível: R$ %.2f", temp!)
     }
     @IBAction func confirmaInvestimento(_ sender: UIButton) {
-        let investido : String = vlrInvestido.text!
-        let temp:Float? = personagem.mexerDinheiro(valor: nil)
+        if(vlrInvestido.hasText){
+            let investido1 : String! = vlrInvestido.text?.replacingOccurrences(of: ",", with: ".")
+            let investido = (investido1 as NSString).floatValue
+            let temp:Float? = personagem.mexerDinheiro(valor: nil)
         
-        if (temp! < Float(investido)!) {
-            saldoIndisponivel.textColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.9)
+            if (temp! < investido){
+                saldoIndisponivel.textColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.9)
+            }
+            else{
+                investimento.setAplicada(investimento.getAplicada() + Double(investido))
+                investimento.setBruto(investimento.getBruto() + Double(investido))
+                _ = personagem.mexerDinheiro(valor: -1 * investido)
+                let nome = Notification.Name(rawValue: atualizaRendimentosNotificationKey)
+                NotificationCenter.default.post(name: nome, object: nil)
+                self.dismiss(animated: true, completion: nil)
+            }
+            atualizaSaldoDispo()
         }
         else{
-            investimento.setAplicada(investimento.getAplicada() + Double(investido)!)
-            investimento.setBruto(investimento.getBruto() + Double(investido)!)
-            _ = personagem.mexerDinheiro(valor: -1 * Float(investido)!)
-            let nome = Notification.Name(rawValue: atualizaRendimentosNotificationKey)
-            NotificationCenter.default.post(name: nome, object: nil)
             self.dismiss(animated: true, completion: nil)
         }
-        atualizaSaldoDispo()
     }
     
 }
@@ -296,24 +302,30 @@ class saque: UIViewController{
         SaldoSaque.text = String(format:"Saldo disponível: R$ %.2f",investimento.getBruto() - investimento.getImposto())
     }
     @IBAction func ConfirmaSaque(_ sender: UIButton) {
-        let Saque : String = VlrSaque.text!
-        let disp = investimento.getBruto() - investimento.getImposto()
-        if (disp < Double(Saque)!) {
-            SaldoIndisp.textColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.9)
+        if(VlrSaque.hasText){
+            let Saque1 : String! = VlrSaque.text?.replacingOccurrences(of: ",", with: ".")
+            let Saque = (Saque1 as NSString).floatValue
+            let disp = investimento.getBruto() - investimento.getImposto()
+            if (disp < Double(Saque)) {
+                SaldoIndisp.textColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.9)
+            }
+            else{
+                let percent = 1 - Double(Saque)/(disp)
+                investimento.setBruto(investimento.getBruto() * percent)
+                investimento.setImposto(investimento.getImposto() * percent)
+                investimento.setAplicada(investimento.getAplicada() * percent)
+                investimento.setLucro(investimento.getLucro() * percent)
+    
+                _=personagem.mexerDinheiro(valor: Saque)
+                let nome = Notification.Name(rawValue: atualizaRendimentosNotificationKey)
+                NotificationCenter.default.post(name: nome, object: nil)
+            }
+            atualizaSaldoDispo()
+            self.dismiss(animated: true, completion: nil)
         }
         else{
-            let percent = 1 - Double(Saque)!/(disp)
-            investimento.setBruto(investimento.getBruto() * percent)
-            investimento.setImposto(investimento.getImposto() * percent)
-            investimento.setAplicada(investimento.getAplicada() * percent)
-            investimento.setLucro(investimento.getLucro() * percent)
-    
-            _=personagem.mexerDinheiro(valor: Float(Saque)!)
-            let nome = Notification.Name(rawValue: atualizaRendimentosNotificationKey)
-            NotificationCenter.default.post(name: nome, object: nil)
+            self.dismiss(animated: true, completion: nil)
         }
-        atualizaSaldoDispo()
-        self.dismiss(animated: true, completion: nil)
     }
     
 }
