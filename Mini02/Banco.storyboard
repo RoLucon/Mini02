@@ -1211,6 +1211,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="rIz-oJ-rdK" secondAttribute="trailing" constant="32" id="lSJ-qG-mxI"/>
                             <constraint firstAttribute="bottomMargin" secondItem="CUX-03-xcy" secondAttribute="bottom" constant="32" id="xIW-Q9-oE5"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="iyz-Tq-M3A"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="10"/>
@@ -1229,7 +1230,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Usl-gZ-DIe"/>
-        <segue reference="Z3r-Bt-wUZ"/>
+        <segue reference="ENy-2t-sxU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>

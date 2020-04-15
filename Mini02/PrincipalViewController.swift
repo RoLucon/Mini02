@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
   
+
     @IBAction func configuracao(_ sender: Any) {
         let confgView = ConfigView(frame: view.frame, viewController: self)
         view.addSubview(confgView)
@@ -319,9 +320,9 @@ class saque: UIViewController{
                 _=personagem.mexerDinheiro(valor: Saque)
                 let nome = Notification.Name(rawValue: atualizaRendimentosNotificationKey)
                 NotificationCenter.default.post(name: nome, object: nil)
+                self.dismiss(animated: true, completion: nil)
             }
             atualizaSaldoDispo()
-            self.dismiss(animated: true, completion: nil)
         }
         else{
             self.dismiss(animated: true, completion: nil)
