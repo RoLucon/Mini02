@@ -454,6 +454,9 @@
                                         <rect key="frame" x="78" y="0.0" width="131.5" height="61.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="valorAlterado:" destination="aoU-Qn-GU2" eventType="editingChanged" id="JB7-IW-s0Q"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>

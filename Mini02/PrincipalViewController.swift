@@ -236,7 +236,8 @@ class Investimentos: UIViewController {
 }
 
 class Investe: UIViewController{
-    
+    var valorGuardado:Int = 0
+    var contador:Int = 0
     let investimento: Investimento = Investimento()
     
     let personagem: Personagem = Personagem()
@@ -247,20 +248,39 @@ class Investe: UIViewController{
     
     @IBOutlet weak var saldoIndisponivel: UILabel!
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         atualizaSaldoDispo()
         
-        // Do any additional setup after loading the view.
     }
+    
     func atualizaSaldoDispo(){
         let temp:Float? = personagem.mexerDinheiro(valor: nil)
         saldoDisp.text = String(format: "Saldo disponível: R$ %.2f", temp!)
     }
+    
+    @IBAction func valorAlterado(_ sender: Any) {
+        let last = (vlrInvestido.text?.last)!
+        if vlrInvestido.text!.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil {
+            let count:Int = vlrInvestido.text?.count as! Int
+            if  count > contador {
+            if let valor = Double(String(last)) {
+                valorGuardado = valorGuardado * 10 + Int(valor)
+            }
+            } else {
+                if valorGuardado % 10 > 0 {
+                    let mod:Int = valorGuardado % 10
+                    valorGuardado = (valorGuardado - mod) / 10
+                } else {
+                    valorGuardado = valorGuardado / 10
+                }
+            }
+        }
+        let aux: Double = Double(valorGuardado) / 100
+        vlrInvestido.text = String(aux)
+        contador = vlrInvestido.text?.count as! Int
+    }
+    
     @IBAction func confirmaInvestimento(_ sender: UIButton) {
         if(vlrInvestido.hasText){
             let investido1 : String! = vlrInvestido.text?.replacingOccurrences(of: ",", with: ".")
