@@ -241,10 +241,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m85-7V-G4e">
-                                <rect key="frame" x="35" y="64" width="21" height="22"/>
+                                <rect key="frame" x="35" y="64" width="20" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system">
+                                <state key="normal" image="arrow.turn.down.left" catalog="system">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -455,7 +455,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-0Y-dgr">
                                         <rect key="frame" x="78" y="0.0" width="131.5" height="61.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -574,7 +574,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-Kc-kba">
                                         <rect key="frame" x="69" y="0.0" width="131.5" height="61.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -644,7 +644,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrow.turn.down.left" catalog="system" width="128" height="99"/>
         <image name="triangulo" width="351" height="316"/>
     </resources>
 </document>
