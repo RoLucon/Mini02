@@ -454,7 +454,10 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-0Y-dgr">
                                         <rect key="frame" x="78" y="0.0" width="131.5" height="61.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>                                        
+                                        <connections>
+                                            <action selector="valorAlterado:" destination="aoU-Qn-GU2" eventType="editingChanged" id="JB7-IW-s0Q"/>
+                                        </connections>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
@@ -574,6 +577,9 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-Kc-kba">
                                         <rect key="frame" x="69" y="0.0" width="131.5" height="61.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <connections>
+                                            <action selector="valorAlterado:" destination="1AX-JT-mP3" eventType="editingChanged" id="7T5-jf-Ar2"/>
+                                        </connections>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue"/>
                                     </textField>
                                 </subviews>
