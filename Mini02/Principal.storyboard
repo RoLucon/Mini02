@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xm2-Ad-2bH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -161,15 +161,24 @@
                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRW-qB-wQp">
+                                <rect key="frame" x="20" y="48" width="146" height="52"/>
+                                <connections>
+                                    <segue destination="eKD-Yn-BDf" kind="show" id="JMt-2s-C6P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1QW-iz-3Zu" firstAttribute="top" secondItem="2rk-os-sVg" secondAttribute="bottom" constant="5" id="0fq-Ho-H2Z"/>
+                            <constraint firstItem="nne-Vg-GkN" firstAttribute="trailing" secondItem="rRW-qB-wQp" secondAttribute="trailing" constant="248" id="2Ah-o7-LpV"/>
+                            <constraint firstItem="rRW-qB-wQp" firstAttribute="leading" secondItem="nne-Vg-GkN" secondAttribute="leading" constant="20" id="3UH-ym-m5k"/>
                             <constraint firstItem="7Rk-Wq-8sN" firstAttribute="leading" secondItem="nne-Vg-GkN" secondAttribute="leading" constant="20" id="74r-kA-xy3"/>
                             <constraint firstItem="nne-Vg-GkN" firstAttribute="trailing" secondItem="7Rk-Wq-8sN" secondAttribute="trailing" constant="20" id="F2n-jZ-lzr"/>
                             <constraint firstItem="2rk-os-sVg" firstAttribute="leading" secondItem="uJ6-wU-sig" secondAttribute="trailing" constant="10" id="KeB-94-gta"/>
                             <constraint firstItem="1QW-iz-3Zu" firstAttribute="leading" secondItem="uJ6-wU-sig" secondAttribute="trailing" constant="10" id="TkZ-JR-bwM"/>
                             <constraint firstItem="T4C-mT-OGQ" firstAttribute="leading" secondItem="uJ6-wU-sig" secondAttribute="trailing" constant="10" id="U5Z-DM-eYT"/>
+                            <constraint firstItem="rRW-qB-wQp" firstAttribute="top" secondItem="nne-Vg-GkN" secondAttribute="top" constant="4" id="bBZ-n4-9Zq"/>
                             <constraint firstItem="nne-Vg-GkN" firstAttribute="trailing" secondItem="h6z-AT-5zW" secondAttribute="trailing" constant="20" id="cEO-fa-m63"/>
                             <constraint firstItem="7Rk-Wq-8sN" firstAttribute="top" secondItem="Jod-eX-8QI" secondAttribute="top" constant="60" id="cxP-f7-Lza"/>
                             <constraint firstItem="h6z-AT-5zW" firstAttribute="top" secondItem="uJ6-wU-sig" secondAttribute="bottom" id="dRe-5s-1tY"/>
@@ -177,6 +186,7 @@
                             <constraint firstItem="2rk-os-sVg" firstAttribute="top" secondItem="7Rk-Wq-8sN" secondAttribute="bottom" constant="180" id="h4W-Y4-BdW"/>
                             <constraint firstItem="uJ6-wU-sig" firstAttribute="leading" secondItem="nne-Vg-GkN" secondAttribute="leading" constant="30" id="i49-jV-Fqu"/>
                             <constraint firstItem="h6z-AT-5zW" firstAttribute="leading" secondItem="nne-Vg-GkN" secondAttribute="leading" constant="20" id="jLG-bH-a8M"/>
+                            <constraint firstItem="uJ6-wU-sig" firstAttribute="top" secondItem="rRW-qB-wQp" secondAttribute="bottom" constant="37" id="oLU-vO-DfR"/>
                             <constraint firstItem="T4C-mT-OGQ" firstAttribute="top" secondItem="1QW-iz-3Zu" secondAttribute="bottom" constant="5" id="y55-1q-Yjm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nne-Vg-GkN"/>
@@ -193,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OjF-ke-z21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3244.9275362318845" y="124.55357142857142"/>
+            <point key="canvasLocation" x="3143" y="55"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ps8-ag-jZh">
@@ -530,6 +540,9 @@
             <point key="canvasLocation" x="2334.7826086956525" y="124.55357142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EnH-U6-gi6"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Banco1" width="44" height="38"/>
         <image name="C1" width="178" height="146"/>
