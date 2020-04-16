@@ -99,8 +99,9 @@ class Investimentos: UIViewController {
     
     let notificacao = Notification.Name(rawValue: atualizaRendimentosNotificationKey)
     
-    @IBOutlet weak var explicacao: UILabel!
-   
+    //@IBOutlet weak var explicacao: UILabel!
+    @IBOutlet weak var explicacao: UITextView!
+    
     @IBOutlet weak var tipoInvestimento: UILabel!
     @IBOutlet weak var aplicado: UILabel!
     
