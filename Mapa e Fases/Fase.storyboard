@@ -224,6 +224,10 @@
                         <outlet property="ajuda" destination="qkq-9j-lQg" id="vzH-D3-8Ju"/>
                         <outlet property="efeito" destination="BtI-9d-bDf" id="uqg-xM-cIO"/>
                         <outlet property="pop" destination="E2M-VY-Qtj" id="i2c-Ut-WBm"/>
+                        <outlet property="questao" destination="Hta-gJ-lTF" id="pcK-qo-yzd"/>
+                        <outlet property="resp1" destination="YUF-so-cLA" id="ty7-f5-XCX"/>
+                        <outlet property="resp2" destination="fQa-7L-mHv" id="oRN-xF-TJ8"/>
+                        <outlet property="resp3" destination="CgO-xU-LH8" id="eW7-Is-TSx"/>
                         <segue destination="lda-wH-PEg" kind="show" identifier="Finaliza" id="H8F-TB-Hab"/>
                         <segue destination="rZ0-0T-hWv" kind="show" identifier="Continua" id="6q2-Fb-26J"/>
                     </connections>
