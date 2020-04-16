@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
+var p = 1
 var i : intmax_t!
 var c = 0 //Representa a fala inicial da fase
-//Todas as falas do jogo
+//Todas as falas do jogo em ordem de aparição
 let texto = [
 1: "fala1",
 2: "fala2",
@@ -45,8 +45,38 @@ let texto = [
 31: "fala31",
 32: "fala32",
 33: "fala33",]
+
+//Todas perguntas do jogo e as respostas possíveis em ordem
+let per = [
+1: "Pergunta 1", 2: "Resposta 1 p1", 3: "Resposta 2 p1", 4: "Resposta 3 p1",
+5: "Pergunta 2", 6: "Resposta 1 p2", 7: "Resposta 2 p2", 8: "Resposta 3 p2",
+9: "Pergunta 3", 10: "Resposta 1 p3", 11: "Resposta 2 p3", 12: "Resposta 3 p3",
+13: "Pergunta 4", 14: "Resposta 1 p4", 15: "Resposta 2 p4", 16: "Resposta 3 p4",
+17: "Pergunta 5", 18: "Resposta 1 p5", 19: "Resposta 2 p5", 20: "Resposta 3 p5",
+21: "Pergunta 6", 22: "Resposta 1 p6", 23: "Resposta 2 p6", 24: "Resposta 3 p6",
+25: "Pergunta 7", 26: "Resposta 1 p7", 27: "Resposta 2 p7", 28: "Resposta 3 p7",
+29: "Pergunta 8", 30: "Resposta 1 p8", 31: "Resposta 2 p8", 32: "Resposta 3 p8",
+33: "Pergunta 9", 34: "Resposta 1 p9", 35: "Resposta 2 p9", 36: "Resposta 3 p9",
+37: "Pergunta 10", 38: "Resposta 1 p10", 39: "Resposta 2 p10", 40: "Resposta 3 p10",
+41: "Pergunta 11", 42: "Resposta 1 p11", 43: "Resposta 2 p11", 44: "Resposta 3 p11",
+45: "Pergunta 12", 46: "Resposta 1 p12", 47: "Resposta 2 p12", 48: "Resposta 3 p12",
+49: "Pergunta 13", 50: "Resposta 1 p13", 51: "Resposta 2 p13", 52: "Resposta 3 p13",
+53: "Pergunta 14", 54: "Resposta 1 p14", 55: "Resposta 2 p14", 56: "Resposta 3 p14",
+57: "Pergunta 15", 58: "Resposta 1 p15", 59: "Resposta 2 p15", 60: "Resposta 3 p15",
+61: "Pergunta 16", 62: "Resposta 1 p16", 63: "Resposta 2 p16", 64: "Resposta 3 p16",
+65: "Pergunta 17", 66: "Resposta 1 p17", 67: "Resposta 2 p17", 68: "Resposta 3 p17",
+69: "Pergunta 18", 70: "Resposta 1 p18", 71: "Resposta 2 p18", 72: "Resposta 3 p18",
+73: "Pergunta 19", 74: "Resposta 1 p19", 75: "Resposta 2 p19", 76: "Resposta 3 p19",
+77: "Pergunta 20", 78: "Resposta 1 p20", 79: "Resposta 2 p20", 80: "Resposta 3 p20",
+81: "Pergunta 21", 82: "Resposta 1 p21", 83: "Resposta 2 p21", 84: "Resposta 3 p21",
+85: "Pergunta 22", 86: "Resposta 1 p22", 87: "Resposta 2 p22", 88: "Resposta 3 p22",
+89: "Pergunta 23", 90: "Resposta 1 p23", 91: "Resposta 2 p23", 92: "Resposta 3 p23",
+]
+
 var prog = 1 // Representa o progresso do jogador
 //Arrays que definem o posicionamento das perguntas durante os dialogos
+//Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
+//Colocar 0 caso já tenha acabado
 var q = Array(repeating: 0, count:4)
 var q1 = [1, 3, 5, 0]
 var q2 = [6, 7, 8, 9]
@@ -59,11 +89,23 @@ var q8 = [30, 31, 32, 33]
 
 class popup: UIViewController{
     
-    
+    @IBOutlet weak var questao: UILabel!
+    @IBOutlet weak var resp1: UIButton!
+    @IBOutlet weak var resp2: UIButton!
+    @IBOutlet weak var resp3: UIButton!
     @IBOutlet weak var ajuda: UILabel!
     @IBOutlet var pop: UIView!
     @IBOutlet weak var efeito: UIVisualEffectView!
     var effect:UIVisualEffect!
+    
+    //Funçào que apresenta a pergunta e as respostas possíveis
+    func mostraper(){
+        questao.text = per[p]
+        resp1.setTitle(per[p+1], for: .normal)
+        resp2.setTitle(per[p+2], for: .normal)
+        resp3.setTitle(per[p+3], for: .normal)
+        p += 4
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +113,7 @@ class popup: UIViewController{
         effect = efeito.effect
         efeito.effect = nil
         pop.layer.cornerRadius = 5
+        mostraper()
     }
     
     func anima(){
@@ -158,8 +201,15 @@ class selecf: UIViewController{
     @IBOutlet weak var fase7: UIButton!
     @IBOutlet weak var fase8: UIButton!
     
+    func dialogo(){
+        fala?.text = texto[c]
+        c += 1
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        dialogo()
         //Progresso de fases
         switch prog {
         case 1:
@@ -194,6 +244,7 @@ class selecf: UIViewController{
             i = 1
             q = q1
             c = q[0]
+            //fala?.text = texto[c]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
             print("ERRO")
@@ -301,8 +352,7 @@ class selecf: UIViewController{
     //Quantidades de caixa de dialogo terão
     @IBAction func telas(_ sender: Any) {
         if c <= q[i]{
-            fala?.text = texto[c]
-            c += 1
+            dialogo()
         }
         else{
             self.performSegue(withIdentifier: "Passa", sender: self)

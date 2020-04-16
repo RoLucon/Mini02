@@ -41,6 +41,8 @@ class BancoViewController: UIViewController {
     }
     
     @IBAction func BackButton(_ sender: Any) {
+        let nome = Notification.Name(rawValue: atualizaFalaNotificationKey)
+        NotificationCenter.default.post(name: nome, object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -116,9 +118,8 @@ class PoupancaView: UIViewController {
     
     
     @IBAction func ConfirmarButton(_ sender: Any) {
-        
-                
-        if (ValorTextField.hasText && action == "guardar") {
+      
+            if (ValorTextField.hasText && action == "guardar") {
             valor = ValorTextField.text?.replacingOccurrences(of: ",", with: ".")
             let total = (valor as NSString).floatValue
             
