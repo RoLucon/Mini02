@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         atualizaNome()
         atualizaSemestre()
         atualizaSituacao()
+        observer()
         // Do any additional setup after loading the view.
     }
   
@@ -59,14 +60,15 @@ class ViewController: UIViewController {
     }
   
     @objc func atualizarFala(notificacao: NSNotification){
+        print("a notificacao chegou")
         atualizaSaldo()
         atualizaFala()
     }
     //Funcao para atualizar o saldo ao iniciar a tela
     func atualizaSaldo(){
+        print("FOI")
         personagem = Personagem()
         let temp:Float? = personagem.mexerDinheiro(valor: nil)
-        //_ = personagem.mexerDinheiro(valor: 60.0)
         Dinheiro.text = String(format:"R$ %.2f",temp!)
     }
     //Funcao para atualizar a fala da personagem ao carregar a tela
@@ -146,6 +148,7 @@ class Investimentos: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.atualizaRendimentoVlr(notificacao:)), name: notificacao, object: nil)
     }
     @objc func atualizaRendimentoVlr(notificacao: NSNotification){
+        print("a notificacao chegou")
         atualizaRendimento()
     }
     
