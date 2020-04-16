@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//Mudar "a" e "p" nas funcoes refazer, f1, f2, f3, f4, f5, f6, f7 e f8 após ter o valor inicial delas para cada fase
+var a = 0
 var p = 1
 var i : intmax_t!
 var c = 0 //Representa a fala inicial da fase
@@ -73,6 +75,33 @@ let per = [
 89: "Pergunta 23", 90: "Resposta 1 p23", 91: "Resposta 2 p23", 92: "Resposta 3 p23",
 ]
 
+
+//Todas as explicações presentes nas fases
+let help = [
+"Ajuda 1 p1", "Ajuda 2 p1", "Ajuda 3 p1",
+"Ajuda 1 p2", "Ajuda 2 p2", "Ajuda 3 p2",
+"Ajuda 1 p3", "Ajuda 2 p3", "Ajuda 3 p3",
+"Ajuda 1 p4", "Ajuda 2 p4", "Ajuda 3 p4",
+"Ajuda 1 p5", "Ajuda 2 p5", "Ajuda 3 p5",
+"Ajuda 1 p6", "Ajuda 2 p6", "Ajuda 3 p6",
+"Ajuda 1 p7", "Ajuda 2 p7", "Ajuda 3 p7",
+"Ajuda 1 p8", "Ajuda 2 p8", "Ajuda 3 p8",
+"Ajuda 1 p9", "Ajuda 2 p9", "Ajuda 3 p9",
+"Ajuda 1 p10", "Ajuda 2 p10", "Ajuda 3 p10",
+"Ajuda 1 p11", "Ajuda 2 p11", "Ajuda 3 p11",
+"Ajuda 1 p12", "Ajuda 2 p12", "Ajuda 3 p12",
+"Ajuda 1 p13", "Ajuda 2 p13", "Ajuda 3 p13",
+"Ajuda 1 p14", "Ajuda 2 p14", "Ajuda 3 p14",
+"Ajuda 1 p15", "Ajuda 2 p15", "Ajuda 3 p15",
+"Ajuda 1 p16", "Ajuda 2 p16", "Ajuda 3 p16",
+"Ajuda 1 p17", "Ajuda 2 p17", "Ajuda 3 p17",
+"Ajuda 1 p18", "Ajuda 2 p18", "Ajuda 3 p18",
+"Ajuda 1 p19", "Ajuda 2 p19", "Ajuda 3 p19",
+"Ajuda 1 p20", "Ajuda 2 p20", "Ajuda 3 p20",
+"Ajuda 1 p21", "Ajuda 2 p21", "Ajuda 3 p21",
+"Ajuda 1 p22", "Ajuda 2 p22", "Ajuda 3 p22",
+"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
+]
 var prog = 1 // Representa o progresso do jogador
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
@@ -143,18 +172,18 @@ class popup: UIViewController{
     
     @IBAction func p1(_ sender: AnyObject) {
         anima()
-        ajuda.text = "ajuda 1"
+        ajuda.text = help[a]
     }
     
     @IBAction func p2(_ sender: Any) {
         anima()
-        ajuda.text = "ajuda 2"
+        ajuda.text = help[a+1]
     }
     
     
     @IBAction func p3(_ sender: Any) {
         anima()
-        ajuda.text = "ajuda 3"
+        ajuda.text = help[a+2]
     }
     
     @IBAction func fecha(_ sender: AnyObject) {
@@ -177,14 +206,17 @@ class popup: UIViewController{
     }
     
     @IBAction func r1(_ sender: AnyObject) {
+        a += 3
         perguntas()
     }
     
     @IBAction func r2(_ sender: AnyObject) {
+        a += 3
         perguntas()
     }
     
     @IBAction func r3(_ sender: AnyObject) {
+        a += 3
         perguntas()
     }
 }
@@ -241,6 +273,8 @@ class selecf: UIViewController{
     @IBAction func f1(_ sender: AnyObject) {
         switch prog {
         case 1:
+            p = 1
+            a = 0
             i = 1
             q = q1
             c = q[0]
@@ -255,6 +289,8 @@ class selecf: UIViewController{
     @IBAction func f2(_ sender: Any) {
         switch prog {
         case 2:
+            p = 9
+            a = 6
             i = 1
             q = q2
             c = q[0]
@@ -268,6 +304,8 @@ class selecf: UIViewController{
     @IBAction func f3(_ sender: AnyObject) {
         switch prog {
         case 3:
+            p = 21
+            a = 15
             i = 1
             q = q3
             c = q[0]
@@ -281,6 +319,8 @@ class selecf: UIViewController{
     @IBAction func f4(_ sender: AnyObject) {
         switch prog {
         case 4:
+            p = 33
+            a = 24
             i = 1
             q = q4
             c = q[0]
@@ -294,6 +334,8 @@ class selecf: UIViewController{
     @IBAction func f5(_ sender: AnyObject) {
         switch prog {
         case 5:
+            p = 45
+            a = 33
             i = 1
             q = q5
             c = q[0]
@@ -307,6 +349,8 @@ class selecf: UIViewController{
     @IBAction func f6(_ sender: AnyObject) {
         switch prog {
         case 6:
+            p = 57
+            a = 42
             i = 1
             q = q6
             c = q[0]
@@ -320,6 +364,8 @@ class selecf: UIViewController{
     @IBAction func f7(_ sender: AnyObject) {
         switch prog {
         case 7:
+            p = 69
+            a = 51
             i = 1
             q = q7
             c = q[0]
@@ -333,6 +379,8 @@ class selecf: UIViewController{
     @IBAction func f8(_ sender: AnyObject) {
         switch prog {
         case 8:
+            p = 81
+            a = 60
             i = 1
             q = q8
             c = q[0]
@@ -347,6 +395,36 @@ class selecf: UIViewController{
         prog -= 1
         c = q[0]
         i = 1
+        
+        switch prog {
+        case 1:
+            p = 1
+            a = 0
+        case 2:
+            p = 9
+            a = 6
+        case 3:
+            p = 21
+            a = 15
+        case 4:
+            p = 33
+            a = 24
+        case 5:
+            p = 45
+            a = 33
+        case 6:
+            p = 57
+            a = 42
+        case 7:
+            p = 69
+            a = 51
+        case 8:
+            p = 81
+            a = 60
+        default:
+            print("UÉ")
+        }
+        
     }
     
     //Quantidades de caixa de dialogo terão
