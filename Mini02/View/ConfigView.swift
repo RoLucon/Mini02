@@ -50,7 +50,8 @@ class ConfigView: UIView {
         
         backgroundColor = .clear
         
-        let resetBtt = buttons(name: "Reset Button")
+        let resetBtt = buttons(name: "Nova Campanha")
+        resetBtt.addTarget(self, action: #selector(reset), for: .touchUpInside)
         let suporteBtt = buttons(name: "Suporte Button")
         
         let audioView = subConfig(name: "AUDIO", switcheNames: ["Campanha", "Sidequest"])
@@ -108,8 +109,13 @@ class ConfigView: UIView {
     }
     
     @objc func reset(){
-        let alert = UIAlertController(title: "Reset", message: "Tem certeza que quer resetar seu save?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(UIAlertAction) in
+        let alert = UIAlertController(title: "Nova Campanha",
+                      message: "Todo o progresso atual sera perdido e uma nova campanha sera iniciada. Deseja continuar?",
+                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: {(UIAlertAction) in
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: {(UIAlertAction) in
             let personagem = Personagem()
             personagem.resetSave()
             let investimento = Investimento()
@@ -120,9 +126,6 @@ class ConfigView: UIView {
             self.vc?.present(viewController, animated: true, completion: {
                 self.dismiss()
             })
-        }))
-        alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: {(UIAlertAction) in
-            
         }))
         vc?.present(alert, animated: true, completion: nil)
         
@@ -200,7 +203,6 @@ class ConfigView: UIView {
         btt.layer.cornerRadius = 32
         btt.translatesAutoresizingMaskIntoConstraints = false
         btt.backgroundColor = .black
-        btt.addTarget(self, action: #selector(reset), for: .touchUpInside)
         return btt
     }
     
