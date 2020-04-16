@@ -13,23 +13,17 @@ class BancoViewController: UIViewController {
     //Banco
     @IBOutlet weak var SaldoBanco: UILabel!
     @IBOutlet weak var SaldoPoupanca: UILabel!
-    
-    //Poupança
-    @IBOutlet weak var SaldoLabel: UILabel!
-    @IBOutlet weak var SaldoDisponivel: UILabel!
-    @IBOutlet weak var GuardarTextField: UITextField!
-    @IBOutlet weak var RetirarTextField: UITextField!
-    
+
+
     var banco = Personagem().mexerDinheiro(valor: nil)
-    var valor: String!
-    var valor2: String!
     
-    //Dicas
     enum Segues {
         static let dicaFatura = "dicaFatura"
         static let dicaConta = "dicaConta"
         static let dicaBanco = "dicaBanco"
         static let dicaPoupanca = "dicaPoupanca"
+        static let guardarPoupanca = "poupGuardar"
+        static let retirarPoupanca = "poupRetirar"
     }
 
 
@@ -38,13 +32,7 @@ class BancoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         atualizarLabel()
-        GuardarTextField?.attributedPlaceholder = NSAttributedString(string: "0,00", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        RetirarTextField?.attributedPlaceholder = NSAttributedString(string: "0,00", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        GuardarTextField?.delegate = self
-        RetirarTextField?.delegate = self
-        
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarSaldo(n:)), name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
-        
     }
     
     @objc func atualizarSaldo(n:NSNotification) {
@@ -58,88 +46,14 @@ class BancoViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    @IBAction func ConfirmarButton(_ sender: Any) {
-        
-            let nome = Notification.Name(rawValue: atualizaFalaNotificationKey)
-            NotificationCenter.default.post(name: nome, object: nil)
-        if (GuardarTextField.hasText) {
-            valor = GuardarTextField.text?.replacingOccurrences(of: ",", with: ".")
-            let total = (valor as NSString).floatValue
-            
-            if (total <= banco!) {
-                 _ = Personagem().mexerDinheiro(valor: -total)
-                 _ = Personagem().poupanca(valor: total)
-                GuardarTextField.text = ""
-                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
-
-                
-            } else {
-                let alert = UIAlertController(title: "Saldo insuficiente", message: nil, preferredStyle: .alert)
-                let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
-                alert.addAction(cancelAction)
-                self.present(alert, animated: true, completion: nil)
-            }
-            
-        } else if(RetirarTextField.hasText) {
-            valor2 = RetirarTextField.text?.replacingOccurrences(of: ",", with: ".")
-            let total2 = (valor2 as NSString).floatValue
-            let poup = Personagem().poupanca(valor: nil)
-            
-            if (total2 <= poup!) {
-                 _ = Personagem().mexerDinheiro(valor: total2)
-                 _ = Personagem().poupanca(valor: -total2)
-                RetirarTextField.text = ""
-                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
-
-                
-            } else {
-                RetirarTextField.clearsOnBeginEditing = true
-                let alert = UIAlertController(title: "Saldo da poupança insuficiente", message: nil, preferredStyle: .alert)
-                let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
-                alert.addAction(cancelAction)
-                self.present(alert, animated: true, completion: nil)
-            }
-            
-        } else {
-           
-        }
-    }
-    
     func atualizarLabel() {
         let saldoConta = Personagem().mexerDinheiro(valor: nil)
         let poupanca = Personagem().poupanca(valor: nil)
         
         SaldoBanco?.text = "R$ " + String(format: "%.2f", saldoConta!).replacingOccurrences(of: ".", with: ",")
         SaldoPoupanca?.text = "R$ " + String(format: "%.2f", poupanca!).replacingOccurrences(of: ".", with: ",")
-        SaldoLabel?.text = String(format: "%.2f", poupanca!).replacingOccurrences(of: ".", with: ",")
-        SaldoDisponivel?.text = "Saldo disponível: R$ " + String(format: "%.2f", saldoConta!).replacingOccurrences(of: ".", with: ",")
-        
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        GuardarTextField?.resignFirstResponder()
-        RetirarTextField?.resignFirstResponder()
-    }
-    
-    func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        return true
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        valor = textField.text?.replacingOccurrences(of: ",", with: ".")
-        let total = (valor as NSString).floatValue
-        if(total > banco!) {
-            if (GuardarTextField.hasText) {
-                SaldoDisponivel.textColor = .red
-
-            }
             
-        } else {
-            SaldoDisponivel.textColor = .white
-        }
-    }
-        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segues.dicaFatura {
             let destVC = segue.destination as! DicasView
@@ -158,17 +72,118 @@ class BancoViewController: UIViewController {
             let destVC = segue.destination as! DicasView
             destVC.poupanca = "ToFirstChild"
         }
+        if segue.identifier == Segues.retirarPoupanca {
+            let destVC = segue.destination as! PoupancaView
+            destVC.action = "retirar"
+            destVC.saldo = Personagem().poupanca(valor: nil)!
+        }
+        if segue.identifier == Segues.guardarPoupanca {
+            let destVC = segue.destination as! PoupancaView
+            destVC.action = "guardar"
+            destVC.saldo = Personagem().mexerDinheiro(valor: nil)!
+        }
     }
     
 
 }
 
-
-extension BancoViewController : UITextFieldDelegate {
+extension PoupancaView : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+}
+
+class PoupancaView: UIViewController {
+    
+    @IBOutlet weak var actionLabel: UILabel!
+    @IBOutlet weak var SaldoDisponivel: UILabel!
+    @IBOutlet weak var ValorTextField: UITextField!
+    
+    var saldo: Float = 0
+    var banco = Personagem().mexerDinheiro(valor: nil)
+    var poupanca = Personagem().poupanca(valor: nil)
+    var valor: String!
+    var valor2: String!
+    
+    var action = "xxxx"
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        actionLabel.text = action
+        SaldoDisponivel?.text = "Saldo disponível: R$ " + String(format: "%.2f", saldo).replacingOccurrences(of: ".", with: ",")
+        ValorTextField?.delegate = self
+    }
+    
+    
+    @IBAction func ConfirmarButton(_ sender: Any) {
+      
+            if (ValorTextField.hasText && action == "guardar") {
+            valor = ValorTextField.text?.replacingOccurrences(of: ",", with: ".")
+            let total = (valor as NSString).floatValue
+            
+            if (total <= banco!) {
+                 _ = Personagem().mexerDinheiro(valor: -total)
+                 _ = Personagem().poupanca(valor: total)
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
+                self.dismiss(animated: true, completion: nil)
+
+                
+            } else {
+                let alert = UIAlertController(title: "Saldo da conta insuficiente", message: nil, preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
+                alert.addAction(cancelAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+        } else if(ValorTextField.hasText && action == "retirar") {
+            valor2 = ValorTextField.text?.replacingOccurrences(of: ",", with: ".")
+            let total2 = (valor2 as NSString).floatValue
+            let poup = Personagem().poupanca(valor: nil)
+            
+            if (total2 <= poup!) {
+                 _ = Personagem().mexerDinheiro(valor: total2)
+                 _ = Personagem().poupanca(valor: -total2)
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
+                self.dismiss(animated: true, completion: nil)
+
+                
+            } else {
+                ValorTextField.clearsOnBeginEditing = true
+                let alert = UIAlertController(title: "Saldo da poupança insuficiente", message: nil, preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
+                alert.addAction(cancelAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        ValorTextField?.resignFirstResponder()
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        valor = textField.text?.replacingOccurrences(of: ",", with: ".")
+        let total = (valor as NSString).floatValue
+        if(total > banco! && action == "guardar") {
+            if (ValorTextField.hasText) {
+                SaldoDisponivel.textColor = .red
+            }
+        } else if(total > poupanca! && action == "retirar") {
+            if (ValorTextField.hasText) {
+                SaldoDisponivel.textColor = .red
+            }
+        } else {
+            SaldoDisponivel.textColor = .black
+        }
+    }
+    
+    
 }
 
 
@@ -200,11 +215,6 @@ class DicasView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .red
-        /*let blurEffect = UIBlurEffect(style: .regular)
-        let visualEffectView = UIVisualEffectView(effect: blurEffect)
-        view.addSubview(visualEffectView)
-        view = visualEffectView*/
         view.backgroundColor = .none
     }
         
