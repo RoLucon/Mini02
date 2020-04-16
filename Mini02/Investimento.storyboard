@@ -576,6 +576,9 @@
                                         <rect key="frame" x="69" y="0.0" width="131.5" height="61.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="valorAlterado:" destination="1AX-JT-mP3" eventType="editingChanged" id="7T5-jf-Ar2"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>

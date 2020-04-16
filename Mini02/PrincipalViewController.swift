@@ -308,6 +308,8 @@ class Investe: UIViewController{
 }
 
 class saque: UIViewController{
+    var valorGuardado:Int = 0
+    var contador:Int = 0
     
     @IBOutlet weak var SaldoIndisp: UILabel!
     @IBOutlet weak var SaldoSaque: UILabel!
@@ -325,6 +327,29 @@ class saque: UIViewController{
     func atualizaSaldoDispo(){
         SaldoSaque.text = String(format:"Saldo disponível: R$ %.2f",investimento.getBruto() - investimento.getImposto())
     }
+    
+    @IBAction func valorAlterado(_ sender: Any) {
+        let last = (VlrSaque.text?.last)!
+        if VlrSaque.text!.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil {
+            let count:Int = VlrSaque.text?.count as! Int
+            if  count > contador {
+            if let valor = Double(String(last)) {
+                valorGuardado = valorGuardado * 10 + Int(valor)
+            }
+            } else {
+                if valorGuardado % 10 > 0 {
+                    let mod:Int = valorGuardado % 10
+                    valorGuardado = (valorGuardado - mod) / 10
+                } else {
+                    valorGuardado = valorGuardado / 10
+                }
+            }
+        }
+        let aux: Double = Double(valorGuardado) / 100
+        VlrSaque.text = String(aux)
+        contador = VlrSaque.text?.count as! Int
+    }
+    
     @IBAction func ConfirmaSaque(_ sender: UIButton) {
         if(VlrSaque.hasText){
             let Saque1 : String! = VlrSaque.text?.replacingOccurrences(of: ",", with: ".")
