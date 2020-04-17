@@ -279,6 +279,13 @@ class Investimentos: UIViewController {
     
 }
 
+extension Investe : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
 class Investe: UIViewController{
     var valorGuardado:Int = 0
     var contador:Int = 0
@@ -292,15 +299,52 @@ class Investe: UIViewController{
     
     @IBOutlet weak var saldoIndisponivel: UILabel!
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         atualizaSaldoDispo()
+        observer()
+        vlrInvestido?.delegate = self
         
+    }
+    func observer(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    @objc func keyboardShow(notification: NSNotification){
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
+            if let duration = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Double {
+                
+                UIView.animate(withDuration: duration){
+                    let bounds = UIScreen.main.bounds
+                    self.view.frame = CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.width, height: bounds.height - keyboardSize.height)
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    @objc func keyboardHide(notification: NSNotification){
+        if let duration = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Double {
+            UIView.animate(withDuration: duration){
+                self.view.frame = UIScreen.main.bounds
+                self.view.layoutIfNeeded()
+            }
+        }
     }
     
     func atualizaSaldoDispo(){
         let temp:Float? = personagem.mexerDinheiro(valor: nil)
         saldoDisp.text = String(format: "Saldo disponível: R$ %.2f", temp!)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        vlrInvestido?.resignFirstResponder()
+    }
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
     }
     
     @IBAction func valorAlterado(_ sender: Any) {
@@ -348,7 +392,13 @@ class Investe: UIViewController{
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
+}
+
+extension saque : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 class saque: UIViewController{
@@ -363,13 +413,52 @@ class saque: UIViewController{
     
     let personagem: Personagem = Personagem()
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         atualizaSaldoDispo()
+        observer()
+        VlrSaque?.delegate = self
         // Do any additional setup after loading the view.
     }
+    
+    func observer(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    @objc func keyboardShow(notification: NSNotification){
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
+            if let duration = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Double {
+                
+                UIView.animate(withDuration: duration){
+                    let bounds = UIScreen.main.bounds
+                    self.view.frame = CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.width, height: bounds.height - keyboardSize.height)
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    @objc func keyboardHide(notification: NSNotification){
+        if let duration = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Double {
+            UIView.animate(withDuration: duration){
+                self.view.frame = UIScreen.main.bounds
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
+    
     func atualizaSaldoDispo(){
         SaldoSaque.text = String(format:"Saldo disponível: R$ %.2f",investimento.getBruto() - investimento.getImposto())
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        VlrSaque?.resignFirstResponder()
+    }
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
     }
     
     @IBAction func valorAlterado(_ sender: Any) {
