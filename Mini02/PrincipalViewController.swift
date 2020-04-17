@@ -258,6 +258,13 @@ class Investimentos: UIViewController {
     
 }
 
+extension Investe : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
 class Investe: UIViewController{
     var valorGuardado:Int = 0
     var contador:Int = 0
@@ -274,12 +281,20 @@ class Investe: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         atualizaSaldoDispo()
+        vlrInvestido?.delegate = self
         
     }
     
     func atualizaSaldoDispo(){
         let temp:Float? = personagem.mexerDinheiro(valor: nil)
         saldoDisp.text = String(format: "Saldo disponível: R$ %.2f", temp!)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        vlrInvestido?.resignFirstResponder()
+    }
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
     }
     
     @IBAction func valorAlterado(_ sender: Any) {
@@ -327,7 +342,13 @@ class Investe: UIViewController{
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
+}
+
+extension saque : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 class saque: UIViewController{
@@ -345,10 +366,18 @@ class saque: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         atualizaSaldoDispo()
+        VlrSaque?.delegate = self
         // Do any additional setup after loading the view.
     }
     func atualizaSaldoDispo(){
         SaldoSaque.text = String(format:"Saldo disponível: R$ %.2f",investimento.getBruto() - investimento.getImposto())
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        VlrSaque?.resignFirstResponder()
+    }
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
     }
     
     @IBAction func valorAlterado(_ sender: Any) {
