@@ -426,7 +426,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrB-g5-9p0">
-                                <rect key="frame" x="136.5" y="726" width="141" height="36"/>
+                                <rect key="frame" x="136.5" y="682" width="141" height="36"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="   CONFIRMAR   ">
@@ -454,11 +454,11 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-0Y-dgr">
                                         <rect key="frame" x="78" y="0.0" width="131.5" height="61.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>                                        
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <action selector="valorAlterado:" destination="aoU-Qn-GU2" eventType="editingChanged" id="JB7-IW-s0Q"/>
                                         </connections>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -486,10 +486,10 @@
                             <constraint firstItem="la4-2F-eNY" firstAttribute="trailing" secondItem="JBe-Ja-MD6" secondAttribute="trailing" constant="81" id="Va9-SA-cgv"/>
                             <constraint firstItem="oae-sx-Ls2" firstAttribute="top" secondItem="la4-2F-eNY" secondAttribute="top" constant="80" id="YAS-oN-bxt"/>
                             <constraint firstItem="Klg-zP-dqT" firstAttribute="centerX" secondItem="eJn-Pn-ARz" secondAttribute="centerX" id="YGB-nh-5ht"/>
-                            <constraint firstItem="la4-2F-eNY" firstAttribute="bottom" secondItem="UrB-g5-9p0" secondAttribute="bottom" constant="46" id="Yfx-tD-OnS"/>
                             <constraint firstItem="3gt-Hj-Smq" firstAttribute="leading" secondItem="la4-2F-eNY" secondAttribute="leading" constant="84" id="bi9-b7-06I"/>
                             <constraint firstItem="JBe-Ja-MD6" firstAttribute="leading" secondItem="frb-Wn-QIB" secondAttribute="trailing" constant="1" id="bst-bP-ll1"/>
                             <constraint firstItem="frb-Wn-QIB" firstAttribute="leading" secondItem="jQA-7g-Ago" secondAttribute="trailing" constant="15" id="eSQ-CU-eJg"/>
+                            <constraint firstItem="la4-2F-eNY" firstAttribute="bottom" secondItem="UrB-g5-9p0" secondAttribute="bottom" constant="90" id="frM-bd-k87"/>
                             <constraint firstItem="3gt-Hj-Smq" firstAttribute="top" secondItem="la4-2F-eNY" secondAttribute="top" constant="80" id="hti-ll-7Mk"/>
                             <constraint firstItem="JBe-Ja-MD6" firstAttribute="leading" secondItem="frb-Wn-QIB" secondAttribute="trailing" constant="1" id="kkv-zo-AhF"/>
                             <constraint firstItem="ZYx-xO-5nK" firstAttribute="top" secondItem="6fO-pS-7E1" secondAttribute="bottom" constant="20" id="odp-NK-6AW"/>
@@ -577,10 +577,10 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-Kc-kba">
                                         <rect key="frame" x="69" y="0.0" width="131.5" height="61.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue"/>
                                         <connections>
                                             <action selector="valorAlterado:" destination="1AX-JT-mP3" eventType="editingChanged" id="7T5-jf-Ar2"/>
                                         </connections>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -591,7 +591,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0V-Kn-eUd">
-                                <rect key="frame" x="136.5" y="726" width="141" height="36"/>
+                                <rect key="frame" x="136.5" y="682" width="141" height="36"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="   CONFIRMAR   ">
@@ -630,7 +630,7 @@
                             <constraint firstItem="aYf-Ob-XIK" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="124" id="SUE-4N-qgP"/>
                             <constraint firstItem="YYE-C5-UMz" firstAttribute="centerX" secondItem="TyW-oT-NsI" secondAttribute="centerX" id="U5b-Dr-2rg"/>
                             <constraint firstItem="C0V-Kn-eUd" firstAttribute="centerX" secondItem="TyW-oT-NsI" secondAttribute="centerX" id="Uc8-TH-dPE"/>
-                            <constraint firstItem="kcL-l5-xft" firstAttribute="bottom" secondItem="C0V-Kn-eUd" secondAttribute="bottom" constant="46" id="fix-gn-e7t"/>
+                            <constraint firstItem="kcL-l5-xft" firstAttribute="bottom" secondItem="C0V-Kn-eUd" secondAttribute="bottom" constant="90" id="fix-gn-e7t"/>
                             <constraint firstItem="yV3-XU-bjw" firstAttribute="leading" secondItem="iJ4-b1-DRA" secondAttribute="trailing" constant="1" id="rk6-MW-EPc"/>
                             <constraint firstItem="iJ4-b1-DRA" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="124" id="sqD-dR-0uP"/>
                             <constraint firstItem="bic-hh-Q4Y" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="80" id="uiy-LU-899"/>
