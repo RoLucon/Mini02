@@ -11,6 +11,7 @@ import UIKit
 var a = 0
 var p = 1
 var i : intmax_t!
+var r = 0 //Resposta atual
 var c = 0 //Representa a fala inicial da fase
 //Todas as falas do jogo em ordem de aparição
 let texto = [
@@ -116,6 +117,39 @@ var q6 = [22, 23, 24, 25]
 var q7 = [26, 27, 28, 29]
 var q8 = [30, 31, 32, 33]
 
+//Arrays que salvarão as respostas
+var resposta1 = Array(repeating: 0, count:2)
+var resposta2 = Array(repeating: 0, count:3)
+var resposta3 = Array(repeating: 0, count:3)
+var resposta4 = Array(repeating: 0, count:3)
+var resposta5 = Array(repeating: 0, count:3)
+var resposta6 = Array(repeating: 0, count:3)
+var resposta7 = Array(repeating: 0, count:3)
+var resposta8 = Array(repeating: 0, count:3)
+
+func zerafase(){
+    switch prog {
+    case 2:
+        resposta1 = Array(repeating: 0, count:2)
+    case 3:
+        resposta2 = Array(repeating: 0, count:3)
+    case 4:
+        resposta3 = Array(repeating: 0, count:3)
+    case 5:
+        resposta4 = Array(repeating: 0, count:3)
+    case 6:
+        resposta5 = Array(repeating: 0, count:3)
+    case 7:
+        resposta6 = Array(repeating: 0, count:3)
+    case 8:
+        resposta7 = Array(repeating: 0, count:3)
+    case 9:
+        resposta8 = Array(repeating: 0, count:3)
+    default:
+        print("n era para isso acontecer")
+    }
+}
+
 class popup: UIViewController{
     
     @IBOutlet weak var questao: UILabel!
@@ -134,6 +168,29 @@ class popup: UIViewController{
         resp2.setTitle(per[p+2], for: .normal)
         resp3.setTitle(per[p+3], for: .normal)
         p += 4
+    }
+    
+    func salvaresp (x: intmax_t){
+        switch prog {
+        case 2:
+            resposta1[r] = x
+        case 3:
+            resposta2[r] = x
+        case 4:
+            resposta3[r] = x
+        case 5:
+            resposta4[r] = x
+        case 6:
+            resposta5[r] = x
+        case 7:
+            resposta6[r] = x
+        case 8:
+            resposta7[r] = x
+        case 9:
+            resposta8[r] = x
+        default:
+            print("n era para isso acontecer")
+        }
     }
     
     override func viewDidLoad() {
@@ -191,6 +248,8 @@ class popup: UIViewController{
     }
     
     @IBAction func volta(_ sender: AnyObject) {
+        zerafase()
+        r = 0
         prog -= 1
     }
     
@@ -207,17 +266,23 @@ class popup: UIViewController{
     
     @IBAction func r1(_ sender: AnyObject) {
         a += 3
+        salvaresp(x: 1)
         perguntas()
+        r += 1
     }
     
     @IBAction func r2(_ sender: AnyObject) {
         a += 3
+        salvaresp(x: 2)
         perguntas()
+        r += 1
     }
     
     @IBAction func r3(_ sender: AnyObject) {
         a += 3
+        salvaresp(x: 3)
         perguntas()
+        r += 1
     }
 }
 
@@ -236,7 +301,6 @@ class selecf: UIViewController{
     func dialogo(){
         fala?.text = texto[c]
         c += 1
-
     }
     
     override func viewDidLoad() {
@@ -263,9 +327,8 @@ class selecf: UIViewController{
         default:
             print("ERRO")
         }
-        
     }
-    //Avanças uma fase
+    //Avança uma fase
     @IBAction func avanca(_ sender: AnyObject) {
     }
     
@@ -273,12 +336,12 @@ class selecf: UIViewController{
     @IBAction func f1(_ sender: AnyObject) {
         switch prog {
         case 1:
+            r = 0
             p = 1
             a = 0
             i = 1
             q = q1
             c = q[0]
-            //fala?.text = texto[c]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
             print("ERRO")
@@ -289,6 +352,7 @@ class selecf: UIViewController{
     @IBAction func f2(_ sender: Any) {
         switch prog {
         case 2:
+            r = 0
             p = 9
             a = 6
             i = 1
@@ -304,6 +368,7 @@ class selecf: UIViewController{
     @IBAction func f3(_ sender: AnyObject) {
         switch prog {
         case 3:
+            r = 0
             p = 21
             a = 15
             i = 1
@@ -319,6 +384,7 @@ class selecf: UIViewController{
     @IBAction func f4(_ sender: AnyObject) {
         switch prog {
         case 4:
+            r = 0
             p = 33
             a = 24
             i = 1
@@ -334,6 +400,7 @@ class selecf: UIViewController{
     @IBAction func f5(_ sender: AnyObject) {
         switch prog {
         case 5:
+            r = 0
             p = 45
             a = 33
             i = 1
@@ -349,6 +416,7 @@ class selecf: UIViewController{
     @IBAction func f6(_ sender: AnyObject) {
         switch prog {
         case 6:
+            r = 0
             p = 57
             a = 42
             i = 1
@@ -364,6 +432,7 @@ class selecf: UIViewController{
     @IBAction func f7(_ sender: AnyObject) {
         switch prog {
         case 7:
+            r = 0
             p = 69
             a = 51
             i = 1
@@ -379,6 +448,7 @@ class selecf: UIViewController{
     @IBAction func f8(_ sender: AnyObject) {
         switch prog {
         case 8:
+            r = 0
             p = 81
             a = 60
             i = 1
@@ -392,6 +462,8 @@ class selecf: UIViewController{
     
     //Refaz a fase
     @IBAction func refazer(_ sender: Any) {
+        zerafase()
+        r = 0
         prog -= 1
         c = q[0]
         i = 1
