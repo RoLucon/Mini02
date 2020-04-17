@@ -35,6 +35,8 @@ Debêntures - Debêntures é um tipo de investimento em renda fixa oferecidos po
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet var scorePopover: UIView!
     //Fala da personagem no campo da tela de intro
     @IBOutlet weak var FalaPrsonagem: UITextView!
     //A quantidade de dinheiro da personagem no jogo
@@ -75,6 +77,25 @@ class ViewController: UIViewController {
         confgView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
   
+    @IBAction func scoreInfo(_ sender: Any) {
+        self.view.addSubview(scorePopover)
+        
+        self.tabBarController?.setTabBar(hidden: true, viewController: self)
+        
+        scorePopover.translatesAutoresizingMaskIntoConstraints = false
+        scorePopover.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        scorePopover.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        scorePopover.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        scorePopover.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        scorePopover.removeFromSuperview()
+        
+        self.tabBarController?.setTabBar(hidden: false, viewController: self)
+    }
+    
     func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.atualizarFala(notificacao:)), name: notificacao, object: nil)
     }
