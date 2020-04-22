@@ -299,6 +299,7 @@ class Investe: UIViewController{
     
     @IBOutlet weak var saldoIndisponivel: UILabel!
     
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }

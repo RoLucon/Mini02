@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LfF-N0-uim">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-kM-z7i">
-                                <rect key="frame" x="136.5" y="726" width="141" height="36"/>
+                                <rect key="frame" x="136.5" y="682" width="141" height="36"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="   CONFIRMAR   ">
@@ -107,7 +107,7 @@
                             <constraint firstItem="xNu-lJ-i7U" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="80" id="cD2-W7-2Mh"/>
                             <constraint firstItem="BoC-S9-srU" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="124" id="eV2-18-fbO"/>
                             <constraint firstItem="EfG-Zt-0vG" firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="kbD-27-EhE"/>
-                            <constraint firstItem="Jjn-rt-nyb" firstAttribute="bottom" secondItem="8xD-kM-z7i" secondAttribute="bottom" constant="46" id="nYe-XO-aTC"/>
+                            <constraint firstItem="Jjn-rt-nyb" firstAttribute="bottom" secondItem="8xD-kM-z7i" secondAttribute="bottom" constant="90" id="nYe-XO-aTC"/>
                             <constraint firstItem="BoC-S9-srU" firstAttribute="leading" secondItem="SGQ-k3-PQK" secondAttribute="trailing" constant="1" id="o0d-8g-Xpt"/>
                             <constraint firstItem="8xD-kM-z7i" firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="oY0-7U-YQl"/>
                             <constraint firstItem="Bjt-6j-80t" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="80" id="ruF-Ms-tfa"/>
