@@ -20,7 +20,7 @@ class Investe: UIViewController{
     var contador:Int = 0
     let investimento: Investimento = Investimento()
     
-    let personagem: Personagem = Personagem()
+    let personagem: Personagem = Personagem.shared
     
     @IBOutlet weak var saldoDisp: UILabel!
     
