@@ -26,7 +26,7 @@ class Saque: UIViewController{
     
     let investimento: Investimento = Investimento()
     
-    let personagem: Personagem = Personagem()
+    let personagem: Personagem = Personagem.shared
     
     deinit {
         NotificationCenter.default.removeObserver(self)
