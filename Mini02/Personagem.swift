@@ -8,6 +8,9 @@
 import Foundation
 
 class Personagem {
+    
+    static let shared = Personagem()
+    
     let nome: String
     private var dinheiro: Float = 0 { didSet {UserDefaults.standard.set(dinheiro, forKey: "personagem.dinheiro")}}
     private var poupanca: Float = 0 { didSet {UserDefaults.standard.set(poupanca, forKey: "personagem.poupanca")}}
@@ -15,7 +18,7 @@ class Personagem {
     private var score: Int = 1000 { didSet {UserDefaults.standard.set(score, forKey: "personagem.score")}}
     private var save: Bool = false
     
-    init() {
+    private init() {
         if (UserDefaults.standard.object(forKey: "personagem.nome") != nil) {
             nome = (UserDefaults.standard.object(forKey: "personagem.nome") as? String)!
             save = true

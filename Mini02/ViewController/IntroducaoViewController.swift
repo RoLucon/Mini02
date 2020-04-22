@@ -14,7 +14,7 @@ class IntroducaoViewController: UIViewController {
         
         //Logica(A ser implementada) se ja tem um jogo salvo vai pro menu se nao tiver vai para customizacao(Abaixo)
         let viewController: UIViewController!
-        let personagem = Personagem()
+        let personagem = Personagem.shared
         
         if personagem.isSave() {
             let storyboard = UIStoryboard(name: "Principal", bundle: nil)

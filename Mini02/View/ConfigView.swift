@@ -116,7 +116,7 @@ class ConfigView: UIView {
             
         }))
         alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: {(UIAlertAction) in
-            let personagem = Personagem()
+            let personagem = Personagem.shared
             personagem.resetSave()
             let investimento = Investimento()
             investimento.resetSave()
