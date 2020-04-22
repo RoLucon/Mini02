@@ -10,6 +10,16 @@ import UIKit
 
 class IntroducaoViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(salvar), name: UIApplication.willResignActiveNotification, object: nil)
+    }
+    
+    @objc func salvar(){
+        Personagem.shared.salvar()
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         //Logica(A ser implementada) se ja tem um jogo salvo vai pro menu se nao tiver vai para customizacao(Abaixo)
