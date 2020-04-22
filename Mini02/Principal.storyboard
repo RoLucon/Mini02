@@ -228,20 +228,174 @@
                                         <constraint firstAttribute="width" constant="100" id="djs-s0-NA0"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto explicando o score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ep-r4-6RX">
-                                    <rect key="frame" x="16" y="216" width="287" height="153"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlR-mP-9l4">
+                                    <rect key="frame" x="8" y="148" width="303" height="229"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Score">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="24" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content">O score e uma pontuação que vai de 0 a 1000. Quanto mais proximo de 1000, maiores podem ser as suas chances de ter credito aprovado e melhor taxas de juros.
+</string>
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="18"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="18"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content">Seu Score e baseado nos seus dados cadastrais, negativações, consultas, crédito e pagamentos. Por isso e importante pagar suas parcelas em dia, o não pagamento influência de foram negativa diminuindo seu score.</string>
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="18"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="  ">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Negativações: ">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content">são dívidas, ações judiciais e protestos.  Tem grande impacto sobre a sua avaliação. Caso possua negativações e aconselhado pagá-las o quanto antes.  </string>
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Consultas:">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content"> é quando o seu score e consultado.  Tem baixo impacto e so afeta seu score quando um numero muito grande de consultas são realizadas em um prazo de 60 dias.  </string>
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Crédito: ">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="são financiamentos, empréstimo e cartões de crédito. Ter diferentes tipos de credito no mercado aumenta seu score.  ">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Pagamentos: ">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content">são as informações que dizem respeito a sua capacidade de pagar em dia os créditos obtidos(cartões, empréstimos, financiamentos). Pagar parcelas em atraso impactam negativamente, caso possa parcelas em atraso resolvê-las é o melhor caminho.</string>
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstItem="9Ep-r4-6RX" firstAttribute="leading" secondItem="2hz-O6-461" secondAttribute="leading" constant="16" id="456-BU-0Ih"/>
-                                <constraint firstAttribute="trailing" secondItem="9Ep-r4-6RX" secondAttribute="trailing" constant="16" id="AjL-Ts-LyN"/>
-                                <constraint firstItem="9Ep-r4-6RX" firstAttribute="top" secondItem="eAb-fv-p9t" secondAttribute="bottom" constant="100" id="Ezh-B3-2RT"/>
+                                <constraint firstAttribute="trailing" secondItem="LlR-mP-9l4" secondAttribute="trailing" constant="8" id="42x-B4-Ze6"/>
+                                <constraint firstItem="LlR-mP-9l4" firstAttribute="leading" secondItem="2hz-O6-461" secondAttribute="leading" constant="8" id="6Sq-Yp-zHL"/>
+                                <constraint firstItem="LlR-mP-9l4" firstAttribute="top" secondItem="eAb-fv-p9t" secondAttribute="bottom" constant="32" id="7n7-JT-lEZ"/>
+                                <constraint firstAttribute="bottom" secondItem="LlR-mP-9l4" secondAttribute="bottom" constant="8" id="BkU-Zc-Gj7"/>
                                 <constraint firstItem="eAb-fv-p9t" firstAttribute="centerX" secondItem="2hz-O6-461" secondAttribute="centerX" id="THa-4x-SVC"/>
-                                <constraint firstAttribute="bottom" secondItem="9Ep-r4-6RX" secondAttribute="bottom" constant="16" id="l96-9e-jqR"/>
                                 <constraint firstItem="eAb-fv-p9t" firstAttribute="top" secondItem="2hz-O6-461" secondAttribute="top" constant="16" id="znj-nX-gaL"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
