@@ -530,7 +530,7 @@
         <!--Saque-->
         <scene sceneID="xcf-wH-Sah">
             <objects>
-                <viewController id="1AX-JT-mP3" customClass="saque" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1AX-JT-mP3" customClass="Saque" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TyW-oT-NsI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
