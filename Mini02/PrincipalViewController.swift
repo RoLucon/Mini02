@@ -28,8 +28,8 @@ class ViewController: UIViewController {
     //A situacao financeira da personagem
     @IBOutlet weak var Situacao: UILabel!
     let notificacao = Notification.Name(rawValue: atualizaFalaNotificationKey)
-     
-    var personagem: Personagem = Personagem()
+    var configView: ConfigView?
+    var personagem: Personagem = Personagem.shared
     
     deinit {
            NotificationCenter.default.removeObserver(self)
@@ -48,13 +48,15 @@ class ViewController: UIViewController {
   
 
     @IBAction func configuracao(_ sender: Any) {
-        let confgView = ConfigView(frame: view.frame, viewController: self)
-        view.addSubview(confgView)
-        confgView.translatesAutoresizingMaskIntoConstraints = false
-        confgView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        confgView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        confgView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        confgView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        if configView == nil {
+            configView = ConfigView(frame: view.frame, viewController: self)
+        }
+        view.addSubview(configView!)
+        configView?.translatesAutoresizingMaskIntoConstraints = false
+        configView?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        configView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        configView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        configView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
   
     @IBAction func scoreInfo(_ sender: Any) {
@@ -72,7 +74,7 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         scorePopover.removeFromSuperview()
-        
+        configView?.dismiss()
         self.tabBarController?.setTabBar(hidden: false, viewController: self)
     }
     
@@ -88,13 +90,13 @@ class ViewController: UIViewController {
     //Funcao para atualizar o saldo ao iniciar a tela
     func atualizaSaldo(){
         print("FOI")
-        personagem = Personagem()
+        personagem = Personagem.shared
         let temp:Float? = personagem.mexerDinheiro(valor: nil)
         Dinheiro.text = String(format:"R$ %.2f",temp!)
     }
     //Funcao para atualizar a fala da personagem ao carregar a tela
     func atualizaFala(){
-        personagem = Personagem()
+        personagem = Personagem.shared
         let temp:Int? = personagem.mexerScore(valor: nil)
         if(temp!>650){
             FalaPrsonagem.text = "Está na situação boa!"
@@ -114,6 +116,5 @@ class ViewController: UIViewController {
         Situacao.text = situacao
     }
 }
-
 
 
