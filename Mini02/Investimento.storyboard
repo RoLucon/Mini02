@@ -444,7 +444,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fO-pS-7E1">
-                                <rect key="frame" x="102.5" y="390.5" width="209.5" height="61.5"/>
+                                <rect key="frame" x="116" y="390.5" width="182.5" height="61.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf8-zb-uBQ">
                                         <rect key="frame" x="0.0" y="0.5" width="61" height="60"/>
@@ -452,10 +452,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-0Y-dgr">
-                                        <rect key="frame" x="78" y="0.0" width="131.5" height="61.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-0Y-dgr">
+                                        <rect key="frame" x="78" y="0.0" width="104.5" height="61.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         <connections>
                                             <action selector="valorAlterado:" destination="aoU-Qn-GU2" eventType="editingChanged" id="JB7-IW-s0Q"/>
                                         </connections>
@@ -566,7 +566,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HL3-Dm-LSV">
-                                <rect key="frame" x="107" y="390.5" width="200.5" height="61.5"/>
+                                <rect key="frame" x="120.5" y="390.5" width="173.5" height="61.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKE-wg-KOu">
                                         <rect key="frame" x="0.0" y="0.0" width="61" height="61.5"/>
@@ -574,8 +574,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-Kc-kba">
-                                        <rect key="frame" x="69" y="0.0" width="131.5" height="61.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-Kc-kba">
+                                        <rect key="frame" x="69" y="0.0" width="104.5" height="61.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue"/>
                                         <connections>
