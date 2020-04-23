@@ -298,9 +298,17 @@ class selecf: UIViewController{
     @IBOutlet weak var fase7: UIButton!
     @IBOutlet weak var fase8: UIButton!
     
+    @IBOutlet weak var setaBancoF2: UIImageView!
+    
     func dialogo(){
-        fala?.text = texto[c]
-        c += 1
+        if(c==8){
+            setaBancoF2.alpha = 1
+            fala?.text = texto[c]
+            c += 1
+        }else{
+            fala?.text = texto[c]
+            c += 1
+        }
     }
     
     override func viewDidLoad() {

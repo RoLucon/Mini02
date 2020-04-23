@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bhA-NR-hfw">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3S-1J-sE8" userLabel="SCORE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R3S-1J-sE8" userLabel="SCORE">
                                 <rect key="frame" x="167" y="44" width="80" height="32"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4UO-g9-oM3" userLabel="MAPA">
@@ -119,6 +119,11 @@
                                     <action selector="f3:" destination="F8c-i4-nYd" eventType="touchUpInside" id="1td-aS-vx3"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ROp-aC-yU2">
+                                <rect key="frame" x="23" y="84.333333333333485" width="71" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -139,8 +144,10 @@
                             <constraint firstItem="BKk-MQ-i99" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" constant="-200" id="Qsr-go-TI8"/>
                             <constraint firstItem="J3M-li-wdE" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" constant="200" id="T4c-t5-Gim"/>
                             <constraint firstItem="4UO-g9-oM3" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" id="VGK-Yr-dP0"/>
+                            <constraint firstItem="Vy2-Kb-8Ef" firstAttribute="leading" secondItem="R3S-1J-sE8" secondAttribute="trailing" constant="80" id="ZtF-Jr-fvF"/>
                             <constraint firstItem="sFz-TR-K4d" firstAttribute="bottom" secondItem="4UO-g9-oM3" secondAttribute="bottom" id="abe-kg-C1O"/>
                             <constraint firstItem="ofh-pM-EdX" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="33" id="f2K-Ri-62a"/>
+                            <constraint firstItem="4UO-g9-oM3" firstAttribute="top" secondItem="R3S-1J-sE8" secondAttribute="bottom" constant="7" id="hwV-xE-0Fa"/>
                             <constraint firstItem="VG3-Nu-LBj" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" constant="200" id="kCw-uC-IOW"/>
                             <constraint firstItem="sFz-TR-K4d" firstAttribute="trailing" secondItem="4UO-g9-oM3" secondAttribute="trailing" id="kYo-5k-nJe"/>
                             <constraint firstItem="UQC-y0-nlu" firstAttribute="leading" secondItem="l84-B2-Ah7" secondAttribute="trailing" constant="20" id="mpS-Ca-aDn"/>
@@ -162,6 +169,7 @@
                         <outlet property="fase6" destination="gsh-ZQ-kPF" id="KV0-J6-Q8P"/>
                         <outlet property="fase7" destination="gay-yc-i2M" id="0pL-pp-3wE"/>
                         <outlet property="fase8" destination="VG3-Nu-LBj" id="iv9-eS-p0h"/>
+                        <outlet property="setaBancoF2" destination="ROp-aC-yU2" id="zXs-MH-Iva"/>
                         <segue destination="Sq6-9L-XzZ" kind="show" identifier="fase" id="lCT-qh-gu8"/>
                     </connections>
                 </viewController>
@@ -198,4 +206,7 @@
             <point key="canvasLocation" x="403" y="159"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
+    </resources>
 </document>
