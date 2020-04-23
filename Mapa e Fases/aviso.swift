@@ -8,15 +8,16 @@
 
 import UIKit
 //Mudar "a" e "p" nas funcoes refazer, f1, f2, f3, f4, f5, f6, f7 e f8 após ter o valor inicial delas para cada fase
-var a = 0
-var p = 1
+var pula = false
+var a = 0 //Ajuda da tela atual
+var p = 1 //Perguntas e possíveis respostas da tela atual
 var i : intmax_t!
-var r = 0 //Resposta atual
+var r = 0 //Salva a resposta escolida
 var c = 0 //Representa a fala inicial da fase
 //Todas as falas do jogo em ordem de aparição
 let texto = [
-1: "fala1",
-2: "fala2",
+1: "Kleytinho… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE o seu salário caiu.",
+2: "Fala aí, Kleytinho!\nRecebeu hoje, né?",
 3: "fala3",
 4: "fala4",
 5: "fala5",
@@ -51,7 +52,7 @@ let texto = [
 
 //Todas perguntas do jogo e as respostas possíveis em ordem
 let per = [
-1: "Pergunta 1", 2: "Resposta 1 p1", 3: "Resposta 2 p1", 4: "Resposta 3 p1",
+1: "Partiu gastar tudo no bar?", 2: "Resposta 1 p1", 3: "Resposta 2 p1", 4: "Resposta 3 p1",
 5: "Pergunta 2", 6: "Resposta 1 p2", 7: "Resposta 2 p2", 8: "Resposta 3 p2",
 9: "Pergunta 3", 10: "Resposta 1 p3", 11: "Resposta 2 p3", 12: "Resposta 3 p3",
 13: "Pergunta 4", 14: "Resposta 1 p4", 15: "Resposta 2 p4", 16: "Resposta 3 p4",
@@ -108,7 +109,7 @@ var prog = 1 // Representa o progresso do jogador
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
 //Colocar 0 caso já tenha acabado
 var q = Array(repeating: 0, count:4)
-var q1 = [1, 3, 5, 0]
+var q1 = [1, 2, 5, 0]
 var q2 = [6, 7, 8, 9]
 var q3 = [10, 11, 12, 13]
 var q4 = [14, 15, 16, 17]
@@ -155,7 +156,6 @@ class popup: UIViewController{
     @IBOutlet weak var questao: UILabel!
     @IBOutlet weak var resp1: UIButton!
     @IBOutlet weak var resp2: UIButton!
-    @IBOutlet weak var resp3: UIButton!
     @IBOutlet weak var ajuda: UILabel!
     @IBOutlet var pop: UIView!
     @IBOutlet weak var efeito: UIVisualEffectView!
@@ -166,7 +166,6 @@ class popup: UIViewController{
         questao.text = per[p]
         resp1.setTitle(per[p+1], for: .normal)
         resp2.setTitle(per[p+2], for: .normal)
-        resp3.setTitle(per[p+3], for: .normal)
         p += 4
     }
     
@@ -237,12 +236,6 @@ class popup: UIViewController{
         ajuda.text = help[a+1]
     }
     
-    
-    @IBAction func p3(_ sender: Any) {
-        anima()
-        ajuda.text = help[a+2]
-    }
-    
     @IBAction func fecha(_ sender: AnyObject) {
         animaf()
     }
@@ -269,6 +262,7 @@ class popup: UIViewController{
         salvaresp(x: 1)
         perguntas()
         r += 1
+        pula = true
     }
     
     @IBAction func r2(_ sender: AnyObject) {
@@ -276,19 +270,13 @@ class popup: UIViewController{
         salvaresp(x: 2)
         perguntas()
         r += 1
-    }
-    
-    @IBAction func r3(_ sender: AnyObject) {
-        a += 3
-        salvaresp(x: 3)
-        perguntas()
-        r += 1
+        pula = false
+        c+=1
     }
 }
 
 class selecf: UIViewController{
     @IBOutlet weak var fala: UILabel!
-    
     @IBOutlet weak var fase1: UIButton!
     @IBOutlet weak var fase2: UIButton!
     @IBOutlet weak var fase3: UIButton!
@@ -300,7 +288,12 @@ class selecf: UIViewController{
     
     func dialogo(){
         fala?.text = texto[c]
-        c += 1
+        if pula == true {
+            c += 2
+            pula = false
+        } else {
+            c += 1
+        }
     }
     
     override func viewDidLoad() {
@@ -344,7 +337,38 @@ class selecf: UIViewController{
             c = q[0]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
-            print("ERRO")
+            print("1:")
+            for valor in resposta1{
+                print(valor)
+            }
+            print("\n2:")
+            for valor in resposta2{
+                print(valor)
+            }
+            print("\n3:")
+            for valor in resposta3{
+                print(valor)
+            }
+            print("\n4:")
+            for valor in resposta4{
+                print(valor)
+            }
+            print("\n5:")
+            for valor in resposta5{
+                print(valor)
+            }
+            print("\n6:")
+            for valor in resposta6{
+                print(valor)
+            }
+            print("\n7:")
+            for valor in resposta7{
+                print(valor)
+            }
+            print("\n8:")
+            for valor in resposta8{
+                print(valor)
+            }
         }
     }
     
