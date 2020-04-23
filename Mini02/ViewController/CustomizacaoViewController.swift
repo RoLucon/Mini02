@@ -50,7 +50,7 @@ class CustomizacaoViewController: UIViewController {
     }
     
     @IBAction func confirm(_ sender: Any) {
-        UserDefaults.standard.set(self.txtField.text, forKey: "personagem.nome")
+        Personagem.shared.salvarNome(nome: self.txtField.text!)
     }
     
     @IBAction func Changed(_ sender: Any) {
