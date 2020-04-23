@@ -140,7 +140,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="obU-yU-Wxd" kind="presentation" id="yOk-WZ-2qd"/>
+                                            <action selector="passarTexto:" destination="oTi-xH-I7W" eventType="touchUpInside" id="sKk-rR-22J"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -236,9 +236,6 @@
             <point key="canvasLocation" x="-59.420289855072468" y="-7.3660714285714279"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="LFp-Kf-NkJ"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowtriangle.down.fill" catalog="system" width="128" height="124"/>
     </resources>
