@@ -25,13 +25,19 @@ class BancoViewController: UIViewController {
         static let guardarPoupanca = "poupGuardar"
         static let retirarPoupanca = "poupRetirar"
     }
-
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         atualizarLabel()
+        observer()
+    }
+    func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarSaldo(n:)), name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
     }
     
