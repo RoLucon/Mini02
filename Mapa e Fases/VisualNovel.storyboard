@@ -69,6 +69,9 @@
                                 <state key="normal" title="BANCO">
                                     <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="fundoViraBanco:" destination="bBy-0S-dHI" eventType="touchUpInside" id="UDY-8i-yed"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aCM-Ds-Mk1">
                                 <rect key="frame" x="20" y="246.33333333333337" width="71" height="73"/>

@@ -518,4 +518,8 @@ class selecf: UIViewController{
             self.performSegue(withIdentifier: "Passa", sender: self)
         }
     }
+    @IBAction func fundoViraBanco(_ sender: UIButton) {
+        
+    }
+    
 }
