@@ -11,6 +11,7 @@ import UIKit
 class TextLabel: UILabel {
     var texto = "" {didSet {
         counter = 0
+        text = ""
         typeWriter()
         }}
     var counter = 0
