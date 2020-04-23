@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QAr-QL-ixH">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,10 +36,10 @@
                                             </vibrancyEffect>
                                         </visualEffectView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUF-so-cLA" userLabel="Resp1">
-                                            <rect key="frame" x="77.666666666666686" y="524" width="229" height="48"/>
+                                            <rect key="frame" x="45" y="593" width="294" height="54"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="229" id="MLS-NL-KHQ"/>
+                                                <constraint firstAttribute="height" constant="54" id="6ay-vh-PGe"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
                                             <state key="normal" title="Resp1">
@@ -57,10 +57,10 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQa-7L-mHv">
-                                            <rect key="frame" x="77.666666666666686" y="612" width="229" height="48"/>
+                                            <rect key="frame" x="45" y="712" width="294" height="54"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="229" id="JB7-Ui-1A5"/>
+                                                <constraint firstAttribute="height" constant="54" id="dOT-Si-v6Y"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
                                             <state key="normal" title="Resp2">
@@ -77,32 +77,12 @@
                                                 <action selector="r2:" destination="aqG-Qv-6pd" eventType="touchUpInside" id="Br1-Gx-n0u"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgO-xU-LH8" userLabel="Resp3">
-                                            <rect key="frame" x="77.666666666666686" y="700" width="229" height="48"/>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="229" id="Xwe-y9-zuL"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
-                                            <state key="normal" title="Resp3">
-                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="r3:" destination="aqG-Qv-6pd" eventType="touchUpInside" id="pBu-8f-D6t"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8v-Vw-Uey" userLabel="!1">
-                                            <rect key="frame" x="286" y="524" width="50" height="48"/>
+                                            <rect key="frame" x="315" y="593" width="54" height="54"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="ddu-mu-h1b"/>
+                                                <constraint firstAttribute="width" constant="54" id="ddu-mu-h1b"/>
+                                                <constraint firstAttribute="height" constant="54" id="ucI-Nx-mKB"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <state key="normal" title="!">
@@ -120,10 +100,11 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2b-7l-8vN" userLabel="!2">
-                                            <rect key="frame" x="286" y="612" width="50" height="48"/>
+                                            <rect key="frame" x="315" y="712" width="54" height="54"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="nrO-BE-F7c"/>
+                                                <constraint firstAttribute="width" constant="54" id="nrO-BE-F7c"/>
+                                                <constraint firstAttribute="height" constant="54" id="yhq-Ez-hek"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <state key="normal" title="!">
@@ -140,30 +121,12 @@
                                                 <action selector="p2:" destination="aqG-Qv-6pd" eventType="touchUpInside" id="w8k-re-spR"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIr-sw-YMu" userLabel="!3">
-                                            <rect key="frame" x="286" y="700" width="50" height="48"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questionamento ao  kleyton" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hta-gJ-lTF" userLabel="Questionamento ao  kleyton">
+                                            <rect key="frame" x="30" y="408" width="354" height="80"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="UJn-7Y-Ocq"/>
+                                                <constraint firstAttribute="height" constant="80" id="sRp-5p-OPp"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <state key="normal" title="!">
-                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="p3:" destination="aqG-Qv-6pd" eventType="touchUpInside" id="gb7-pL-chn"/>
-                                            </connections>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questionamento ao  kleyton" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hta-gJ-lTF" userLabel="Questionamento ao  kleyton">
-                                            <rect key="frame" x="77.666666666666686" y="412.33333333333331" width="259" height="71.666666666666686"/>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -187,22 +150,22 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="kIr-sw-YMu" firstAttribute="centerX" secondItem="gm1-h6-gKq" secondAttribute="centerX" constant="104" id="2zo-DX-o9Q"/>
-                                        <constraint firstItem="fQa-7L-mHv" firstAttribute="centerX" secondItem="gm1-h6-gKq" secondAttribute="centerX" constant="-15" id="35L-MT-Kme"/>
-                                        <constraint firstItem="fQa-7L-mHv" firstAttribute="top" secondItem="YUF-so-cLA" secondAttribute="bottom" constant="40" id="4Dc-Nl-dvp"/>
-                                        <constraint firstItem="K8v-Vw-Uey" firstAttribute="centerX" secondItem="gm1-h6-gKq" secondAttribute="centerX" constant="104" id="4WO-QE-6nP"/>
-                                        <constraint firstItem="kIr-sw-YMu" firstAttribute="top" secondItem="P2b-7l-8vN" secondAttribute="bottom" constant="40" id="7tR-5e-H20"/>
-                                        <constraint firstItem="K8v-Vw-Uey" firstAttribute="top" secondItem="Hta-gJ-lTF" secondAttribute="bottom" constant="40" id="L6z-YO-zWu"/>
-                                        <constraint firstItem="YUF-so-cLA" firstAttribute="top" secondItem="Hta-gJ-lTF" secondAttribute="bottom" constant="40" id="LIM-GR-7cs"/>
+                                        <constraint firstItem="fQa-7L-mHv" firstAttribute="top" secondItem="YUF-so-cLA" secondAttribute="bottom" constant="65" id="4Dc-Nl-dvp"/>
+                                        <constraint firstAttribute="trailing" secondItem="YUF-so-cLA" secondAttribute="trailing" constant="75" id="6D5-HC-Axc"/>
+                                        <constraint firstItem="Hta-gJ-lTF" firstAttribute="leading" secondItem="gm1-h6-gKq" secondAttribute="leading" constant="30" id="9gW-iP-f6J"/>
+                                        <constraint firstItem="K8v-Vw-Uey" firstAttribute="top" secondItem="Hta-gJ-lTF" secondAttribute="bottom" constant="105" id="L6z-YO-zWu"/>
+                                        <constraint firstItem="YUF-so-cLA" firstAttribute="top" secondItem="Hta-gJ-lTF" secondAttribute="bottom" constant="105" id="LIM-GR-7cs"/>
                                         <constraint firstItem="Csj-dC-qaf" firstAttribute="top" secondItem="gm1-h6-gKq" secondAttribute="top" constant="44" id="MBf-bA-wve"/>
-                                        <constraint firstItem="CgO-xU-LH8" firstAttribute="top" secondItem="fQa-7L-mHv" secondAttribute="bottom" constant="40" id="NLd-EF-3bt"/>
+                                        <constraint firstItem="YUF-so-cLA" firstAttribute="leading" secondItem="gm1-h6-gKq" secondAttribute="leading" constant="45" id="MgC-V9-BmD"/>
+                                        <constraint firstAttribute="trailing" secondItem="K8v-Vw-Uey" secondAttribute="trailing" constant="45" id="Mqp-yw-8re"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hta-gJ-lTF" secondAttribute="trailing" constant="30" id="Oi6-l5-EhA"/>
                                         <constraint firstItem="Hta-gJ-lTF" firstAttribute="centerX" secondItem="gm1-h6-gKq" secondAttribute="centerX" id="P4x-vV-brB"/>
+                                        <constraint firstAttribute="trailing" secondItem="P2b-7l-8vN" secondAttribute="trailing" constant="45" id="Y4l-gH-OkT"/>
                                         <constraint firstItem="Csj-dC-qaf" firstAttribute="leading" secondItem="gm1-h6-gKq" secondAttribute="leading" constant="30" id="YqV-TC-2rT"/>
-                                        <constraint firstItem="YUF-so-cLA" firstAttribute="centerX" secondItem="gm1-h6-gKq" secondAttribute="centerX" constant="-15" id="ahN-uY-xAN"/>
+                                        <constraint firstItem="fQa-7L-mHv" firstAttribute="leading" secondItem="gm1-h6-gKq" secondAttribute="leading" constant="45" id="Zg2-8U-iIr"/>
                                         <constraint firstItem="Hta-gJ-lTF" firstAttribute="centerY" secondItem="gm1-h6-gKq" secondAttribute="centerY" id="glv-SZ-agt"/>
-                                        <constraint firstItem="P2b-7l-8vN" firstAttribute="centerX" secondItem="gm1-h6-gKq" secondAttribute="centerX" constant="104" id="jYQ-6X-Qq6"/>
-                                        <constraint firstItem="P2b-7l-8vN" firstAttribute="top" secondItem="K8v-Vw-Uey" secondAttribute="bottom" constant="40" id="shR-dT-EdW"/>
-                                        <constraint firstItem="CgO-xU-LH8" firstAttribute="centerX" secondItem="gm1-h6-gKq" secondAttribute="centerX" constant="-15" id="y7w-8P-igW"/>
+                                        <constraint firstItem="P2b-7l-8vN" firstAttribute="top" secondItem="K8v-Vw-Uey" secondAttribute="bottom" constant="65" id="shR-dT-EdW"/>
+                                        <constraint firstAttribute="trailing" secondItem="fQa-7L-mHv" secondAttribute="trailing" constant="75" id="tUe-Hs-49a"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="regular"/>
@@ -227,7 +190,6 @@
                         <outlet property="questao" destination="Hta-gJ-lTF" id="pcK-qo-yzd"/>
                         <outlet property="resp1" destination="YUF-so-cLA" id="ty7-f5-XCX"/>
                         <outlet property="resp2" destination="fQa-7L-mHv" id="oRN-xF-TJ8"/>
-                        <outlet property="resp3" destination="CgO-xU-LH8" id="eW7-Is-TSx"/>
                         <segue destination="lda-wH-PEg" kind="show" identifier="Finaliza" id="H8F-TB-Hab"/>
                         <segue destination="rZ0-0T-hWv" kind="show" identifier="Continua" id="6q2-Fb-26J"/>
                     </connections>
