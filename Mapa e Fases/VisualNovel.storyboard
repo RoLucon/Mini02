@@ -23,8 +23,11 @@
                                 <rect key="frame" x="340" y="44" width="54" height="34"/>
                                 <state key="normal" title="Config"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Cd-pq-FtR" userLabel="Visual Novel">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kimTEMPORARIO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cd-pq-FtR" userLabel="Visual Novel">
+                                <rect key="frame" x="21.666666666666657" y="86" width="371" height="650"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="650" id="hoV-Ci-7uc"/>
+                                </constraints>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfi-qt-eHA" userLabel="Caixa De Texto(efeito blurry)">
                                 <rect key="frame" x="0.0" y="736" width="414" height="160"/>
@@ -59,10 +62,18 @@
                                     <action selector="telas:" destination="bBy-0S-dHI" eventType="touchUpInside" id="Jfm-dQ-QH1"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aCM-Ds-Mk1">
-                                <rect key="frame" x="10" y="71.333333333333485" width="71" height="73"/>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZk-Y2-Zsx">
+                                <rect key="frame" x="0.0" y="183" width="125" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="BANCO">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aCM-Ds-Mk1">
+                                <rect key="frame" x="20" y="246.33333333333337" width="71" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,7 +84,7 @@
                             <constraint firstItem="ggn-YG-DRR" firstAttribute="trailing" secondItem="zfi-qt-eHA" secondAttribute="trailing" id="Anl-uV-Auc"/>
                             <constraint firstItem="YSe-eg-Icr" firstAttribute="centerX" secondItem="uPe-Ze-HbX" secondAttribute="centerX" id="BCi-vg-jv8"/>
                             <constraint firstAttribute="bottom" secondItem="zfi-qt-eHA" secondAttribute="bottom" id="F7T-0W-a8t"/>
-                            <constraint firstItem="5Cd-pq-FtR" firstAttribute="centerY" secondItem="uPe-Ze-HbX" secondAttribute="centerY" id="ICL-1N-H2l"/>
+                            <constraint firstItem="5Cd-pq-FtR" firstAttribute="centerY" secondItem="uPe-Ze-HbX" secondAttribute="centerY" constant="-37" id="ICL-1N-H2l"/>
                             <constraint firstItem="5Cd-pq-FtR" firstAttribute="centerX" secondItem="uPe-Ze-HbX" secondAttribute="centerX" id="Qux-mh-wnP"/>
                             <constraint firstItem="6Ng-Wc-MHr" firstAttribute="leading" secondItem="uPe-Ze-HbX" secondAttribute="leadingMargin" id="RKK-9i-4Zo"/>
                             <constraint firstItem="cln-C3-ez3" firstAttribute="top" secondItem="uPe-Ze-HbX" secondAttribute="topMargin" id="S68-aH-Lm7"/>
@@ -87,6 +98,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gh6-6Z-5J9"/>
                     <connections>
+                        <outlet property="bancoFase2" destination="eZk-Y2-Zsx" id="yHa-8P-oWM"/>
                         <outlet property="fala" destination="Zd8-o1-cvg" id="hFg-R6-1hH"/>
                         <outlet property="setaBancoF2" destination="aCM-Ds-Mk1" id="cQr-wD-gfw"/>
                         <segue destination="y7e-Fm-1rE" kind="show" identifier="Passa" id="bFs-vk-vf2"/>
@@ -128,5 +140,6 @@
     </scenes>
     <resources>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="kimTEMPORARIO" width="371" height="664"/>
     </resources>
 </document>

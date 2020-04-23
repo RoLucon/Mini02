@@ -119,6 +119,11 @@
                                     <action selector="f3:" destination="F8c-i4-nYd" eventType="touchUpInside" id="1td-aS-vx3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cel-Zp-pBa">
+                                <rect key="frame" x="331" y="783" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ROp-aC-yU2">
                                 <rect key="frame" x="23" y="84.333333333333485" width="71" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -161,6 +166,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="i6s-DE-C1Q"/>
                     <connections>
+                        <outlet property="bancoFase2" destination="cel-Zp-pBa" id="5zD-3i-UmW"/>
                         <outlet property="fase1" destination="l84-B2-Ah7" id="zrd-tH-Gar"/>
                         <outlet property="fase2" destination="UQC-y0-nlu" id="7u9-JP-7Ju"/>
                         <outlet property="fase3" destination="BKk-MQ-i99" id="P36-SV-4PT"/>
