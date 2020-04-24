@@ -288,6 +288,10 @@ class selecf: UIViewController{
     
     @IBOutlet weak var bancoFase2: UIButton!
     @IBOutlet weak var setaBancoF2: UIImageView!
+    @IBOutlet var bancoTelaFase2: UIView!
+    @IBOutlet weak var imgDinamicaFase2: UIImageView!
+    @IBOutlet weak var sairBancoF2: UIButton!
+    
     
     func dialogo(){
         if(c==9){
@@ -543,7 +547,29 @@ class selecf: UIViewController{
         }
     }
     @IBAction func fundoViraBanco(_ sender: UIButton) {
-        
+        abreTelaBanco()
+    }
+    @IBAction func sairTela(_ sender: UIButton) {
+        fechaTelaBanco()
+    }
+    
+    func abreTelaBanco(){
+        self.view.addSubview(bancoTelaFase2)
+        bancoTelaFase2.center = self.view.center
+        bancoTelaFase2.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        bancoTelaFase2.alpha = 0
+        UIView.animate(withDuration: 0.4){
+            self.bancoTelaFase2.alpha = 1
+            self.bancoTelaFase2.transform = CGAffineTransform.identity
+        }
+    }
+    func fechaTelaBanco(){
+        UIView.animate(withDuration: 0.3, animations:{
+            self.bancoTelaFase2.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.bancoTelaFase2.alpha = 0
+        }) { (success: Bool) in
+            self.bancoTelaFase2.removeFromSuperview()
+        }
     }
     
 }

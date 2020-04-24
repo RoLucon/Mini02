@@ -91,13 +91,12 @@ class ViewController: UIViewController {
     func atualizaSaldo(){
         print("FOI")
         personagem = Personagem.shared
-        let temp:Float? = personagem.mexerDinheiro(valor: nil)
-        Dinheiro.text = String(format:"R$ %.2f",temp!)
+        Dinheiro.text = String(format:"R$ %.2f", personagem.dinheiro(nil)!)
     }
     //Funcao para atualizar a fala da personagem ao carregar a tela
     func atualizaFala(){
         personagem = Personagem.shared
-        let temp:Int? = personagem.mexerScore(valor: nil)
+        let temp:Int? = personagem.score(nil)
         if(temp!>650){
             FalaPrsonagem.text = "Está na situação boa!"
         }else if(temp!>350){

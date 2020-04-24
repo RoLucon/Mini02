@@ -167,6 +167,7 @@
                     <navigationItem key="navigationItem" id="i6s-DE-C1Q"/>
                     <connections>
                         <outlet property="bancoFase2" destination="cel-Zp-pBa" id="5zD-3i-UmW"/>
+                        <outlet property="bancoTelaFase2" destination="RYb-Tn-JCg" id="PJA-1g-8mw"/>
                         <outlet property="fase1" destination="l84-B2-Ah7" id="zrd-tH-Gar"/>
                         <outlet property="fase2" destination="UQC-y0-nlu" id="7u9-JP-7Ju"/>
                         <outlet property="fase3" destination="BKk-MQ-i99" id="P36-SV-4PT"/>
@@ -175,11 +176,30 @@
                         <outlet property="fase6" destination="gsh-ZQ-kPF" id="KV0-J6-Q8P"/>
                         <outlet property="fase7" destination="gay-yc-i2M" id="0pL-pp-3wE"/>
                         <outlet property="fase8" destination="VG3-Nu-LBj" id="iv9-eS-p0h"/>
+                        <outlet property="imgDinamicaFase2" destination="OzY-yc-AB5" id="WfD-rC-iCa"/>
+                        <outlet property="sairBancoF2" destination="DRh-dT-d2S" id="UEC-WL-ZXB"/>
                         <outlet property="setaBancoF2" destination="ROp-aC-yU2" id="zXs-MH-Iva"/>
                         <segue destination="Sq6-9L-XzZ" kind="show" identifier="fase" id="lCT-qh-gu8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QV6-gO-fj9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="RYb-Tn-JCg">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OzY-yc-AB5">
+                            <rect key="frame" x="60" y="11" width="120" height="97"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-dT-d2S">
+                            <rect key="frame" x="6" y="0.0" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <viewLayoutGuide key="safeArea" id="tL0-tX-fyK"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1296" y="159"/>
         </scene>
