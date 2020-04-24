@@ -7,6 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Banco-->
+        <scene sceneID="JUp-e8-PVr">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Banco" storyboardName="Banco" id="XxI-nm-TrM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fvT-VI-qUY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sc-YE-MC0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="-205"/>
+        </scene>
         <!--Selecf-->
         <scene sceneID="LxW-Rq-wEy">
             <objects>
@@ -18,6 +28,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ng-Wc-MHr">
                                 <rect key="frame" x="20" y="44" width="51" height="34"/>
                                 <state key="normal" title="Banco"/>
+                                <connections>
+                                    <action selector="banco:" destination="bBy-0S-dHI" eventType="touchUpInside" id="uGr-H7-iiP"/>
+                                    <segue destination="XxI-nm-TrM" kind="show" id="iCY-qg-DN7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cln-C3-ez3">
                                 <rect key="frame" x="340" y="44" width="54" height="34"/>

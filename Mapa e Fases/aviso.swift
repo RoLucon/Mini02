@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 func zerafase(){
     switch prog {
     case 2:
@@ -210,12 +211,20 @@ class selecf: UIViewController{
             print("ERRO")
         }
     }
+    
+    @IBAction func banco(_ sender: Any) {
+        print(contadorBanco)
+    }
+    
+    
+    
     //Avança uma fase
     @IBAction func avanca(_ sender: AnyObject) {
     }
     
     //Vai pra fase 1
     @IBAction func f1(_ sender: AnyObject) {
+        contadorBanco = 1
         switch prog {
         case 1:
             r = 0
