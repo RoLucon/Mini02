@@ -286,13 +286,23 @@ class selecf: UIViewController{
     @IBOutlet weak var fase7: UIButton!
     @IBOutlet weak var fase8: UIButton!
     
+    @IBOutlet weak var bancoFase2: UIButton!
+    @IBOutlet weak var setaBancoF2: UIImageView!
+    
     func dialogo(){
-        fala?.text = texto[c]
-        if pula == true {
-            c += 2
-            pula = false
-        } else {
+        if(c==9){
+            bancoFase2.alpha = 1
+            setaBancoF2.alpha = 1
+            fala?.text = texto[c]
             c += 1
+        }else{
+          fala?.text = texto[c]
+          if pula == true {
+              c += 2
+              pula = false
+          } else {
+            c += 1
+          }
         }
     }
     
@@ -532,4 +542,8 @@ class selecf: UIViewController{
             self.performSegue(withIdentifier: "Passa", sender: self)
         }
     }
+    @IBAction func fundoViraBanco(_ sender: UIButton) {
+        
+    }
+    
 }
