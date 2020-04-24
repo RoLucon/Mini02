@@ -36,12 +36,12 @@
                                             </vibrancyEffect>
                                         </visualEffectView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUF-so-cLA" userLabel="Resp1">
-                                            <rect key="frame" x="45" y="593" width="294" height="54"/>
+                                            <rect key="frame" x="40" y="593" width="304" height="54"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="54" id="6ay-vh-PGe"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                             <state key="normal" title="Resp1">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </state>
@@ -57,12 +57,12 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQa-7L-mHv">
-                                            <rect key="frame" x="45" y="712" width="294" height="54"/>
+                                            <rect key="frame" x="40" y="712" width="304" height="54"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="54" id="dOT-Si-v6Y"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                             <state key="normal" title="Resp2">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </state>
@@ -78,7 +78,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8v-Vw-Uey" userLabel="!1">
-                                            <rect key="frame" x="315" y="593" width="54" height="54"/>
+                                            <rect key="frame" x="325" y="593" width="54" height="54"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="54" id="ddu-mu-h1b"/>
@@ -100,7 +100,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2b-7l-8vN" userLabel="!2">
-                                            <rect key="frame" x="315" y="712" width="54" height="54"/>
+                                            <rect key="frame" x="325" y="712" width="54" height="54"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="54" id="nrO-BE-F7c"/>
@@ -121,11 +121,11 @@
                                                 <action selector="p2:" destination="aqG-Qv-6pd" eventType="touchUpInside" id="w8k-re-spR"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questionamento ao  kleyton" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hta-gJ-lTF" userLabel="Questionamento ao  kleyton">
-                                            <rect key="frame" x="30" y="408" width="354" height="80"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questionamento ao  kleyton" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hta-gJ-lTF" userLabel="Questionamento ao  kleyton">
+                                            <rect key="frame" x="30" y="368" width="354" height="120"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="80" id="sRp-5p-OPp"/>
+                                                <constraint firstAttribute="height" constant="120" id="sRp-5p-OPp"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <nil key="textColor"/>
@@ -151,21 +151,21 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="fQa-7L-mHv" firstAttribute="top" secondItem="YUF-so-cLA" secondAttribute="bottom" constant="65" id="4Dc-Nl-dvp"/>
-                                        <constraint firstAttribute="trailing" secondItem="YUF-so-cLA" secondAttribute="trailing" constant="75" id="6D5-HC-Axc"/>
+                                        <constraint firstAttribute="trailing" secondItem="YUF-so-cLA" secondAttribute="trailing" constant="70" id="6D5-HC-Axc"/>
                                         <constraint firstItem="Hta-gJ-lTF" firstAttribute="leading" secondItem="gm1-h6-gKq" secondAttribute="leading" constant="30" id="9gW-iP-f6J"/>
                                         <constraint firstItem="K8v-Vw-Uey" firstAttribute="top" secondItem="Hta-gJ-lTF" secondAttribute="bottom" constant="105" id="L6z-YO-zWu"/>
                                         <constraint firstItem="YUF-so-cLA" firstAttribute="top" secondItem="Hta-gJ-lTF" secondAttribute="bottom" constant="105" id="LIM-GR-7cs"/>
                                         <constraint firstItem="Csj-dC-qaf" firstAttribute="top" secondItem="gm1-h6-gKq" secondAttribute="top" constant="44" id="MBf-bA-wve"/>
-                                        <constraint firstItem="YUF-so-cLA" firstAttribute="leading" secondItem="gm1-h6-gKq" secondAttribute="leading" constant="45" id="MgC-V9-BmD"/>
-                                        <constraint firstAttribute="trailing" secondItem="K8v-Vw-Uey" secondAttribute="trailing" constant="45" id="Mqp-yw-8re"/>
+                                        <constraint firstItem="YUF-so-cLA" firstAttribute="leading" secondItem="gm1-h6-gKq" secondAttribute="leading" constant="40" id="MgC-V9-BmD"/>
+                                        <constraint firstAttribute="trailing" secondItem="K8v-Vw-Uey" secondAttribute="trailing" constant="35" id="Mqp-yw-8re"/>
                                         <constraint firstAttribute="trailing" secondItem="Hta-gJ-lTF" secondAttribute="trailing" constant="30" id="Oi6-l5-EhA"/>
                                         <constraint firstItem="Hta-gJ-lTF" firstAttribute="centerX" secondItem="gm1-h6-gKq" secondAttribute="centerX" id="P4x-vV-brB"/>
-                                        <constraint firstAttribute="trailing" secondItem="P2b-7l-8vN" secondAttribute="trailing" constant="45" id="Y4l-gH-OkT"/>
+                                        <constraint firstAttribute="trailing" secondItem="P2b-7l-8vN" secondAttribute="trailing" constant="35" id="Y4l-gH-OkT"/>
                                         <constraint firstItem="Csj-dC-qaf" firstAttribute="leading" secondItem="gm1-h6-gKq" secondAttribute="leading" constant="30" id="YqV-TC-2rT"/>
-                                        <constraint firstItem="fQa-7L-mHv" firstAttribute="leading" secondItem="gm1-h6-gKq" secondAttribute="leading" constant="45" id="Zg2-8U-iIr"/>
-                                        <constraint firstItem="Hta-gJ-lTF" firstAttribute="centerY" secondItem="gm1-h6-gKq" secondAttribute="centerY" id="glv-SZ-agt"/>
+                                        <constraint firstItem="fQa-7L-mHv" firstAttribute="leading" secondItem="gm1-h6-gKq" secondAttribute="leading" constant="40" id="Zg2-8U-iIr"/>
+                                        <constraint firstItem="Hta-gJ-lTF" firstAttribute="centerY" secondItem="gm1-h6-gKq" secondAttribute="centerY" constant="-20" id="glv-SZ-agt"/>
                                         <constraint firstItem="P2b-7l-8vN" firstAttribute="top" secondItem="K8v-Vw-Uey" secondAttribute="bottom" constant="65" id="shR-dT-EdW"/>
-                                        <constraint firstAttribute="trailing" secondItem="fQa-7L-mHv" secondAttribute="trailing" constant="75" id="tUe-Hs-49a"/>
+                                        <constraint firstAttribute="trailing" secondItem="fQa-7L-mHv" secondAttribute="trailing" constant="70" id="tUe-Hs-49a"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="regular"/>

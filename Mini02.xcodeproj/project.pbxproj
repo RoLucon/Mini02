@@ -11,6 +11,7 @@
 		1CC462B42450DF0600D6CB59 /* InvestimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */; };
 		1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B52450E25300D6CB59 /* InvestirViewController.swift */; };
 		1CC462B82450E30700D6CB59 /* SacarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B72450E30700D6CB59 /* SacarViewController.swift */; };
+		40B9BDAC245357680087800A /* textos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B9BDAB245357680087800A /* textos.swift */; };
 		40BAA40E2437DAC4002FA0CE /* FeedBack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */; };
 		40BAA40F2437DAC4002FA0CE /* Fase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BAA4082437DAC4002FA0CE /* Fase.storyboard */; };
 		40BAA4102437DAC4002FA0CE /* VisualNovel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BAA4092437DAC4002FA0CE /* VisualNovel.storyboard */; };
@@ -62,6 +63,7 @@
 		1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoViewController.swift; sourceTree = "<group>"; };
 		1CC462B52450E25300D6CB59 /* InvestirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestirViewController.swift; sourceTree = "<group>"; };
 		1CC462B72450E30700D6CB59 /* SacarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacarViewController.swift; sourceTree = "<group>"; };
+		40B9BDAB245357680087800A /* textos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textos.swift; sourceTree = "<group>"; };
 		40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FeedBack.storyboard; path = "../Mapa e Fases/FeedBack.storyboard"; sourceTree = "<group>"; };
 		40BAA4082437DAC4002FA0CE /* Fase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Fase.storyboard; path = "../Mapa e Fases/Fase.storyboard"; sourceTree = "<group>"; };
 		40BAA4092437DAC4002FA0CE /* VisualNovel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = VisualNovel.storyboard; path = "../Mapa e Fases/VisualNovel.storyboard"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				40BAA4082437DAC4002FA0CE /* Fase.storyboard */,
 				40BAA4092437DAC4002FA0CE /* VisualNovel.storyboard */,
 				40BAA40D2437DAC4002FA0CE /* aviso.swift */,
+				40B9BDAB245357680087800A /* textos.swift */,
 				C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */,
 				8932CD4B243BCB9000E2BCA4 /* SideQuest.storyboard */,
 			);
@@ -367,6 +370,7 @@
 				8932CD53243D1F4900E2BCA4 /* NarrativaViewController.swift in Sources */,
 				1C24ADCA243FC258000D9B67 /* Investimento.swift in Sources */,
 				895108A8244A1D140088D7CB /* ContaViewController.swift in Sources */,
+				40B9BDAC245357680087800A /* textos.swift in Sources */,
 				89E3EAF024328755007C2CFC /* IntroducaoViewController.swift in Sources */,
 				89E3EAB1242E98D3007C2CFC /* PrincipalViewController.swift in Sources */,
 				1CC462B82450E30700D6CB59 /* SacarViewController.swift in Sources */,
