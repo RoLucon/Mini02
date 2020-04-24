@@ -37,6 +37,7 @@
 		89E3EAED24326E35007C2CFC /* Principal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAEC24326E35007C2CFC /* Principal.storyboard */; };
 		89E3EAF024328755007C2CFC /* IntroducaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */; };
 		89E3EAF524328D7C007C2CFC /* CustomizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */; };
+		89E4E74524536D12008A71E5 /* SideQuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4E74424536D12008A71E5 /* SideQuestViewController.swift */; };
 		C0CDCA00243BCBEB0057014D /* BancoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		89E3EAEC24326E35007C2CFC /* Principal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Principal.storyboard; sourceTree = "<group>"; };
 		89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducaoViewController.swift; sourceTree = "<group>"; };
 		89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizacaoViewController.swift; sourceTree = "<group>"; };
+		89E4E74424536D12008A71E5 /* SideQuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideQuestViewController.swift; sourceTree = "<group>"; };
 		C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BancoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +219,7 @@
 				89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */,
 				8932CD52243D1F4900E2BCA4 /* NarrativaViewController.swift */,
 				895108A7244A1D140088D7CB /* ContaViewController.swift */,
+				89E4E74424536D12008A71E5 /* SideQuestViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				40BAA4132437DAC4002FA0CE /* aviso.swift in Sources */,
 				8932CD51243D1E1200E2BCA4 /* TextLabel.swift in Sources */,
 				1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */,
+				89E4E74524536D12008A71E5 /* SideQuestViewController.swift in Sources */,
 				89078E082444EB16002F5CF2 /* Extension.swift in Sources */,
 				89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */,
 				89DF46A92437B75200FB36EB /* Personagem.swift in Sources */,

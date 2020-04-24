@@ -18,6 +18,7 @@ class IntroducaoViewController: UIViewController {
     
     @objc func salvar(){
         Personagem.shared.salvar()
+        SideQuestViewController.notificacao()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
