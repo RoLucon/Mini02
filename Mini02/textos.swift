@@ -14,6 +14,7 @@ var p = 1 //Perguntas e possíveis respostas da tela atual
 var i : intmax_t!
 var r = 0 //Salva a resposta escolida
 var c = 0 //Representa a fala inicial da fase
+var contadorBanco = 0
 //Todas as falas do jogo em ordem de aparição
 let texto = [
     //Inicio cap 1
