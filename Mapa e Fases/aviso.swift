@@ -14,6 +14,7 @@ var p = 1 //Perguntas e possíveis respostas da tela atual
 var i : intmax_t!
 var r = 0 //Salva a resposta escolida
 var c = 0 //Representa a fala inicial da fase
+var contadorBanco = 0
 //Todas as falas do jogo em ordem de aparição
 let texto = [
 1: "Kleytinho… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE o seu salário caiu.",
@@ -331,12 +332,20 @@ class selecf: UIViewController{
             print("ERRO")
         }
     }
+    
+    @IBAction func banco(_ sender: Any) {
+        print(contadorBanco)
+    }
+    
+    
+    
     //Avança uma fase
     @IBAction func avanca(_ sender: AnyObject) {
     }
     
     //Vai pra fase 1
     @IBAction func f1(_ sender: AnyObject) {
+        contadorBanco = 1
         switch prog {
         case 1:
             r = 0

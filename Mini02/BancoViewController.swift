@@ -13,15 +13,26 @@ class BancoViewController: UIViewController {
     //Banco
     @IBOutlet weak var SaldoBanco: UILabel!
     @IBOutlet weak var SaldoPoupanca: UILabel!
-
-
+    
+    //Banco História
+    @IBOutlet weak var saldoConta: UIView!
+    @IBOutlet weak var poupancaView: UIView!
+    @IBOutlet weak var Investimento: UIButton!
+    @IBOutlet weak var Contas: UIButton!
+    @IBOutlet weak var Extrato: UIButton!
+    @IBOutlet weak var fundoView: UIView!
+    @IBOutlet weak var StackView: UIStackView!
+    @IBOutlet weak var seta: UIImageView!
+    @IBOutlet weak var textoLabel: UILabel!
+    @IBOutlet weak var faturaView: UIView!
+    @IBOutlet weak var textoView: UIView!
+    
     var banco = Personagem.shared.mexerDinheiro(valor: nil)
     
     enum Segues {
         static let dicaFatura = "dicaFatura"
         static let dicaConta = "dicaConta"
         static let dicaBanco = "dicaBanco"
-        static let dicaPoupanca = "dicaPoupanca"
         static let guardarPoupanca = "poupGuardar"
         static let retirarPoupanca = "poupRetirar"
     }
@@ -32,7 +43,13 @@ class BancoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if contadorBanco >= 1 {
+            fundoView?.isHidden = false
+            textoView?.isHidden = false
+            poupancaView?.transform = CGAffineTransform(translationX: 0, y: -20)
+            StackView?.transform = CGAffineTransform(translationX: 0, y: -90)
+            Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
+        }
         // Do any additional setup after loading the view.
         atualizarLabel()
         observer()
@@ -74,10 +91,6 @@ class BancoViewController: UIViewController {
             let destVC = segue.destination as! DicasView
             destVC.banco = "ToFirstChild"
         }
-        if segue.identifier == Segues.dicaPoupanca {
-            let destVC = segue.destination as! DicasView
-            destVC.poupanca = "ToFirstChild"
-        }
         if segue.identifier == Segues.retirarPoupanca {
             let destVC = segue.destination as! PoupancaView
             destVC.action = "retirar"
@@ -90,8 +103,72 @@ class BancoViewController: UIViewController {
         }
     }
     
+    //História - Capítulo 1
+    
+    @IBAction func teste(_ sender: Any) {
+        fundoView?.isHidden = false
+    }
+    
+    @objc func fundoV(){
+        fundoView?.isHidden = false
+        print("ok...")
 
+    }
+    
+    @IBAction func next(_ sender: Any) {
+        contadorBanco += 1
+        switch  contadorBanco {
+        case 1:
+            view.addSubview(saldoConta)
+            textoLabel?.text = texto[1]!
+        case 2:
+            view.sendSubviewToBack(saldoConta)
+            seta?.isHidden = false
+            textoLabel?.text = texto[2]!
+            seta?.center.x += 250
+            seta?.center.y -= 390
+        case 3:
+            view.addSubview(poupancaView)
+            seta?.center.x -= 250
+            seta?.center.y += 390
+            textoLabel?.text = texto[3]!
+        case 4:
+            view.sendSubviewToBack(poupancaView)
+            seta?.isHidden = true
+            textoLabel?.text = texto[4]!
+        case 5:
+            view.addSubview(StackView)
+            Contas.alpha = 0.5
+            textoLabel?.text = texto[5]!
+        case 6:
+            Investimento.alpha = 0.5
+            Contas.alpha = 1
+            seta?.isHidden = false
+            seta?.center.x += 190
+            seta?.center.y += 130
+            textoLabel?.text = texto[6]!
+        case 7:
+            view.sendSubviewToBack(StackView)
+            seta?.isHidden = true
+            Investimento.alpha = 1
+            textoLabel?.text = texto[7]!
+        case 8:
+            view.addSubview(Extrato)
+            textoLabel?.text = texto[8]!
+        case 10:
+            fundoView?.isHidden = true
+            contadorBanco = 0
+            poupancaView?.transform = .identity
+            StackView?.transform = .identity
+            Extrato?.transform = .identity
+        default:
+            print("ok")
+            view.sendSubviewToBack(Extrato)
+        }
+    }
+    
 }
+
 
 extension PoupancaView : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -99,6 +176,7 @@ extension PoupancaView : UITextFieldDelegate {
         return true
     }
 }
+
 
 class PoupancaView: UIViewController {
     
