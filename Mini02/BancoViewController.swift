@@ -117,6 +117,7 @@ class BancoViewController: UIViewController {
     
     @IBAction func next(_ sender: Any) {
         contadorBanco += 1
+        print("contador Banco: " + String(contadorBanco))
         switch  contadorBanco {
         case 1:
             view.addSubview(saldoConta)
@@ -156,6 +157,15 @@ class BancoViewController: UIViewController {
             view.addSubview(Extrato)
             textoLabel?.text = texto[8]!
         case 10:
+            seta?.isHidden = false
+            view.addSubview(StackView)
+            seta?.center.x += 190
+            seta?.center.y += 130
+            Contas.alpha = 1
+            Investimento.alpha = 0.5
+            textoLabel?.text = texto[9]!
+            
+        case 11:
             fundoView?.isHidden = true
             contadorBanco = 0
             poupancaView?.transform = .identity
@@ -165,6 +175,10 @@ class BancoViewController: UIViewController {
             print("ok")
             view.sendSubviewToBack(Extrato)
         }
+    }
+    ////História - Capítulo 2
+    @IBAction func voltarFase(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
