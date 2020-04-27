@@ -307,7 +307,7 @@ class selecf: UIViewController{
         switch prog {
         case 4:
             r = 0
-            p = 33
+            p = 37
             a = 24
             i = 1
             q = q4
@@ -401,7 +401,7 @@ class selecf: UIViewController{
             p = 21
             a = 15
         case 4:
-            p = 33
+            p = 37
             a = 24
         case 5:
             p = 45
@@ -425,6 +425,10 @@ class selecf: UIViewController{
     @IBAction func telas(_ sender: Any) {
         if c <= q[i]{
             dialogo()
+        }
+        else if c == 13 || c == 23 || c == 37{
+            self.performSegue(withIdentifier: "Finalizar", sender: self)
+            prog += 1
         }
         else{
             self.performSegue(withIdentifier: "Passa", sender: self)
