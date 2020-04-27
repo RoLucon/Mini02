@@ -54,7 +54,7 @@ class NarrativaViewController : UIViewController {
     }
     //Substituido pelas cenas quando imgs estiverem prontas
     func carregaTexto() {
-        self.texto = ["Era uma vez menino Kleytinho, um jovem recém-formado do ensino médio que sonha em ser um astronauta.","Todos os dias, ele ficava encostado na casa dos pais, sem ajudar nas tarefas econômicas da família.","Mas um dia ele precisou se mudar para outra cidade para estudar Astrofísica.\nPor causa disso, conseguiu seu primeiro emprego e uma moradia em uma república.","Por nunca ter se sustentado antes, se afundou em dívidas…","Mas sua colega de república, Kim, manja muito de economia e vai ajudá-lo a sair dessa!…Ou tentar."]
+        self.texto = ["Era uma vez menino \(Personagem.shared.nome!), um jovem recém-formado do ensino médio que sonha em ser um astronauta.","Todos os dias, ele ficava encostado na casa dos pais, sem ajudar nas tarefas econômicas da família.","Mas um dia ele precisou se mudar para outra cidade para estudar Astrofísica.\nPor causa disso, conseguiu seu primeiro emprego e uma moradia em uma república.","Por nunca ter se sustentado antes, se afundou em dívidas…","Mas sua colega de república, Kim, manja muito de economia e vai ajudá-lo a sair dessa!…Ou tentar."]
     }
     
     struct Cena {
