@@ -33,7 +33,7 @@ class NarrativaViewController : UIViewController {
         //Utilizado com cenas quando imgs estiverem prontas
 //        if index < texto.count {
 //        label.texto = cenas[index].texto!
-//        imgView.image = cenas[index].img
+//        imgView.changeImage(imageTo: cenas[index].img!)
 //        index += 1
         if index < texto.count {
             label.texto = texto[index]
