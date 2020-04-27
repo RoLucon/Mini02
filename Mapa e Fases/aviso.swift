@@ -165,16 +165,29 @@ class selecf: UIViewController{
     @IBOutlet weak var fase6: UIButton!
     @IBOutlet weak var fase7: UIButton!
     @IBOutlet weak var fase8: UIButton!
+    @IBOutlet weak var setaBanco: UIImageView!
     
     
     
     func dialogo(){
+        ApareceSeta(c)
         fala?.text = texto[c]
+        print("texto n: " + String(c))
+        
         if pula == true {
             c += 2
             pula = false
         } else {
             c += 1
+        }
+    }
+    func ApareceSeta(_ c:Int){
+        if(c==21){
+            setaBanco.alpha = 1
+            //alterar o alpha da seta para 1
+        }
+        if c==22{
+            setaBanco.alpha = 0
         }
     }
     
