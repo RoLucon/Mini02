@@ -83,22 +83,6 @@
                                     <action selector="telas:" destination="bBy-0S-dHI" eventType="touchUpInside" id="Jfm-dQ-QH1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZk-Y2-Zsx">
-                                <rect key="frame" x="0.0" y="183" width="125" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <state key="normal" title="BANCO">
-                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="fundoViraBanco:" destination="bBy-0S-dHI" eventType="touchUpInside" id="UDY-8i-yed"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aCM-Ds-Mk1">
-                                <rect key="frame" x="20" y="246.33333333333337" width="71" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -122,34 +106,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="gh6-6Z-5J9"/>
                     <connections>
-                        <outlet property="bancoFase2" destination="eZk-Y2-Zsx" id="yHa-8P-oWM"/>
-                        <outlet property="bancoTelaFase2" destination="1nz-EQ-SLe" id="q2G-bi-St4"/>
                         <outlet property="fala" destination="Zd8-o1-cvg" id="hFg-R6-1hH"/>
-                        <outlet property="setaBancoF2" destination="aCM-Ds-Mk1" id="cQr-wD-gfw"/>
                         <segue destination="y7e-Fm-1rE" kind="show" identifier="Passa" id="bFs-vk-vf2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="urK-1t-e2C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="1nz-EQ-SLe">
-                    <rect key="frame" x="0.0" y="0.0" width="294" height="577"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bancoTelaTEMP" translatesAutoresizingMaskIntoConstraints="NO" id="93J-bj-HqR">
-                            <rect key="frame" x="0.0" y="1" width="295" height="576"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgd-bc-na3">
-                            <rect key="frame" x="10" y="11" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="sairTela:" destination="bBy-0S-dHI" eventType="touchUpInside" id="5Rx-JZ-S43"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <viewLayoutGuide key="safeArea" id="dak-bI-DV8"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="1076.8115942028987" y="158.70535714285714"/>
         </scene>
@@ -184,8 +145,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.up" catalog="system" width="120" height="128"/>
-        <image name="bancoTelaTEMP" width="490" height="960"/>
         <image name="kimTEMPORARIO" width="371" height="664"/>
     </resources>
 </document>

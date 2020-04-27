@@ -166,27 +166,15 @@ class selecf: UIViewController{
     @IBOutlet weak var fase7: UIButton!
     @IBOutlet weak var fase8: UIButton!
     
-    @IBOutlet weak var bancoFase2: UIButton!
-    @IBOutlet weak var setaBancoF2: UIImageView!
-    @IBOutlet var bancoTelaFase2: UIView!
-    @IBOutlet weak var imgDinamicaFase2: UIImageView!
-    @IBOutlet weak var sairBancoF2: UIButton!
     
     
     func dialogo(){
-        if(c==8){
-            bancoFase2.alpha = 1
-            setaBancoF2.alpha = 1
-            fala?.text = texto[c]
+        fala?.text = texto[c]
+        if pula == true {
+            c += 2
+            pula = false
+        } else {
             c += 1
-        }else{
-          fala?.text = texto[c]
-          if pula == true {
-              c += 2
-              pula = false
-          } else {
-            c += 1
-          }
         }
     }
     
@@ -219,8 +207,6 @@ class selecf: UIViewController{
     @IBAction func banco(_ sender: Any) {
         print(contadorBanco)
     }
-    
-    
     
     //Avança uma fase
     @IBAction func avanca(_ sender: AnyObject) {
@@ -434,30 +420,4 @@ class selecf: UIViewController{
             self.performSegue(withIdentifier: "Passa", sender: self)
         }
     }
-    @IBAction func fundoViraBanco(_ sender: UIButton) {
-        abreTelaBanco()
-    }
-    @IBAction func sairTela(_ sender: UIButton) {
-        fechaTelaBanco()
-    }
-    
-    func abreTelaBanco(){
-        self.view.addSubview(bancoTelaFase2)
-        bancoTelaFase2.center = self.view.center
-        bancoTelaFase2.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-        bancoTelaFase2.alpha = 0
-        UIView.animate(withDuration: 0.4){
-            self.bancoTelaFase2.alpha = 1
-            self.bancoTelaFase2.transform = CGAffineTransform.identity
-        }
-    }
-    func fechaTelaBanco(){
-        UIView.animate(withDuration: 0.3, animations:{
-            self.bancoTelaFase2.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-            self.bancoTelaFase2.alpha = 0
-        }) { (success: Bool) in
-            self.bancoTelaFase2.removeFromSuperview()
-        }
-    }
-    
 }
