@@ -13,8 +13,29 @@ class ContaViewController: UIViewController {
     
     @IBOutlet weak var pieChartView: UIView!
     
+    //historia Fase2
+    @IBOutlet weak var viewFase2: UIView!
+    @IBOutlet weak var setaFase2: UIImageView!
+    @IBOutlet weak var viewFrase: UIView!
+    @IBOutlet weak var textoFase2: UILabel!
+    @IBOutlet weak var kimFase2: UIImageView!
+    @IBOutlet weak var gerenciarFase2: UIButton!
+    @IBOutlet weak var viewInferior: UIView!
+    @IBOutlet weak var stkViewInferior: UIStackView!
+    @IBOutlet weak var gerenciarButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if contadorBanco >= 1 {
+            viewFase2?.isHidden = false
+            viewFrase?.isHidden = false
+            setaFase2?.isHidden = false
+           view.addSubview(gerenciarFase2)
+            viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
+            stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
+            //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
+        }
         updateChart()
     }
     
@@ -57,4 +78,7 @@ class ContaViewController: UIViewController {
         semiCircleLayer.strokeEnd = CGFloat(valor)
         pieChartView.layer.addSublayer(semiCircleLayer)
     }
+    
+    //História - Capítulo 2
+    
 }

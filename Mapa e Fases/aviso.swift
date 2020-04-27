@@ -165,24 +165,29 @@ class selecf: UIViewController{
     @IBOutlet weak var fase6: UIButton!
     @IBOutlet weak var fase7: UIButton!
     @IBOutlet weak var fase8: UIButton!
+    @IBOutlet weak var setaBanco: UIImageView!
     
-    @IBOutlet weak var bancoFase2: UIButton!
-    @IBOutlet weak var setaBancoF2: UIImageView!
+    
     
     func dialogo(){
-        if(c==8){
-            bancoFase2.alpha = 1
-            setaBancoF2.alpha = 1
-            fala?.text = texto[c]
+        ApareceSeta(c)
+        fala?.text = texto[c]
+        print("texto n: " + String(c))
+        
+        if pula == true {
+            c += 2
+            pula = false
+        } else {
             c += 1
-        }else{
-          fala?.text = texto[c]
-          if pula == true {
-              c += 2
-              pula = false
-          } else {
-            c += 1
-          }
+        }
+    }
+    func ApareceSeta(_ c:Int){
+        if(c==21){
+            setaBanco.alpha = 1
+            //alterar o alpha da seta para 1
+        }
+        if c==22{
+            setaBanco.alpha = 0
         }
     }
     
@@ -215,8 +220,6 @@ class selecf: UIViewController{
     @IBAction func banco(_ sender: Any) {
         print(contadorBanco)
     }
-    
-    
     
     //Avança uma fase
     @IBAction func avanca(_ sender: AnyObject) {
@@ -272,6 +275,7 @@ class selecf: UIViewController{
     
     //Vai pra fase 2
     @IBAction func f2(_ sender: Any) {
+        contadorBanco = 9
         switch prog {
         case 2:
             r = 0
@@ -434,8 +438,4 @@ class selecf: UIViewController{
             self.performSegue(withIdentifier: "Passa", sender: self)
         }
     }
-    @IBAction func fundoViraBanco(_ sender: UIButton) {
-        
-    }
-    
 }
