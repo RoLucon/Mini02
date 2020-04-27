@@ -68,7 +68,7 @@
                                     <fragment content="Primeira fala">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <font key="NSFont" size="17" name=".SFNS-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -126,11 +126,22 @@
                         <outlet property="fala" destination="Zd8-o1-cvg" id="hFg-R6-1hH"/>
                         <outlet property="setaBancoF2" destination="aCM-Ds-Mk1" id="cQr-wD-gfw"/>
                         <segue destination="y7e-Fm-1rE" kind="show" identifier="Passa" id="bFs-vk-vf2"/>
+                        <segue destination="F2i-mQ-rQf" kind="show" identifier="Finalizar" id="PeW-Ou-30F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="urK-1t-e2C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076.8115942028987" y="158.70535714285714"/>
+        </scene>
+        <!--FeedBack-->
+        <scene sceneID="iOX-sy-asa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FeedBack" id="F2i-mQ-rQf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bnA-oS-FqK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDB-8C-0g1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="43"/>
         </scene>
         <!--Fase-->
         <scene sceneID="frT-zZ-gFG">
