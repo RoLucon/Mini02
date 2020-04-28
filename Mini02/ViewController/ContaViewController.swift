@@ -39,21 +39,19 @@ class ContaViewController: UIViewController {
         updateChart()
         
         if contadorBanco >= 1 {
-            textoView?.isHidden = false
-            texto?.text = texto2[9]
+            viewFase2?.isHidden = false
+            textoFase2?.text = texto2[9]
         }
     }
     
     
     //História capítulo 1
-    @IBAction func proximoTexto(_ sender: Any) {
+   /* @IBAction func proximoTexto(_ sender: Any) {
         if contadorBanco >= 9 && contadorBanco < 11 {
             contadorBanco += 1
             texto?.text = texto2[contadorBanco]
         }
- 
-
-    }
+    }*/
     
     
     
