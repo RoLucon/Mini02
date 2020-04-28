@@ -180,16 +180,15 @@ class BancoViewController: UIViewController {
         }
     }
 
-}
-    /*História - Capítulo 2
+    //História - Capítulo 2
 
     @IBAction func voltarFase(_ sender: Any) {
         let nome = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
         NotificationCenter.default.post(name: nome, object: nil)
         self.dismiss(animated: true, completion: nil)
-
+    }
 }
- */
+
 
 extension PoupancaView : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

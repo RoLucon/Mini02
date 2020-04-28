@@ -288,7 +288,7 @@ class selecf: UIViewController{
     
     //Vai pra fase 2
     @IBAction func f2(_ sender: Any) {
-        contadorBanco = 9
+        contadorBanco = 1
         switch prog {
         case 2:
             r = 0
