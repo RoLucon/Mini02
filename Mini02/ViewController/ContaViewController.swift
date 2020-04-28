@@ -13,10 +13,39 @@ class ContaViewController: UIViewController {
     
     @IBOutlet weak var pieChartView: UIView!
     
+    
+    //História
+    @IBOutlet weak var texto: UILabel!
+    @IBOutlet weak var textoView: UIView!
+    @IBOutlet weak var seta: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChart()
+        
+        if contadorBanco >= 1 {
+            textoView?.isHidden = false
+            texto?.text = texto2[9]
+        }
     }
+    
+    
+    //História capítulo 1
+    @IBAction func proximoTexto(_ sender: Any) {
+        if contadorBanco >= 9 && contadorBanco < 11 {
+            contadorBanco += 1
+            texto?.text = texto2[contadorBanco]
+        }
+ 
+
+    }
+    
+    
+    
+    
+    
+    //Gráfico
     
     func updateChart(numeros: [Double]){
         updateChart()
@@ -58,3 +87,4 @@ class ContaViewController: UIViewController {
         pieChartView.layer.addSublayer(semiCircleLayer)
     }
 }
+
