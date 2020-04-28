@@ -12,17 +12,6 @@ class ContaViewController: UIViewController {
     let numeros: [Double] = [90,90,90,90,90,90]
     
     @IBOutlet weak var pieChartView: UIView!
-    @IBOutlet weak var aluguel: UIStackView!
-    @IBOutlet weak var alimento: UIStackView!
-    @IBOutlet weak var luz: UIStackView!
-    @IBOutlet weak var mensalidade: UIStackView!
-    @IBOutlet weak var material: UIStackView!
-    
-    @IBOutlet weak var kimAjuda: UIView!
-    @IBOutlet weak var kimAjudaText: UILabel!
-    var checkBoxBtts: [CheckBoxButton] = []
-    
-    var countText = 30
     
     //historia Fase2
     @IBOutlet weak var viewFase2: UIView!
@@ -48,7 +37,6 @@ class ContaViewController: UIViewController {
             //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
         }
         updateChart()
-        startMission()
     }
     
     func updateChart(numeros: [Double]){
@@ -93,30 +81,4 @@ class ContaViewController: UIViewController {
     
     //História - Capítulo 2
     
-    func startMission() {
-        kimAjuda.isHidden = false
-        kimAjudaText.text = texto[countText]
-    }
-    
-    func fase3(){
-        let stackViews: [UIStackView] = [aluguel, alimento, luz, mensalidade, material]
-        
-        for stack in stackViews {
-            let btt = CheckBoxButton(tag: stack.tag)
-            checkBoxBtts.append(btt)
-            stack.insertArrangedSubview(btt, at: 0)
-            stack.distribution = .equalSpacing
-            stack.spacing = stack.spacing / 2 - 15
-        }
-        
-    }
-    
-    @IBAction func changeMessage(_ sender: Any) {
-        countText += 1
-        kimAjudaText.text = texto[countText]
-        
-        if countText == 33 {
-            fase3()
-        }
-    }
 }
