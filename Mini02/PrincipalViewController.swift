@@ -8,6 +8,10 @@
 
 import UIKit
 
+func zeraContadorBanco(){
+    contadorBanco = 0
+}
+
 var situacao = " Pendente "
 
 let atualizaRendimentosNotificationKey = "co.gusrigor.atualizaRendimento"
@@ -44,6 +48,7 @@ class ViewController: UIViewController {
         atualizaSemestre()
         atualizaSituacao()
         observer()
+        zeraContadorBanco()
         // Do any additional setup after loading the view.
     }
   
