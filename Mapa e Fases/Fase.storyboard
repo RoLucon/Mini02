@@ -127,7 +127,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="120" id="sRp-5p-OPp"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
