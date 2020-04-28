@@ -41,6 +41,7 @@ class ContaViewController: UIViewController {
         if contadorBanco >= 1 {
             viewFase2?.isHidden = false
             textoFase2?.text = texto2[9]
+
         }
     }
     
@@ -49,7 +50,7 @@ class ContaViewController: UIViewController {
    /* @IBAction func proximoTexto(_ sender: Any) {
         if contadorBanco >= 9 && contadorBanco < 11 {
             contadorBanco += 1
-            texto?.text = texto2[contadorBanco]
+           // texto?.text = texto2[contadorBanco]
         }
     }*/
     
