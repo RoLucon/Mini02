@@ -168,6 +168,7 @@ class BancoViewController: UIViewController {
         case 11:
             fundoView?.isHidden = true
             contadorBanco = 0
+            Investimento.alpha = 1
             poupancaView?.transform = .identity
             StackView?.transform = .identity
             Extrato?.transform = .identity
@@ -178,6 +179,8 @@ class BancoViewController: UIViewController {
     }
     ////História - Capítulo 2
     @IBAction func voltarFase(_ sender: Any) {
+        let nome = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
+        NotificationCenter.default.post(name: nome, object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     
