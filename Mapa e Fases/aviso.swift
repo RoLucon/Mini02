@@ -165,30 +165,38 @@ class selecf: UIViewController{
     @IBOutlet weak var fase6: UIButton!
     @IBOutlet weak var fase7: UIButton!
     @IBOutlet weak var fase8: UIButton!
+    @IBOutlet weak var setaBanco: UIImageView!
+    @IBOutlet weak var passaButton: UIButton!
+    let notificacao = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
     
-    @IBOutlet weak var bancoFase2: UIButton!
-    @IBOutlet weak var setaBancoF2: UIImageView!
+    
     
     func dialogo(){
-        if(c==8){
-            bancoFase2.alpha = 1
-            setaBancoF2.alpha = 1
-            fala?.text = texto[c]
+        ApareceSeta(c)
+        fala?.text = texto[c]
+        print("texto n: " + String(c))
+        
+        if pula == true {
+            c += 2
+            pula = false
+        } else {
             c += 1
-        }else{
-          fala?.text = texto[c]
-          if pula == true {
-              c += 2
-              pula = false
-          } else {
-            c += 1
-          }
         }
+    }
+    func ApareceSeta(_ c:Int){
+        if(c==21){
+            setaBanco?.alpha = 1
+            //alterar o alpha da seta para 1
+        }
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dialogo()
+        observer()
         //Progresso de fases
         switch prog {
         case 1:
@@ -211,12 +219,20 @@ class selecf: UIViewController{
             print("ERRO")
         }
     }
+    func observer(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.atualizaSetaBanco(notificacao:)), name: notificacao, object: nil)
+    }
+    @objc func atualizaSetaBanco(notificacao: NSNotification){
+        setaBanco?.alpha = 0
+        c = 22
+        dialogo()
+        print("a notificacao chegou")
+        
+    }
     
     @IBAction func banco(_ sender: Any) {
         print(contadorBanco)
     }
-    
-    
     
     //Avança uma fase
     @IBAction func avanca(_ sender: AnyObject) {
@@ -272,6 +288,7 @@ class selecf: UIViewController{
     
     //Vai pra fase 2
     @IBAction func f2(_ sender: Any) {
+        contadorBanco = 9
         switch prog {
         case 2:
             r = 0
@@ -307,7 +324,7 @@ class selecf: UIViewController{
         switch prog {
         case 4:
             r = 0
-            p = 33
+            p = 37
             a = 24
             i = 1
             q = q4
@@ -401,7 +418,7 @@ class selecf: UIViewController{
             p = 21
             a = 15
         case 4:
-            p = 33
+            p = 37
             a = 24
         case 5:
             p = 45
@@ -420,18 +437,20 @@ class selecf: UIViewController{
         }
         
     }
-    
     //Quantidades de caixa de dialogo terão
-    @IBAction func telas(_ sender: Any) {
+    @IBAction func telas(_ sender: UIButton) {
+        trocaFala()
+    }
+    func trocaFala(){
         if c <= q[i]{
             dialogo()
+        }
+        else if c == 13 || c == 23 || c == 37{
+            self.performSegue(withIdentifier: "Finalizar", sender: self)
+            prog += 1
         }
         else{
             self.performSegue(withIdentifier: "Passa", sender: self)
         }
     }
-    @IBAction func fundoViraBanco(_ sender: UIButton) {
-        
-    }
-    
 }
