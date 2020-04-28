@@ -12,6 +12,7 @@ var situacao = " Pendente "
 
 let atualizaRendimentosNotificationKey = "co.gusrigor.atualizaRendimento"
 let atualizaFalaNotificationKey = "co.gusrigor.atualizaFala"
+let atualizaSetaBancoNotificationKey = "co.gusrigor.atualizaSetaBanco"
 
 class ViewController: UIViewController {
     

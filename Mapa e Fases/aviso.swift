@@ -166,6 +166,8 @@ class selecf: UIViewController{
     @IBOutlet weak var fase7: UIButton!
     @IBOutlet weak var fase8: UIButton!
     @IBOutlet weak var setaBanco: UIImageView!
+    @IBOutlet weak var passaButton: UIButton!
+    let notificacao = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
     
     
     
@@ -183,17 +185,18 @@ class selecf: UIViewController{
     }
     func ApareceSeta(_ c:Int){
         if(c==21){
-            setaBanco.alpha = 1
+            setaBanco?.alpha = 1
             //alterar o alpha da seta para 1
         }
-        if c==22{
-            setaBanco.alpha = 0
-        }
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dialogo()
+        observer()
         //Progresso de fases
         switch prog {
         case 1:
@@ -215,6 +218,16 @@ class selecf: UIViewController{
         default:
             print("ERRO")
         }
+    }
+    func observer(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.atualizaSetaBanco(notificacao:)), name: notificacao, object: nil)
+    }
+    @objc func atualizaSetaBanco(notificacao: NSNotification){
+        setaBanco?.alpha = 0
+        c = 22
+        dialogo()
+        print("a notificacao chegou")
+        
     }
     
     @IBAction func banco(_ sender: Any) {
@@ -424,9 +437,11 @@ class selecf: UIViewController{
         }
         
     }
-    
     //Quantidades de caixa de dialogo terão
-    @IBAction func telas(_ sender: Any) {
+    @IBAction func telas(_ sender: UIButton) {
+        trocaFala()
+    }
+    func trocaFala(){
         if c <= q[i]{
             dialogo()
         }
