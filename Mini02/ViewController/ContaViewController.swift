@@ -12,10 +12,21 @@ class ContaViewController: UIViewController {
     let numeros: [Double] = [90,90,90,90,90,90]
     
     @IBOutlet weak var pieChartView: UIView!
+    @IBOutlet weak var aluguel: UIStackView!
+    @IBOutlet weak var alimento: UIStackView!
+    @IBOutlet weak var luz: UIStackView!
+    @IBOutlet weak var mensalidade: UIStackView!
+    @IBOutlet weak var material: UIStackView!
+    
+    @IBOutlet weak var kimAjuda: UIView!
+    var checkBoxBtts: [CheckBoxButton] = []
+    
+    var countText = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChart()
+        fase3()
     }
     
     func updateChart(numeros: [Double]){
@@ -57,4 +68,18 @@ class ContaViewController: UIViewController {
         semiCircleLayer.strokeEnd = CGFloat(valor)
         pieChartView.layer.addSublayer(semiCircleLayer)
     }
+    
+    func fase3(){
+        let stackViews: [UIStackView] = [aluguel, alimento, luz, mensalidade, material]
+        
+        for stack in stackViews {
+            let btt = CheckBoxButton(tag: stack.tag)
+            checkBoxBtts.append(btt)
+            stack.insertArrangedSubview(btt, at: 0)
+            stack.distribution = .equalSpacing
+            stack.spacing = stack.spacing / 2 - 15
+        }
+        kimAjuda.isHidden = false
+    }
+    
 }
