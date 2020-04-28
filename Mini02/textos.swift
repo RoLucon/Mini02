@@ -15,6 +15,7 @@ var i : intmax_t!
 var r = 0 //Salva a resposta escolida
 var c = 0 //Representa a fala inicial da fase
 var contadorBanco = 0
+var personagem: Personagem = Personagem.shared
 //Todas as falas do jogo em ordem de aparição
 let texto = [
     //Inicio cap 1
@@ -103,6 +104,33 @@ let texto = [
 78: "fala33",
 79: "fala33",
 80: "fala33",]
+
+//Textos das interações da fase no banco
+let texto2 = [
+    
+    //Capítulo 1
+    1: "Essa é sua conta bancária, \(personagem.nome!). Seu salário já tá na mão! Uhuuul!",
+    2:"...Mas não fica empolgado, não.",
+    3:"Aqui, você vê o seu saldo corrente.",
+    4:"E aqui, você está vendo a sua poupança.",
+    5:"A conta poupança é o lugar ideal para deixar o dinheiro que você não quer ou não pode gastar.",
+    6:"Vamos, coloque um pouquinho de dinheiro aqui.",
+    7:"Aqui é onde vc pode fazer investimentos, mas vamos deixar isso pra outra hora",
+    8:"Agora, vamos para a parte que dói.",
+    9:"Tah-dah! É isso que te faz sofrer todos os dias.",
+    10:"Eu sei, \(personagem.nome!), eu sei. Tem sido difícil...",
+    11:"Mas vai piorar! Clica naquele botão ali.",
+    12:"Essa é a fatura do seu cartão de crédito. Aqui, você consegue ver todo o seu histórico de gastos.",
+    13:"Triste histórico de gastos...",
+    14:"Agora fecha isso, tá me dando gatilho.",
+    15:"",
+    16:"",
+    17:"",
+    18:"",
+    19:"",
+    20:"",
+]
+
 
 //Todas perguntas do jogo e as respostas possíveis em ordem
 let per = [

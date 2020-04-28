@@ -13,6 +13,7 @@ class BancoViewController: UIViewController {
     //Banco
     @IBOutlet weak var SaldoBanco: UILabel!
     @IBOutlet weak var SaldoPoupanca: UILabel!
+    @IBOutlet weak var nome: UILabel!
     
     //Banco História
     @IBOutlet weak var saldoConta: UIView!
@@ -26,8 +27,11 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var textoLabel: UILabel!
     @IBOutlet weak var faturaView: UIView!
     @IBOutlet weak var textoView: UIView!
+    @IBOutlet weak var backButton: UIButton!
     
     var banco = Personagem.shared.mexerDinheiro(valor: nil)
+    var personagem: Personagem = Personagem.shared
+
     
     enum Segues {
         static let dicaFatura = "dicaFatura"
@@ -49,8 +53,12 @@ class BancoViewController: UIViewController {
             poupancaView?.transform = CGAffineTransform(translationX: 0, y: -20)
             StackView?.transform = CGAffineTransform(translationX: 0, y: -90)
             Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
+            textoLabel?.text = texto2[1]!
+            backButton?.isEnabled = false
+            
         }
         // Do any additional setup after loading the view.
+        nome?.text = personagem.nome!
         atualizarLabel()
         observer()
     }
@@ -115,75 +123,70 @@ class BancoViewController: UIViewController {
 
     }
     
-    @IBAction func next(_ sender: Any) {
+    @IBAction func proximoTexto(_ sender: Any) {
         contadorBanco += 1
-        print("contador Banco: " + String(contadorBanco))
+        textoLabel?.text = texto2[contadorBanco]!
+        
         switch  contadorBanco {
-        case 1:
-            view.addSubview(saldoConta)
-            textoLabel?.text = texto[1]!
-        case 2:
-            view.sendSubviewToBack(saldoConta)
-            seta?.isHidden = false
-            textoLabel?.text = texto[2]!
-            seta?.center.x += 250
-            seta?.center.y -= 390
         case 3:
-            view.addSubview(poupancaView)
-            seta?.center.x -= 250
-            seta?.center.y += 390
-            textoLabel?.text = texto[3]!
+            view.addSubview(saldoConta)
         case 4:
+            view.sendSubviewToBack(saldoConta)
+            view.addSubview(poupancaView)
+            //seta?.center.x += 250
+            //seta?.center.y -= 390
+        case 6:
+            seta?.isHidden = false
+            //seta?.center.x -= 250
+            //seta?.center.y += 390
+        case 7:
             view.sendSubviewToBack(poupancaView)
             seta?.isHidden = true
-            textoLabel?.text = texto[4]!
-        case 5:
+        case 8:
             view.addSubview(StackView)
             Contas.alpha = 0.5
-            textoLabel?.text = texto[5]!
-        case 6:
+            Investimento?.isEnabled = false
+        case 9:
             Investimento.alpha = 0.5
             Contas.alpha = 1
             seta?.isHidden = false
             seta?.center.x += 190
             seta?.center.y += 130
-            textoLabel?.text = texto[6]!
-        case 7:
+        case 10:
             view.sendSubviewToBack(StackView)
             seta?.isHidden = true
             Investimento.alpha = 1
-            textoLabel?.text = texto[7]!
-        case 8:
-            view.addSubview(Extrato)
-            textoLabel?.text = texto[8]!
-        case 10:
-            seta?.isHidden = false
-            view.addSubview(StackView)
-            seta?.center.x += 190
-            seta?.center.y += 130
-            Contas.alpha = 1
-            Investimento.alpha = 0.5
-            textoLabel?.text = texto[9]!
-            
         case 11:
+            view.addSubview(Extrato)
+        case 15:
             fundoView?.isHidden = true
             contadorBanco = 0
             Investimento.alpha = 1
             poupancaView?.transform = .identity
             StackView?.transform = .identity
             Extrato?.transform = .identity
+            backButton?.isEnabled = true
         default:
             print("ok")
             view.sendSubviewToBack(Extrato)
         }
+
     }
-    ////História - Capítulo 2
+    
+    @IBAction func voltarTexto(_ sender: Any) {
+        if contadorBanco > 1 && contadorBanco <= 15 {
+            contadorBanco -= 1
+            textoLabel?.text = texto2[contadorBanco]!
+        }
+    }
+
+    //História - Capítulo 2
+
     @IBAction func voltarFase(_ sender: Any) {
         let nome = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
         NotificationCenter.default.post(name: nome, object: nil)
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
 
 

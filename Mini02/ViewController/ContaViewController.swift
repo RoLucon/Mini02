@@ -37,7 +37,28 @@ class ContaViewController: UIViewController {
             //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
         }
         updateChart()
+        
+        if contadorBanco >= 1 {
+            viewFase2?.isHidden = false
+            textoFase2?.text = texto2[9]
+
+        }
     }
+    
+    
+    //História capítulo 1
+   /* @IBAction func proximoTexto(_ sender: Any) {
+        if contadorBanco >= 9 && contadorBanco < 11 {
+            contadorBanco += 1
+           // texto?.text = texto2[contadorBanco]
+        }
+    }*/
+    
+    
+    
+    
+    
+    //Gráfico
     
     func updateChart(numeros: [Double]){
         updateChart()
@@ -82,3 +103,4 @@ class ContaViewController: UIViewController {
     //História - Capítulo 2
     
 }
+
