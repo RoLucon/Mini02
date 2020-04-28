@@ -19,14 +19,15 @@ class ContaViewController: UIViewController {
     @IBOutlet weak var material: UIStackView!
     
     @IBOutlet weak var kimAjuda: UIView!
+    @IBOutlet weak var kimAjudaText: UILabel!
     var checkBoxBtts: [CheckBoxButton] = []
     
-    var countText = 0
+    var countText = 30
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChart()
-        fase3()
+        startMission()
     }
     
     func updateChart(numeros: [Double]){
@@ -69,6 +70,11 @@ class ContaViewController: UIViewController {
         pieChartView.layer.addSublayer(semiCircleLayer)
     }
     
+    func startMission() {
+        kimAjuda.isHidden = false
+        kimAjudaText.text = texto[countText]
+    }
+    
     func fase3(){
         let stackViews: [UIStackView] = [aluguel, alimento, luz, mensalidade, material]
         
@@ -79,7 +85,15 @@ class ContaViewController: UIViewController {
             stack.distribution = .equalSpacing
             stack.spacing = stack.spacing / 2 - 15
         }
-        kimAjuda.isHidden = false
+        
     }
     
+    @IBAction func changeMessage(_ sender: Any) {
+        countText += 1
+        kimAjudaText.text = texto[countText]
+        
+        if countText == 33 {
+            fase3()
+        }
+    }
 }
