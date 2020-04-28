@@ -323,7 +323,7 @@ class selecf: UIViewController{
         switch prog {
         case 5:
             r = 0
-            p = 45
+            p = 41
             a = 33
             i = 1
             q = q5
@@ -339,7 +339,7 @@ class selecf: UIViewController{
         switch prog {
         case 6:
             r = 0
-            p = 57
+            p = 53
             a = 42
             i = 1
             q = q6
@@ -404,10 +404,10 @@ class selecf: UIViewController{
             p = 37
             a = 24
         case 5:
-            p = 45
+            p = 41
             a = 33
         case 6:
-            p = 57
+            p = 53
             a = 42
         case 7:
             p = 69
@@ -426,7 +426,7 @@ class selecf: UIViewController{
         if c <= q[i]{
             dialogo()
         }
-        else if c == 13 || c == 23 || c == 37{
+        else if c == 13 || c == 23 || c == 37 || c == 44 || c == 60{
             self.performSegue(withIdentifier: "Finalizar", sender: self)
             prog += 1
         }

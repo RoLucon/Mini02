@@ -57,29 +57,31 @@ let texto = [
 35: "…Kim te ajudando é uma oportunidade única, okay?",
 36: "De qualquer forma, vou tirar um cochilo. Enquanto isso, partiu testar os conhecimentos?",
     //Inicio cap 4
-37: "cap4",
-38: "fala33",
-39: "fala33",
-40: "fala33",
-41: "fala33",
-42: "fala33",
-43: "fala33",
-44: "fala33",
-45: "fala33",
-46: "fala33",
-47: "fala33",
-48: "fala33",
-49: "fala33",
-50: "fala33",
-51: "fala33",
-52: "fala33",
-53: "fala33",
-54: "fala33",
-55: "fala33",
-56: "fala33",
-57: "fala33",
-58: "fala33",
-59: "fala33",
+37: "\(Personagem.shared.nome!)...\nEu estava pensando, você guardou uma grana na poupança, né? Já pensou em investir em algo mais lucrativo?",
+38: "Okay, essa explicação não foi a mais esclarecedora…",
+39: "Diferente, ué. Só que um diferente melhor!",
+40: "Enquanto na poupança o objetivo é juntar dinheiro, aqui a ideia é outra.\nÉ como colocar o seu dinheiro para trabalhar para você.",
+41: "Na poupança, a gente gasta os rendimentos e o valor que já tínhamos aplicado.\nJá, quando investimos corretamente, usamos só os rendimentos, deixando o dinheiro aplicado rendendo sempre.",
+42: "Vem cá que vamos entender isso melhor.", //Vai para a tela de banco
+43: "Caso você esteja com uma graninha parada, recomendo que invista.\nNo futuro, faz toda a diferença!", //Volta para o fundo da faculdade
+    //Inicio cap 5
+44: "Se você é jovem ainda, jovem ainda, jovem ainda…\nAmanhã velho será, velho será, velho será!",
+45: "A JUVENTUDE QUE NUNCA MORRERÁÁÁ!",
+46: "…poxa, Kleytinho. Poxa.",
+47: "Mas e você?",
+48: "Mas não pode deixar de pensar nas coisas que vão te ajudar lá na frente, viu?",
+49: "Naaah! Ainda tem muita preocupação pela frente.",
+50: "Uma delas é a previdência.\nA previdência social é uma proteção cedida sob situações que podem comprometer a renda ou o trabalho de alguém.",
+51: "Uma delas é a velhice! Mas também tem acidentes, doenças, prisão… e, no meu caso, a gravidez.",
+52: "Esse benefício é concedido pelo Instituto Nacional do Seguro Social. O famoso INSS.\nPara se tornar um contribuinte, basta ter 16 anos ou mais.",
+53: "Mas olha, essa não é a única forma de garantir uma aposentaria top!\nVocê também pode recorrer à previdência privada, que é basicamente o mesmo serviço, só que desvinculado do INSS.",
+54: "Algumas empresas oferecem para seus funcionários, o que é um fornecimento fechado.",
+55: "Mas também há o fornecimento aberto, onde você pode ir em qualquer banco ou corretora e começar a contribuir.",
+56: "Já que você começou a investir recentemente, recomendo que fique só na previdência social.\nQuando você estiver com bastante grana, dá pra investir um pouquinho mais na previdência privada.",
+57: "Esse é o espírito! Mas não esqueça que você quer comprar seu Celta.",
+58: "É, você está certo. Uma coisa de cada vez.",
+59: "Por enquanto, foque na sua… fila de metas.\nMas pequeno gafanhoto! Amanhã, você será um velho gafanhoto!\nPense no seu futuro também, sem atropelar os outros objetivos.",
+    //Inicio cap 6
 60: "fala33",
 61: "fala33",
 62: "fala33",
@@ -117,10 +119,12 @@ let per = [
 29: "Sua grana nunca mais vai sumir pro espaço!\nEntendeu?", 30: "Sim! Entendido.", 31: "Não entendi, não", 32: " ",
 33: "Pergunta 9", 34: "Resposta 1 p9", 35: "Resposta 2 p9", 36: "Resposta 3 p9",
     //Cap 4
-37: "Pergunta 10", 38: "Resposta 1 p10", 39: "Resposta 2 p10", 40: "Resposta 3 p10",
-41: "Pergunta 11", 42: "Resposta 1 p11", 43: "Resposta 2 p11", 44: "Resposta 3 p11",
-45: "Pergunta 12", 46: "Resposta 1 p12", 47: "Resposta 2 p12", 48: "Resposta 3 p12",
-49: "Pergunta 13", 50: "Resposta 1 p13", 51: "Resposta 2 p13", 52: "Resposta 3 p13",
+37: "Tipo uma poupança... Só que diferente.", 38: "Ué.", 39: "Diferente como?", 40: " ",
+    //Cap 5
+41: "A menos que…", 42: "…o coração, o coração sustente…", 43: "…você morra antes?", 44: " ",
+45: "Em que fase da vida acha que está?", 46: "Jovem ainda, é claro.", 47: "Velho já sou.", 48: " ",
+49: "O que você acha ?", 50: "Guardarei dinheiro para isso"/*Vou guardar bastante dinheiro para isso.*/, 51: "Quero focar na minha meta"/*Mas eu quero comprar meu celta logooo!*/, 52: " ",
+    //Cap 6
 53: "Pergunta 14", 54: "Resposta 1 p14", 55: "Resposta 2 p14", 56: "Resposta 3 p14",
 57: "Pergunta 15", 58: "Resposta 1 p15", 59: "Resposta 2 p15", 60: "Resposta 3 p15",
 61: "Pergunta 16", 62: "Resposta 1 p16", 63: "Resposta 2 p16", 64: "Resposta 3 p16",
@@ -203,9 +207,9 @@ var q = Array(repeating: 0, count:6)
 var q1 = [1, 2, 5, 9, 12, 0]
 var q2 = [13, 13, 18, 22, 0, 0]
 var q3 = [23, 23, 26, 33, 36, 0]
-var q4 = [37, 15, 16, 17, 0, 0]
-var q5 = [18, 19, 20, 21, 0, 0]
-var q6 = [22, 23, 24, 25, 0, 0]
+var q4 = [37, 37, 43, 0, 0, 0]
+var q5 = [44, 44, 47, 56, 59, 0]
+var q6 = [60, 23, 24, 25, 0, 0]
 var q7 = [26, 27, 28, 29, 0, 0]
 var q8 = [30, 31, 32, 33, 0, 0]
 
