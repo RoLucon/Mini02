@@ -1048,8 +1048,7 @@
                                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="next:" destination="k1o-wQ-zpY" eventType="touchUpInside" id="MnT-qu-x6j"/>
-                                                    <action selector="nextButton:" destination="ERt-pN-ToC" eventType="touchUpInside" id="AAn-e4-hYd"/>
+                                                    <action selector="next:" destination="ERt-pN-ToC" eventType="touchUpInside" id="dSD-jW-fO8"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kim" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="635-RH-42p">
@@ -1066,8 +1065,7 @@
                                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="next:" destination="k1o-wQ-zpY" eventType="touchUpInside" id="epr-O0-Ppk"/>
-                                                    <action selector="nextButton:" destination="ERt-pN-ToC" eventType="touchUpInside" id="1x4-aI-hCN"/>
+                                                    <action selector="back:" destination="ERt-pN-ToC" eventType="touchUpInside" id="icO-ja-CeH"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1164,7 +1162,7 @@
                         <outlet property="textoFase2" destination="sVU-Rb-LUQ" id="gXX-XR-Mv1"/>
                         <outlet property="viewFase2" destination="ZyD-Ft-oQa" id="Dfx-pz-YT6"/>
                         <outlet property="viewFrase" destination="EPA-0r-pwf" id="eFE-13-n0u"/>
-                        <outlet property="viewInferior" destination="5BM-mQ-GgB" id="lg4-D7-qo6"/>
+                        <outlet property="viewInferior" destination="5BM-mQ-GgB" id="26U-Ys-Ifl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9U-HK-Og5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1541,7 +1539,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="S9E-Fe-Ghc"/>
         <segue reference="Usl-gZ-DIe"/>
-        <segue reference="yTC-S7-h55"/>
+        <segue reference="d73-3l-XYX"/>
         <segue reference="sW6-Px-Z69"/>
     </inferredMetricsTieBreakers>
     <resources>
