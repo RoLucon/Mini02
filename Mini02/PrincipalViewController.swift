@@ -8,15 +8,10 @@
 
 import UIKit
 
-func zeraContadorBanco(){
-    contadorBanco = 0
-}
-
 var situacao = " Pendente "
 
 let atualizaRendimentosNotificationKey = "co.gusrigor.atualizaRendimento"
 let atualizaFalaNotificationKey = "co.gusrigor.atualizaFala"
-let atualizaSetaBancoNotificationKey = "co.gusrigor.atualizaSetaBanco"
 
 class ViewController: UIViewController {
     
@@ -48,7 +43,6 @@ class ViewController: UIViewController {
         atualizaSemestre()
         atualizaSituacao()
         observer()
-        zeraContadorBanco()
         // Do any additional setup after loading the view.
     }
   
@@ -97,12 +91,13 @@ class ViewController: UIViewController {
     func atualizaSaldo(){
         print("FOI")
         personagem = Personagem.shared
-        Dinheiro.text = String(format:"R$ %.2f", personagem.dinheiro(nil)!)
+        let temp:Float? = personagem.mexerDinheiro(valor: nil)
+        Dinheiro.text = String(format:"R$ %.2f",temp!)
     }
     //Funcao para atualizar a fala da personagem ao carregar a tela
     func atualizaFala(){
         personagem = Personagem.shared
-        let temp:Int? = personagem.score(nil)
+        let temp:Int? = personagem.mexerScore(valor: nil)
         if(temp!>650){
             FalaPrsonagem.text = "Está na situação boa!"
         }else if(temp!>350){

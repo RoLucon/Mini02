@@ -10,51 +10,14 @@ import UIKit
 
 class ContaViewController: UIViewController {
     let numeros: [Double] = [90,90,90,90,90,90]
-    var checkBoxBtts: [CheckBoxButton] = []
+    
     @IBOutlet weak var pieChartView: UIView!
-    
-    //historia Fase2
-    @IBOutlet weak var viewFase2: UIView!
-    @IBOutlet weak var setaFase2: UIImageView!
-    @IBOutlet weak var viewFrase: UIView!
-    @IBOutlet weak var textoFase2: UILabel!
-    @IBOutlet weak var kimFase2: UIImageView!
-    @IBOutlet weak var gerenciarFase2: UIButton!
-    @IBOutlet weak var viewInferior: UIView!
-    @IBOutlet weak var stkViewInferior: UIStackView!
-    @IBOutlet weak var gerenciarButton: UIButton!
-    
-    var controleTexto = ["index": 0, "primeiro": 0, "ultimo": 0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            if contadorBanco >= 1 {
-                viewFrase?.isHidden = false
-                viewFase2?.isHidden = false
-                if prog == 3{
-                    fase3()
-                } else {
-                    setaFase2?.isHidden = false
-                    textoFase2?.text = texto2[9]
-                    view.addSubview(gerenciarFase2)
-                    viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
-                    stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
-                    //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
-            }
-        }
         updateChart()
-        
     }
     
-    //História capítulo 1
-   /* @IBAction func proximoTexto(_ sender: Any) {
-        if contadorBanco >= 9 && contadorBanco < 11 {
-            contadorBanco += 1
-           // texto?.text = texto2[contadorBanco]
-        }
-    }*/
-
-    //Gráfico
     func updateChart(numeros: [Double]){
         updateChart()
     }
@@ -94,52 +57,4 @@ class ContaViewController: UIViewController {
         semiCircleLayer.strokeEnd = CGFloat(valor)
         pieChartView.layer.addSublayer(semiCircleLayer)
     }
-    
-    //Fase 3
-    func fase3(){
-        let stackViews = stkViewInferior.arrangedSubviews
-        stkViewInferior.distribution = .fillEqually
-        
-        for stack in stackViews {
-            let btt = CheckBoxButton(tag: stack.tag)
-            checkBoxBtts.append(btt)
-            let aux: UIStackView = stack as! UIStackView
-            aux.insertArrangedSubview(btt, at: 0)
-            aux.distribution = .equalSpacing
-            aux.spacing = aux.spacing / 2 - 15
-        }
-        fase3AjustaTela()
-    }
-    
-    func fase3AjustaTela(){
-        textoFase2?.text = texto2[9]
-        viewInferior?.transform = CGAffineTransform(translationX: 0, y: -65)
-        stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -90)
-        gerenciarFase2.isHidden = true
-        let gl = CAGradientLayer()
-        gl.colors = [viewFase2.backgroundColor!.cgColor,viewFase2.backgroundColor!.cgColor, UIColor.clear.cgColor, UIColor.clear.cgColor]
-        gl.locations = [0.4, 0.55, 0.6, 1.0]
-        gl.frame = viewFase2.frame
-        viewFase2.layer.addSublayer(gl)
-        viewFase2.backgroundColor = .clear
-        stkViewInferior.superview?.bringSubviewToFront(stkViewInferior)
-        controleTexto["index"] = 30
-        controleTexto["primeiro"] = 30
-        controleTexto["ultimo"] = 35
-    }
-    
-    @IBAction func next(_ sender: Any) {
-        if controleTexto["index"]! < controleTexto["ultimo"]! {
-            controleTexto["index"]! += 1
-        }
-        textoFase2.text = texto[controleTexto["index"]!]
-    }
-    
-    @IBAction func back(_ sender: Any) {
-        if controleTexto["index"]! > controleTexto["primeiro"]! {
-            controleTexto["index"]! -= 1
-        }
-        textoFase2.text = texto[controleTexto["index"]!]
-    }
 }
-

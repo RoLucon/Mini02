@@ -47,7 +47,6 @@ class Personagem {
     func salvarNome(nome: String){
         self.nome = nome
         UserDefaults.standard.set(nome, forKey: "personagem.nome")
-        salvar()
     }
     
     func salvar(){
