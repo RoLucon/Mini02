@@ -1048,8 +1048,7 @@
                                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="next:" destination="k1o-wQ-zpY" eventType="touchUpInside" id="MnT-qu-x6j"/>
-                                                    <action selector="nextButton:" destination="ERt-pN-ToC" eventType="touchUpInside" id="AAn-e4-hYd"/>
+                                                    <action selector="next:" destination="ERt-pN-ToC" eventType="touchUpInside" id="dSD-jW-fO8"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kim" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="635-RH-42p">
@@ -1066,8 +1065,7 @@
                                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="next:" destination="k1o-wQ-zpY" eventType="touchUpInside" id="epr-O0-Ppk"/>
-                                                    <action selector="nextButton:" destination="ERt-pN-ToC" eventType="touchUpInside" id="1x4-aI-hCN"/>
+                                                    <action selector="back:" destination="ERt-pN-ToC" eventType="touchUpInside" id="icO-ja-CeH"/>
                                                 </connections>
                                             </button>
                                         </subviews>

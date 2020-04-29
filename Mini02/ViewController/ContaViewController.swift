@@ -24,6 +24,7 @@ class ContaViewController: UIViewController {
     @IBOutlet weak var stkViewInferior: UIStackView!
     @IBOutlet weak var gerenciarButton: UIButton!
     
+    var controleTexto = ["index": 0, "primeiro": 0, "ultimo": 0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,9 @@ class ContaViewController: UIViewController {
                 viewFase2.layer.addSublayer(gl)
                 viewFase2.backgroundColor = .clear
                 stkViewInferior.superview?.bringSubviewToFront(stkViewInferior)
+                controleTexto["index"] = 30
+                controleTexto["primeiro"] = 30
+                controleTexto["ultimo"] = 35
             } else {
                 setaFase2?.isHidden = false
                 textoFase2?.text = texto2[9]
@@ -122,5 +126,18 @@ class ContaViewController: UIViewController {
         
     }
     
+    @IBAction func next(_ sender: Any) {
+        if controleTexto["index"]! < controleTexto["ultimo"]! {
+            controleTexto["index"]! += 1
+        }
+        textoFase2.text = texto[controleTexto["index"]!]
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        if controleTexto["index"]! > controleTexto["primeiro"]! {
+            controleTexto["index"]! -= 1
+        }
+        textoFase2.text = texto[controleTexto["index"]!]
+    }
 }
 
