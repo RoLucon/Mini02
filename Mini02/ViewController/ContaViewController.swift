@@ -126,11 +126,11 @@ class ContaViewController: UIViewController {
                 label.backgroundColor = .clear
                 label.layer.borderWidth = 3
                 label.layer.borderColor = UIColor.green.cgColor
+                label.layer.cornerRadius = 10
                 stack.addSubview(label)
-//                self.view.addSubview(label)
                 label.translatesAutoresizingMaskIntoConstraints = false
-                label.bottomAnchor.constraint(equalTo: stack.bottomAnchor, constant: 5).isActive = true
-                label.topAnchor.constraint(equalTo: stack.topAnchor, constant: -5).isActive = true
+                label.bottomAnchor.constraint(equalTo: stack.bottomAnchor, constant: 10).isActive = true
+                label.topAnchor.constraint(equalTo: stack.topAnchor, constant: -10).isActive = true
                 label.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: -10).isActive = true
                 label.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: 10).isActive = true
             }
