@@ -28,32 +28,23 @@ class ContaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            if contadorBanco >= 1 {
-                viewFrase?.isHidden = false
-                viewFase2?.isHidden = false
-                if prog == 3{
-                    fase3()
-                } else {
-                    setaFase2?.isHidden = false
-                    textoFase2?.text = texto2[9]
-                    view.addSubview(gerenciarFase2)
-                    viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
-                    stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
-                    //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
+        if contadorBanco >= 1 {
+            viewFrase?.isHidden = false
+            viewFase2?.isHidden = false
+            if prog == 3{
+                fase3()
+            } else {
+                setaFase2?.isHidden = false
+                textoFase2?.text = texto2[9]
+                view.addSubview(gerenciarFase2)
+                viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
+                stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
+                //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
             }
         }
         updateChart()
-        
     }
     
-    //História capítulo 1
-   /* @IBAction func proximoTexto(_ sender: Any) {
-        if contadorBanco >= 9 && contadorBanco < 11 {
-            contadorBanco += 1
-           // texto?.text = texto2[contadorBanco]
-        }
-    }*/
-
     //Gráfico
     func updateChart(numeros: [Double]){
         updateChart()
@@ -128,11 +119,30 @@ class ContaViewController: UIViewController {
         controleTexto["ultimo"] = 35
     }
     
+    func destacaRespostaCorreta(){
+        for stack in stkViewInferior.arrangedSubviews {
+            if stack.tag == 0 || stack.tag == 3 {
+                let label = UILabel(frame: stack.frame)
+                label.backgroundColor = .clear
+                label.layer.borderWidth = 3
+                label.layer.borderColor = UIColor.green.cgColor
+                stack.addSubview(label)
+//                self.view.addSubview(label)
+                label.translatesAutoresizingMaskIntoConstraints = false
+                label.bottomAnchor.constraint(equalTo: stack.bottomAnchor, constant: 5).isActive = true
+                label.topAnchor.constraint(equalTo: stack.topAnchor, constant: -5).isActive = true
+                label.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: -10).isActive = true
+                label.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: 10).isActive = true
+            }
+        }
+    }
+    //Botoes de texto Kim
     @IBAction func next(_ sender: Any) {
         if controleTexto["index"]! < controleTexto["ultimo"]! {
             controleTexto["index"]! += 1
         }
         textoFase2.text = texto[controleTexto["index"]!]
+        
     }
     
     @IBAction func back(_ sender: Any) {
