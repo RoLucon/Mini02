@@ -115,7 +115,7 @@ let texto2 = [
     4:"E aqui, você está vendo a sua poupança.",
     5:"A conta poupança é o lugar ideal para deixar o dinheiro que você não quer ou não pode gastar.",
     6:"Vamos, coloque um pouquinho de dinheiro aqui.",
-    7:"Aqui é onde vc pode fazer investimentos, mas vamos deixar isso pra outra hora",
+    7:"Aqui é onde vc pode fazer investimentos, mas vamos deixar isso pra outra hora.",
     8:"Agora, vamos para a parte que dói.",
     9:"Tah-dah! É isso que te faz sofrer todos os dias.",
     10:"Eu sei, \(personagem.nome!), eu sei. Tem sido difícil...",

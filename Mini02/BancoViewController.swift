@@ -47,7 +47,7 @@ class BancoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if contadorBanco >= 1 {
+        if prog == 1 && contadorBanco >= 1 {
             fundoView?.isHidden = false
             textoView?.isHidden = false
             poupancaView?.transform = CGAffineTransform(translationX: 0, y: -20)
@@ -55,8 +55,8 @@ class BancoViewController: UIViewController {
             Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
             textoLabel?.text = texto2[1]!
             backButton?.isEnabled = false
-            
         }
+
         // Do any additional setup after loading the view.
         nome?.text = personagem.nome!
         atualizarLabel()
@@ -64,6 +64,8 @@ class BancoViewController: UIViewController {
     }
     func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarSaldo(n:)), name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(proximoTexto(_:)), name: NSNotification.Name.init("AtualizarFala"), object: nil)
     }
     
     @objc func atualizarSaldo(n:NSNotification) {
@@ -142,7 +144,6 @@ class BancoViewController: UIViewController {
         case 7:
             view.sendSubviewToBack(poupancaView)
             seta?.isHidden = true
-        case 8:
             view.addSubview(StackView)
             Contas.alpha = 0.5
             Investimento?.isEnabled = false
@@ -152,13 +153,13 @@ class BancoViewController: UIViewController {
             seta?.isHidden = false
             seta?.center.x += 190
             seta?.center.y += 130
-        case 10:
+        case 12:
             view.sendSubviewToBack(StackView)
             seta?.isHidden = true
             Investimento.alpha = 1
-        case 11:
+        case 13:
             view.addSubview(Extrato)
-        case 15:
+        case 19:
             fundoView?.isHidden = true
             contadorBanco = 0
             Investimento.alpha = 1
@@ -168,7 +169,7 @@ class BancoViewController: UIViewController {
             backButton?.isEnabled = true
         default:
             print("ok")
-            view.sendSubviewToBack(Extrato)
+            //view.sendSubviewToBack(Extrato)
         }
 
     }
@@ -183,10 +184,16 @@ class BancoViewController: UIViewController {
     //História - Capítulo 2
 
     @IBAction func voltarFase(_ sender: Any) {
-        let nome = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
-        NotificationCenter.default.post(name: nome, object: nil)
-        self.dismiss(animated: true, completion: nil)
+        contadorBanco += 1
+        NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarView"), object: nil)
+        if prog == 2 {
+            let nome = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
+            NotificationCenter.default.post(name: nome, object: nil)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
+    
+    
 }
 
 

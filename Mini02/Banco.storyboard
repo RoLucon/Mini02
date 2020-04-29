@@ -566,7 +566,9 @@
                         <outlet property="SaldoBanco" destination="OTB-xb-Vat" id="GB3-LM-ngu"/>
                         <outlet property="SaldoPoupanca" destination="tf1-yL-rW5" id="3UL-b8-RLu"/>
                         <outlet property="StackView" destination="PEt-H6-UbM" id="Gan-LW-NMq"/>
+                        <outlet property="backButton" destination="6K8-va-3Zl" id="jyI-Ko-Bnp"/>
                         <outlet property="fundoView" destination="TQk-JS-N0D" id="cg4-gn-JUG"/>
+                        <outlet property="nome" destination="RNm-xX-q0A" id="hLt-p8-1sj"/>
                         <outlet property="poupancaView" destination="iez-fV-sME" id="tIy-Tb-Wzr"/>
                         <outlet property="saldoConta" destination="XWn-j5-BCc" id="C5f-Im-7KV"/>
                         <outlet property="seta" destination="qf9-mb-A3y" id="UTL-Pn-C4z"/>
@@ -1032,7 +1034,7 @@
                                         <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPA-0r-pwf">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPA-0r-pwf">
                                         <rect key="frame" x="0.0" y="756" width="414" height="140"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique em gerenciar para pagar a fatura do cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVU-Rb-LUQ">
@@ -1041,6 +1043,13 @@
                                                 <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBx-07-grl">
+                                                <rect key="frame" x="349" y="98" width="17.5" height="22"/>
+                                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="arrowtriangle.left.fill" catalog="system">
+                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICB-1T-nHo">
                                                 <rect key="frame" x="376.5" y="98" width="17.5" height="22"/>
                                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1048,8 +1057,7 @@
                                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="next:" destination="k1o-wQ-zpY" eventType="touchUpInside" id="MnT-qu-x6j"/>
-                                                    <action selector="nextButton:" destination="ERt-pN-ToC" eventType="touchUpInside" id="AAn-e4-hYd"/>
+                                                    <action selector="proximoTexto:" destination="ERt-pN-ToC" eventType="touchUpInside" id="y2w-4P-3Lf"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kim" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="635-RH-42p">
@@ -1059,17 +1067,6 @@
                                                     <constraint firstAttribute="width" constant="85" id="xdD-tw-8li"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBx-07-grl">
-                                                <rect key="frame" x="349" y="98" width="17.5" height="22"/>
-                                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="arrowtriangle.left.fill" catalog="system">
-                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="next:" destination="k1o-wQ-zpY" eventType="touchUpInside" id="epr-O0-Ppk"/>
-                                                    <action selector="nextButton:" destination="ERt-pN-ToC" eventType="touchUpInside" id="1x4-aI-hCN"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1390,7 +1387,6 @@
                                             <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="next:" destination="k1o-wQ-zpY" eventType="touchUpInside" id="eD6-PY-q1q"/>
                                             <action selector="voltarFase:" destination="LEQ-ax-7Ib" eventType="touchUpInside" id="I44-Bs-6ib"/>
                                         </connections>
                                     </button>
@@ -1407,10 +1403,6 @@
                                         <state key="normal" image="arrowtriangle.left.fill" catalog="system">
                                             <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="next:" destination="k1o-wQ-zpY" eventType="touchUpInside" id="HuD-yV-g69"/>
-                                            <action selector="voltarFase:" destination="LEQ-ax-7Ib" eventType="touchUpInside" id="EjP-l9-115"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1541,7 +1533,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="S9E-Fe-Ghc"/>
         <segue reference="Usl-gZ-DIe"/>
-        <segue reference="yTC-S7-h55"/>
+        <segue reference="d73-3l-XYX"/>
         <segue reference="sW6-Px-Z69"/>
     </inferredMetricsTieBreakers>
     <resources>

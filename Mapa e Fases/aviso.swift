@@ -401,6 +401,10 @@ class selecf: UIViewController{
     
     //Refaz a fase
     @IBAction func refazer(_ sender: Any) {
+        if prog == 2 {
+            contadorBanco = 1
+        }
+        
         zerafase()
         r = 0
         prog -= 1
@@ -435,6 +439,7 @@ class selecf: UIViewController{
         default:
             print("UÉ")
         }
+        
         
     }
     //Quantidades de caixa de dialogo terão
