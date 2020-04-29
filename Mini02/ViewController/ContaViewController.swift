@@ -28,20 +28,18 @@ class ContaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contadorBanco = 1
-        prog = 3
-        if contadorBanco >= 1 {
-            viewFrase?.isHidden = false
-            viewFase2?.isHidden = false
-            if prog == 3{
-                fase3()
-            } else {
-                setaFase2?.isHidden = false
-                textoFase2?.text = texto2[9]
-                view.addSubview(gerenciarFase2)
-                viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
-                stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
-                //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
+            if contadorBanco >= 1 {
+                viewFrase?.isHidden = false
+                viewFase2?.isHidden = false
+                if prog == 3{
+                    fase3()
+                } else {
+                    setaFase2?.isHidden = false
+                    textoFase2?.text = texto2[9]
+                    view.addSubview(gerenciarFase2)
+                    viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
+                    stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
+                    //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
             }
         }
         updateChart()
