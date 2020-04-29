@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 var perguntaAtual = 0
-let respostasCertas = 0
+var respostasCertas = 0
 
 struct Resposta {
     var resp = "algum texto"
@@ -48,21 +48,79 @@ class Quiz3Resp: UIViewController{
     }
     func atualizaResposta(){
         let pergunta = perguntasQuiz[perguntaAtual]
-        respostaA.titleLabel?.text = pergunta.respostaA.resp
-        respostaB.titleLabel?.text = pergunta.respostaB.resp
-        respostaC.titleLabel?.text = pergunta.respostaC.resp
+        respostaA.setTitle(pergunta.respostaA.resp, for: .normal)
+        respostaA.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaA.backgroundColor = UIColor.white
+        respostaB.setTitle(pergunta.respostaB.resp, for: .normal)
+        respostaB.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaB.backgroundColor = UIColor.white
+        respostaC.setTitle(pergunta.respostaC.resp, for: .normal)
+        respostaC.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaC.backgroundColor = UIColor.white
     }
     @IBAction func verificaRespA(_ sender: UIButton) {
         let pergunta = perguntasQuiz[perguntaAtual]
+        let certo = pergunta.respostaA.certo
+        respostasCertas += certo
+        if certo == 1 {
+            respostaA.setTitleColor(UIColor.white, for: .normal)
+            respostaA.backgroundColor = UIColor.green
+            perguntaAtual += 1
+            if perguntaAtual == 3{
+                proximaTela.isHidden = false
+            }else{
+                UIView.animate(withDuration: 1.2){
+                    self.atualizaPergunta()
+                    self.atualizaResposta()
+                }
+            }
+        }else{
+            respostaA.setTitleColor(UIColor.white, for: .normal)
+            respostaA.backgroundColor = UIColor.red
+        }
     }
     @IBAction func verificaRespB(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
+        let certo = pergunta.respostaB.certo
+        respostasCertas += certo
+        if certo == 1 {
+            respostaB.setTitleColor(UIColor.white, for: .normal)
+            respostaB.backgroundColor = UIColor.green
+            perguntaAtual += 1
+            if perguntaAtual == 3{
+                proximaTela.isHidden = false
+            }else{
+                UIView.animate(withDuration: 1.2){
+                    self.atualizaPergunta()
+                    self.atualizaResposta()
+                }
+            }
+        }else{
+            respostaB.setTitleColor(UIColor.white, for: .normal)
+            respostaB.backgroundColor = UIColor.red
+        }
     }
     @IBAction func verificaRespC(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
+        let certo = pergunta.respostaC.certo
+        respostasCertas += certo
+        if certo == 1 {
+            respostaC.setTitleColor(UIColor.white, for: .normal)
+            respostaC.backgroundColor = UIColor.green
+            perguntaAtual += 1
+            if perguntaAtual == 3{
+                proximaTela.isHidden = false
+            }else{
+                UIView.animate(withDuration: 1.2){
+                    self.atualizaPergunta()
+                    self.atualizaResposta()
+                }
+            }
+        }else{
+        respostaC.setTitleColor(UIColor.white, for: .normal)
+        respostaC.backgroundColor = UIColor.red
+        }
     }
-    
-    
 }
 
 class Quiz5Resp: UIViewController{
@@ -78,6 +136,10 @@ class Quiz5Resp: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        atualizaPergunta()
+        atualizaResposta()
+        perguntaAtual = 3
+        
     }
     func atualizaPergunta(){
         let pergunta = perguntasQuiz[perguntaAtual]
@@ -85,21 +147,126 @@ class Quiz5Resp: UIViewController{
     }
     func atualizaResposta(){
         let pergunta = perguntasQuiz[perguntaAtual]
-        respostaA.titleLabel?.text = pergunta.respostaA.resp
-        respostaB.titleLabel?.text = pergunta.respostaB.resp
-        respostaC.titleLabel?.text = pergunta.respostaC.resp
-        respostaD.titleLabel?.text = pergunta.respostaD.resp
-        respostaE.titleLabel?.text = pergunta.respostaE.resp
+        respostaA.setTitle(pergunta.respostaA.resp, for: .normal)
+        respostaA.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaA.backgroundColor = UIColor.white
+        respostaB.setTitle(pergunta.respostaB.resp, for: .normal)
+        respostaB.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaB.backgroundColor = UIColor.white
+        respostaC.setTitle(pergunta.respostaC.resp, for: .normal)
+        respostaC.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaC.backgroundColor = UIColor.white
+        respostaD.setTitle(pergunta.respostaD.resp, for: .normal)
+        respostaD.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaD.backgroundColor = UIColor.white
+        respostaE.setTitle(pergunta.respostaE.resp, for: .normal)
+        respostaE.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaE.backgroundColor = UIColor.white
     }
     @IBAction func verificaRespA(_ sender: Any) {
+        let pergunta = perguntasQuiz[perguntaAtual]
+        let certo = pergunta.respostaA.certo
+        respostasCertas += certo
+        if certo == 1 {
+            respostaA.setTitleColor(UIColor.white, for: .normal)
+            respostaA.backgroundColor = UIColor.green
+            perguntaAtual += 1
+            if perguntaAtual == 7{
+                proximaTela.isHidden = false
+            }else{
+                UIView.animate(withDuration: 1.2){
+                    self.atualizaPergunta()
+                    self.atualizaResposta()
+                }
+            }
+        }else{
+        respostaA.setTitleColor(UIColor.white, for: .normal)
+        respostaA.backgroundColor = UIColor.red
+        }
     }
     @IBAction func verificaRespB(_ sender: Any) {
+        let pergunta = perguntasQuiz[perguntaAtual]
+        let certo = pergunta.respostaB.certo
+        respostasCertas += certo
+        if certo == 1 {
+            respostaB.setTitleColor(UIColor.white, for: .normal)
+            respostaB.backgroundColor = UIColor.green
+            perguntaAtual += 1
+            if perguntaAtual == 7{
+                proximaTela.isHidden = false
+            }else{
+                UIView.animate(withDuration: 1.2){
+                    self.atualizaPergunta()
+                    self.atualizaResposta()
+                }
+            }
+        }else{
+        respostaB.setTitleColor(UIColor.white, for: .normal)
+        respostaB.backgroundColor = UIColor.red
+        }
     }
     @IBAction func verificaRespC(_ sender: Any) {
+        let pergunta = perguntasQuiz[perguntaAtual]
+        let certo = pergunta.respostaC.certo
+        respostasCertas += certo
+        if certo == 1 {
+            respostaC.setTitleColor(UIColor.white, for: .normal)
+            respostaC.backgroundColor = UIColor.green
+            perguntaAtual += 1
+            if perguntaAtual == 7{
+                proximaTela.isHidden = false
+            }else{
+                UIView.animate(withDuration: 1.2){
+                    self.atualizaPergunta()
+                    self.atualizaResposta()
+                }
+            }
+        }else{
+        respostaC.setTitleColor(UIColor.white, for: .normal)
+        respostaC.backgroundColor = UIColor.red
+        }
     }
     @IBAction func verificaRespD(_ sender: Any) {
+        let pergunta = perguntasQuiz[perguntaAtual]
+        let certo = pergunta.respostaD.certo
+        respostasCertas += certo
+        if certo == 1 {
+            respostaD.setTitleColor(UIColor.white, for: .normal)
+            respostaD.backgroundColor = UIColor.green
+            perguntaAtual += 1
+            if perguntaAtual == 7{
+                proximaTela.isHidden = false
+            }else{
+                UIView.animate(withDuration: 1.2){
+                    self.atualizaPergunta()
+                    self.atualizaResposta()
+                }
+            }
+        }else{
+        respostaD.setTitleColor(UIColor.white, for: .normal)
+        respostaD.backgroundColor = UIColor.red
+        }
     }
     @IBAction func verificaRespE(_ sender: Any) {
+        let pergunta = perguntasQuiz[perguntaAtual]
+        let certo = pergunta.respostaE.certo
+        respostasCertas += certo
+        if certo == 1 {
+            respostaE.setTitleColor(UIColor.white, for: .normal)
+            respostaE.backgroundColor = UIColor.green
+            perguntaAtual += 1
+            if perguntaAtual == 7{
+                proximaTela.isHidden = false
+            }else{
+                UIView.animate(withDuration: 1.2){
+                    self.atualizaPergunta()
+                    self.atualizaResposta()
+                }
+            }
+        }else{
+        respostaE.setTitleColor(UIColor.white, for: .normal)
+        respostaE.backgroundColor = UIColor.red
+        }
     }
     
     
@@ -112,6 +279,7 @@ class QuizFim: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resultado.text = String(respostasCertas) + " de 10"
     }
     
 }

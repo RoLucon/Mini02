@@ -114,7 +114,7 @@
                             </view>
                             <button hidden="YES" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZN-iA-38p">
                                 <rect key="frame" x="135" y="750" width="144" height="52"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="  Próximo  ">
                                     <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -191,7 +191,7 @@
                             </label>
                             <button hidden="YES" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvj-fr-5g2">
                                 <rect key="frame" x="135" y="750" width="144" height="52"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="  Próximo  ">
                                     <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -394,6 +394,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="arj-at-RWK" kind="show" id="y59-jx-eb5"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iof-up-86Q">
                                 <rect key="frame" x="20" y="246" width="374" height="404"/>
@@ -487,6 +490,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpW-Be-P6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1500.0000000000002" y="20.758928571428569"/>
+        </scene>
+        <!--Principal-->
+        <scene sceneID="hKq-Gh-jCz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Principal" id="arj-at-RWK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="s7R-OC-XiD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcq-hv-BIt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2221" y="21"/>
         </scene>
     </scenes>
     <resources>
