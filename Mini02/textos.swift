@@ -18,7 +18,7 @@ var contadorBanco = 0
 //Todas as falas do jogo em ordem de aparição
 let texto = [
     //Inicio cap 1
-1: "\(Personagem.shared.nome!)… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE o seu salário caiu.",
+1: "\(Personagem.shared.nome!)… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE o seu salário caiu.", //Narrador
 2: "Fala aí, \(Personagem.shared.nome!)!\nRecebeu hoje, né?",
 3: "Ehh… Não foi isso que conversamos ontem, \(Personagem.shared.nome!)",
 4: "Olha só, nossa conversa de ontem até que fez efeito!",
@@ -31,7 +31,7 @@ let texto = [
 11: "Oh? Coitadinho…",
 12: "Mas relaxa, dessa vez eu pago pra gente.",
     //Inicio cap 2
-13: "\(Personagem.shared.nome!), esse é o seu pior inimigo…\nNão, não o shopping.\nO cartão de crédito.",
+13: "\(Personagem.shared.nome!), esse é o seu pior inimigo…\nNão, não o shopping.\nO cartão de crédito.", //Narrador
 14: "Que espaço lindo! Quanto lugar legal!",
 15: "E acumular várias dívidas pelos próximos meses!",
 16: "…Você por acaso tem saldo na conta pra passar no débito?",
@@ -49,8 +49,8 @@ let texto = [
 27: "MUAHAHAH! Eu sei, eu sei! Eu sou demais, mesmo!",
 28: "Calma lá. Super Kim está aqui para te ajudar!",
 29: "Primeiro passo: você precisa saber o que gasta todo mês.\nSó que é impossível saber exatamente, porque tem gasto que conseguimos prever, tem gasto que não.",
-30: "É o que separamos entre despesa fixa e despesa variável.\nVamos ver isso melhor?",
-31: "Outra coisa importante é criar uma reserva de emergência.\nVocê só vai usar essa reserva em… emergências! Desemprego, por exemplo.",
+30: "É o que separamos entre despesa fixa e despesa variável.\nVamos ver isso melhor?", //Seta pro banco
+31: "Outra coisa importante é criar uma reserva de emergência.\nVocê só vai usar essa reserva em… emergências! Desemprego, por exemplo.", // vol
 32: "Essa reserva pode variar entre 3 a 6 salários atuais.\nPara se organizar melhor, você pode usar uma planilha com todas as entradas e saídas de grana.",
 33: "É bom, também, guardar as notinhas para consultar depois. Aí você anota todos os gastos, casuais ou não, e deixa registrado para onde foi seu dinheiro.",
 34: "HAHAH! Isso é o que nós vamos ver!",
@@ -82,24 +82,25 @@ let texto = [
 58: "É, você está certo. Uma coisa de cada vez.",
 59: "Por enquanto, foque na sua… fila de metas.\nMas pequeno gafanhoto! Amanhã, você será um velho gafanhoto!\nPense no seu futuro também, sem atropelar os outros objetivos.",
     //Inicio cap 6
-60: "fala33",
-61: "fala33",
-62: "fala33",
-63: "fala33",
-64: "fala33",
-65: "fala33",
-66: "fala33",
-67: "fala33",
-68: "fala33",
-69: "fala33",
-70: "fala33",
-71: "fala33",
-72: "fala33",
-73: "fala33",
-74: "fala33",
-75: "fala33",
-76: "fala33",
-77: "fala33",
+60: "Kleytinho… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE você precisa declarar seu imposto de renda.",//Narrador
+61: "Hoje é um dia chato, sabe?",
+62: "Vamos lá declarar esse negócio…",
+63: "Não sabe o por quê? Bem, eu vou te mostrar.",
+64: "O imposto de renda, como o nome já diz, é um imposto que é cobrado sobre o quanto você ganha.",
+65: "Você precisa fazer uma declaração com toda, absolutamente toda a movimentação do seu dinheiro. Ou seja: seu salário, onde você mora, a faculdade, o plano de saúde que paga, o que guarda na poupança…",
+66: "Isso serve para que a Receita Federal acompanhe o crescimento do seu patrimônio e, com base nisso, te cobre impostos proporcionais aos seus ganhos.",
+67: "Eles fazem… muitas coisas.",
+68: "Quê?!",
+69: "O dinheiro vai para a saúde, educação e programas sociais no geral.\nÉ o que chamamos de dinheiro público!",
+70: "E se você não declarar, vai ter que pagar uma multa.\n…Você não quer pagar essa multa, Kleytinho.",
+71: "Então, vamos lá?!", //Vai para a simulação
+    //Inicio cap 7
+72: "Após um longo dia no trabalho e na faculdade, Kleytinho retorna.\nÉ um dia comum…\nMas um cheiro estranho.",
+73: "O que está acontecendo?", //FALA DO KLEY KLEY
+74: "Tá pegando fogo, bicho!!!", //FAUSTÃO
+75: "Kleytinho!!! Eu não sei o que aconteceu… Os meninos estavam cozinhando e… e…", //Volta para kim
+76: "Tá todo mundo desesperado… É a nossa casa! O que nós vamos fazer?",
+77: "Todas as suas escolhas definiram nosso rumo até aqui.\nConfio em você.",
 78: "fala33",
 79: "fala33",
 80: "fala33",]
@@ -125,9 +126,10 @@ let per = [
 45: "Em que fase da vida acha que está?", 46: "Jovem ainda, é claro.", 47: "Velho já sou.", 48: " ",
 49: "O que você acha ?", 50: "Guardarei dinheiro para isso"/*Vou guardar bastante dinheiro para isso.*/, 51: "Quero focar na minha meta"/*Mas eu quero comprar meu celta logooo!*/, 52: " ",
     //Cap 6
-53: "Pergunta 14", 54: "Resposta 1 p14", 55: "Resposta 2 p14", 56: "Resposta 3 p14",
-57: "Pergunta 15", 58: "Resposta 1 p15", 59: "Resposta 2 p15", 60: "Resposta 3 p15",
-61: "Pergunta 16", 62: "Resposta 1 p16", 63: "Resposta 2 p16", 64: "Resposta 3 p16",
+53: "Eu não estou feliz com esse dia, sabe…", 54: "Sei, sim…", 55: "Ué, por quê?", 56: " ",
+57: "Serve para que quem ganhe mais, contribua mais e quem ganha menos, contribua menos.", 58: "Para onde vai esse dinheiro ?", 59: "Não quero contribuir nada, não.", 60: " ",
+    //Cap 7
+61: "Kleytinho… O que você quer fazer?", 62: "Vou ajudar vocês!"/*Eu tenho dinheiro guardado, Kim. Vou ajudar vocês!*/, 63: "Desculpe... Não vou ajudar!", 64: " ",
 65: "Pergunta 17", 66: "Resposta 1 p17", 67: "Resposta 2 p17", 68: "Resposta 3 p17",
 69: "Pergunta 18", 70: "Resposta 1 p18", 71: "Resposta 2 p18", 72: "Resposta 3 p18",
 73: "Pergunta 19", 74: "Resposta 1 p19", 75: "Resposta 2 p19", 76: "Resposta 3 p19",
@@ -205,12 +207,12 @@ var prog = 1 // Representa o progresso do jogador
 //Colocar 0 caso já tenha acabado
 var q = Array(repeating: 0, count:6)
 var q1 = [1, 2, 5, 9, 12, 0]
-var q2 = [13, 13, 18, 22, 0, 0]
+var q2 = [13, 14, 18, 22, 0, 0]
 var q3 = [23, 23, 26, 33, 36, 0]
 var q4 = [37, 37, 43, 0, 0, 0]
 var q5 = [44, 44, 47, 56, 59, 0]
-var q6 = [60, 23, 24, 25, 0, 0]
-var q7 = [26, 27, 28, 29, 0, 0]
+var q6 = [60, 61, 66, 71, 0, 0]
+var q7 = [72, 76, 76 , 77, 0, 0]
 var q8 = [30, 31, 32, 33, 0, 0]
 
 //Arrays que salvarão as respostas

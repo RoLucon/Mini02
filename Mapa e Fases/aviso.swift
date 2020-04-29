@@ -151,7 +151,9 @@ class popup: UIViewController{
         perguntas()
         r += 1
         pula = false
-        c+=1
+        if prog != 7{
+            c+=1
+        }
     }
 }
 
@@ -173,6 +175,9 @@ class selecf: UIViewController{
         if(c==8){
             bancoFase2.alpha = 1
             setaBancoF2.alpha = 1
+            fala?.text = texto[c]
+            c += 1
+        }else if prog == 7{
             fala?.text = texto[c]
             c += 1
         }else{
@@ -355,7 +360,7 @@ class selecf: UIViewController{
         switch prog {
         case 7:
             r = 0
-            p = 69
+            p = 61
             a = 51
             i = 1
             q = q7
@@ -410,7 +415,7 @@ class selecf: UIViewController{
             p = 53
             a = 42
         case 7:
-            p = 69
+            p = 61
             a = 51
         case 8:
             p = 81
@@ -426,7 +431,7 @@ class selecf: UIViewController{
         if c <= q[i]{
             dialogo()
         }
-        else if c == 13 || c == 23 || c == 37 || c == 44 || c == 60{
+        else if c == 13 || c == 23 || c == 37 || c == 44 || c == 60 || c == 72 || c == 78{
             self.performSegue(withIdentifier: "Finalizar", sender: self)
             prog += 1
         }
