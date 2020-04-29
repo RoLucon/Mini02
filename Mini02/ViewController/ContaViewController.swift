@@ -34,20 +34,7 @@ class ContaViewController: UIViewController {
             viewFrase?.isHidden = false
             viewFase2?.isHidden = false
             if prog == 3{
-                textoFase2?.text = texto2[9]
-                viewInferior?.transform = CGAffineTransform(translationX: 0, y: -65)
-                stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -90)
-                gerenciarFase2.isHidden = true
-                let gl = CAGradientLayer()
-                gl.colors = [viewFase2.backgroundColor!.cgColor,viewFase2.backgroundColor!.cgColor, UIColor.clear.cgColor, UIColor.clear.cgColor]
-                gl.locations = [0.4, 0.55, 0.6, 1.0]
-                gl.frame = viewFase2.frame
-                viewFase2.layer.addSublayer(gl)
-                viewFase2.backgroundColor = .clear
-                stkViewInferior.superview?.bringSubviewToFront(stkViewInferior)
-                controleTexto["index"] = 30
-                controleTexto["primeiro"] = 30
-                controleTexto["ultimo"] = 35
+                fase3()
             } else {
                 setaFase2?.isHidden = false
                 textoFase2?.text = texto2[9]
@@ -58,7 +45,7 @@ class ContaViewController: UIViewController {
             }
         }
         updateChart()
-        fase3()
+        
     }
     
     //História capítulo 1
@@ -123,7 +110,24 @@ class ContaViewController: UIViewController {
             aux.distribution = .equalSpacing
             aux.spacing = aux.spacing / 2 - 15
         }
-        
+        fase3AjustaTela()
+    }
+    
+    func fase3AjustaTela(){
+        textoFase2?.text = texto2[9]
+        viewInferior?.transform = CGAffineTransform(translationX: 0, y: -65)
+        stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -90)
+        gerenciarFase2.isHidden = true
+        let gl = CAGradientLayer()
+        gl.colors = [viewFase2.backgroundColor!.cgColor,viewFase2.backgroundColor!.cgColor, UIColor.clear.cgColor, UIColor.clear.cgColor]
+        gl.locations = [0.4, 0.55, 0.6, 1.0]
+        gl.frame = viewFase2.frame
+        viewFase2.layer.addSublayer(gl)
+        viewFase2.backgroundColor = .clear
+        stkViewInferior.superview?.bringSubviewToFront(stkViewInferior)
+        controleTexto["index"] = 30
+        controleTexto["primeiro"] = 30
+        controleTexto["ultimo"] = 35
     }
     
     @IBAction func next(_ sender: Any) {
