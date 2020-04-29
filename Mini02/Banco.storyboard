@@ -1164,7 +1164,7 @@
                         <outlet property="textoFase2" destination="sVU-Rb-LUQ" id="gXX-XR-Mv1"/>
                         <outlet property="viewFase2" destination="ZyD-Ft-oQa" id="Dfx-pz-YT6"/>
                         <outlet property="viewFrase" destination="EPA-0r-pwf" id="eFE-13-n0u"/>
-                        <outlet property="viewInferior" destination="5BM-mQ-GgB" id="lg4-D7-qo6"/>
+                        <outlet property="viewInferior" destination="5BM-mQ-GgB" id="26U-Ys-Ifl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9U-HK-Og5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1541,7 +1541,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="S9E-Fe-Ghc"/>
         <segue reference="Usl-gZ-DIe"/>
-        <segue reference="yTC-S7-h55"/>
+        <segue reference="d73-3l-XYX"/>
         <segue reference="sW6-Px-Z69"/>
     </inferredMetricsTieBreakers>
     <resources>
