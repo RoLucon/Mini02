@@ -38,6 +38,7 @@
 		89E3EAED24326E35007C2CFC /* Principal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAEC24326E35007C2CFC /* Principal.storyboard */; };
 		89E3EAF024328755007C2CFC /* IntroducaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */; };
 		89E3EAF524328D7C007C2CFC /* CustomizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */; };
+		89FD50912459ED0C0057A1B0 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FD50902459ED0C0057A1B0 /* CheckBoxButton.swift */; };
 		C0CDCA00243BCBEB0057014D /* BancoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		89E3EAEC24326E35007C2CFC /* Principal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Principal.storyboard; sourceTree = "<group>"; };
 		89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducaoViewController.swift; sourceTree = "<group>"; };
 		89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizacaoViewController.swift; sourceTree = "<group>"; };
+		89FD50902459ED0C0057A1B0 /* CheckBoxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BancoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 		8932CD4F243D1DF500E2BCA4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				89FD50902459ED0C0057A1B0 /* CheckBoxButton.swift */,
 				8932CD50243D1E1200E2BCA4 /* TextLabel.swift */,
 				89078E072444EB16002F5CF2 /* Extension.swift */,
 			);
@@ -379,6 +382,7 @@
 				1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */,
 				89078E082444EB16002F5CF2 /* Extension.swift in Sources */,
 				89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */,
+				89FD50912459ED0C0057A1B0 /* CheckBoxButton.swift in Sources */,
 				89DF46A92437B75200FB36EB /* Personagem.swift in Sources */,
 				C0CDCA00243BCBEB0057014D /* BancoViewController.swift in Sources */,
 				89E3EAAF242E98D3007C2CFC /* SceneDelegate.swift in Sources */,

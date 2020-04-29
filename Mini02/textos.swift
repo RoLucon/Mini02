@@ -15,6 +15,7 @@ var i : intmax_t!
 var r = 0 //Salva a resposta escolida
 var c = 0 //Representa a fala inicial da fase
 var contadorBanco = 0
+var personagem: Personagem = Personagem.shared
 //Todas as falas do jogo em ordem de aparição
 let texto = [
     //Inicio cap 1
@@ -104,6 +105,33 @@ let texto = [
 78: "fala33",
 79: "fala33",
 80: "fala33",]
+
+//Textos das interações da fase no banco
+let texto2 = [
+    
+    //Capítulo 1
+    1: "Essa é sua conta bancária, \(personagem.nome!). Seu salário já tá na mão! Uhuuul!",
+    2:"...Mas não fica empolgado, não.",
+    3:"Aqui, você vê o seu saldo corrente.",
+    4:"E aqui, você está vendo a sua poupança.",
+    5:"A conta poupança é o lugar ideal para deixar o dinheiro que você não quer ou não pode gastar.",
+    6:"Vamos, coloque um pouquinho de dinheiro aqui.",
+    7:"Aqui é onde vc pode fazer investimentos, mas vamos deixar isso pra outra hora",
+    8:"Agora, vamos para a parte que dói.",
+    9:"Tah-dah! É isso que te faz sofrer todos os dias.",
+    10:"Eu sei, \(personagem.nome!), eu sei. Tem sido difícil...",
+    11:"Mas vai piorar! Clica naquele botão ali.",
+    12:"Essa é a fatura do seu cartão de crédito. Aqui, você consegue ver todo o seu histórico de gastos.",
+    13:"Triste histórico de gastos...",
+    14:"Agora fecha isso, tá me dando gatilho.",
+    15:"",
+    16:"",
+    17:"",
+    18:"",
+    19:"",
+    20:"",
+]
+
 
 //Todas perguntas do jogo e as respostas possíveis em ordem
 let per = [
@@ -224,3 +252,28 @@ var resposta5 = Array(repeating: 0, count:3)
 var resposta6 = Array(repeating: 0, count:3)
 var resposta7 = Array(repeating: 0, count:3)
 var resposta8 = Array(repeating: 0, count:3)
+
+
+
+//Explicações detalhadas dos tipos de investimento
+let CDBEx = """
+CDB - O Certificado de Depósito Bancário é um tipo de investimento em renda fixa oferecidos por bancos e com a proteção do Fundo Garantidor de Créditos. Este investimento é de baixo risco e sem taxas de administração, mas com a necessidade de ser declarado no imposto de renda. O CDB é, na prática, um empréstimo de dinheiro ao banco, e este te paga com juros. E este juros, o lucro do investimento, é acordado com a instituição financeira quando o CDB é adquirido.
+    (Colocar a regra do jogo, pelo que é apresentado nas pesquisa que fiz, no ano passado o lucro médio de um bom CDB estava em torno 15 a 20% dependendo do tempo do investimento. Eu gostaria de deixar mais ou menos entre 1 e 1,5% ao mês).
+    Sendo que o Imposto de renda é de 15% (na vida real este valor varia com o tempo em que a pessoa fica com o CDB Variando de 22,5 a 15%) em cima do lucro que você tiver neste investimento.
+"""
+let LCIEx = """
+LCI/LCA - Letras de Crédito Imobiliário e Letras de Crédito do Agronegócio é um tipo de investimento em renda fixa oferecidos por bancos e com a proteção do Fundo Garantidor de Créditos. Este investimento é de baixo risco e sem taxas. Os LCI e LCA são na prática, um empréstimo destinado ao setor do agronegócio e do setor imobiliário. O lucro do investimento é acordado com a instituição financeira quando é adquirido.
+    (Colocar a regra do jogo, pelo que é apresentado nas pesquisa que fiz, no ano passado o lucro médio de um bom LCI/LCA estava em torno 5 a 10% dependendo do tempo do investimento. Eu gostaria de deixar mais ou menos entre 0,5 e 1% ao mês).
+    Não há impostos neste tipo de investimento, ou seja, o valor líquido é o mesmo que o valor bruto.
+"""
+let CRIEx = """
+CRI/CRA - Certificado de Recebíveis Imobiliários e Certificado de Recebíveis do Agronegócio é um tipo de investimento em renda fixa oferecidos por securitizadoras. Os CRI e CRA são, na prática, um empréstimo destinado ao agronegócio ao setor imobiliário para que estes setores tenham capital, por exemplo, para realizar o financiamento de um imóvel. O lucro do investimento é acordado com a corretora quando é adquirido. Este investimento  não é protegido pelo Fundo Garantidor de Créditos o que pode significar perdas financeiras caso os devedores não cumpram sua parte no acordo.
+    (Colocar a regra do jogo, pelo que é apresentado nas pesquisa que fiz, não achei um valor certo do valor do lucro, aparentemente porque depende do tempo que está investindo e da confiabilidade que a securitizadora tem, pois pode haver um calote. Os dados que eu encontrei são baseados no CDI, que é um valor que flutua. Eu gostaria de deixar mais ou menos entre 1,5 e 2% ao mês).
+    Não há impostos neste tipo de investimento, mas pode haver uma cobrança de uma taxa administrativa da corretora (Os valores estão na casa de 2% do valor investido).
+"""
+let DEBEx = """
+Debêntures - Debêntures é um tipo de investimento em renda fixa oferecidos por corretoras. As debêntures são, na prática, um empréstimo para empresas que estão arrecadando recursos para financiar o desenvolvimento de seu negócio. O lucro do investimento é acordado com a corretora quando é adquirido. Este investimento  não é protegido pelo Fundo Garantidor de Créditos o que pode significar perdas financeiras caso os devedores não cumpram sua parte no acordo.
+    (Colocar a regra do jogo, pelo que é apresentado nas pesquisa que fiz, no ano passado o lucro médio de um bom Debênture estava em torno 10 a 20% dependendo do tempo do investimento. Eu gostaria de deixar mais ou menos 1,5 % ao mês).
+    Sendo que o Imposto de renda é de 15% (na vida real este valor varia com o tempo em que a pessoa fica com o CDB Variando de 22,5 a 15%) em cima do lucro que você tiver neste investimento.
+"""
+
