@@ -8,6 +8,7 @@
 
 import UIKit
 //Mudar "a" e "p" nas funcoes refazer, f1, f2, f3, f4, f5, f6, f7 e f8 após ter o valor inicial delas para cada fase
+var fim = 1 //Determina o final que será apresentado
 var pula = false
 var a = 0 //Ajuda da tela atual
 var p = 1 //Perguntas e possíveis respostas da tela atual
@@ -50,8 +51,9 @@ let texto = [
 27: "MUAHAHAH! Eu sei, eu sei! Eu sou demais, mesmo!",
 28: "Calma lá. Super Kim está aqui para te ajudar!",
 29: "Primeiro passo: você precisa saber o que gasta todo mês.\nSó que é impossível saber exatamente, porque tem gasto que conseguimos prever, tem gasto que não.",
-30: "É o que separamos entre despesa fixa e despesa variável.\nVamos ver isso melhor?",
-31: "Outra coisa importante é criar uma reserva de emergência.\nVocê só vai usar essa reserva em… emergências! Desemprego, por exemplo.",
+30: "É o que separamos entre despesa fixa e despesa variável.\nVamos ver isso melhor?", //Seta pro banco
+31: "Outra coisa importante é criar uma reserva de emergência.\nVocê só vai usar essa reserva em… emergências! Desemprego, por exemplo.", // volta
+
 32: "Essa reserva pode variar entre 3 a 6 salários atuais.\nPara se organizar melhor, você pode usar uma planilha com todas as entradas e saídas de grana.",
 33: "É bom, também, guardar as notinhas para consultar depois. Aí você anota todos os gastos, casuais ou não, e deixa registrado para onde foi seu dinheiro.",
 34: "HAHAH! Isso é o que nós vamos ver!",
@@ -83,27 +85,48 @@ let texto = [
 58: "É, você está certo. Uma coisa de cada vez.",
 59: "Por enquanto, foque na sua… fila de metas.\nMas pequeno gafanhoto! Amanhã, você será um velho gafanhoto!\nPense no seu futuro também, sem atropelar os outros objetivos.",
     //Inicio cap 6
-60: "fala33",
-61: "fala33",
-62: "fala33",
-63: "fala33",
-64: "fala33",
-65: "fala33",
-66: "fala33",
-67: "fala33",
-68: "fala33",
-69: "fala33",
-70: "fala33",
-71: "fala33",
-72: "fala33",
-73: "fala33",
-74: "fala33",
-75: "fala33",
-76: "fala33",
-77: "fala33",
-78: "fala33",
-79: "fala33",
-80: "fala33",]
+60: "Kleytinho… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE você precisa declarar seu imposto de renda.",//Narrador
+61: "Hoje é um dia chato, sabe?",
+62: "Vamos lá declarar esse negócio…",
+63: "Não sabe o por quê? Bem, eu vou te mostrar.",
+64: "O imposto de renda, como o nome já diz, é um imposto que é cobrado sobre o quanto você ganha.",
+65: "Você precisa fazer uma declaração com toda, absolutamente toda a movimentação do seu dinheiro. Ou seja: seu salário, onde você mora, a faculdade, o plano de saúde que paga, o que guarda na poupança…",
+66: "Isso serve para que a Receita Federal acompanhe o crescimento do seu patrimônio e, com base nisso, te cobre impostos proporcionais aos seus ganhos.",
+67: "Eles fazem… muitas coisas.",
+68: "Quê?!",
+69: "O dinheiro vai para a saúde, educação e programas sociais no geral.\nÉ o que chamamos de dinheiro público!",
+70: "E se você não declarar, vai ter que pagar uma multa.\n…Você não quer pagar essa multa, Kleytinho.",
+71: "Então, vamos lá?!", //Vai para a simulação
+    //Inicio cap 7
+72: "Após um longo dia no trabalho e na faculdade, Kleytinho retorna.\nÉ um dia comum…\nMas um cheiro estranho.",
+73: "O que está acontecendo?", //FALA DO KLEY KLEY
+74: "Tá pegando fogo, bicho!!!", //FAUSTÃO
+75: "Kleytinho!!! Eu não sei o que aconteceu… Os meninos estavam cozinhando e… e…", //Volta para kim
+76: "Tá todo mundo desesperado… É a nossa casa! O que nós vamos fazer?",
+77: "Todas as suas escolhas definiram nosso rumo até aqui.\nConfio em você.",
+    //Mudar os valores dos finais com os dados do jogador
+    //Cap 8.1 - dinheiro insuficiente
+78: "Kleytinho…\nEsse foi o seu andamento até aqui.",
+79: "Você tem <valor> na conta bancária. <valor> na conta corrente  e <valor> guardado na poupança.",
+80: "Nos investimentos, você aplicou <valor>, que te rendeu <valor> de lucro.",
+81: "Quanto às dívidas, você ficou com <valor> pendentes. <valor> são de contas essenciais, <valor> são da fatura.",
+82: "Kleytinho, infelizmente, o dinheiro que você tem não vai poder nos ajudar.\nMas deixo marcada a minha gratidão!\nE, na próxima, não esqueça das dicas da Kim.",
+    //Cap 8.2 - escolheu não ajudar
+83: "Kleytinho…\nEsse foi o seu andamento até aqui.",
+84: "Você tem <valor> na conta bancária. <valor> na conta corrente  e <valor> guardado na poupança.",
+85: "Nos investimentos, você aplicou <valor>, que te rendeu <valor> de lucro.",
+86: "Quanto às dívidas, você ficou com <valor> pendentes. <valor> são de contas essenciais, <valor> são da fatura.",
+87: "Kleytinho… Você optou por não nos ajudar.\nMas sua grana também é insuficiente para comprar o Celta.",
+88: "Eu respeito sua decisão, amigo. Mas, na próxima, guarde melhor o seu dinheiro.",
+    //Cap 8.3 - Escolheu ajudar e tem dinheiro
+89: "Kleytinho…\nEsse foi o seu andamento até aqui.",
+90: "Você tem <valor> na conta bancária. <valor> na conta corrente  e <valor> guardado na poupança.",
+91: "Nos investimentos, você aplicou <valor>, que te rendeu <valor> de lucro.",
+92: "Quanto às dívidas, você ficou com <valor> pendentes. <valor> são de contas essenciais, <valor> são da fatura.",
+93: "Kleytinho…\nGraças a você, conseguimos nos reestabelecer em um novo lugar!\nE sem prejudicar na nossa faculdade.",
+94: "Obrigada! Graças à sua boa vontade e educação financeira, tudo ficou bem.",
+95: "Não esqueça de manter a disciplina na vida real também, viu?",]
+
 
 //Textos das interações da fase no banco
 let texto2 = [
@@ -145,7 +168,6 @@ let per = [
 21: "Você tá triste?", 22: "Sim."/*Preocupado com as contas*/, 23: "Eu não."/*Paguei a fatura! Preciso de mais nada!*/, 24: " ",
 25: "Já pensou em bons hábitos?", 26: "Sim!"/*Colocar tudo nas mãos da Kim!*/, 27: "Para ser sincero, não.", 28: " ",
 29: "Sua grana nunca mais vai sumir pro espaço!\nEntendeu?", 30: "Sim! Entendido.", 31: "Não entendi, não", 32: " ",
-33: "Pergunta 9", 34: "Resposta 1 p9", 35: "Resposta 2 p9", 36: "Resposta 3 p9",
     //Cap 4
 37: "Tipo uma poupança... Só que diferente.", 38: "Ué.", 39: "Diferente como?", 40: " ",
     //Cap 5
@@ -227,7 +249,7 @@ let help = [
 "Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
 "Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
 ]
-var prog = 1 // Representa o progresso do jogador
+var prog = 7 // Representa o progresso do jogador
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
 //Colocar 0 caso já tenha acabado
@@ -237,20 +259,20 @@ var q2 = [13, 13, 18, 22, 0, 0]
 var q3 = [23, 23, 26, 33, 36, 0]
 var q4 = [37, 37, 43, 0, 0, 0]
 var q5 = [44, 44, 47, 56, 59, 0]
-var q6 = [60, 23, 24, 25, 0, 0]
-var q7 = [26, 27, 28, 29, 0, 0]
-var q8 = [30, 31, 32, 33, 0, 0]
+var q6 = [60, 61, 66, 71, 0, 0]
+var q7 = [72, 76, 76 , 77, 0, 0]
+var q81 = [78, 82, 0, 0, 0, 0]
+var q82 = [83, 88, 0, 0, 0, 0]
+var q83 = [89, 95, 0, 0, 0, 0]
 
 //Arrays que salvarão as respostas
 var resposta1 = Array(repeating: 0, count:3)
-var resposta2 = Array(repeating: 0, count:3)
+var resposta2 = Array(repeating: 0, count:2)
 var resposta3 = Array(repeating: 0, count:3)
-var resposta4 = Array(repeating: 0, count:3)
+var resposta4 = Array(repeating: 0, count:1)
 var resposta5 = Array(repeating: 0, count:3)
-var resposta6 = Array(repeating: 0, count:3)
-var resposta7 = Array(repeating: 0, count:3)
-var resposta8 = Array(repeating: 0, count:3)
-
+var resposta6 = Array(repeating: 0, count:2)
+var resposta7 = Array(repeating: 0, count:1)
 
 
 //Explicações detalhadas dos tipos de investimento
