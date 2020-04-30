@@ -25,7 +25,7 @@
                                 <rect key="frame" x="20" y="246" width="374" height="404"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4t-cT-qVA">
-                                        <rect key="frame" x="96" y="127.5" width="182" height="52"/>
+                                        <rect key="frame" x="50" y="127.5" width="274" height="52"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <state key="normal" title="  RespostaA  ">
@@ -35,7 +35,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -43,7 +43,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBR-dm-JMP">
-                                        <rect key="frame" x="95" y="311.5" width="184" height="52"/>
+                                        <rect key="frame" x="50" y="311.5" width="274" height="52"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <state key="normal" title="  RespostaC  ">
@@ -53,7 +53,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -61,7 +61,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iP8-E3-FdQ">
-                                        <rect key="frame" x="96" y="219.5" width="182" height="52"/>
+                                        <rect key="frame" x="50" y="219.5" width="274" height="52"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <state key="normal" title="  RespostaB  ">
@@ -71,7 +71,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -97,13 +97,19 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="UwI-v2-iPF" secondAttribute="trailing" constant="10" id="4Hx-8Q-aau"/>
                                     <constraint firstItem="iP8-E3-FdQ" firstAttribute="top" secondItem="X4t-cT-qVA" secondAttribute="bottom" constant="40" id="4lT-cn-64J"/>
+                                    <constraint firstAttribute="trailing" secondItem="iP8-E3-FdQ" secondAttribute="trailing" constant="50" id="66p-nh-wdi"/>
+                                    <constraint firstItem="X4t-cT-qVA" firstAttribute="leading" secondItem="bZl-dY-fbc" secondAttribute="leading" constant="50" id="DTh-mR-nbP"/>
                                     <constraint firstItem="sBR-dm-JMP" firstAttribute="centerX" secondItem="bZl-dY-fbc" secondAttribute="centerX" id="DqM-ei-OD0"/>
                                     <constraint firstItem="UwI-v2-iPF" firstAttribute="centerX" secondItem="bZl-dY-fbc" secondAttribute="centerX" id="Jz7-fu-4rp"/>
+                                    <constraint firstAttribute="trailing" secondItem="X4t-cT-qVA" secondAttribute="trailing" constant="50" id="NfM-5D-THF"/>
+                                    <constraint firstItem="iP8-E3-FdQ" firstAttribute="leading" secondItem="bZl-dY-fbc" secondAttribute="leading" constant="50" id="OVF-mp-LPp"/>
+                                    <constraint firstAttribute="trailing" secondItem="sBR-dm-JMP" secondAttribute="trailing" constant="50" id="Qux-cC-IyK"/>
                                     <constraint firstItem="UwI-v2-iPF" firstAttribute="top" secondItem="bZl-dY-fbc" secondAttribute="top" constant="22" id="aVn-4z-SjP"/>
                                     <constraint firstItem="UwI-v2-iPF" firstAttribute="leading" secondItem="bZl-dY-fbc" secondAttribute="leading" constant="10" id="f1E-Gn-jik"/>
                                     <constraint firstItem="sBR-dm-JMP" firstAttribute="top" secondItem="iP8-E3-FdQ" secondAttribute="bottom" constant="40" id="kcd-Ee-K9v"/>
                                     <constraint firstItem="X4t-cT-qVA" firstAttribute="centerX" secondItem="bZl-dY-fbc" secondAttribute="centerX" id="lgg-fJ-P5x"/>
                                     <constraint firstItem="iP8-E3-FdQ" firstAttribute="centerX" secondItem="bZl-dY-fbc" secondAttribute="centerX" id="mkA-tU-R0y"/>
+                                    <constraint firstItem="sBR-dm-JMP" firstAttribute="leading" secondItem="bZl-dY-fbc" secondAttribute="leading" constant="50" id="nrN-dI-4aO"/>
                                     <constraint firstItem="X4t-cT-qVA" firstAttribute="top" secondItem="bZl-dY-fbc" secondAttribute="top" constant="127.5" id="ohC-ZE-Mdu"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -113,19 +119,11 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button hidden="YES" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZN-iA-38p">
-                                <rect key="frame" x="135" y="750" width="144" height="52"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="89" y="750" width="236" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="  Próximo  ">
-                                    <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Aumentar o nível">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="I60-ru-AgR" kind="show" id="KAG-Al-hDY"/>
                                 </connections>
@@ -190,30 +188,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvj-fr-5g2">
-                                <rect key="frame" x="135" y="750" width="144" height="52"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="136" y="750" width="142" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="  Próximo  ">
-                                    <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Resultado">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="hM0-bu-tMo" kind="show" id="OFd-ve-B9M"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ng9-xM-naz">
-                                <rect key="frame" x="20" y="184.5" width="374" height="527.5"/>
+                                <rect key="frame" x="20" y="209.5" width="374" height="477.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHh-GL-mpl">
-                                        <rect key="frame" x="96" y="117.5" width="182" height="52"/>
+                                        <rect key="frame" x="25" y="117.5" width="324" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="  RespostaA  ">
                                             <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -221,7 +211,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -229,9 +219,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4c-9a-CCi">
-                                        <rect key="frame" x="95" y="281.5" width="184" height="52"/>
+                                        <rect key="frame" x="25" y="261.5" width="324" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="  RespostaC  ">
                                             <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -239,7 +229,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -247,9 +237,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlU-Pn-sHC">
-                                        <rect key="frame" x="96" y="199.5" width="182" height="52"/>
+                                        <rect key="frame" x="25" y="189.5" width="324" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="  RespostaB  ">
                                             <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -257,7 +247,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -279,9 +269,9 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zee-E9-G8P">
-                                        <rect key="frame" x="95" y="363.5" width="184" height="52"/>
+                                        <rect key="frame" x="25" y="333.5" width="324" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="  RespostaD  ">
                                             <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -289,7 +279,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -297,9 +287,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgQ-fo-3f0">
-                                        <rect key="frame" x="97" y="445.5" width="180" height="52"/>
+                                        <rect key="frame" x="25" y="405.5" width="324" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="  RespostaE  ">
                                             <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -307,7 +297,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -317,20 +307,30 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dlU-Pn-sHC" secondAttribute="trailing" constant="25" id="71z-ff-PU0"/>
                                     <constraint firstItem="dlU-Pn-sHC" firstAttribute="centerX" secondItem="ng9-xM-naz" secondAttribute="centerX" id="7ky-iU-K44"/>
                                     <constraint firstItem="mHh-GL-mpl" firstAttribute="centerX" secondItem="ng9-xM-naz" secondAttribute="centerX" id="Dfi-BX-5b6"/>
+                                    <constraint firstAttribute="trailing" secondItem="zee-E9-G8P" secondAttribute="trailing" constant="25" id="EkN-Zn-yoN"/>
                                     <constraint firstItem="dlU-Pn-sHC" firstAttribute="top" secondItem="mHh-GL-mpl" secondAttribute="bottom" constant="30" id="FSd-da-xlG"/>
+                                    <constraint firstItem="EgQ-fo-3f0" firstAttribute="leading" secondItem="ng9-xM-naz" secondAttribute="leading" constant="25" id="FUv-hB-Iw7"/>
+                                    <constraint firstItem="dlU-Pn-sHC" firstAttribute="leading" secondItem="ng9-xM-naz" secondAttribute="leading" constant="25" id="LBq-hn-Wbc"/>
                                     <constraint firstItem="YyD-cG-p73" firstAttribute="centerX" secondItem="ng9-xM-naz" secondAttribute="centerX" id="Ld7-1c-6L6"/>
                                     <constraint firstItem="w4c-9a-CCi" firstAttribute="centerX" secondItem="ng9-xM-naz" secondAttribute="centerX" id="N0Z-3Q-iDj"/>
                                     <constraint firstItem="mHh-GL-mpl" firstAttribute="top" secondItem="ng9-xM-naz" secondAttribute="top" constant="117.5" id="OYR-JN-LgW"/>
                                     <constraint firstItem="YyD-cG-p73" firstAttribute="top" secondItem="ng9-xM-naz" secondAttribute="top" constant="22" id="VnH-WT-QVw"/>
+                                    <constraint firstAttribute="trailing" secondItem="mHh-GL-mpl" secondAttribute="trailing" constant="25" id="Ypn-zB-cvt"/>
+                                    <constraint firstAttribute="trailing" secondItem="w4c-9a-CCi" secondAttribute="trailing" constant="25" id="Z7z-fS-9A5"/>
                                     <constraint firstItem="YyD-cG-p73" firstAttribute="leading" secondItem="ng9-xM-naz" secondAttribute="leading" constant="10" id="dwF-l9-VsT"/>
+                                    <constraint firstItem="zee-E9-G8P" firstAttribute="leading" secondItem="ng9-xM-naz" secondAttribute="leading" constant="25" id="ebE-qI-FIa"/>
                                     <constraint firstItem="zee-E9-G8P" firstAttribute="centerX" secondItem="ng9-xM-naz" secondAttribute="centerX" id="etw-h9-ZEQ"/>
                                     <constraint firstAttribute="bottom" secondItem="EgQ-fo-3f0" secondAttribute="bottom" constant="30" id="fS9-Kd-qAG"/>
                                     <constraint firstItem="EgQ-fo-3f0" firstAttribute="centerX" secondItem="ng9-xM-naz" secondAttribute="centerX" id="j0N-UC-cu9"/>
                                     <constraint firstAttribute="trailing" secondItem="YyD-cG-p73" secondAttribute="trailing" constant="10" id="jEa-Yl-vv8"/>
                                     <constraint firstItem="w4c-9a-CCi" firstAttribute="top" secondItem="dlU-Pn-sHC" secondAttribute="bottom" constant="30" id="l0W-ou-dMb"/>
+                                    <constraint firstItem="mHh-GL-mpl" firstAttribute="leading" secondItem="ng9-xM-naz" secondAttribute="leading" constant="25" id="lYH-El-ACk"/>
+                                    <constraint firstItem="w4c-9a-CCi" firstAttribute="leading" secondItem="ng9-xM-naz" secondAttribute="leading" constant="25" id="nIq-uc-NKC"/>
                                     <constraint firstItem="EgQ-fo-3f0" firstAttribute="top" secondItem="zee-E9-G8P" secondAttribute="bottom" constant="30" id="rxL-eY-41C"/>
+                                    <constraint firstAttribute="trailing" secondItem="EgQ-fo-3f0" secondAttribute="trailing" constant="25" id="tr8-Z6-ghK"/>
                                     <constraint firstItem="zee-E9-G8P" firstAttribute="top" secondItem="w4c-9a-CCi" secondAttribute="bottom" constant="30" id="xz7-Om-Bak"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -387,15 +387,8 @@
                                 <state key="normal" title="Voltar ao game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="arj-at-RWK" kind="show" id="y59-jx-eb5"/>
+                                    <action selector="voltarGame:" destination="hM0-bu-tMo" eventType="touchUpInside" id="fDc-ZX-CeN"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iof-up-86Q">
@@ -490,16 +483,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpW-Be-P6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1500.0000000000002" y="20.758928571428569"/>
-        </scene>
-        <!--Principal-->
-        <scene sceneID="hKq-Gh-jCz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Principal" id="arj-at-RWK" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="s7R-OC-XiD"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wcq-hv-BIt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2221" y="21"/>
         </scene>
     </scenes>
     <resources>
