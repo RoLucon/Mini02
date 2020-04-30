@@ -44,7 +44,7 @@ class ContaViewController: UIViewController {
         }
         updateChart()
     }
-    
+
     //Gráfico
     func updateChart(numeros: [Double]){
         updateChart()
@@ -151,5 +151,6 @@ class ContaViewController: UIViewController {
         }
         textoFase2.text = texto[controleTexto["index"]!]
     }
+
 }
 
