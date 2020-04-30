@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eJk-59-TAO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -304,6 +304,74 @@
                                 </constraints>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
+                            <view hidden="YES" alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ya9-5J-QvY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yRK-77-93u">
+                                        <rect key="frame" x="59" y="481" width="101" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBY-cS-MBo">
+                                        <rect key="frame" x="0.0" y="756" width="414" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é tela do banco" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFX-28-bgZ">
+                                                <rect key="frame" x="95" y="5" width="314" height="95"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reM-xU-UKk">
+                                                <rect key="frame" x="376.5" y="98" width="17.5" height="22"/>
+                                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="arrowtriangle.right.fill" catalog="system">
+                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kim" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZt-5H-VZg">
+                                                <rect key="frame" x="0.0" y="18" width="85" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="5vw-jd-Rg2"/>
+                                                    <constraint firstAttribute="width" constant="85" id="zba-AA-zIv"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNc-Nz-B5x">
+                                                <rect key="frame" x="349" y="98" width="17.5" height="22"/>
+                                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="arrowtriangle.left.fill" catalog="system">
+                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="FFX-28-bgZ" secondAttribute="trailing" constant="5" id="1j5-7l-l0k"/>
+                                            <constraint firstAttribute="bottom" secondItem="FFX-28-bgZ" secondAttribute="bottom" constant="40" id="4q5-LC-Kif"/>
+                                            <constraint firstAttribute="height" constant="140" id="8c7-xu-a31"/>
+                                            <constraint firstItem="dZt-5H-VZg" firstAttribute="leading" secondItem="oBY-cS-MBo" secondAttribute="leading" id="FOL-93-4BQ"/>
+                                            <constraint firstItem="reM-xU-UKk" firstAttribute="leading" secondItem="vNc-Nz-B5x" secondAttribute="trailing" constant="10" id="WDb-fH-goy"/>
+                                            <constraint firstAttribute="trailing" secondItem="reM-xU-UKk" secondAttribute="trailing" constant="20" id="fuh-p0-fhq"/>
+                                            <constraint firstAttribute="bottom" secondItem="vNc-Nz-B5x" secondAttribute="bottom" constant="20" id="jFf-T4-xEt"/>
+                                            <constraint firstAttribute="bottom" secondItem="reM-xU-UKk" secondAttribute="bottom" constant="20" id="oz9-wV-Ly8"/>
+                                            <constraint firstAttribute="bottom" secondItem="dZt-5H-VZg" secondAttribute="bottom" constant="32" id="p67-WW-wi7"/>
+                                            <constraint firstItem="FFX-28-bgZ" firstAttribute="top" secondItem="oBY-cS-MBo" secondAttribute="top" constant="5" id="qLQ-kA-bum"/>
+                                            <constraint firstItem="FFX-28-bgZ" firstAttribute="leading" secondItem="dZt-5H-VZg" secondAttribute="trailing" constant="10" id="rEX-Ow-w51"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oBY-cS-MBo" secondAttribute="trailing" id="H62-yf-Io8"/>
+                                    <constraint firstItem="oBY-cS-MBo" firstAttribute="leading" secondItem="ya9-5J-QvY" secondAttribute="leading" id="ct2-ZE-JYG"/>
+                                    <constraint firstAttribute="bottom" secondItem="oBY-cS-MBo" secondAttribute="bottom" id="uUc-62-Sam"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -311,6 +379,9 @@
                             <constraint firstItem="vis-kh-gYB" firstAttribute="top" secondItem="xDy-HH-rzV" secondAttribute="top" constant="20" id="2rx-q7-0uY"/>
                             <constraint firstItem="xDy-HH-rzV" firstAttribute="trailing" secondItem="Mfd-uO-PmZ" secondAttribute="trailing" constant="35" id="2xb-fA-bMr"/>
                             <constraint firstItem="hsu-yn-Fb1" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="35" id="5Sn-0T-a1O"/>
+                            <constraint firstItem="ya9-5J-QvY" firstAttribute="trailing" secondItem="xDy-HH-rzV" secondAttribute="trailing" id="5YR-jf-brr"/>
+                            <constraint firstItem="ya9-5J-QvY" firstAttribute="leading" secondItem="9t2-2E-tlB" secondAttribute="trailing" id="5o4-Me-wlP"/>
+                            <constraint firstAttribute="bottom" secondItem="ya9-5J-QvY" secondAttribute="bottom" id="68P-FB-cxH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bnu-l6-NRR" secondAttribute="trailing" constant="15" id="6Em-LU-lcC"/>
                             <constraint firstItem="xDy-HH-rzV" firstAttribute="trailing" secondItem="oEJ-oF-2DZ" secondAttribute="trailing" constant="35" id="Ado-k1-W2W"/>
                             <constraint firstItem="b34-4q-nxz" firstAttribute="top" secondItem="VEP-PM-miD" secondAttribute="bottom" constant="83" id="KzI-zI-uxM"/>
@@ -332,6 +403,7 @@
                             <constraint firstItem="b34-4q-nxz" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="278" id="or1-nG-ebq"/>
                             <constraint firstItem="9t2-2E-tlB" firstAttribute="leading" secondItem="bta-Np-5So" secondAttribute="leading" constant="-414" id="rAd-9y-7n8"/>
                             <constraint firstItem="Mfd-uO-PmZ" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="35" id="sCj-pp-FTk"/>
+                            <constraint firstItem="ya9-5J-QvY" firstAttribute="top" secondItem="bta-Np-5So" secondAttribute="top" id="stQ-bI-YDu"/>
                             <constraint firstItem="VEP-PM-miD" firstAttribute="centerX" secondItem="bta-Np-5So" secondAttribute="centerX" id="v8x-ZP-2Wv"/>
                             <constraint firstItem="xDy-HH-rzV" firstAttribute="trailing" secondItem="vis-kh-gYB" secondAttribute="trailing" constant="35" id="vNw-pT-K5x"/>
                             <constraint firstItem="m85-7V-G4e" firstAttribute="leading" secondItem="xDy-HH-rzV" secondAttribute="leading" constant="35" id="wY0-4a-dzb"/>
@@ -651,6 +723,10 @@
     </scenes>
     <resources>
         <image name="arrow.turn.down.left" catalog="system" width="128" height="99"/>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
+        <image name="kim" width="377" height="371"/>
         <image name="triangulo" width="351" height="316"/>
     </resources>
 </document>
