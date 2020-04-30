@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Lr-aW-fsn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8Pk-BH-eD9">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="7Lr-aW-fsn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3a1-gy-pap">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wtt-kC-Ok3" kind="relationship" relationship="rootViewController" id="B4X-F5-MoJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmN-VE-nuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1731" y="-201"/>
+        </scene>
+        <!--Meu Imposto de Renda-->
+        <scene sceneID="zaj-FJ-14f">
+            <objects>
+                <viewController id="wtt-kC-Ok3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vpt-WR-sH5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-dd-p0K">
+                                <rect key="frame" x="0.0" y="756" width="414" height="140"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kim" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fB7-do-xHP">
+                                        <rect key="frame" x="10" y="10" width="85" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="KEU-EA-DrU"/>
+                                            <constraint firstAttribute="width" constant="85" id="is2-ev-3Qx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSP-v3-2GL">
+                                        <rect key="frame" x="354" y="88" width="17.5" height="22"/>
+                                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="arrowtriangle.left.fill" catalog="system">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zC-6T-lPK">
+                                        <rect key="frame" x="376.5" y="88" width="17.5" height="22"/>
+                                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="arrowtriangle.right.fill" catalog="system">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esse é o app do imposto de renda, clica lá no seu nome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXE-KZ-5cL">
+                                        <rect key="frame" x="105" y="25" width="279" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rXE-KZ-5cL" secondAttribute="trailing" constant="30" id="8z1-ds-eKF"/>
+                                    <constraint firstItem="rXE-KZ-5cL" firstAttribute="top" secondItem="mFj-dd-p0K" secondAttribute="top" constant="25" id="FOa-yj-c0O"/>
+                                    <constraint firstAttribute="bottom" secondItem="vSP-v3-2GL" secondAttribute="bottom" constant="30" id="J7V-ea-oj9"/>
+                                    <constraint firstItem="rXE-KZ-5cL" firstAttribute="leading" secondItem="fB7-do-xHP" secondAttribute="trailing" constant="10" id="dkW-ck-sWa"/>
+                                    <constraint firstAttribute="trailing" secondItem="0zC-6T-lPK" secondAttribute="trailing" constant="20" id="iI3-yc-3nh"/>
+                                    <constraint firstAttribute="height" constant="140" id="nmM-YR-cg8"/>
+                                    <constraint firstAttribute="bottom" secondItem="0zC-6T-lPK" secondAttribute="bottom" constant="30" id="qpK-vv-b0D"/>
+                                    <constraint firstItem="0zC-6T-lPK" firstAttribute="leading" secondItem="vSP-v3-2GL" secondAttribute="trailing" constant="5" id="r9K-Pe-wav"/>
+                                    <constraint firstItem="fB7-do-xHP" firstAttribute="top" secondItem="mFj-dd-p0K" secondAttribute="top" constant="10" id="uBH-TE-XIF"/>
+                                    <constraint firstItem="fB7-do-xHP" firstAttribute="leading" secondItem="mFj-dd-p0K" secondAttribute="leading" constant="10" id="v8w-rW-2XH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7l1-qh-GMh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meu Imposto de Renda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKZ-Io-w5b">
+                                        <rect key="frame" x="83" y="45" width="248" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ov4-YK-r3B">
+                                        <rect key="frame" x="375" y="47" width="20" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="thg-NJ-z7b"/>
+                                        </constraints>
+                                        <state key="normal" image="info.circle.fill" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ov4-YK-r3B" secondAttribute="bottom" constant="13" id="AtU-hS-d6i"/>
+                                    <constraint firstItem="kKZ-Io-w5b" firstAttribute="leading" secondItem="7l1-qh-GMh" secondAttribute="leading" constant="83" id="HvO-sH-Vj0"/>
+                                    <constraint firstAttribute="trailing" secondItem="kKZ-Io-w5b" secondAttribute="trailing" constant="83" id="dv1-hX-ePa"/>
+                                    <constraint firstAttribute="bottom" secondItem="ov4-YK-r3B" secondAttribute="bottom" constant="13" id="nYn-xh-ucH"/>
+                                    <constraint firstItem="ov4-YK-r3B" firstAttribute="leading" secondItem="kKZ-Io-w5b" secondAttribute="trailing" constant="44" id="sgC-QT-XgX"/>
+                                    <constraint firstAttribute="bottom" secondItem="kKZ-Io-w5b" secondAttribute="bottom" constant="15" id="tMm-NT-94L"/>
+                                    <constraint firstAttribute="height" constant="90" id="wK1-eN-xc9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7l1-qh-GMh" firstAttribute="top" secondItem="Vpt-WR-sH5" secondAttribute="top" id="ATb-Ce-ytj"/>
+                            <constraint firstItem="5ug-aZ-tLa" firstAttribute="trailing" secondItem="mFj-dd-p0K" secondAttribute="trailing" id="Buf-Bn-ZON"/>
+                            <constraint firstItem="5ug-aZ-tLa" firstAttribute="trailing" secondItem="7l1-qh-GMh" secondAttribute="trailing" id="XU0-jm-hRg"/>
+                            <constraint firstAttribute="bottom" secondItem="mFj-dd-p0K" secondAttribute="bottom" id="dwr-VI-uW7"/>
+                            <constraint firstItem="mFj-dd-p0K" firstAttribute="leading" secondItem="5ug-aZ-tLa" secondAttribute="leading" id="ily-Il-vsJ"/>
+                            <constraint firstItem="7l1-qh-GMh" firstAttribute="leading" secondItem="5ug-aZ-tLa" secondAttribute="leading" id="lat-Gw-AE4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5ug-aZ-tLa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Meu Imposto de Renda" id="m9u-q3-ktX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugE-q3-d0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-768.11594202898561" y="-202.23214285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="kim" width="377" height="371"/>
+    </resources>
+</document>
