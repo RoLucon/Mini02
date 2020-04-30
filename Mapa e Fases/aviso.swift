@@ -11,21 +11,19 @@ import UIKit
 func zerafase(){
     switch prog {
     case 2:
-        resposta1 = Array(repeating: 0, count:4)
+        resposta1 = Array(repeating: 0, count:3)
     case 3:
-        resposta2 = Array(repeating: 0, count:3)
+        resposta2 = Array(repeating: 0, count:2)
     case 4:
         resposta3 = Array(repeating: 0, count:3)
     case 5:
-        resposta4 = Array(repeating: 0, count:3)
+        resposta4 = Array(repeating: 0, count:1)
     case 6:
         resposta5 = Array(repeating: 0, count:3)
     case 7:
-        resposta6 = Array(repeating: 0, count:3)
+        resposta6 = Array(repeating: 0, count:2)
     case 8:
-        resposta7 = Array(repeating: 0, count:3)
-    case 9:
-        resposta8 = Array(repeating: 0, count:3)
+        resposta7 = Array(repeating: 0, count:1)
     default:
         print("n era para isso acontecer")
     }
@@ -65,8 +63,6 @@ class popup: UIViewController{
             resposta6[r] = x
         case 8:
             resposta7[r] = x
-        case 9:
-            resposta8[r] = x
         default:
             print("n era para isso acontecer")
         }
@@ -171,6 +167,30 @@ class selecf: UIViewController{
     @IBOutlet weak var bancoFase2: UIButton!
     @IBOutlet weak var setaBancoF2: UIImageView!
     
+    func verifica(){
+        if resposta7[0] == 2{
+            fim = 2
+        }else if Personagem.shared.dinheiro()! >= 10.0{
+            fim = 3
+        }else{
+            fim = 1
+        }
+    }
+    
+    func escolhefim(){
+        verifica()
+        switch fim {
+        case 1:
+            q = q81
+        case 2:
+            q = q82
+        case 3:
+            q = q83
+        default:
+            print("DEU BAYBLADE AQUI EM!!!")
+        }
+    }
+    
     func dialogo(){
         if(c==8){
             bancoFase2.alpha = 1
@@ -240,38 +260,7 @@ class selecf: UIViewController{
             c = q[0]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
-            print("1:")
-            for valor in resposta1{
-                print(valor)
-            }
-            print("\n2:")
-            for valor in resposta2{
-                print(valor)
-            }
-            print("\n3:")
-            for valor in resposta3{
-                print(valor)
-            }
-            print("\n4:")
-            for valor in resposta4{
-                print(valor)
-            }
-            print("\n5:")
-            for valor in resposta5{
-                print(valor)
-            }
-            print("\n6:")
-            for valor in resposta6{
-                print(valor)
-            }
-            print("\n7:")
-            for valor in resposta7{
-                print(valor)
-            }
-            print("\n8:")
-            for valor in resposta8{
-                print(valor)
-            }
+            print("ERRO")
         }
     }
     
@@ -375,11 +364,12 @@ class selecf: UIViewController{
     @IBAction func f8(_ sender: AnyObject) {
         switch prog {
         case 8:
+            fim = 3
             r = 0
             p = 81
             a = 60
             i = 1
-            q = q8
+            escolhefim()
             c = q[0]
             self.performSegue(withIdentifier: "fase", sender: self)
         default:
@@ -431,7 +421,7 @@ class selecf: UIViewController{
         if c <= q[i]{
             dialogo()
         }
-        else if c == 13 || c == 23 || c == 37 || c == 44 || c == 60 || c == 72 || c == 78{
+        else if c == 13 || c == 23 || c == 37 || c == 44 || c == 60 || c == 72 || c == 78 || c == 83 || c == 89 || c == 96{
             self.performSegue(withIdentifier: "Finalizar", sender: self)
             prog += 1
         }
