@@ -15,7 +15,7 @@ var i : intmax_t!
 var r = 0 //Salva a resposta escolida
 var c = 0 //Representa a fala inicial da fase
 var contadorBanco = 0
-var personagem: Personagem = Personagem.shared
+let personagem: Personagem = Personagem.shared
 //Todas as falas do jogo em ordem de aparição
 let texto = [
     //Inicio cap 1
@@ -123,10 +123,10 @@ let texto2 = [
     12:"Essa é a fatura do seu cartão de crédito. Aqui, você consegue ver todo o seu histórico de gastos.",
     13:"Triste histórico de gastos...",
     14:"Agora fecha isso, tá me dando gatilho.",
-    15:"",
+    15:"Agora pra finalizar...",
     16:"",
-    17:"",
-    18:"",
+    17:"Esse é o extrato, onde mostra todas as transações feitas.",
+    18:"Chega!!!",
     19:"",
     20:"",
 ]

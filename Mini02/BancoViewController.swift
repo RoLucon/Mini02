@@ -28,9 +28,11 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var faturaView: UIView!
     @IBOutlet weak var textoView: UIView!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var faturaTexto: UILabel!
+    @IBOutlet weak var setaFatura: UIImageView!
     
     var banco = Personagem.shared.mexerDinheiro(valor: nil)
-    var personagem: Personagem = Personagem.shared
+    let personagem: Personagem = Personagem.shared
 
     
     enum Segues {
@@ -54,6 +56,7 @@ class BancoViewController: UIViewController {
             StackView?.transform = CGAffineTransform(translationX: 0, y: -90)
             Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
             textoLabel?.text = texto2[1]!
+            faturaTexto?.text = texto2[contadorBanco]
             backButton?.isEnabled = false
         }
 
@@ -126,52 +129,56 @@ class BancoViewController: UIViewController {
     }
     
     @IBAction func proximoTexto(_ sender: Any) {
-        contadorBanco += 1
-        textoLabel?.text = texto2[contadorBanco]!
-        
-        switch  contadorBanco {
-        case 3:
-            view.addSubview(saldoConta)
-        case 4:
-            view.sendSubviewToBack(saldoConta)
-            view.addSubview(poupancaView)
-            //seta?.center.x += 250
-            //seta?.center.y -= 390
-        case 6:
-            seta?.isHidden = false
-            //seta?.center.x -= 250
-            //seta?.center.y += 390
-        case 7:
-            view.sendSubviewToBack(poupancaView)
-            seta?.isHidden = true
-            view.addSubview(StackView)
-            Contas.alpha = 0.5
-            Investimento?.isEnabled = false
-        case 9:
-            Investimento.alpha = 0.5
-            Contas.alpha = 1
-            seta?.isHidden = false
-            seta?.center.x += 190
-            seta?.center.y += 130
-        case 12:
-            view.sendSubviewToBack(StackView)
-            seta?.isHidden = true
-            Investimento.alpha = 1
-        case 13:
-            view.addSubview(Extrato)
-        case 19:
-            fundoView?.isHidden = true
-            contadorBanco = 0
-            Investimento.alpha = 1
-            poupancaView?.transform = .identity
-            StackView?.transform = .identity
-            Extrato?.transform = .identity
-            backButton?.isEnabled = true
-        default:
-            print("ok")
-            //view.sendSubviewToBack(Extrato)
+        if contadorBanco >= 1 && contadorBanco <= 20 {
+            if contadorBanco != 9  {
+                contadorBanco += 1
+                textoLabel?.text = texto2[contadorBanco]!
+            }
+            
+            switch  contadorBanco {
+            case 3:
+                view.addSubview(saldoConta)
+            case 4:
+                view.sendSubviewToBack(saldoConta)
+                view.addSubview(poupancaView)
+                //seta?.center.x += 250
+                //seta?.center.y -= 390
+            case 6:
+                seta?.isHidden = false
+                //seta?.center.x -= 250
+                //seta?.center.y += 390
+            case 7:
+                view.sendSubviewToBack(poupancaView)
+                seta?.isHidden = true
+                view.addSubview(StackView)
+                Contas.alpha = 0.5
+                Investimento?.isEnabled = false
+            case 8:
+                Investimento.alpha = 0.5
+                Contas.alpha = 1
+                seta?.isHidden = false
+                seta?.center.x += 190
+                seta?.center.y += 130
+                contadorBanco += 1
+            case 12:
+                view.sendSubviewToBack(StackView)
+                seta?.isHidden = true
+                Investimento.alpha = 1
+            case 17:
+                view.addSubview(Extrato)
+            case 19:
+                fundoView?.isHidden = true
+                contadorBanco = 0
+                Investimento.alpha = 1
+                poupancaView?.transform = .identity
+                StackView?.transform = .identity
+                Extrato?.transform = .identity
+                backButton?.isEnabled = true
+            default:
+                print("ok")
+                //view.sendSubviewToBack(Extrato)
+            }
         }
-
     }
     
     @IBAction func voltarTexto(_ sender: Any) {
@@ -184,8 +191,18 @@ class BancoViewController: UIViewController {
     //História - Capítulo 2
 
     @IBAction func voltarFase(_ sender: Any) {
-        contadorBanco += 1
-        NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarView"), object: nil)
+        if contadorBanco >= 12 && contadorBanco < 14 {
+            contadorBanco += 1
+            faturaTexto?.text = texto2[contadorBanco]
+            if contadorBanco == 14 {
+                faturaView?.isHidden = false
+                setaFatura?.isHidden = false
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarView"), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFala"), object: nil)
+
+            }
+        }
+        
         if prog == 2 {
             let nome = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
             NotificationCenter.default.post(name: nome, object: nil)

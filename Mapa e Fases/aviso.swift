@@ -167,6 +167,7 @@ class selecf: UIViewController{
     @IBOutlet weak var fase8: UIButton!
     @IBOutlet weak var setaBanco: UIImageView!
     @IBOutlet weak var passaButton: UIButton!
+    @IBOutlet weak var banco: UIButton!
     let notificacao = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
     
     
@@ -223,7 +224,7 @@ class selecf: UIViewController{
         NotificationCenter.default.addObserver(self, selector: #selector(self.atualizaSetaBanco(notificacao:)), name: notificacao, object: nil)
     }
     @objc func atualizaSetaBanco(notificacao: NSNotification){
-        setaBanco?.alpha = 0
+        setaBanco?.alpha = 1
         c = 22
         dialogo()
         print("a notificacao chegou")

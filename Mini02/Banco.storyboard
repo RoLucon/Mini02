@@ -1362,14 +1362,21 @@
                             <view hidden="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-BW-xD3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6ik-CW-DBO">
-                                        <rect key="frame" x="59" y="481" width="101" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6ik-CW-DBO">
+                                        <rect key="frame" x="0.0" y="91" width="50" height="48"/>
                                         <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Axy-T6-YBp"/>
+                                            <constraint firstAttribute="width" constant="50" id="iUr-Os-xY8"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6ik-CW-DBO" firstAttribute="leading" secondItem="Hu0-BW-xD3" secondAttribute="leading" id="Hqe-s4-WGy"/>
+                                    <constraint firstItem="6ik-CW-DBO" firstAttribute="top" secondItem="Hu0-BW-xD3" secondAttribute="top" constant="90" id="cjq-0H-SA5"/>
+                                </constraints>
                             </view>
                             <view hidden="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfv-h4-Vdp">
                                 <rect key="frame" x="0.0" y="756" width="414" height="140"/>
@@ -1462,7 +1469,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="faturaTexto" destination="bTd-R8-1AW" id="dMs-Cr-tGX"/>
                         <outlet property="faturaView" destination="Hu0-BW-xD3" id="qUJ-lJ-mTh"/>
+                        <outlet property="setaFatura" destination="6ik-CW-DBO" id="lJv-ey-O6m"/>
                         <outlet property="textoView" destination="lfv-h4-Vdp" id="wQi-dA-pfs"/>
                     </connections>
                 </viewController>
@@ -1533,7 +1542,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="S9E-Fe-Ghc"/>
         <segue reference="Usl-gZ-DIe"/>
-        <segue reference="d73-3l-XYX"/>
+        <segue reference="yTC-S7-h55"/>
         <segue reference="sW6-Px-Z69"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -41,7 +41,7 @@ class ContaViewController: UIViewController {
         if prog == 1 && contadorBanco >= 1 {
             viewFase2?.isHidden = false
             viewFrase?.isHidden = false
-            textoFase2?.text = texto2[9]
+            textoFase2?.text = texto2[contadorBanco]
             view.addSubview(gerenciarFase2)
             viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
             stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
@@ -98,21 +98,20 @@ class ContaViewController: UIViewController {
          if contadorBanco >= 9 && contadorBanco < 11 {
              contadorBanco += 1
              textoFase2?.text = texto2[contadorBanco]
+            
+            if contadorBanco == 11 {
+                setaFase2?.isHidden = false
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFala"), object: nil)
+            }
          }
-        else if contadorBanco == 11 {
-            setaFase2?.isHidden = false
-            NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFala"), object: nil)
-        }
-         else if contadorBanco == 13 {
+         
+         else if contadorBanco == 14 {
             viewFase2?.isHidden = true
             viewFrase?.isHidden = true
             view.sendSubviewToBack(gerenciarFase2)
             viewInferior?.transform = .identity
             stkViewInferior?.transform = .identity
          }
-        else {
-            setaFase2?.isHidden = true
-        }
      }
     
     //História - Capítulo 2
