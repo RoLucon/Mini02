@@ -42,8 +42,9 @@ class Investimentos: UIViewController {
     @IBOutlet weak var viewAjudaInvest: UIView!
     @IBOutlet weak var viewRendimento: UIView!
     @IBOutlet weak var viewKim: UIView!
+    @IBOutlet weak var kimHeigth: NSLayoutConstraint!
     
-    var investFase = false
+    var investFase = true
     
     let TextAjuda = "Está é a tela de investimentos. Aqui vai ser possível aplicar o seu dinheiro e ver ele rendendo com o passar do tempo. Todos os investimentos são rendas fixas, isso significa que você receberá juros por ter esta aplicação. Cada um dos investimenros terá uma explicção mais detalhada, basta clicar sobre algum deles. O investimento será de grande ajuda no decorrer da história, além de uma ótima maneira de guardar o seu dinheiro na vida real e receber por isso."
     
@@ -162,4 +163,35 @@ class Investimentos: UIViewController {
         retiraEfeito()
     }
     
+    //Botoes tela da Kim
+    
+    @IBAction func proximaFala(_ sender: Any) {
+        ajustaTelaParaAlternativas(250)
+    }
+    
+    @IBAction func voltarFala(_ sender: Any) {
+        ajustaTelaParaAlternativas(140)
+    }
+    
+    func ajustaTelaParaAlternativas(_ height: CGFloat) {
+        
+        UIView.animate(withDuration: 0, delay: 0, animations: {
+            
+            print(Date())
+        }, completion: {_ in
+            let h: CGFloat = self.kimHeigth.constant
+            if h < height {
+                self.kimHeigth.constant += 10
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+                    self.ajustaTelaParaAlternativas(height)
+                }
+            } else if h > height {
+                self.kimHeigth.constant -= 10
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+                    self.ajustaTelaParaAlternativas(height)
+                }
+            }
+            
+        })
+    }
 }
