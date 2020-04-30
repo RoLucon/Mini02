@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0339B72458B4C700342FF9 /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0339B62458B4C700342FF9 /* Quiz.storyboard */; };
 		1C24ADCA243FC258000D9B67 /* Investimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24ADC9243FC257000D9B67 /* Investimento.swift */; };
+		1C8342C92459ED3000E0CC9B /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8342C82459ED3000E0CC9B /* Quiz.swift */; };
 		1CC462B42450DF0600D6CB59 /* InvestimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */; };
 		1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B52450E25300D6CB59 /* InvestirViewController.swift */; };
 		1CC462B82450E30700D6CB59 /* SacarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B72450E30700D6CB59 /* SacarViewController.swift */; };
@@ -38,7 +40,6 @@
 		89E3EAED24326E35007C2CFC /* Principal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAEC24326E35007C2CFC /* Principal.storyboard */; };
 		89E3EAF024328755007C2CFC /* IntroducaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */; };
 		89E3EAF524328D7C007C2CFC /* CustomizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */; };
-		89FD50912459ED0C0057A1B0 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FD50902459ED0C0057A1B0 /* CheckBoxButton.swift */; };
 		C0CDCA00243BCBEB0057014D /* BancoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C0339B62458B4C700342FF9 /* Quiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
 		1C24ADC9243FC257000D9B67 /* Investimento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Investimento.swift; sourceTree = "<group>"; };
+		1C8342C82459ED3000E0CC9B /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoViewController.swift; sourceTree = "<group>"; };
 		1CC462B52450E25300D6CB59 /* InvestirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestirViewController.swift; sourceTree = "<group>"; };
 		1CC462B72450E30700D6CB59 /* SacarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacarViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +100,6 @@
 		89E3EAEC24326E35007C2CFC /* Principal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Principal.storyboard; sourceTree = "<group>"; };
 		89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducaoViewController.swift; sourceTree = "<group>"; };
 		89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizacaoViewController.swift; sourceTree = "<group>"; };
-		89FD50902459ED0C0057A1B0 /* CheckBoxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BancoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +131,6 @@
 		8932CD4F243D1DF500E2BCA4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				89FD50902459ED0C0057A1B0 /* CheckBoxButton.swift */,
 				8932CD50243D1E1200E2BCA4 /* TextLabel.swift */,
 				89078E072444EB16002F5CF2 /* Extension.swift */,
 			);
@@ -177,6 +178,8 @@
 				1CC462B72450E30700D6CB59 /* SacarViewController.swift */,
 				1CC462B52450E25300D6CB59 /* InvestirViewController.swift */,
 				89E3EAB0242E98D3007C2CFC /* PrincipalViewController.swift */,
+				1C0339B62458B4C700342FF9 /* Quiz.storyboard */,
+				1C8342C82459ED3000E0CC9B /* Quiz.swift */,
 				89E3EAB2242E98D3007C2CFC /* Main.storyboard */,
 				89E3EAB5242E98D5007C2CFC /* Assets.xcassets */,
 				89E3EAB7242E98D5007C2CFC /* LaunchScreen.storyboard */,
@@ -331,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0339B72458B4C700342FF9 /* Quiz.storyboard in Resources */,
 				8932CD48243BAB0C00E2BCA4 /* Mapa.storyboard in Resources */,
 				89E3EAB9242E98D5007C2CFC /* LaunchScreen.storyboard in Resources */,
 				8932CD4C243BCB9000E2BCA4 /* SideQuest.storyboard in Resources */,
@@ -382,7 +386,7 @@
 				1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */,
 				89078E082444EB16002F5CF2 /* Extension.swift in Sources */,
 				89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */,
-				89FD50912459ED0C0057A1B0 /* CheckBoxButton.swift in Sources */,
+				1C8342C92459ED3000E0CC9B /* Quiz.swift in Sources */,
 				89DF46A92437B75200FB36EB /* Personagem.swift in Sources */,
 				C0CDCA00243BCBEB0057014D /* BancoViewController.swift in Sources */,
 				89E3EAAF242E98D3007C2CFC /* SceneDelegate.swift in Sources */,

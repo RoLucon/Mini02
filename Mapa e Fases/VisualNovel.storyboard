@@ -25,6 +25,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ng-Wc-MHr">
+                                <rect key="frame" x="20" y="44" width="51" height="34"/>
+                                <state key="normal" title="Banco"/>
+                                <connections>
+                                    <action selector="banco:" destination="bBy-0S-dHI" eventType="touchUpInside" id="uGr-H7-iiP"/>
+                                    <segue destination="XxI-nm-TrM" kind="show" id="iCY-qg-DN7"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cln-C3-ez3">
                                 <rect key="frame" x="340" y="44" width="54" height="34"/>
                                 <state key="normal" title="Config"/>
@@ -72,36 +80,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Passa"/>
                                 <connections>
-                                    <action selector="telas:" destination="bBy-0S-dHI" eventType="touchUpInside" id="F5T-Ak-YV1"/>
+                                    <action selector="telas:" destination="bBy-0S-dHI" eventType="touchUpInside" id="Jfm-dQ-QH1"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hKC-oW-xqW">
-                                <rect key="frame" x="12" y="54.333333333333336" width="66" height="109.99999999999997"/>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="112.33" id="7hQ-P9-5f8"/>
-                                    <constraint firstAttribute="width" constant="66" id="Iyl-N9-e7Z"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="66" id="O8u-qI-9k5"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ng-Wc-MHr">
-                                <rect key="frame" x="20" y="44" width="51" height="34"/>
-                                <state key="normal" title="Banco"/>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZk-Y2-Zsx">
+                                <rect key="frame" x="0.0" y="183" width="125" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="BANCO">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="banco:" destination="bBy-0S-dHI" eventType="touchUpInside" id="uGr-H7-iiP"/>
-                                    <segue destination="XxI-nm-TrM" kind="show" id="iCY-qg-DN7"/>
+                                    <action selector="fundoViraBanco:" destination="bBy-0S-dHI" eventType="touchUpInside" id="UDY-8i-yed"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aCM-Ds-Mk1">
+                                <rect key="frame" x="20" y="246.33333333333337" width="71" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YSe-eg-Icr" firstAttribute="top" secondItem="uPe-Ze-HbX" secondAttribute="topMargin" id="3B3-or-hi4"/>
                             <constraint firstItem="zfi-qt-eHA" firstAttribute="leading" secondItem="ggn-YG-DRR" secondAttribute="leading" id="54D-56-lyn"/>
                             <constraint firstAttribute="bottomMargin" secondItem="8CH-LB-d8e" secondAttribute="bottom" id="5nJ-pC-IDN"/>
-                            <constraint firstItem="hKC-oW-xqW" firstAttribute="leading" secondItem="ggn-YG-DRR" secondAttribute="leading" constant="12" id="9ja-Xf-aIg"/>
                             <constraint firstItem="ggn-YG-DRR" firstAttribute="trailing" secondItem="zfi-qt-eHA" secondAttribute="trailing" id="Anl-uV-Auc"/>
                             <constraint firstItem="YSe-eg-Icr" firstAttribute="centerX" secondItem="uPe-Ze-HbX" secondAttribute="centerX" id="BCi-vg-jv8"/>
-                            <constraint firstItem="hKC-oW-xqW" firstAttribute="top" secondItem="ggn-YG-DRR" secondAttribute="top" constant="9" id="DM1-HY-leM"/>
                             <constraint firstAttribute="bottom" secondItem="zfi-qt-eHA" secondAttribute="bottom" id="F7T-0W-a8t"/>
                             <constraint firstItem="5Cd-pq-FtR" firstAttribute="centerY" secondItem="uPe-Ze-HbX" secondAttribute="centerY" constant="-37" id="ICL-1N-H2l"/>
                             <constraint firstItem="5Cd-pq-FtR" firstAttribute="centerX" secondItem="uPe-Ze-HbX" secondAttribute="centerX" id="Qux-mh-wnP"/>
@@ -117,9 +122,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="gh6-6Z-5J9"/>
                     <connections>
+                        <outlet property="bancoFase2" destination="eZk-Y2-Zsx" id="yHa-8P-oWM"/>
                         <outlet property="fala" destination="Zd8-o1-cvg" id="hFg-R6-1hH"/>
-                        <outlet property="passaButton" destination="8CH-LB-d8e" id="hs8-8E-i0a"/>
-                        <outlet property="setaBanco" destination="hKC-oW-xqW" id="7Vz-8n-dGb"/>
+                        <outlet property="setaBancoF2" destination="aCM-Ds-Mk1" id="cQr-wD-gfw"/>
                         <segue destination="y7e-Fm-1rE" kind="show" identifier="Passa" id="bFs-vk-vf2"/>
                         <segue destination="F2i-mQ-rQf" kind="show" identifier="Finalizar" id="PeW-Ou-30F"/>
                     </connections>
