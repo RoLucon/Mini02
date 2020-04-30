@@ -36,7 +36,14 @@ class Investimentos: UIViewController {
     @IBOutlet weak var efeito: UIVisualEffectView!
     
     @IBOutlet weak var textoAjuda: UILabel!
+    @IBOutlet weak var viewFase: UIView!
+    @IBOutlet weak var seuRendimento: UILabel!
+    @IBOutlet weak var bttSacar: UIButton!
+    @IBOutlet weak var viewAjudaInvest: UIView!
+    @IBOutlet weak var viewRendimento: UIView!
+    @IBOutlet weak var viewKim: UIView!
     
+    var investFase = false
     
     let TextAjuda = "Está é a tela de investimentos. Aqui vai ser possível aplicar o seu dinheiro e ver ele rendendo com o passar do tempo. Todos os investimentos são rendas fixas, isso significa que você receberá juros por ter esta aplicação. Cada um dos investimenros terá uma explicção mais detalhada, basta clicar sobre algum deles. O investimento será de grande ajuda no decorrer da história, além de uma ótima maneira de guardar o seu dinheiro na vida real e receber por isso."
     
@@ -60,7 +67,13 @@ class Investimentos: UIViewController {
         atualizaMsg()
         observer()
         
-        // Do any additional setup after loading the view.
+        if investFase {
+            viewFase.isHidden = false
+            viewRendimento.bottomAnchor.constraint(equalTo: viewKim.topAnchor, constant: -10).isActive = true
+//            seuRendimento.transform = CGAffineTransform(translationX: 0, y: -40)
+//            bttSacar.transform = CGAffineTransform(translationX: 0, y: -40)
+//            viewRendimento.transform = CGAffineTransform(translationX: 0, y: -40)
+        }
     }
     
     func observer(){
