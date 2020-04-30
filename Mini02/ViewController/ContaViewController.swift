@@ -10,8 +10,21 @@ import UIKit
 
 class ContaViewController: UIViewController {
     let numeros: [Double] = [90,90,90,90,90,90]
-    
+    var checkBoxBtts: [CheckBoxButton] = []
     @IBOutlet weak var pieChartView: UIView!
+    
+    //historia Fase2
+    @IBOutlet weak var viewFase2: UIView!
+    @IBOutlet weak var setaFase2: UIImageView!
+    @IBOutlet weak var viewFrase: UIView!
+    @IBOutlet weak var textoFase2: UILabel!
+    @IBOutlet weak var kimFase2: UIImageView!
+    @IBOutlet weak var gerenciarFase2: UIButton!
+    @IBOutlet weak var viewInferior: UIView!
+    @IBOutlet weak var stkViewInferior: UIStackView!
+    @IBOutlet weak var gerenciarButton: UIButton!
+    
+    var controleTexto = ["index": 0, "primeiro": 0, "ultimo": 0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +44,8 @@ class ContaViewController: UIViewController {
         }
         updateChart()
     }
-
+    
+    //Gráfico
     func updateChart(numeros: [Double]){
         updateChart()
     }
@@ -137,5 +151,5 @@ class ContaViewController: UIViewController {
         }
         textoFase2.text = texto[controleTexto["index"]!]
     }
-
 }
+

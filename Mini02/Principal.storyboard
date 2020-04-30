@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xm2-Ad-2bH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -168,14 +168,6 @@
                                 <rect key="frame" x="20" y="48" width="146" height="52"/>
                                 <connections>
                                     <segue destination="eKD-Yn-BDf" kind="show" id="JMt-2s-C6P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vv-rr-cWB">
-                                <rect key="frame" x="296" y="476" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="QUIZ"/>
-                                <connections>
-                                    <segue destination="MR9-vL-v5k" kind="show" id="Q7J-AP-3pZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -762,16 +754,6 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0B-pk-Qag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2334.7826086956525" y="124.55357142857142"/>
-        </scene>
-        <!--Quiz-->
-        <scene sceneID="dqy-vb-wt4">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Quiz" id="MR9-vL-v5k" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="mkK-uL-xi1"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wLB-Cs-jNK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3627" y="188"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
