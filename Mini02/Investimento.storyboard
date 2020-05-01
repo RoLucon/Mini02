@@ -367,14 +367,14 @@
                                                     <action selector="voltarFala:" destination="mSW-eH-V3v" eventType="touchUpInside" id="8Ak-41-faB"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuY-Zy-j0w">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuY-Zy-j0w">
                                                 <rect key="frame" x="100" y="108" width="264" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="UCi-rJ-x96"/>
                                                 </constraints>
                                                 <state key="normal" title="AlternativaUm"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTZ-pm-cZ6">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTZ-pm-cZ6">
                                                 <rect key="frame" x="100" y="150" width="264" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="fCA-aa-x7m"/>
@@ -462,6 +462,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Investimento" leftItemsSupplementBackButton="YES" id="xD9-rL-CLU"/>
                     <connections>
+                        <outlet property="anteriorBtt" destination="vNc-Nz-B5x" id="bRV-Ft-kz1"/>
                         <outlet property="aplicado" destination="GRR-dN-87d" id="nWm-eH-n1I"/>
                         <outlet property="bruto" destination="aHh-oO-Uph" id="ePn-va-DDy"/>
                         <outlet property="bttSacar" destination="Ox1-lH-c7G" id="qDO-Oc-5KK"/>
@@ -471,9 +472,13 @@
                         <outlet property="imposto" destination="vOC-tc-Keh" id="LpG-HO-a0f"/>
                         <outlet property="kimHeigth" destination="8c7-xu-a31" id="L7C-zP-Ie3"/>
                         <outlet property="lucro" destination="wl7-Ef-wwr" id="s59-KC-eJR"/>
+                        <outlet property="primeiraAlternativaBtt" destination="vuY-Zy-j0w" id="xna-Cn-MfB"/>
+                        <outlet property="proximoBtt" destination="reM-xU-UKk" id="XHc-K8-e8B"/>
+                        <outlet property="segundaAlternativaBtt" destination="fTZ-pm-cZ6" id="OH7-gi-b64"/>
                         <outlet property="seuRendimento" destination="IEt-xg-mLf" id="oP7-dB-K1T"/>
                         <outlet property="telaAjuda" destination="obg-gk-xFe" id="8RF-yV-e6i"/>
                         <outlet property="textoAjuda" destination="ych-Gm-VEj" id="zMM-5S-fzm"/>
+                        <outlet property="textoKim" destination="FFX-28-bgZ" id="cAb-oi-IoT"/>
                         <outlet property="tipoInvestimento" destination="Ops-lx-7QJ" id="IMX-PK-ykf"/>
                         <outlet property="trianguloConstraints" destination="mIF-fQ-72M" id="Ai4-CP-Ckr"/>
                         <outlet property="viewAjudaInvest" destination="bnu-l6-NRR" id="l4p-DN-bxH"/>

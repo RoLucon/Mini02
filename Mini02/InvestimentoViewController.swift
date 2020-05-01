@@ -36,6 +36,7 @@ class Investimentos: UIViewController {
     @IBOutlet weak var efeito: UIVisualEffectView!
     
     @IBOutlet weak var textoAjuda: UILabel!
+    
     @IBOutlet weak var viewFase: UIView!
     @IBOutlet weak var seuRendimento: UILabel!
     @IBOutlet weak var bttSacar: UIButton!
@@ -43,8 +44,15 @@ class Investimentos: UIViewController {
     @IBOutlet weak var viewRendimento: UIView!
     @IBOutlet weak var viewKim: UIView!
     @IBOutlet weak var kimHeigth: NSLayoutConstraint!
+    @IBOutlet weak var proximoBtt: UIButton!
+    @IBOutlet weak var anteriorBtt: UIButton!
+    @IBOutlet weak var primeiraAlternativaBtt: UIButton!
+    @IBOutlet weak var segundaAlternativaBtt: UIButton!
+    
+    @IBOutlet weak var textoKim: UILabel!
     
     var investFase = true
+    var indexKim = ["index": 1, "primeira": 1]
     
     let TextAjuda = "Está é a tela de investimentos. Aqui vai ser possível aplicar o seu dinheiro e ver ele rendendo com o passar do tempo. Todos os investimentos são rendas fixas, isso significa que você receberá juros por ter esta aplicação. Cada um dos investimenros terá uma explicção mais detalhada, basta clicar sobre algum deles. O investimento será de grande ajuda no decorrer da história, além de uma ótima maneira de guardar o seu dinheiro na vida real e receber por isso."
     
@@ -71,6 +79,7 @@ class Investimentos: UIViewController {
         if investFase {
             viewFase.isHidden = false
             viewRendimento.bottomAnchor.constraint(equalTo: viewKim.topAnchor, constant: -10).isActive = true
+            textoKim.text = perguntaFase4[indexKim["index"]!]
 //            seuRendimento.transform = CGAffineTransform(translationX: 0, y: -40)
 //            bttSacar.transform = CGAffineTransform(translationX: 0, y: -40)
 //            viewRendimento.transform = CGAffineTransform(translationX: 0, y: -40)
@@ -166,18 +175,39 @@ class Investimentos: UIViewController {
     //Botoes tela da Kim
     
     @IBAction func proximaFala(_ sender: Any) {
-        ajustaTelaParaAlternativas(250)
+        indexKim["index"]! += 1
+        if let texto = perguntaFase4[indexKim["index"]!] {
+            textoKim.text = texto
+        }
+        if let alter = alternativasFase4[indexKim["index"]!] {
+            ajustaTelaParaAlternativas(250)
+            primeiraAlternativaBtt.isHidden = false
+            segundaAlternativaBtt.tag = 0
+            primeiraAlternativaBtt.setTitle(alter[0], for: .normal)
+            primeiraAlternativaBtt.addTarget(self, action: #selector(feedBackAternativas), for: .touchUpInside)
+            segundaAlternativaBtt.isHidden = false
+            segundaAlternativaBtt.tag = 1
+            segundaAlternativaBtt.setTitle(alter[1], for: .normal)
+            segundaAlternativaBtt.addTarget(self, action: #selector(feedBackAternativas), for: .touchUpInside)
+            proximoBtt.isEnabled = false
+            anteriorBtt.isEnabled = false
+            indexKim["primeira"] = indexKim["index"]!
+        }
+        
     }
     
     @IBAction func voltarFala(_ sender: Any) {
-        ajustaTelaParaAlternativas(140)
+        print(indexKim["index"]!)
+        if indexKim["index"]! > indexKim["primeira"]! {
+            indexKim["index"]! -= 1
+            textoKim.text = perguntaFase4[indexKim["index"]!]
+        }
+        
     }
     
     func ajustaTelaParaAlternativas(_ height: CGFloat) {
         
         UIView.animate(withDuration: 0, delay: 0, animations: {
-            
-            print(Date())
         }, completion: {_ in
             let h: CGFloat = self.kimHeigth.constant
             if h < height {
@@ -193,5 +223,17 @@ class Investimentos: UIViewController {
             }
             
         })
+    }
+    
+    @objc func feedBackAternativas(_ sender: UIButton){
+        print(sender.tag)
+        if let aux = feedBakcFase4[indexKim["index"]!] {
+            textoKim.text = aux[sender.tag]
+        }
+        primeiraAlternativaBtt.isHidden = true
+        segundaAlternativaBtt.isHidden = true
+        proximoBtt.isEnabled = true
+        anteriorBtt.isEnabled = true
+        ajustaTelaParaAlternativas(140)
     }
 }

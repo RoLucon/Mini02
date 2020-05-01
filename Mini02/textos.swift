@@ -131,6 +131,28 @@ let texto2 = [
     20:"",
 ]
 
+//Iteracoes Fase 4
+let perguntaFase4 = [
+    1: "Existem alguns tipos de trabalho... Digo, investimentos.",
+    2: "Cada uma tem um rendimento específico e riscos, também.",
+    3: "Como estamos vulgarmente falando de “comprar dinheiro”, é normal que a grana não renda tanto.",
+    4: "Mas não se preocupe!",
+    5: "Aqui, tem só os investimentos de renda fixa.", // Primeira Pergunta
+    6: "Os investimentos de renda fixa indicam, obviamente, rentabilidade fixa.",
+    7: "Isso significa que você já sabe qual é a taxa de rentabilidade acordada no investimento.",
+    8: "São os mais seguros do mercado!",
+    9: "É como um trampo. Ele trabalha o mês todo e recebe um salário no final.",
+    10: "O salário no final do mês é o seu lucro. Isso é bom, né?",
+    11: "Que tal dar uma olhada?" // Faz ele olhar investimentos um a um
+]
+
+let alternativasFase4 = [
+    5: ["Okay...","O que é isso?"]
+]
+let feedBakcFase4 = [
+    5: ["Poxa, \(Personagem.shared.nome!). Você deveria perguntar o que é renda fixa...",
+    "Era essa a pergunta que eu estava esperando!"]
+]
 
 //Todas perguntas do jogo e as respostas possíveis em ordem
 let per = [
@@ -274,4 +296,5 @@ Debêntures - Debêntures é um tipo de investimento em renda fixa oferecidos po
     (Colocar a regra do jogo, pelo que é apresentado nas pesquisa que fiz, no ano passado o lucro médio de um bom Debênture estava em torno 10 a 20% dependendo do tempo do investimento. Eu gostaria de deixar mais ou menos 1,5 % ao mês).
     Sendo que o Imposto de renda é de 15% (na vida real este valor varia com o tempo em que a pessoa fica com o CDB Variando de 22,5 a 15%) em cima do lucro que você tiver neste investimento.
 """
+
 
