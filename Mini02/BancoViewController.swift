@@ -13,7 +13,24 @@ class BancoViewController: UIViewController {
     //Banco
     @IBOutlet weak var SaldoBanco: UILabel!
     @IBOutlet weak var SaldoPoupanca: UILabel!
+    
+    //Teste
+    @IBOutlet weak var visualEffectBlur: UIVisualEffectView!
+    @IBOutlet weak var poupTeste: UIView!
+    @IBOutlet weak var bancoView: UIView!
+    @IBOutlet var viewBanco: UIView!
+    @IBOutlet weak var effectView: UIView!
+    @IBOutlet weak var fundoView: UIView!
+    @IBOutlet weak var labelTeste: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var setaImageView: UIImageView!
+    
+    var num = 0
 
+    
+    
+    var vfx: UIVisualEffectView!
+    var effect: UIVisualEffect!
 
     var banco = Personagem().mexerDinheiro(valor: nil)
     
@@ -29,11 +46,277 @@ class BancoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //effect = visualEffectBlur?.effect
+        //visualEffectBlur?.effect = nil
+        
+        //vfx = visualEffectBlur
+        //vfx.isHidden = true
+        fundoView?.isHidden = true
+        setaImageView?.isHidden = true
 
         // Do any additional setup after loading the view.
         atualizarLabel()
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarSaldo(n:)), name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
     }
+    
+    func animateIn() {
+        fundoView?.isHidden = false
+        self.view.addSubview(bancoView)
+        bancoView.center = self.view.center
+        
+        bancoView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        bancoView.alpha = 0
+        
+        UIView.animate(withDuration: 2, animations: {
+            //self.vfx.isHidden = false
+            //self.visualEffectBlur.effect = self.effect
+            self.bancoView.alpha = 1
+            self.bancoView.transform = CGAffineTransform.identity
+
+        }){ (_) in
+            self.view.addSubview(self.poupTeste)
+            self.view.sendSubviewToBack(self.bancoView)
+        }
+        
+        UIView.animate(withDuration: 2, delay: 2.5, options: .autoreverse, animations: {
+            self.poupTeste.transform = CGAffineTransform(translationX: 0, y: -180)
+
+        }) { (_) in
+            self.poupTeste.transform = CGAffineTransform.identity
+            self.view.sendSubviewToBack(self.poupTeste)
+            self.view.addSubview(self.stackView)
+        }
+        
+        UIView.animate(withDuration: 2, delay: 6.5, options: .autoreverse, animations: {
+            self.stackView.transform = CGAffineTransform(translationX: 0, y: -480)
+        }) { (_) in
+            self.stackView.transform = CGAffineTransform.identity
+            self.view.sendSubviewToBack(self.stackView)
+            self.fundoView.alpha = 0.9
+            //self.fundoView.isHidden = true
+
+
+        }
+        
+    }
+    
+    func animateOut() {
+        
+        self.view.addSubview(poupTeste)
+
+        
+        UIView.animate(withDuration: 2, animations: {
+        self.view.sendSubviewToBack(self.bancoView)
+            
+      
+            //self.visualEffectBlur.effect = nil
+            
+        }) { (_) in
+            print("aaaaaaaa")
+            //self.fundoView?.isHidden = true
+            
+                  //self.vfx.isHidden = true
+            //self.bancoView.removeFromSuperview()
+            
+            UIView.animate(withDuration: 2) {
+                self.poupTeste.transform = CGAffineTransform(translationX: 0, y: -180)
+            }
+        }
+        
+        
+    }
+    
+    func animate2()  {
+        self.view.sendSubviewToBack(self.bancoView)
+        
+        UIView.animate(withDuration: 2, delay: 0.1, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
+            
+            self.view.addSubview(self.poupTeste)
+            
+        }) { (success: Bool) in
+            self.poupTeste.center.y -= 180
+
+        }
+        
+        
+    }
+    
+    @IBAction func teste(_ sender: Any) {
+        animateIn()
+        
+         /*effectView.addSubview(bancoView)
+        //bancoView.center = self.view.center
+        
+        //bancoView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        //bancoView.alpha = 0
+        
+        UIView.animate(withDuration: 1) {
+            self.vfx.isHidden = false
+            self.visualEffectBlur.effect = self.effect
+            //self.bancoView.alpha = 1
+            self.bancoView.transform = CGAffineTransform.identity
+        }
+        
+       UIView.animate(withDuration: 1, animations: {
+            self.vfx.isHidden = false
+            self.visualEffectBlur.effect = self.effect
+            self.bancoView.alpha = 0
+            self.bancoView.transform = CGAffineTransform.identity
+
+        }) { (Bool) in
+            self.effectView.addSubview(self.poupTeste)
+            
+            UIView.animate(withDuration: 0.1, animations: {
+                //self.vfx.isHidden = true
+                //self.visualEffectBlur.effect = nil
+            }) { (Bool) in
+                //self.viewBanco.addSubview(self.bancoView)
+                //self.viewBanco.addSubview(self.poupTeste)
+
+            }
+            
+            
+        }*/
+        
+        /*vfx.isHidden = false
+        vfx.addSubview(bancoView)
+        UIView.animate(withDuration: 1, animations: {
+            self.poupTeste.frame.origin.y -= 150
+        }) { (Bool) in
+            UIView.animate(withDuration: 1, animations: {
+                self.poupTeste.frame.origin.y += 150
+            }) { (Bool) in
+                self.vfx.isHidden = true
+            }
+        }*/
+    }
+    
+    func pulse(duration: TimeInterval = 0.3) {
+        UIView.animate(withDuration: 1.5, animations: {
+            self.setaImageView?.alpha = 0
+
+        }) { (_) in
+            UIView.animate(withDuration: 1.5) {
+            self.setaImageView?.alpha = 1
+
+            }
+        }
+    }
+    
+    @IBAction func nextButton(_ sender: Any) {
+        
+        if num == 0 {
+            print(num)
+            num += 1
+            labelTeste.text = "0"
+            self.fundoView.alpha = 0.5
+
+        }
+        else if num == 1 {
+            print(num)
+            num += 1
+            labelTeste.text = "1"
+            self.fundoView.alpha = 0.7
+            self.view.addSubview(poupTeste)
+
+
+        }
+        else if num == 2 {
+            print(num)
+            num += 1
+            labelTeste.text = "2"
+            self.view.sendSubviewToBack(poupTeste)
+            setaImageView?.isHidden = false
+            pulse()
+
+
+            //animateOut()
+
+        }
+
+        
+        //animateOut()
+        //animate2()
+        
+        //self.effectView.insertSubview(self.bancoView, belowSubview: self.viewBanco)
+
+        
+        /*self.visualEffectBlur.effect = nil
+        self.vfx.isHidden = true
+        //bancoView.center = self.view.center
+        
+        //bancoView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        //bancoView.alpha = 0
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            //self.viewBanco.addSubview(self.bancoView)
+
+            //self.vfx.isHidden = false
+            self.view.addSubview(self.poupTeste)
+
+        }) { (Bool) in
+            //self.effectView.sendSubviewToBack(self.viewBanco)
+            self.view.superview?.sendSubviewToBack(self.viewBanco)
+            //self.vfx.isHidden = false
+            //self.visualEffectBlur.effect = self.effect
+            //self.bancoView.alpha = 1
+            //self.poupTeste.transform = CGAffineTransform.identity
+        }*/
+        /*UIView.animate(withDuration: 0.4, animations: {
+            
+            
+            //self.view.addSubview(self.poupTeste)
+            //self.poupTeste.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            //self.poupTeste.frame.origin.y -= 150
+            self.bancoView.alpha = 0
+            
+
+            
+            self.visualEffectBlur.effect = nil
+            self.vfx.isHidden = true
+
+            
+        }) { (Bool) in
+            self.poupTeste.frame.origin.y = 150
+            self.poup()
+            print("OK")
+            //self.view.addSubview(self.poupTeste)
+            //self.poupTeste.center = self.view.center
+            
+            //bancoView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            //self.poupTeste.alpha = 0
+            //self.bancoView.removeFromSuperview()
+            //self.viewBanco.addSubview(self.bancoView)
+            //self.vfx.isHidden = true
+            /*UIView.animate(withDuration: 1, animations: {
+                self.vfx.isHidden = false
+                self.visualEffectBlur.effect = self.effect
+                self.bancoView.alpha = 1
+                self.bancoView.transform = CGAffineTransform.identity
+            }, completion: nil)*/
+            
+        }*/
+    }
+    
+    func poup() {
+        
+        self.view.addSubview(poupTeste)
+        poupTeste.center = self.view.center
+        
+        //bancoView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        poupTeste.alpha = 0
+        
+        UIView.animate(withDuration: 1) {
+            self.vfx.isHidden = false
+            self.visualEffectBlur.effect = self.effect
+            self.poupTeste.alpha = 1
+            self.poupTeste.transform = CGAffineTransform.identity
+        }
+        
+    }
+    
+    
     
     @objc func atualizarSaldo(n:NSNotification) {
         atualizarLabel()
