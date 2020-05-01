@@ -28,7 +28,8 @@ class ContaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if contadorBanco >= 1 {
+        if prog == 2 && contadorBanco >= 1 {
+            viewFase2?.isHidden = false
             viewFrase?.isHidden = false
             viewFase2?.isHidden = false
             if prog == 3{
@@ -43,6 +44,17 @@ class ContaViewController: UIViewController {
             }
         }
         updateChart()
+        
+        if prog == 1 && contadorBanco >= 1 {
+            viewFase2?.isHidden = false
+            viewFrase?.isHidden = false
+            textoFase2?.text = texto2[contadorBanco]
+            view.addSubview(gerenciarFase2)
+            viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
+            stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(proximoTexto(_:)), name: NSNotification.Name.init("AtualizarView"), object: nil)
     }
 
     //Gráfico
@@ -84,6 +96,28 @@ class ContaViewController: UIViewController {
         semiCircleLayer.strokeStart = CGFloat(soma)
         semiCircleLayer.strokeEnd = CGFloat(valor)
         pieChartView.layer.addSublayer(semiCircleLayer)
+    }
+    
+     
+    //História capítulo 1
+    @IBAction func proximoTexto(_ sender: Any) {
+         if contadorBanco >= 9 && contadorBanco < 11 {
+             contadorBanco += 1
+             textoFase2?.text = texto2[contadorBanco]
+            
+            if contadorBanco == 11 {
+                setaFase2?.isHidden = false
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFala"), object: nil)
+                }
+            }
+                    
+            else if contadorBanco == 14 {
+                viewFase2?.isHidden = true
+                viewFrase?.isHidden = true
+                view.sendSubviewToBack(gerenciarFase2)
+                viewInferior?.transform = .identity
+                stkViewInferior?.transform = .identity
+            }
     }
     
     //Fase 3
@@ -136,6 +170,8 @@ class ContaViewController: UIViewController {
             }
         }
     }
+    
+    
     //Botoes de texto Kim
     @IBAction func next(_ sender: Any) {
         if controleTexto["index"]! < controleTexto["ultimo"]! {
@@ -151,6 +187,8 @@ class ContaViewController: UIViewController {
         }
         textoFase2.text = texto[controleTexto["index"]!]
     }
+    
+    
 
 }
 

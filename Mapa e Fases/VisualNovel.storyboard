@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZSu-Ir-Nmx">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -88,6 +88,7 @@
                                 <rect key="frame" x="20" y="44" width="51" height="34"/>
                                 <state key="normal" title="Banco"/>
                                 <connections>
+                                    <action selector="banco:" destination="kQz-Fa-RIQ" eventType="touchUpInside" id="cgK-Gs-tIP"/>
                                     <action selector="banco:" destination="bBy-0S-dHI" eventType="touchUpInside" id="uGr-H7-iiP"/>
                                     <segue destination="XxI-nm-TrM" kind="show" id="iCY-qg-DN7"/>
                                 </connections>
@@ -117,6 +118,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gh6-6Z-5J9"/>
                     <connections>
+                        <outlet property="banco" destination="6Ng-Wc-MHr" id="SOW-LU-TEM"/>
                         <outlet property="fala" destination="Zd8-o1-cvg" id="hFg-R6-1hH"/>
                         <outlet property="passaButton" destination="8CH-LB-d8e" id="hs8-8E-i0a"/>
                         <outlet property="setaBanco" destination="hKC-oW-xqW" id="7Vz-8n-dGb"/>
@@ -125,6 +127,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="urK-1t-e2C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="kQz-Fa-RIQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1076.8115942028987" y="158.70535714285714"/>
         </scene>

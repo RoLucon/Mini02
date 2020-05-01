@@ -163,6 +163,7 @@ class selecf: UIViewController{
     @IBOutlet weak var fase8: UIButton!
     @IBOutlet weak var setaBanco: UIImageView!
     @IBOutlet weak var passaButton: UIButton!
+    @IBOutlet weak var banco: UIButton!
     let notificacao = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
     
     
@@ -243,7 +244,7 @@ class selecf: UIViewController{
         NotificationCenter.default.addObserver(self, selector: #selector(self.atualizaSetaBanco(notificacao:)), name: notificacao, object: nil)
     }
     @objc func atualizaSetaBanco(notificacao: NSNotification){
-        setaBanco?.alpha = 0
+        setaBanco?.alpha = 1
         c = 22
         dialogo()
         print("a notificacao chegou")
@@ -391,6 +392,10 @@ class selecf: UIViewController{
     
     //Refaz a fase
     @IBAction func refazer(_ sender: Any) {
+        if prog == 2 {
+            contadorBanco = 1
+        }
+        
         zerafase()
         r = 0
         prog -= 1
@@ -425,6 +430,7 @@ class selecf: UIViewController{
         default:
             print("UÉ")
         }
+        
         
     }
     //Quantidades de caixa de dialogo terão
