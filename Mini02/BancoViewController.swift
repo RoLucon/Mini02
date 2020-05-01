@@ -31,7 +31,7 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var faturaTexto: UILabel!
     @IBOutlet weak var setaFatura: UIImageView!
     
-    var banco = Personagem.shared.mexerDinheiro(valor: nil)
+    var banco = Personagem.shared.dinheiro(nil)
     let personagem: Personagem = Personagem.shared
 
     
@@ -55,8 +55,8 @@ class BancoViewController: UIViewController {
             poupancaView?.transform = CGAffineTransform(translationX: 0, y: -20)
             StackView?.transform = CGAffineTransform(translationX: 0, y: -90)
             Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
-            textoLabel?.text = texto2[1]!
-            faturaTexto?.text = texto2[contadorBanco]
+            textoLabel?.text = textoFase1[1]!
+            faturaTexto?.text = textoFase1[contadorBanco]
             backButton?.isEnabled = false
         }
 
@@ -73,7 +73,7 @@ class BancoViewController: UIViewController {
     
     @objc func atualizarSaldo(n:NSNotification) {
         atualizarLabel()
-        banco = Personagem.shared.mexerDinheiro(valor: nil)
+        banco = personagem.dinheiro(nil)
     }
     
     @IBAction func BackButton(_ sender: Any) {
@@ -83,8 +83,8 @@ class BancoViewController: UIViewController {
     }
     
     func atualizarLabel() {
-        let saldoConta = Personagem.shared.mexerDinheiro(valor: nil)
-        let poupanca = Personagem.shared.poupanca(valor: nil)
+        let saldoConta = personagem.dinheiro(nil)
+        let poupanca = personagem.poupanca(nil)
         
         SaldoBanco?.text = "R$ " + String(format: "%.2f", saldoConta!).replacingOccurrences(of: ".", with: ",")
         SaldoPoupanca?.text = "R$ " + String(format: "%.2f", poupanca!).replacingOccurrences(of: ".", with: ",")
@@ -107,12 +107,12 @@ class BancoViewController: UIViewController {
         if segue.identifier == Segues.retirarPoupanca {
             let destVC = segue.destination as! PoupancaView
             destVC.action = "retirar"
-            destVC.saldo = Personagem.shared.poupanca(valor: nil)!
+            destVC.saldo = personagem.poupanca(nil)!
         }
         if segue.identifier == Segues.guardarPoupanca {
             let destVC = segue.destination as! PoupancaView
             destVC.action = "guardar"
-            destVC.saldo = Personagem.shared.mexerDinheiro(valor: nil)!
+            destVC.saldo = personagem.dinheiro(nil)!
         }
     }
     
@@ -132,7 +132,7 @@ class BancoViewController: UIViewController {
         if contadorBanco >= 1 && contadorBanco <= 20 {
             if contadorBanco != 9  {
                 contadorBanco += 1
-                textoLabel?.text = texto2[contadorBanco]!
+                textoLabel?.text = textoFase1[contadorBanco]!
             }
             
             switch  contadorBanco {
@@ -184,7 +184,7 @@ class BancoViewController: UIViewController {
     @IBAction func voltarTexto(_ sender: Any) {
         if contadorBanco > 1 && contadorBanco <= 15 {
             contadorBanco -= 1
-            textoLabel?.text = texto2[contadorBanco]!
+            textoLabel?.text = textoFase1[contadorBanco]!
         }
     }
 
@@ -193,7 +193,7 @@ class BancoViewController: UIViewController {
     @IBAction func voltarFase(_ sender: Any) {
         if contadorBanco >= 12 && contadorBanco < 14 {
             contadorBanco += 1
-            faturaTexto?.text = texto2[contadorBanco]
+            faturaTexto?.text = textoFase1[contadorBanco]
             if contadorBanco == 14 {
                 faturaView?.isHidden = false
                 setaFatura?.isHidden = false
@@ -229,8 +229,8 @@ class PoupancaView: UIViewController {
     @IBOutlet weak var ValorTextField: UITextField!
     
     var saldo: Float = 0
-    var banco = Personagem.shared.mexerDinheiro(valor: nil)
-    var poupanca = Personagem.shared.poupanca(valor: nil)
+    var banco = personagem.dinheiro(nil)
+    var poupanca = personagem.poupanca(nil)
     var valor: String!
     var valor2: String!
     
@@ -280,8 +280,8 @@ class PoupancaView: UIViewController {
             let total = (valor as NSString).floatValue
             
             if (total <= banco!) {
-                 _ = Personagem.shared.mexerDinheiro(valor: -total)
-                 _ = Personagem.shared.poupanca(valor: total)
+                _ = personagem.dinheiro(-total)
+                 _ = personagem.poupanca(total)
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
                 self.dismiss(animated: true, completion: nil)
 
@@ -296,11 +296,11 @@ class PoupancaView: UIViewController {
         } else if(ValorTextField.hasText && action == "retirar") {
             valor2 = ValorTextField.text?.replacingOccurrences(of: ",", with: ".")
             let total2 = (valor2 as NSString).floatValue
-            let poup = Personagem.shared.poupanca(valor: nil)
+                let poup = personagem.poupanca(nil)
             
             if (total2 <= poup!) {
-                 _ = Personagem.shared.mexerDinheiro(valor: total2)
-                 _ = Personagem.shared.poupanca(valor: -total2)
+                 _ = personagem.dinheiro(total2)
+                 _ = personagem.poupanca(-total2)
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
                 self.dismiss(animated: true, completion: nil)
 

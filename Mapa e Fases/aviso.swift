@@ -295,6 +295,7 @@ class selecf: UIViewController{
     
     //Vai pra fase 3
     @IBAction func f3(_ sender: AnyObject) {
+        contadorBanco = 1
         switch prog {
         case 3:
             r = 0

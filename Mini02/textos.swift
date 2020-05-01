@@ -129,7 +129,7 @@ let texto = [
 
 
 //Textos das interações da fase no banco
-let texto2 = [
+let textoFase1 = [
     
     //Capítulo 1
     1: "Essa é sua conta bancária, \(personagem.nome!). Seu salário já tá na mão! Uhuuul!",
@@ -249,7 +249,7 @@ let help = [
 "Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
 "Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
 ]
-var prog = 7 // Representa o progresso do jogador
+var prog = 1 // Representa o progresso do jogador
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
 //Colocar 0 caso já tenha acabado

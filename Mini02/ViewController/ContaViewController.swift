@@ -28,32 +28,32 @@ class ContaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if prog == 2 && contadorBanco >= 1 {
-            viewFase2?.isHidden = false
-            viewFrase?.isHidden = false
-            viewFase2?.isHidden = false
-            if prog == 3{
-                fase3()
-            } else {
-                setaFase2?.isHidden = false
-                textoFase2?.text = texto2[9]
-                view.addSubview(gerenciarFase2)
-                viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
-                stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
-                //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
-            }
-        }
         updateChart()
         
+        //Fase 1
         if prog == 1 && contadorBanco >= 1 {
             viewFase2?.isHidden = false
             viewFrase?.isHidden = false
-            textoFase2?.text = texto2[contadorBanco]
+            textoFase2?.text = textoFase1[contadorBanco]
             view.addSubview(gerenciarFase2)
             viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
             stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
+        } else if prog == 2 && contadorBanco >= 1 {
+            viewFrase?.isHidden = false
+            viewFase2?.isHidden = false
+            setaFase2?.isHidden = false
+            textoFase2?.text = textoFase1[9]
+            view.addSubview(gerenciarFase2)
+            viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
+            stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
+            //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
+        } else if prog == 3{
+            viewFrase?.isHidden = false
+            viewFase2?.isHidden = false
+            fase3()
         }
         
+
         NotificationCenter.default.addObserver(self, selector: #selector(proximoTexto(_:)), name: NSNotification.Name.init("AtualizarView"), object: nil)
     }
 
@@ -101,9 +101,9 @@ class ContaViewController: UIViewController {
      
     //História capítulo 1
     @IBAction func proximoTexto(_ sender: Any) {
-         if contadorBanco >= 9 && contadorBanco < 11 {
+         if prog == 1 && contadorBanco >= 9 && contadorBanco < 11 {
              contadorBanco += 1
-             textoFase2?.text = texto2[contadorBanco]
+             textoFase2?.text = textoFase1[contadorBanco]
             
             if contadorBanco == 11 {
                 setaFase2?.isHidden = false
@@ -111,7 +111,7 @@ class ContaViewController: UIViewController {
                 }
             }
                     
-            else if contadorBanco == 14 {
+            else if prog == 1 && contadorBanco == 14 {
                 viewFase2?.isHidden = true
                 viewFrase?.isHidden = true
                 view.sendSubviewToBack(gerenciarFase2)
@@ -137,7 +137,7 @@ class ContaViewController: UIViewController {
     }
     
     func fase3AjustaTela(){
-        textoFase2?.text = texto2[9]
+        textoFase2?.text = textoFase1[9]
         viewInferior?.transform = CGAffineTransform(translationX: 0, y: -65)
         stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -90)
         gerenciarFase2.isHidden = true
@@ -174,18 +174,21 @@ class ContaViewController: UIViewController {
     
     //Botoes de texto Kim
     @IBAction func next(_ sender: Any) {
-        if controleTexto["index"]! < controleTexto["ultimo"]! {
-            controleTexto["index"]! += 1
+        if prog != 1 {
+            if controleTexto["index"]! < controleTexto["ultimo"]! {
+                controleTexto["index"]! += 1
+            }
+            textoFase2.text = texto[controleTexto["index"]!]
         }
-        textoFase2.text = texto[controleTexto["index"]!]
-        
     }
     
     @IBAction func back(_ sender: Any) {
-        if controleTexto["index"]! > controleTexto["primeiro"]! {
-            controleTexto["index"]! -= 1
+        if prog != 1 {
+            if controleTexto["index"]! > controleTexto["primeiro"]! {
+                controleTexto["index"]! -= 1
+            }
+            textoFase2.text = texto[controleTexto["index"]!]
         }
-        textoFase2.text = texto[controleTexto["index"]!]
     }
     
     
