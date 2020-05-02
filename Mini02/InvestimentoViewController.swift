@@ -50,6 +50,11 @@ class Investimentos: UIViewController {
     @IBOutlet weak var segundaAlternativaBtt: UIButton!
     
     @IBOutlet weak var textoKim: UILabel!
+    @IBOutlet weak var cdbBtt: UIButton!
+    @IBOutlet weak var lciBtt: UIButton!
+    @IBOutlet weak var criBtt: UIButton!
+    @IBOutlet weak var debenturesBtt: UIButton!
+    @IBOutlet weak var tipoInvestimentoStack: UIStackView!
     
     var investFase = true
     var indexKim = ["index": 1, "primeira": 1]
@@ -83,6 +88,7 @@ class Investimentos: UIViewController {
 //            seuRendimento.transform = CGAffineTransform(translationX: 0, y: -40)
 //            bttSacar.transform = CGAffineTransform(translationX: 0, y: -40)
 //            viewRendimento.transform = CGAffineTransform(translationX: 0, y: -40)
+            view.bringSubviewToFront(tipoInvestimentoStack)
         }
     }
     
@@ -176,6 +182,7 @@ class Investimentos: UIViewController {
     
     @IBAction func proximaFala(_ sender: Any) {
         indexKim["index"]! += 1
+        print(indexKim["index"])
         if let texto = perguntaFase4[indexKim["index"]!] {
             textoKim.text = texto
         }
@@ -194,8 +201,22 @@ class Investimentos: UIViewController {
             indexKim["primeira"] = indexKim["index"]!
         }
         
+        if indexKim["index"]! >= 12 && indexKim["index"]! <= 18 {
+            bCDB(UIButton())
+             print("CDB")
+        } else if indexKim["index"]! >= 19 && indexKim["index"]! <= 25 {
+            bLCI(self)
+             print("LCI")
+        } else if indexKim["index"]! >= 26 && indexKim["index"]! <= 30 {
+            bCRI(self)
+             print("CRI")
+        } else if indexKim["index"]! >= 31 && indexKim["index"]! <= 33 {
+            bDEB(self)
+             print("Debenture")
+        }
+        
     }
-    
+    //12-16,17-22,23-26,27-29
     @IBAction func voltarFala(_ sender: Any) {
         print(indexKim["index"]!)
         if indexKim["index"]! > indexKim["primeira"]! {
