@@ -17,7 +17,7 @@ var r = 0 //Salva a resposta escolida
 var c = 0 //Representa a fala inicial da fase
 var contadorBanco = 0
 var personagem: Personagem = Personagem.shared
-//Todas as falas do jogo em ordem de aparição
+//Todas as falas do visual novel em ordem de aparição
 let texto = [
     //Inicio cap 1
 1: "\(Personagem.shared.nome!)… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE o seu salário caiu.",
@@ -175,9 +175,10 @@ let per = [
 45: "Em que fase da vida acha que está?", 46: "Jovem ainda, é claro.", 47: "Velho já sou.", 48: " ",
 49: "O que você acha ?", 50: "Guardarei dinheiro para isso"/*Vou guardar bastante dinheiro para isso.*/, 51: "Quero focar na minha meta"/*Mas eu quero comprar meu celta logooo!*/, 52: " ",
     //Cap 6
-53: "Pergunta 14", 54: "Resposta 1 p14", 55: "Resposta 2 p14", 56: "Resposta 3 p14",
-57: "Pergunta 15", 58: "Resposta 1 p15", 59: "Resposta 2 p15", 60: "Resposta 3 p15",
-61: "Pergunta 16", 62: "Resposta 1 p16", 63: "Resposta 2 p16", 64: "Resposta 3 p16",
+53: "Eu não estou feliz com esse dia, sabe…", 54: "Sei, sim…", 55: "Ué, por quê?", 56: " ",
+57: "Serve para que quem ganhe mais, contribua mais e quem ganha menos, contribua menos.", 58: "O que fazem com o dinheiro?", 59: "Não quero contribuir nada, não.", 60: " ",
+    //Cap 7
+61: "Kleytinho… O que você quer fazer?", 62: "Vou ajudar vocês!",/*Eu tenho dinheiro guardado, Kim. Vou ajudar vocês!*/ 63: "Desculpa… Mas não irei ajudar", 64: " ",
 65: "Pergunta 17", 66: "Resposta 1 p17", 67: "Resposta 2 p17", 68: "Resposta 3 p17",
 69: "Pergunta 18", 70: "Resposta 1 p18", 71: "Resposta 2 p18", 72: "Resposta 3 p18",
 73: "Pergunta 19", 74: "Resposta 1 p19", 75: "Resposta 2 p19", 76: "Resposta 3 p19",
@@ -249,7 +250,7 @@ let help = [
 "Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
 "Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
 ]
-var prog = 7 // Representa o progresso do jogador
+var prog = 1 // Representa o progresso do jogador
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
 //Colocar 0 caso já tenha acabado

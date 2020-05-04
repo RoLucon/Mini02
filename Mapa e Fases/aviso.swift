@@ -75,6 +75,7 @@ class popup: UIViewController{
         efeito.effect = nil
         pop.layer.cornerRadius = 5
         mostraper()
+        print(c)
     }
     
     func anima(){
@@ -138,7 +139,9 @@ class popup: UIViewController{
         salvaresp(x: 1)
         perguntas()
         r += 1
-        pula = true
+        if c != 77{
+            pula = true
+        }
     }
     
     @IBAction func r2(_ sender: AnyObject) {
@@ -147,7 +150,9 @@ class popup: UIViewController{
         perguntas()
         r += 1
         pula = false
-        c+=1
+        if c != 77{
+            c+=1
+        }
     }
 }
 
@@ -361,7 +366,7 @@ class selecf: UIViewController{
         switch prog {
         case 7:
             r = 0
-            p = 69
+            p = 61
             a = 51
             i = 1
             q = q7
@@ -417,7 +422,7 @@ class selecf: UIViewController{
             p = 53
             a = 42
         case 7:
-            p = 69
+            p = 61
             a = 51
         case 8:
             p = 81
