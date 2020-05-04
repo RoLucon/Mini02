@@ -14,6 +14,7 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var SaldoBanco: UILabel!
     @IBOutlet weak var SaldoPoupanca: UILabel!
     @IBOutlet weak var nome: UILabel!
+    @IBOutlet weak var foto: UIImageView!
     
     //Banco História
     @IBOutlet weak var saldoConta: UIView!
@@ -24,13 +25,16 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var fundoView: UIView!
     @IBOutlet weak var StackView: UIStackView!
     @IBOutlet weak var seta: UIImageView!
+    @IBOutlet weak var viewKim: UIView!
     @IBOutlet weak var textoLabel: UILabel!
     @IBOutlet weak var faturaView: UIView!
     @IBOutlet weak var textoView: UIView!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var faturaTexto: UILabel!
+    @IBOutlet weak var setaFatura: UIImageView!
     
-    var banco = Personagem.shared.mexerDinheiro(valor: nil)
-    var personagem: Personagem = Personagem.shared
+    var banco = Personagem.shared.dinheiro(nil)
+    let personagem: Personagem = Personagem.shared
 
     
     enum Segues {
@@ -47,28 +51,35 @@ class BancoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if contadorBanco >= 1 {
+        
+        foto?.image = UIImage(named: "kleytinho")
+        nome?.text = personagem.nome!
+        atualizarLabel()
+        observer()
+        
+        //História - Capítulo 1
+        if prog == 1 && contadorBanco >= 1 {
             fundoView?.isHidden = false
+            viewKim?.isHidden = false
             textoView?.isHidden = false
             poupancaView?.transform = CGAffineTransform(translationX: 0, y: -20)
             StackView?.transform = CGAffineTransform(translationX: 0, y: -90)
             Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
-            textoLabel?.text = texto2[1]!
+            textoLabel?.text = textoFase1[1]!
+            faturaTexto?.text = textoFase1[contadorBanco]
             backButton?.isEnabled = false
-            
         }
-        // Do any additional setup after loading the view.
-        nome?.text = personagem.nome!
-        atualizarLabel()
-        observer()
     }
+    
     func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarSaldo(n:)), name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(proximoTexto(_:)), name: NSNotification.Name.init("AtualizarFala"), object: nil)
     }
     
     @objc func atualizarSaldo(n:NSNotification) {
         atualizarLabel()
-        banco = Personagem.shared.mexerDinheiro(valor: nil)
+        banco = personagem.dinheiro(nil)
     }
     
     @IBAction func BackButton(_ sender: Any) {
@@ -78,8 +89,8 @@ class BancoViewController: UIViewController {
     }
     
     func atualizarLabel() {
-        let saldoConta = Personagem.shared.mexerDinheiro(valor: nil)
-        let poupanca = Personagem.shared.poupanca(valor: nil)
+        let saldoConta = personagem.dinheiro(nil)
+        let poupanca = personagem.poupanca(nil)
         
         SaldoBanco?.text = "R$ " + String(format: "%.2f", saldoConta!).replacingOccurrences(of: ".", with: ",")
         SaldoPoupanca?.text = "R$ " + String(format: "%.2f", poupanca!).replacingOccurrences(of: ".", with: ",")
@@ -102,12 +113,12 @@ class BancoViewController: UIViewController {
         if segue.identifier == Segues.retirarPoupanca {
             let destVC = segue.destination as! PoupancaView
             destVC.action = "retirar"
-            destVC.saldo = Personagem.shared.poupanca(valor: nil)!
+            destVC.saldo = personagem.poupanca(nil)!
         }
         if segue.identifier == Segues.guardarPoupanca {
             let destVC = segue.destination as! PoupancaView
             destVC.action = "guardar"
-            destVC.saldo = Personagem.shared.mexerDinheiro(valor: nil)!
+            destVC.saldo = personagem.dinheiro(nil)!
         }
     }
     
@@ -124,69 +135,115 @@ class BancoViewController: UIViewController {
     }
     
     @IBAction func proximoTexto(_ sender: Any) {
-        contadorBanco += 1
-        textoLabel?.text = texto2[contadorBanco]!
-        
-        switch  contadorBanco {
-        case 3:
-            view.addSubview(saldoConta)
-        case 4:
-            view.sendSubviewToBack(saldoConta)
-            view.addSubview(poupancaView)
-            //seta?.center.x += 250
-            //seta?.center.y -= 390
-        case 6:
-            seta?.isHidden = false
-            //seta?.center.x -= 250
-            //seta?.center.y += 390
-        case 7:
-            view.sendSubviewToBack(poupancaView)
-            seta?.isHidden = true
-        case 8:
-            view.addSubview(StackView)
-            Contas.alpha = 0.5
-            Investimento?.isEnabled = false
-        case 9:
-            Investimento.alpha = 0.5
-            Contas.alpha = 1
-            seta?.isHidden = false
-            seta?.center.x += 190
-            seta?.center.y += 130
-        case 10:
-            view.sendSubviewToBack(StackView)
-            seta?.isHidden = true
-            Investimento.alpha = 1
-        case 11:
-            view.addSubview(Extrato)
-        case 15:
-            fundoView?.isHidden = true
-            contadorBanco = 0
-            Investimento.alpha = 1
-            poupancaView?.transform = .identity
-            StackView?.transform = .identity
-            Extrato?.transform = .identity
-            backButton?.isEnabled = true
-        default:
-            print("ok")
-            view.sendSubviewToBack(Extrato)
+        if contadorBanco >= 1 && contadorBanco <= 20 {
+            if contadorBanco != 9  {
+                contadorBanco += 1
+                textoLabel?.text = textoFase1[contadorBanco]!
+            }
+            
+            switch  contadorBanco {
+            case 3:
+                view.addSubview(saldoConta)
+            case 4:
+                view.sendSubviewToBack(saldoConta)
+                view.addSubview(poupancaView)
+                //seta?.center.x += 250
+                //seta?.center.y -= 390
+            case 6:
+                seta?.isHidden = false
+                //seta?.center.x -= 250
+                //seta?.center.y += 390
+            case 7:
+                view.sendSubviewToBack(poupancaView)
+                seta?.isHidden = true
+                view.addSubview(StackView)
+                Contas.alpha = 0.5
+                Investimento?.isEnabled = false
+            case 8:
+                Investimento.alpha = 0.5
+                Contas.alpha = 1
+                seta?.isHidden = false
+                seta?.center.x += 190
+                seta?.center.y += 130
+                contadorBanco += 1
+            case 12:
+                view.sendSubviewToBack(StackView)
+                seta?.isHidden = true
+                Investimento.alpha = 1
+            case 17:
+                view.addSubview(Extrato)
+            case 19:
+                viewKim?.isHidden = true
+                fundoView?.isHidden = true
+                contadorBanco = 0
+                Investimento.alpha = 1
+                poupancaView?.transform = .identity
+                StackView?.transform = .identity
+                Extrato?.transform = .identity
+                backButton?.isEnabled = true
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
+            default:
+                print("ok")
+            }
         }
-
     }
     
     @IBAction func voltarTexto(_ sender: Any) {
-        if contadorBanco > 1 && contadorBanco <= 15 {
+        if contadorBanco > 1 && contadorBanco <= 9 {
             contadorBanco -= 1
-            textoLabel?.text = texto2[contadorBanco]!
+            textoLabel?.text = textoFase1[contadorBanco]!
+            switch  contadorBanco {
+            case 1:
+                view.sendSubviewToBack(saldoConta)
+            case 2:
+                view.sendSubviewToBack(poupancaView)
+                view.addSubview(saldoConta)
+            case 3:
+                view.sendSubviewToBack(poupancaView)
+                view.addSubview(saldoConta)
+            case 5:
+                seta?.isHidden = true
+            case 6:
+                view.sendSubviewToBack(StackView)
+                view.addSubview(poupancaView)
+                seta?.isHidden = false
+                seta?.center.x -= 190
+                seta?.center.y -= 130
+            case 8:
+                textoLabel?.text = textoFase1[contadorBanco - 1]!
+                Investimento.alpha = 1
+                Contas.alpha = 0.5
+                seta?.isHidden = true
+                contadorBanco -= 1
+            default:
+                print("nada")
+            }
         }
     }
 
     //História - Capítulo 2
 
     @IBAction func voltarFase(_ sender: Any) {
-        let nome = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
-        NotificationCenter.default.post(name: nome, object: nil)
-        self.dismiss(animated: true, completion: nil)
+        if contadorBanco >= 12 && contadorBanco < 14 {
+            contadorBanco += 1
+            faturaTexto?.text = textoFase1[contadorBanco]
+            if contadorBanco == 14 {
+                faturaView?.isHidden = false
+                setaFatura?.isHidden = false
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarView"), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFala"), object: nil)
+
+            }
+        }
+        
+        if prog == 2 {
+            let nome = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
+            NotificationCenter.default.post(name: nome, object: nil)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
+    
+    
 }
 
 
@@ -205,8 +262,8 @@ class PoupancaView: UIViewController {
     @IBOutlet weak var ValorTextField: UITextField!
     
     var saldo: Float = 0
-    var banco = Personagem.shared.mexerDinheiro(valor: nil)
-    var poupanca = Personagem.shared.poupanca(valor: nil)
+    var banco = personagem.dinheiro(nil)
+    var poupanca = personagem.poupanca(nil)
     var valor: String!
     var valor2: String!
     
@@ -256,8 +313,8 @@ class PoupancaView: UIViewController {
             let total = (valor as NSString).floatValue
             
             if (total <= banco!) {
-                 _ = Personagem.shared.mexerDinheiro(valor: -total)
-                 _ = Personagem.shared.poupanca(valor: total)
+                _ = personagem.dinheiro(-total)
+                 _ = personagem.poupanca(total)
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
                 self.dismiss(animated: true, completion: nil)
 
@@ -272,11 +329,11 @@ class PoupancaView: UIViewController {
         } else if(ValorTextField.hasText && action == "retirar") {
             valor2 = ValorTextField.text?.replacingOccurrences(of: ",", with: ".")
             let total2 = (valor2 as NSString).floatValue
-            let poup = Personagem.shared.poupanca(valor: nil)
+                let poup = personagem.poupanca(nil)
             
             if (total2 <= poup!) {
-                 _ = Personagem.shared.mexerDinheiro(valor: total2)
-                 _ = Personagem.shared.poupanca(valor: -total2)
+                 _ = personagem.dinheiro(total2)
+                 _ = personagem.poupanca(-total2)
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
                 self.dismiss(animated: true, completion: nil)
 

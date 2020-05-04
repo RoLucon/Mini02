@@ -168,8 +168,11 @@ class selecf: UIViewController{
     @IBOutlet weak var fase8: UIButton!
     @IBOutlet weak var setaBanco: UIImageView!
     @IBOutlet weak var passaButton: UIButton!
+    @IBOutlet weak var banco: UIButton!
+    @IBOutlet weak var fundoFase: UIImageView!
+    @IBOutlet var faseView: UIView!
+    @IBOutlet weak var kimRosto: UIImageView!
     let notificacao = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
-    
     
     
     func verifica(){
@@ -201,6 +204,11 @@ class selecf: UIViewController{
         fala?.text = texto[c]
         print("texto n: " + String(c))
         
+        if c == 8 || c == 21 || c == 23 {
+            banco?.isUserInteractionEnabled = true
+            rosto("kimpiscada")
+        }
+        
         if pula == true {
             c += 2
             pula = false
@@ -209,11 +217,18 @@ class selecf: UIViewController{
         }
     }
     func ApareceSeta(_ c:Int){
-        if(c==21){
-            setaBanco?.alpha = 1
+        if(c==21 || c == 8){
+            setaBanco?.alpha = 0.8
             //alterar o alpha da seta para 1
+        } else {
+            setaBanco?.alpha = 0
         }
     }
+    
+    func rosto (_ rosto:String) {
+        kimRosto?.image = UIImage(named: rosto)
+    }
+        
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -226,8 +241,13 @@ class selecf: UIViewController{
         switch prog {
         case 1:
             fase1?.backgroundColor = nil
+            fundoFase?.image = UIImage(named: "parque-1")
+            faseView?.backgroundColor = .systemGreen
+            setaBanco?.tintColor = .systemRed
+            rosto("kimneutra")
         case 2:
             fase2?.backgroundColor = nil
+            fundoFase?.image = UIImage(named: "kimTEMPORARIO")
         case 3:
             fase3?.backgroundColor = nil
         case 4:
@@ -246,13 +266,21 @@ class selecf: UIViewController{
     }
     func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.atualizaSetaBanco(notificacao:)), name: notificacao, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(atualizarFala(notificacao:)), name: NSNotification.Name.init("AtualizarTexto"), object: nil)
     }
     @objc func atualizaSetaBanco(notificacao: NSNotification){
-        setaBanco?.alpha = 0
+        setaBanco?.alpha = 1
         c = 22
         dialogo()
         print("a notificacao chegou")
-        
+    }
+    
+    @objc func atualizarFala(notificacao: NSNotification) {
+        c = 9
+        banco?.isUserInteractionEnabled = false
+        rosto("kimneutra")
+        dialogo()
     }
     
     @IBAction func banco(_ sender: Any) {
@@ -299,6 +327,7 @@ class selecf: UIViewController{
     
     //Vai pra fase 3
     @IBAction func f3(_ sender: AnyObject) {
+        contadorBanco = 1
         switch prog {
         case 3:
             r = 0
@@ -396,6 +425,10 @@ class selecf: UIViewController{
     
     //Refaz a fase
     @IBAction func refazer(_ sender: Any) {
+        if prog == 2 {
+            contadorBanco = 1
+        }
+        
         zerafase()
         r = 0
         prog -= 1
@@ -431,10 +464,13 @@ class selecf: UIViewController{
             print("UÉ")
         }
         
+        
     }
     //Quantidades de caixa de dialogo terão
     @IBAction func telas(_ sender: UIButton) {
-        trocaFala()
+        if c != 9 {
+            trocaFala()
+        }
     }
     func trocaFala(){
         if c <= q[i]{
