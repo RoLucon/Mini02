@@ -1239,7 +1239,6 @@
                                         </state>
                                         <connections>
                                             <action selector="next:" destination="ERt-pN-ToC" eventType="touchUpInside" id="Xb9-Nh-lzy"/>
-                                            <action selector="proximoTexto:" destination="ERt-pN-ToC" eventType="touchUpInside" id="y2w-4P-3Lf"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kim" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="635-RH-42p">

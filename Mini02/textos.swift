@@ -170,7 +170,7 @@ let textoFase3 = [
 //Ajusatar testos
 let feedBackFase4 = [
     1: "Você tá pegando o jeito, cara!",
-    2: "Acertou mais da metade"
+    2: "Acertou mais da metade",
     3: "Ta precisando prestar mais atençao"
 ]
 

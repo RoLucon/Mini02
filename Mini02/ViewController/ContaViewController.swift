@@ -193,13 +193,12 @@ class ContaViewController: UIViewController {
                 }
             }
         }
-
         if erradas == 0 {
-            return feedBackFase4[1]
+            return feedBackFase4[1]!
         } else if ((certas+erradas)/2) > erradas {
-            return feedBackFase4[2]
+            return feedBackFase4[2]!
         } else {
-            return feedBackFase4[3]
+            return feedBackFase4[3]!
         }
     }
     
