@@ -20,20 +20,20 @@ let personagem: Personagem = Personagem.shared
 //Todas as falas do jogo em ordem de aparição
 let texto = [
     //Inicio cap 1
-1: "\(Personagem.shared.nome!)… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE o seu salário caiu.",
-2: "Fala aí, \(Personagem.shared.nome!)!\nRecebeu hoje, né?",
-3: "Ehh… Não foi isso que conversamos ontem, \(Personagem.shared.nome!)",
+1: "\(personagem.nome!)… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE o seu salário caiu.",
+2: "Fala aí, \(personagem.nome!)!\nRecebeu hoje, né?",
+3: "Ehh… Não foi isso que conversamos ontem, \(personagem.nome!)",
 4: "Olha só, nossa conversa de ontem até que fez efeito!",
 5: "De qualquer forma, sua situação está mesmo caótica.\nDesespero nunca é a saída. Mas eu estaria desesperada no seu lugar!",
 6: "Pagar conta é massa, mas pensar no futuro também é, sabe?!",
 7: "Dói guardar o dinheiro que não tem, né?",
 8: "Vou te ajudar nessa, cara. Cola aí!", //Seta pro banco
-9: "Mas isso é história para mais tarde.\nAprenda com leveza, \(Personagem.shared.nome!).", //Volta do banco
+9: "Mas isso é história para mais tarde.\nAprenda com leveza, \(personagem.nome!).", //Volta do banco
 10: "…PARA DE GASTAR SEM NECESSIDADE!",
 11: "Oh? Coitadinho…",
 12: "Mas relaxa, dessa vez eu pago pra gente.",
     //Inicio cap 2
-13: "\(Personagem.shared.nome!), esse é o seu pior inimigo…\nNão, não o shopping.\nO cartão de crédito.",
+13: "\(personagem.nome!), esse é o seu pior inimigo…\nNão, não o shopping.\nO cartão de crédito.",
 14: "Que espaço lindo! Quanto lugar legal!",
 15: "E acumular várias dívidas pelos próximos meses!",
 16: "…Você por acaso tem saldo na conta pra passar no débito?",
@@ -44,7 +44,7 @@ let texto = [
 21: "Isso porque, se passar desse prazo, você corre o risco de ser negativado.\nNão fica perdido que vou te ajudar nisso!", //Seta pro banco
 22: "Enfim! Vamos voltar para lá! A fome é grande, mas comer em casa sai mais barato.\nInclusive, queeem sabe não te dou umas dicas para gastar menos…",
     //Inicio cap 3
-23: "...\(Personagem.shared.nome!).",
+23: "...\(personagem.nome!).",
 24: "Poxa… Mas você conseguiu pagar sua fatura. Não é tudo, mas é algo.",
 25: "Que bom! Mas ei, você precisa aprender muito ainda.",
 26: "Pagar as contas é um alívio, mas você tem que tomar cuidado pra não se afundar em dívidas de novo.",
@@ -60,7 +60,7 @@ let texto = [
 35: "…Kim te ajudando é uma oportunidade única, okay?",
 36: "De qualquer forma, vou tirar um cochilo. Enquanto isso, partiu testar os conhecimentos?",
     //Inicio cap 4
-37: "\(Personagem.shared.nome!)...\nEu estava pensando, você guardou uma grana na poupança, né? Já pensou em investir em algo mais lucrativo?",
+37: "\(personagem.nome!)...\nEu estava pensando, você guardou uma grana na poupança, né? Já pensou em investir em algo mais lucrativo?",
 38: "Okay, essa explicação não foi a mais esclarecedora…",
 39: "Diferente, ué. Só que um diferente melhor!",
 40: "Enquanto na poupança o objetivo é juntar dinheiro, aqui a ideia é outra.\nÉ como colocar o seu dinheiro para trabalhar para você.",

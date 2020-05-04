@@ -14,6 +14,7 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var SaldoBanco: UILabel!
     @IBOutlet weak var SaldoPoupanca: UILabel!
     @IBOutlet weak var nome: UILabel!
+    @IBOutlet weak var foto: UIImageView!
     
     //Banco História
     @IBOutlet weak var saldoConta: UIView!
@@ -24,6 +25,7 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var fundoView: UIView!
     @IBOutlet weak var StackView: UIStackView!
     @IBOutlet weak var seta: UIImageView!
+    @IBOutlet weak var viewKim: UIView!
     @IBOutlet weak var textoLabel: UILabel!
     @IBOutlet weak var faturaView: UIView!
     @IBOutlet weak var textoView: UIView!
@@ -49,8 +51,16 @@ class BancoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        foto?.image = UIImage(named: "kleytinho")
+        nome?.text = personagem.nome!
+        atualizarLabel()
+        observer()
+        
+        //História - Capítulo 1
         if prog == 1 && contadorBanco >= 1 {
             fundoView?.isHidden = false
+            viewKim?.isHidden = false
             textoView?.isHidden = false
             poupancaView?.transform = CGAffineTransform(translationX: 0, y: -20)
             StackView?.transform = CGAffineTransform(translationX: 0, y: -90)
@@ -59,12 +69,8 @@ class BancoViewController: UIViewController {
             faturaTexto?.text = textoFase1[contadorBanco]
             backButton?.isEnabled = false
         }
-
-        // Do any additional setup after loading the view.
-        nome?.text = personagem.nome!
-        atualizarLabel()
-        observer()
     }
+    
     func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarSaldo(n:)), name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
         
@@ -167,6 +173,7 @@ class BancoViewController: UIViewController {
             case 17:
                 view.addSubview(Extrato)
             case 19:
+                viewKim?.isHidden = true
                 fundoView?.isHidden = true
                 contadorBanco = 0
                 Investimento.alpha = 1
@@ -174,17 +181,43 @@ class BancoViewController: UIViewController {
                 StackView?.transform = .identity
                 Extrato?.transform = .identity
                 backButton?.isEnabled = true
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
             default:
                 print("ok")
-                //view.sendSubviewToBack(Extrato)
             }
         }
     }
     
     @IBAction func voltarTexto(_ sender: Any) {
-        if contadorBanco > 1 && contadorBanco <= 15 {
+        if contadorBanco > 1 && contadorBanco <= 9 {
             contadorBanco -= 1
             textoLabel?.text = textoFase1[contadorBanco]!
+            switch  contadorBanco {
+            case 1:
+                view.sendSubviewToBack(saldoConta)
+            case 2:
+                view.sendSubviewToBack(poupancaView)
+                view.addSubview(saldoConta)
+            case 3:
+                view.sendSubviewToBack(poupancaView)
+                view.addSubview(saldoConta)
+            case 5:
+                seta?.isHidden = true
+            case 6:
+                view.sendSubviewToBack(StackView)
+                view.addSubview(poupancaView)
+                seta?.isHidden = false
+                seta?.center.x -= 190
+                seta?.center.y -= 130
+            case 8:
+                textoLabel?.text = textoFase1[contadorBanco - 1]!
+                Investimento.alpha = 1
+                Contas.alpha = 0.5
+                seta?.isHidden = true
+                contadorBanco -= 1
+            default:
+                print("nada")
+            }
         }
     }
 

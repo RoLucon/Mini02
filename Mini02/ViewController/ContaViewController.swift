@@ -32,18 +32,18 @@ class ContaViewController: UIViewController {
         
         //Fase 1
         if prog == 1 && contadorBanco >= 1 {
-            viewFase2?.isHidden = false
             viewFrase?.isHidden = false
             textoFase2?.text = textoFase1[contadorBanco]
-            view.addSubview(gerenciarFase2)
-            viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
-            stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
+            gerenciarButton.isUserInteractionEnabled = false
+            viewInferior?.transform = CGAffineTransform(translationX: 0, y: -60)
+            stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -80)
         } else if prog == 2 && contadorBanco >= 1 {
             viewFrase?.isHidden = false
             viewFase2?.isHidden = false
             setaFase2?.isHidden = false
             textoFase2?.text = textoFase1[9]
-            view.addSubview(gerenciarFase2)
+            gerenciarFase2.isHidden = false
+            //view.addSubview(gerenciarFase2)
             viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
             stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
             //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
@@ -106,15 +106,18 @@ class ContaViewController: UIViewController {
              textoFase2?.text = textoFase1[contadorBanco]
             
             if contadorBanco == 11 {
+                viewFase2?.isHidden = false
                 setaFase2?.isHidden = false
+                gerenciarFase2?.isHidden = false
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFala"), object: nil)
                 }
             }
                     
             else if prog == 1 && contadorBanco == 14 {
+                //gerenciarButton.isUserInteractionEnabled = true
                 viewFase2?.isHidden = true
                 viewFrase?.isHidden = true
-                view.sendSubviewToBack(gerenciarFase2)
+                gerenciarFase2?.isHidden = true
                 viewInferior?.transform = .identity
                 stkViewInferior?.transform = .identity
             }
