@@ -70,7 +70,7 @@ let texto = [
     //Inicio cap 5
 44: "Se você é jovem ainda, jovem ainda, jovem ainda…\nAmanhã velho será, velho será, velho será!",
 45: "A JUVENTUDE QUE NUNCA MORRERÁÁÁ!",
-46: "…poxa, Kleytinho. Poxa.",
+46: "…poxa, \(personagem.nome!) Poxa.",
 47: "Mas e você?",
 48: "Mas não pode deixar de pensar nas coisas que vão te ajudar lá na frente, viu?",
 49: "Naaah! Ainda tem muita preocupação pela frente.",
@@ -85,7 +85,7 @@ let texto = [
 58: "É, você está certo. Uma coisa de cada vez.",
 59: "Por enquanto, foque na sua… fila de metas.\nMas pequeno gafanhoto! Amanhã, você será um velho gafanhoto!\nPense no seu futuro também, sem atropelar os outros objetivos.",
     //Inicio cap 6
-60: "Kleytinho… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE você precisa declarar seu imposto de renda.",//Narrador
+60: "\(personagem.nome!)… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE você precisa declarar seu imposto de renda.",//Narrador
 61: "Hoje é um dia chato, sabe?",
 62: "Vamos lá declarar esse negócio…",
 63: "Não sabe o por quê? Bem, eu vou te mostrar.",
@@ -95,28 +95,28 @@ let texto = [
 67: "Eles fazem… muitas coisas.",
 68: "Quê?!",
 69: "O dinheiro vai para a saúde, educação e programas sociais no geral.\nÉ o que chamamos de dinheiro público!",
-70: "E se você não declarar, vai ter que pagar uma multa.\n…Você não quer pagar essa multa, Kleytinho.",
+70: "E se você não declarar, vai ter que pagar uma multa.\n…Você não quer pagar essa multa, \(personagem.nome!).",
 71: "Então, vamos lá?!", //Vai para a simulação
     //Inicio cap 7
-72: "Após um longo dia no trabalho e na faculdade, Kleytinho retorna.\nÉ um dia comum…\nMas um cheiro estranho.",
+72: "Após um longo dia no trabalho e na faculdade, \(personagem.nome!) retorna.\nÉ um dia comum…\nMas um cheiro estranho.",
 73: "O que está acontecendo?", //FALA DO KLEY KLEY
 74: "Tá pegando fogo, bicho!!!", //FAUSTÃO
-75: "Kleytinho!!! Eu não sei o que aconteceu… Os meninos estavam cozinhando e… e…", //Volta para kim
+75: "\(personagem.nome!)!!! Eu não sei o que aconteceu… Os meninos estavam cozinhando e… e…", //Volta para kim
 76: "Tá todo mundo desesperado… É a nossa casa! O que nós vamos fazer?",
 77: "Todas as suas escolhas definiram nosso rumo até aqui.\nConfio em você.",
     //Mudar os valores dos finais com os dados do jogador
     //Cap 8.1 - dinheiro insuficiente
-78: "Kleytinho…\nEsse foi o seu andamento até aqui.",
+78: "\(personagem.nome!)…\nEsse foi o seu andamento até aqui.",
 79: "Você tem <valor> na conta bancária. <valor> na conta corrente  e <valor> guardado na poupança.",
 80: "Nos investimentos, você aplicou <valor>, que te rendeu <valor> de lucro.",
 81: "Quanto às dívidas, você ficou com <valor> pendentes. <valor> são de contas essenciais, <valor> são da fatura.",
-82: "Kleytinho, infelizmente, o dinheiro que você tem não vai poder nos ajudar.\nMas deixo marcada a minha gratidão!\nE, na próxima, não esqueça das dicas da Kim.",
+82: "\(personagem.nome!), infelizmente, o dinheiro que você tem não vai poder nos ajudar.\nMas deixo marcada a minha gratidão!\nE, na próxima, não esqueça das dicas da Kim.",
     //Cap 8.2 - escolheu não ajudar
-83: "Kleytinho…\nEsse foi o seu andamento até aqui.",
+83: "\(personagem.nome!)…\nEsse foi o seu andamento até aqui.",
 84: "Você tem <valor> na conta bancária. <valor> na conta corrente  e <valor> guardado na poupança.",
 85: "Nos investimentos, você aplicou <valor>, que te rendeu <valor> de lucro.",
 86: "Quanto às dívidas, você ficou com <valor> pendentes. <valor> são de contas essenciais, <valor> são da fatura.",
-87: "Kleytinho… Você optou por não nos ajudar.\nMas sua grana também é insuficiente para comprar o Celta.",
+87: "\(personagem.nome!)… Você optou por não nos ajudar.\nMas sua grana também é insuficiente para comprar o Celta.",
 88: "Eu respeito sua decisão, amigo. Mas, na próxima, guarde melhor o seu dinheiro.",
     //Cap 8.3 - Escolheu ajudar e tem dinheiro
 89: "Kleytinho…\nEsse foi o seu andamento até aqui.",
@@ -125,7 +125,11 @@ let texto = [
 92: "Quanto às dívidas, você ficou com <valor> pendentes. <valor> são de contas essenciais, <valor> são da fatura.",
 93: "Kleytinho…\nGraças a você, conseguimos nos reestabelecer em um novo lugar!\nE sem prejudicar na nossa faculdade.",
 94: "Obrigada! Graças à sua boa vontade e educação financeira, tudo ficou bem.",
-95: "Não esqueça de manter a disciplina na vida real também, viu?",]
+95: "Não esqueça de manter a disciplina na vida real também, viu?",
+96: "Tá vendo aquele score ali?",
+97: "Ele está vermelho, né?\nÉ… Não é um bom sinal.",
+98: "Gastar todo o seu salário faz parte disso. Sempre guarde um pouco do que você ganha. Para emergências!.",
+99: "Para deixar essa bolinha verde, você precisa pagar suas dívidas.\nRelaxa que tô contigo nessa!\nAgora, vamos para a parte que dói."]
 
 
 //Textos das interações da fase no banco
