@@ -154,6 +154,55 @@ let textoFase1 = [
     20:"",
 ]
 
+//Iteracoes Fase 4
+let perguntaFase4 = [
+    1: "Existem alguns tipos de trabalho... Digo, investimentos.",
+    2: "Cada uma tem um rendimento específico e riscos, também.",
+    3: "Como estamos vulgarmente falando de “comprar dinheiro”, é normal que a grana não renda tanto.",
+    4: "Mas não se preocupe!",
+    5: "Aqui, tem só os investimentos de renda fixa.", // Primeira Pergunta
+    6: "Os investimentos de renda fixa indicam, obviamente, rentabilidade fixa.",
+    7: "Isso significa que você já sabe qual é a taxa de rentabilidade acordada no investimento.",
+    8: "São os mais seguros do mercado!",
+    9: "É como um trampo. Ele trabalha o mês todo e recebe um salário no final.",
+    10: "O salário no final do mês é o seu lucro. Isso é bom, né?",
+    11: "Que tal dar uma olhada?", // Faz ele olhar investimentos um a um
+    12: "Vamos começar pelo CDB. Esse, é como colocar o seu dinheiro para trabalhar no banco.",// Foco no CDB
+    13: "O dinheiro do CDB é aquele que o banco usa para emprestar para quem tem conta no banco.",
+    14: "Quem tem o CDB recebe um juros por conta disso. E o juros é o salário do seu dinheiro.",
+    15: "Uma coisa que eu já estava esquecendo...",
+    16: "Se quiser saber mais sobre esse investimento ou sobre qualquer outro...",
+    17: "Tem explicações mais detalhadas em cada investimento. É só rolar o dedinho para mais detalhes!",
+    18: "Mas continuando, tem também o LCI e LCA.",
+    19: "Esses caras são Letras de Crédito e, resumidamente, significa que quem compra vai receber por eles.",//Foco no LCI e LCA
+    20: "Tem um cara chamado Fundo Garantidor de Crédito",
+    21: "é um órgão que pagará ao dono do LCI e/ou LCA. Isso deixa o investimento bem seguro.",
+    22: "Ah, e o CDB também tem essa garantia!",
+    23: "Voltando à explicação, assim como o CDB, o LCI e o LCA são empregos para o seu dinheiro.",
+    24: "O LCI seria um trabalho no setor imobiliário e o LCA no setor do agronegócio.",
+    25: "O salário, no caso, o lucro, são os juros por estar investindo nesse setores.",
+    26: "Temos também os CRI e CRA. Esses, são certificados de recebíveis, resumidamente.",//CRI e CRA
+    27: "Isso significa que o dono do CRI e/ou do CRA vai receber por esse dinheiro com juros.",
+    28: "O CRI e o CRA são trabalhos para o dinheiro em que ele dá uma força para a galera que está financiando...",
+    29: "um apê, ou a um fazendeiro que tá comprando um trator.",
+    30: "A força que seu dinheiro está dando gera um salário, no caso, o seu lucro.",
+    31: "Por último, mas não menos importante, temos os debêntures.", //Debent
+    32: "É um investimento onde o seu dinheiro trabalha na indústria.",
+    33: "O trabalho do seu dindin, nesse caso, é gerar um crescimento e/ou uma inovação.",
+    34: "E adivinha só o que é o salário do seu dinheiro?",//Pergunta
+    35: "Só uma coisinha... Na vida nem, tudo são flores.",
+    36: "Alguns investimentos cobram impostos no seu lucro, tem que ficar ligado nisso, tudo bem?",
+    37: "Agora, bora para a facul que o dia ainda não está ganho.",
+]
+
+let alternativasFase4 = [
+    5: ["Okay...","O que é isso?"],
+    34: ["Sorvete, fala que é sorvete!","É o meu lucro!"]
+]
+let feedBakcFase4 = [
+    5: ["Poxa, \(Personagem.shared.nome!). Você deveria perguntar o que é renda fixa...","Era essa a pergunta que eu estava esperando!"],
+    34: ["Poxa, \(Personagem.shared.nome!)... Cê ainda tá muito perdido.","LOL! E não é que você tá aprendendo?!"]
+]
 
 //Todas perguntas do jogo e as respostas possíveis em ordem
 let per = [
@@ -296,4 +345,5 @@ Debêntures - Debêntures é um tipo de investimento em renda fixa oferecidos po
     (Colocar a regra do jogo, pelo que é apresentado nas pesquisa que fiz, no ano passado o lucro médio de um bom Debênture estava em torno 10 a 20% dependendo do tempo do investimento. Eu gostaria de deixar mais ou menos 1,5 % ao mês).
     Sendo que o Imposto de renda é de 15% (na vida real este valor varia com o tempo em que a pessoa fica com o CDB Variando de 22,5 a 15%) em cima do lucro que você tiver neste investimento.
 """
+
 
