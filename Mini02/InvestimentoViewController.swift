@@ -37,6 +37,7 @@ class Investimentos: UIViewController {
     
     @IBOutlet weak var textoAjuda: UILabel!
     
+    @IBOutlet weak var voltarNavBtt: UIButton!
     @IBOutlet weak var viewFase: UIView!
     @IBOutlet weak var seuRendimento: UILabel!
     @IBOutlet weak var bttSacar: UIButton!
@@ -49,15 +50,12 @@ class Investimentos: UIViewController {
     @IBOutlet weak var primeiraAlternativaBtt: UIButton!
     @IBOutlet weak var segundaAlternativaBtt: UIButton!
     
+    @IBOutlet weak var tiposInvestStack: UIStackView!
     @IBOutlet weak var textoKim: UILabel!
-    @IBOutlet weak var cdbBtt: UIButton!
-    @IBOutlet weak var lciBtt: UIButton!
-    @IBOutlet weak var criBtt: UIButton!
-    @IBOutlet weak var debenturesBtt: UIButton!
-    @IBOutlet weak var tipoInvestimentoStack: UIStackView!
+    @IBOutlet weak var flecha: UIImageView!
     
     var investFase = true
-    var indexKim = ["index": 1, "primeira": 1]
+    var indexKim = ["index": 10, "primeira": 1]
     
     let TextAjuda = "Está é a tela de investimentos. Aqui vai ser possível aplicar o seu dinheiro e ver ele rendendo com o passar do tempo. Todos os investimentos são rendas fixas, isso significa que você receberá juros por ter esta aplicação. Cada um dos investimenros terá uma explicção mais detalhada, basta clicar sobre algum deles. O investimento será de grande ajuda no decorrer da história, além de uma ótima maneira de guardar o seu dinheiro na vida real e receber por isso."
     
@@ -80,15 +78,10 @@ class Investimentos: UIViewController {
         atualizaRendimento()
         atualizaMsg()
         observer()
-        
         if investFase {
             viewFase.isHidden = false
             viewRendimento.bottomAnchor.constraint(equalTo: viewKim.topAnchor, constant: -10).isActive = true
             textoKim.text = perguntaFase4[indexKim["index"]!]
-//            seuRendimento.transform = CGAffineTransform(translationX: 0, y: -40)
-//            bttSacar.transform = CGAffineTransform(translationX: 0, y: -40)
-//            viewRendimento.transform = CGAffineTransform(translationX: 0, y: -40)
-            view.bringSubviewToFront(tipoInvestimentoStack)
         }
     }
     
@@ -178,11 +171,10 @@ class Investimentos: UIViewController {
         retiraEfeito()
     }
     
-    //Botoes tela da Kim
-    
+    //Botoes tela da Kim --- Func Para fase 4
     @IBAction func proximaFala(_ sender: Any) {
         indexKim["index"]! += 1
-        print(indexKim["index"])
+        print(indexKim["index"]!)
         if let texto = perguntaFase4[indexKim["index"]!] {
             textoKim.text = texto
         }
@@ -198,10 +190,24 @@ class Investimentos: UIViewController {
             segundaAlternativaBtt.addTarget(self, action: #selector(feedBackAternativas), for: .touchUpInside)
             proximoBtt.isEnabled = false
             anteriorBtt.isEnabled = false
-            indexKim["primeira"] = indexKim["index"]!
+            indexKim["primeira"] = indexKim["index"]! + 1
         }
-        
+        verificaFalas()
+    }
+
+    @IBAction func voltarFala(_ sender: Any) {
+        print(indexKim["index"]!)
+        if indexKim["index"]! > indexKim["primeira"]! {
+            indexKim["index"]! -= 1
+            textoKim.text = perguntaFase4[indexKim["index"]!]
+        }
+        verificaFalas()
+    }
+    
+    func verificaFalas(){
         if indexKim["index"]! >= 12 && indexKim["index"]! <= 18 {
+            self.view.bringSubviewToFront(viewAjudaInvest)
+            self.view.bringSubviewToFront(tiposInvestStack)
             bCDB(UIButton())
              print("CDB")
         } else if indexKim["index"]! >= 19 && indexKim["index"]! <= 25 {
@@ -211,19 +217,19 @@ class Investimentos: UIViewController {
             bCRI(self)
              print("CRI")
         } else if indexKim["index"]! >= 31 && indexKim["index"]! <= 33 {
+            self.view.bringSubviewToFront(viewAjudaInvest)
+            self.view.bringSubviewToFront(tiposInvestStack)
             bDEB(self)
              print("Debenture")
+        } else {
+            self.view.bringSubviewToFront(viewFase)
         }
-        
-    }
-    //12-16,17-22,23-26,27-29
-    @IBAction func voltarFala(_ sender: Any) {
-        print(indexKim["index"]!)
-        if indexKim["index"]! > indexKim["primeira"]! {
-            indexKim["index"]! -= 1
-            textoKim.text = perguntaFase4[indexKim["index"]!]
+        if indexKim["index"]! == 37 {
+            proximoBtt.isEnabled = false
+            anteriorBtt.isEnabled = false
+            flecha.isHidden = false
+            self.view.bringSubviewToFront(voltarNavBtt)
         }
-        
     }
     
     func ajustaTelaParaAlternativas(_ height: CGFloat) {
