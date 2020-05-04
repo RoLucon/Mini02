@@ -42,6 +42,7 @@
 		89E3EAF524328D7C007C2CFC /* CustomizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */; };
 		89FD50912459ED0C0057A1B0 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FD50902459ED0C0057A1B0 /* CheckBoxButton.swift */; };
 		C0CDCA00243BCBEB0057014D /* BancoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */; };
+		C0DC056F245D1C4100CA893F /* ExtratoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC056E245D1C4100CA893F /* ExtratoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizacaoViewController.swift; sourceTree = "<group>"; };
 		89FD50902459ED0C0057A1B0 /* CheckBoxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BancoViewController.swift; sourceTree = "<group>"; };
+		C0DC056E245D1C4100CA893F /* ExtratoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtratoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				89E3EAB5242E98D5007C2CFC /* Assets.xcassets */,
 				89E3EAE824326209007C2CFC /* Banco.storyboard */,
 				C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */,
+				C0DC056E245D1C4100CA893F /* ExtratoViewController.swift */,
 				40BAA4082437DAC4002FA0CE /* Fase.storyboard */,
 				40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */,
 				89E3EABA242E98D5007C2CFC /* Info.plist */,
@@ -391,6 +394,7 @@
 				89078E082444EB16002F5CF2 /* Extension.swift in Sources */,
 				89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */,
 				89FD50912459ED0C0057A1B0 /* CheckBoxButton.swift in Sources */,
+				C0DC056F245D1C4100CA893F /* ExtratoViewController.swift in Sources */,
 				89DF46A92437B75200FB36EB /* Personagem.swift in Sources */,
 				C0CDCA00243BCBEB0057014D /* BancoViewController.swift in Sources */,
 				89E3EAAF242E98D3007C2CFC /* SceneDelegate.swift in Sources */,
@@ -567,6 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Mini02/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -584,6 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Mini02/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
