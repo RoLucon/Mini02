@@ -126,10 +126,10 @@ let texto = [
 93: "Kleytinho…\nGraças a você, conseguimos nos reestabelecer em um novo lugar!\nE sem prejudicar na nossa faculdade.",
 94: "Obrigada! Graças à sua boa vontade e educação financeira, tudo ficou bem.",
 95: "Não esqueça de manter a disciplina na vida real também, viu?",
-96: "Tá vendo aquele score ali?",
-97: "Ele está vermelho, né?\nÉ… Não é um bom sinal.",
-98: "Gastar todo o seu salário faz parte disso. Sempre guarde um pouco do que você ganha. Para emergências!.",
-99: "Para deixar essa bolinha verde, você precisa pagar suas dívidas.\nRelaxa que tô contigo nessa!\nAgora, vamos para a parte que dói."]
+97: "Tá vendo aquele score ali?",
+98: "Ele está vermelho, né?\nÉ… Não é um bom sinal.",
+99: "Gastar todo o seu salário faz parte disso. Sempre guarde um pouco do que você ganha. Para emergências!.",
+100: "Para deixar essa bolinha verde, você precisa pagar suas dívidas.\nRelaxa que tô contigo nessa!\nAgora, vamos para a parte que dói."]
 
 
 //Textos das interações da fase no banco
