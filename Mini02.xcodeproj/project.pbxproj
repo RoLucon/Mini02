@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C24ADCA243FC258000D9B67 /* Investimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24ADC9243FC257000D9B67 /* Investimento.swift */; };
+		1C4FE0162460836F00D99CD1 /* ImpostoDeRenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4FE0152460836F00D99CD1 /* ImpostoDeRenda.swift */; };
 		1CC462B42450DF0600D6CB59 /* InvestimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */; };
 		1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B52450E25300D6CB59 /* InvestirViewController.swift */; };
 		1CC462B82450E30700D6CB59 /* SacarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B72450E30700D6CB59 /* SacarViewController.swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		1C24ADC9243FC257000D9B67 /* Investimento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Investimento.swift; sourceTree = "<group>"; };
+		1C4FE0152460836F00D99CD1 /* ImpostoDeRenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostoDeRenda.swift; sourceTree = "<group>"; };
 		1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoViewController.swift; sourceTree = "<group>"; };
 		1CC462B52450E25300D6CB59 /* InvestirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestirViewController.swift; sourceTree = "<group>"; };
 		1CC462B72450E30700D6CB59 /* SacarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacarViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				40BAA4082437DAC4002FA0CE /* Fase.storyboard */,
 				40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */,
 				1CDA1898245B624C00A360AF /* ImpostoDeRenda.storyboard */,
+				1C4FE0152460836F00D99CD1 /* ImpostoDeRenda.swift */,
 				89E3EABA242E98D5007C2CFC /* Info.plist */,
 				89E3EAE6243261B7007C2CFC /* Intro.storyboard */,
 				89E3EAEA24326226007C2CFC /* Investimento.storyboard */,
@@ -391,6 +394,7 @@
 				1CC462B82450E30700D6CB59 /* SacarViewController.swift in Sources */,
 				40BAA4132437DAC4002FA0CE /* aviso.swift in Sources */,
 				8932CD51243D1E1200E2BCA4 /* TextLabel.swift in Sources */,
+				1C4FE0162460836F00D99CD1 /* ImpostoDeRenda.swift in Sources */,
 				1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */,
 				89078E082444EB16002F5CF2 /* Extension.swift in Sources */,
 				89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */,
