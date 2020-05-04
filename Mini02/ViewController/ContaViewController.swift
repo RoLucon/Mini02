@@ -29,7 +29,7 @@ class ContaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChart()
-        prog = 3
+        
         //Fase 1
         if prog == 1 && contadorBanco >= 1 {
             viewFrase?.isHidden = false
@@ -47,7 +47,7 @@ class ContaViewController: UIViewController {
             viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
             stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
             //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
-        } else if prog == 3{
+        } else if prog == 3 && contadorBanco >= 1 {
             viewFrase?.isHidden = false
             viewFase2?.isHidden = false
             fase3()
