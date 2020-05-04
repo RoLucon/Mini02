@@ -29,7 +29,8 @@ class ContaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChart()
-        
+        prog = 3
+        contadorBanco = 2
         //Fase 1
         if prog == 1 && contadorBanco >= 1 {
             viewFrase?.isHidden = false
@@ -47,10 +48,11 @@ class ContaViewController: UIViewController {
             viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
             stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
             //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
-        } else if prog == 3 && contadorBanco >= 1 {
+        } else if prog == 3 && contadorBanco >= 1 { // Fase 3
             viewFrase?.isHidden = false
             viewFase2?.isHidden = false
             fase3()
+            self.navigationItem.setHidesBackButton(true, animated: true)
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(proximoTexto(_:)), name: NSNotification.Name.init("AtualizarView"), object: nil)
@@ -220,7 +222,7 @@ class ContaViewController: UIViewController {
                 textoFase2.text = textoFase3[controleTexto["index"]!]
             }
             if controleTexto["index"]! == 8 {
-                //Faz voltar
+                self.navigationItem.setHidesBackButton(false, animated: true)
             }
         }
     }
