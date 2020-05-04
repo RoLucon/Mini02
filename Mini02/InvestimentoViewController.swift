@@ -79,6 +79,11 @@ class Investimentos: UIViewController {
         atualizaRendimento()
         atualizaMsg()
         observer()
+        
+        if prog == 4 && c <= 42{
+            investFase = true
+        }
+        
         if investFase {
             viewFase.isHidden = false
             viewRendimento.bottomAnchor.constraint(equalTo: viewKim.topAnchor, constant: -10).isActive = true
