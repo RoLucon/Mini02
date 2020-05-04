@@ -209,10 +209,8 @@ class selecf: UIViewController{
             banco?.isUserInteractionEnabled = true
             rosto("kimpiscada")
         }else if c == 6 || c == 7{
-            c = 95
-        }/*else if c == 96{
-            c = 8
-        }*/
+            c = 96
+        }
         
         if pula == true {
             c += 2
@@ -473,7 +471,7 @@ class selecf: UIViewController{
     }
     //Quantidades de caixa de dialogo terão
     @IBAction func telas(_ sender: UIButton) {
-        if c == 100{
+        if c == 101{
             c = 8
         }
         if c != 9 {
@@ -481,7 +479,7 @@ class selecf: UIViewController{
         }
     }
     func trocaFala(){
-        if c <= q[i] || c >= 96{
+        if c <= q[i] || c >= 97{
             dialogo()
         }
         else if c == 13 || c == 23 || c == 37 || c == 44 || c == 60 || c == 72 || c == 78 || c == 83 || c == 89 || c == 96{
