@@ -252,76 +252,32 @@ let per = [
 57: "Serve para que quem ganhe mais, contribua mais e quem ganha menos, contribua menos.", 58: "O que fazem com o dinheiro?", 59: "Não quero contribuir nada, não.", 60: " ",
     //Cap 7
 61: "Kleytinho… O que você quer fazer?", 62: "Vou ajudar vocês!",/*Eu tenho dinheiro guardado, Kim. Vou ajudar vocês!*/ 63: "Desculpa… Mas não irei ajudar", 64: " ",
-65: "Pergunta 17", 66: "Resposta 1 p17", 67: "Resposta 2 p17", 68: "Resposta 3 p17",
-69: "Pergunta 18", 70: "Resposta 1 p18", 71: "Resposta 2 p18", 72: "Resposta 3 p18",
-73: "Pergunta 19", 74: "Resposta 1 p19", 75: "Resposta 2 p19", 76: "Resposta 3 p19",
-77: "Pergunta 20", 78: "Resposta 1 p20", 79: "Resposta 2 p20", 80: "Resposta 3 p20",
-81: "Pergunta 21", 82: "Resposta 1 p21", 83: "Resposta 2 p21", 84: "Resposta 3 p21",
-85: "Pergunta 22", 86: "Resposta 1 p22", 87: "Resposta 2 p22", 88: "Resposta 3 p22",
-89: "Pergunta 23", 90: "Resposta 1 p23", 91: "Resposta 2 p23", 92: "Resposta 3 p23",
-93: "Pergunta 23", 94: "Resposta 1 p23", 95: "Resposta 2 p23", 96: "Resposta 3 p23",
-97: "Pergunta 23", 98: "Resposta 1 p23", 99: "Resposta 2 p23", 100: "Resposta 3 p23",
-101: "Pergunta 23", 102: "Resposta 1 p23", 103: "Resposta 2 p23", 104: "Resposta 3 p23",
-105: "Pergunta 23", 106: "Resposta 1 p23", 107: "Resposta 2 p23", 108: "Resposta 3 p23",
-109: "Pergunta 23", 110: "Resposta 1 p23", 111: "Resposta 2 p23", 112: "Resposta 3 p23",
-113: "Pergunta 23", 114: "Resposta 1 p23", 115: "Resposta 2 p23", 116: "Resposta 3 p23",
-117: "Pergunta 23", 118: "Resposta 1 p23", 119: "Resposta 2 p23", 120: "Resposta 3 p23",
-121: "Pergunta 23", 122: "Resposta 1 p23", 123: "Resposta 2 p23", 124: "Resposta 3 p23",
-125: "Pergunta 23", 126: "Resposta 1 p23", 127: "Resposta 2 p23", 128: "Resposta 3 p23",
-129: "Pergunta 23", 130: "Resposta 1 p23", 131: "Resposta 2 p23", 132: "Resposta 3 p23",
-133: "Pergunta 23", 134: "Resposta 1 p23", 135: "Resposta 2 p23", 136: "Resposta 3 p23",
-137: "Pergunta 23", 138: "Resposta 1 p23", 139: "Resposta 2 p23", 140: "Resposta 3 p23",
-141: "Pergunta 23", 142: "Resposta 1 p23", 143: "Resposta 2 p23", 144: "Resposta 3 p23",
-145: "Pergunta 23", 146: "Resposta 1 p23", 147: "Resposta 2 p23", 148: "Resposta 3 p23",
-149: "Pergunta 23", 150: "Resposta 1 p23", 151: "Resposta 2 p23", 152: "Resposta 3 p23",
-153: "Pergunta 23", 154: "Resposta 1 p23", 155: "Resposta 2 p23", 156: "Resposta 3 p23",
-157: "Pergunta 23", 158: "Resposta 1 p23", 159: "Resposta 2 p23", 160: "Resposta 3 p23",
 ]
-
 
 //Todas as explicações presentes nas fases
 let help = [
-"Ajuda 1 p1", "Ajuda 2 p1", "Ajuda 3 p1",
-"Ajuda 1 p2", "Ajuda 2 p2", "Ajuda 3 p2",
-"Ajuda 1 p3", "Ajuda 2 p3", "Ajuda 3 p3",
-"Ajuda 1 p4", "Ajuda 2 p4", "Ajuda 3 p4",
-"Ajuda 1 p5", "Ajuda 2 p5", "Ajuda 3 p5",
-"Ajuda 1 p6", "Ajuda 2 p6", "Ajuda 3 p6",
-"Ajuda 1 p7", "Ajuda 2 p7", "Ajuda 3 p7",
-"Ajuda 1 p8", "Ajuda 2 p8", "Ajuda 3 p8",
-"Ajuda 1 p9", "Ajuda 2 p9", "Ajuda 3 p9",
-"Ajuda 1 p10", "Ajuda 2 p10", "Ajuda 3 p10",
-"Ajuda 1 p11", "Ajuda 2 p11", "Ajuda 3 p11",
-"Ajuda 1 p12", "Ajuda 2 p12", "Ajuda 3 p12",
-"Ajuda 1 p13", "Ajuda 2 p13", "Ajuda 3 p13",
-"Ajuda 1 p14", "Ajuda 2 p14", "Ajuda 3 p14",
-"Ajuda 1 p15", "Ajuda 2 p15", "Ajuda 3 p15",
-"Ajuda 1 p16", "Ajuda 2 p16", "Ajuda 3 p16",
-"Ajuda 1 p17", "Ajuda 2 p17", "Ajuda 3 p17",
-"Ajuda 1 p18", "Ajuda 2 p18", "Ajuda 3 p18",
-"Ajuda 1 p19", "Ajuda 2 p19", "Ajuda 3 p19",
-"Ajuda 1 p20", "Ajuda 2 p20", "Ajuda 3 p20",
-"Ajuda 1 p21", "Ajuda 2 p21", "Ajuda 3 p21",
-"Ajuda 1 p22", "Ajuda 2 p22", "Ajuda 3 p22",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
-"Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
+    //Cap 1
+"Optar por gastar todo o dinheiro que recebeu. O que importa é aproveitar o presente.", "Ser mais conservador com o dinheiro e utiliza-lo de forma inteligente para não ficar com mais dívidas", " ",// 0 1 2
+"Optar por utilizar o salário para pagar as dívidas que conseguir.", "Optar por guardar dinheiro para ir pagando as dívidas aos poucos.", " ",// 3 4 5
+"Aceitar o convite.", "Se preocupar com sua situação financeira.", " ",// 6 7 8
+    //Cap 2
+"Comprar o que quiser e se virar para pagar as faturas do cartão depois.", "Gastar conforme o dinheiro disponível na conta.", " ",// 9 10 11
+"Ajuda 1 p5", "Ajuda 2 p5", " ",// 12 13 14 - RETIRAR
+    //Cap 3
+"Está preocupado com as contas.", "Está tranquilo por ja ter pago a fatura.", " ",// 15 16 17
+"Colocar toda responsabilidade nas mãos da Kim.", "Ainda não possui entendimento sobre.", " ",// 18 19 20
+"Compreendeu tudo que foi passado e sabe aplicar.", "Ainda não entendeu tudo completamente.", " ",// 21 22 23
+    //Cap 4
+"Ajuda 1 p9", "Ajuda 2 p9", " ",// 24 25 26 - Retirar
+    //Cap 5
+"Ajuda 1 p10", "Ajuda 2 p10", " ",// 27 28 29 - Retirar
+"Ainda é jovem e tem muito pela frente.", "Já é velho e nào tem muito mais o que passar.", " ",// 30 31 32
+"Guardar dinheiro para a previdência privada.", "Manter, inicialmente, o foco para comprar o Celta.", " ",//33 34 35
+    //Cap 6
+"Compreende o motivo do dia não ser muito agradável.", "Nào sabe o motivo do dia não ser bom.", " ",// 36 37 38
+"Perguntar sobre o que é gerado com o todo dinheiro dado", "Optar por nào contribuir", " ",// 39 40 41
+    //Cap 7
+"Utilizar o dinheiro que guardou durante a faculdade para garantir um lugar para todos morarem novamente, e deixar para depois a meta de adquirir seu Celta.", "Não contribuir para se reestruturarem por ter o foco em comprar seu Celta o mais rápido possível.", " ",// 42 43 44
 ]
 var prog = 1 // Representa o progresso do jogador
 //Arrays que definem o posicionamento das perguntas durante os dialogos

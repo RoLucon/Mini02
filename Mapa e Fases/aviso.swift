@@ -444,7 +444,7 @@ class selecf: UIViewController{
             a = 0
         case 2:
             p = 13
-            a = 6
+            a = 9
         case 3:
             p = 21
             a = 15
@@ -453,13 +453,13 @@ class selecf: UIViewController{
             a = 24
         case 5:
             p = 41
-            a = 33
+            a = 27
         case 6:
             p = 53
-            a = 42
+            a = 36
         case 7:
             p = 61
-            a = 51
+            a = 42
         case 8:
             p = 81
             a = 60
