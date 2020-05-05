@@ -220,14 +220,16 @@ class selecf: UIViewController{
         }
     }
     func ApareceSeta(_ c:Int){
-        if(c == 8 || c == 21 || c == 42){
+        if(c == 97 || c == 8 || c == 21 || c == 42){
             setaBanco?.alpha = 0.8
             if c == 8 {
-                setaBanco?.transform = CGAffineTransform(translationX: 165, y: 0)
                 _ = personagem.dinheiro(1000)
+            } else if c == 97 {
+                setaBanco?.transform = CGAffineTransform(translationX: 165, y: 0)
             }
         } else {
             setaBanco?.alpha = 0
+            setaBanco?.transform = .identity
         }
     }
     
@@ -247,13 +249,13 @@ class selecf: UIViewController{
         switch prog {
         case 1:
             fase1?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "parque-1")
+            fundoFase?.image = UIImage(named: "parque")
             faseView?.backgroundColor = .systemGreen
             setaBanco?.tintColor = .systemRed
             rosto("kimneutra")
         case 2:
             fase2?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "kimTEMPORARIO")
+            fundoFase?.image = UIImage(named: "shopping")
         case 3:
             fase3?.backgroundColor = nil
         case 4:
@@ -350,6 +352,7 @@ class selecf: UIViewController{
     
     //Vai pra fase 4
     @IBAction func f4(_ sender: AnyObject) {
+        contadorBanco = 1
         switch prog {
         case 4:
             r = 0
@@ -447,7 +450,7 @@ class selecf: UIViewController{
             a = 0
         case 2:
             p = 13
-            a = 6
+            a = 9
         case 3:
             p = 21
             a = 15
@@ -456,13 +459,13 @@ class selecf: UIViewController{
             a = 24
         case 5:
             p = 41
-            a = 33
+            a = 27
         case 6:
             p = 53
-            a = 42
+            a = 36
         case 7:
             p = 61
-            a = 51
+            a = 42
         case 8:
             p = 81
             a = 60
@@ -474,10 +477,16 @@ class selecf: UIViewController{
     }
     //Quantidades de caixa de dialogo terão
     @IBAction func telas(_ sender: UIButton) {
-        if c == 101{
+        var fala = true
+        
+        if c == 101 {
             c = 8
+            dialogo()
         }
-        if c != 9 {
+        else if c == 9 { // || c == 21 || c == 43 
+            fala = false
+        }
+        else if fala != false {
             trocaFala()
         }
     }
