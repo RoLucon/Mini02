@@ -75,6 +75,7 @@ class popup: UIViewController{
         efeito.effect = nil
         pop.layer.cornerRadius = 5
         mostraper()
+        print(c)
     }
     
     func anima(){
@@ -138,7 +139,9 @@ class popup: UIViewController{
         salvaresp(x: 1)
         perguntas()
         r += 1
-        pula = true
+        if c != 77{
+            pula = true
+        }
     }
     
     @IBAction func r2(_ sender: AnyObject) {
@@ -147,7 +150,9 @@ class popup: UIViewController{
         perguntas()
         r += 1
         pula = false
-        c+=1
+        if c != 77{
+            c+=1
+        }
     }
 }
 
@@ -195,6 +200,7 @@ class selecf: UIViewController{
     }
     
     func dialogo(){
+        print(c)
         ApareceSeta(c)
         fala?.text = texto[c]
         print("texto n: " + String(c))
@@ -202,6 +208,8 @@ class selecf: UIViewController{
         if c == 8 || c == 21 || c == 23 || c == 42 {
             banco?.isUserInteractionEnabled = true
             rosto("kimpiscada")
+        }else if c == 6 || c == 7{
+            c = 96
         }
         
         if pula == true {
@@ -393,7 +401,7 @@ class selecf: UIViewController{
         switch prog {
         case 7:
             r = 0
-            p = 69
+            p = 61
             a = 51
             i = 1
             q = q7
@@ -453,7 +461,7 @@ class selecf: UIViewController{
             p = 53
             a = 42
         case 7:
-            p = 69
+            p = 61
             a = 51
         case 8:
             p = 81
@@ -466,12 +474,15 @@ class selecf: UIViewController{
     }
     //Quantidades de caixa de dialogo terão
     @IBAction func telas(_ sender: UIButton) {
+        if c == 101{
+            c = 8
+        }
         if c != 9 {
             trocaFala()
         }
     }
     func trocaFala(){
-        if c <= q[i]{
+        if c <= q[i] || c >= 97{
             dialogo()
         }
         else if c == 13 || c == 23 || c == 37 || c == 44 || c == 60 || c == 72 || c == 78 || c == 83 || c == 89 || c == 96{
