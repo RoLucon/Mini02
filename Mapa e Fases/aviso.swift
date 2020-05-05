@@ -509,15 +509,19 @@ class selecf: UIViewController{
         if configView == nil {
             configView = ConfigView(frame: view.frame, viewController: self)
         }
+        configView?.mostrarTabBar(value: false)
         view.addSubview(configView!)
         configView?.translatesAutoresizingMaskIntoConstraints = false
         configView?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         configView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         configView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         configView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         configView?.dismiss()
+        self.tabBarController?.setTabBar(hidden: false, viewController: self)
     }
 }

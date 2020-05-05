@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         if configView == nil {
             configView = ConfigView(frame: view.frame, viewController: self)
         }
+        configView?.mostrarTabBar(value: false)
         view.addSubview(configView!)
         configView?.translatesAutoresizingMaskIntoConstraints = false
         configView?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true

@@ -231,7 +231,7 @@ class ConfigView: UIView {
         bg.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -90).isActive = true
     }
     
-    private func mostrarTabBar(value: Bool) {
+    func mostrarTabBar(value: Bool) {
         if let bar = vc?.tabBarController {
             bar.setTabBar(hidden: !value, animated: true, viewController: vc!)
         }
