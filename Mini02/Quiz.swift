@@ -175,9 +175,10 @@ class Quiz5Resp: UIViewController{
     }
     @IBAction func verificaRespA(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
-        certo += pergunta.respostaA.certo
-        respostasCertas += certo
-        if certo > 0.0 {
+        let tempCerto = pergunta.respostaA.certo
+        respostasCertas += tempCerto
+        if tempCerto > 0.0 {
+            certo += tempCerto
             respostaA.setTitleColor(UIColor.white, for: .normal)
             respostaA.backgroundColor = UIColor.green
             if certo == 1.0 {
@@ -204,9 +205,10 @@ class Quiz5Resp: UIViewController{
     }
     @IBAction func verificaRespB(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
-        certo += pergunta.respostaB.certo
-        respostasCertas += certo
-        if certo > 0.0 {
+        let tempCerto = pergunta.respostaB.certo
+        respostasCertas += tempCerto
+        if tempCerto > 0.0 {
+            certo += tempCerto
             respostaB.setTitleColor(UIColor.white, for: .normal)
             respostaB.backgroundColor = UIColor.green
             if certo == 1.0 {
@@ -233,9 +235,10 @@ class Quiz5Resp: UIViewController{
     }
     @IBAction func verificaRespC(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
-        certo += pergunta.respostaC.certo
-        respostasCertas += certo
-        if certo > 0.0 {
+        let tempCerto = pergunta.respostaC.certo
+        respostasCertas += tempCerto
+        if tempCerto > 0.0 {
+            certo += tempCerto
             respostaC.setTitleColor(UIColor.white, for: .normal)
             respostaC.backgroundColor = UIColor.green
             if certo == 1.0 {
@@ -262,9 +265,10 @@ class Quiz5Resp: UIViewController{
     }
     @IBAction func verificaRespD(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
-        certo += pergunta.respostaD.certo
-        respostasCertas += certo
-        if certo > 0.0 {
+        let tempCerto = pergunta.respostaD.certo
+        respostasCertas += tempCerto
+        if tempCerto > 0.0 {
+            certo += tempCerto
             respostaD.setTitleColor(UIColor.white, for: .normal)
             respostaD.backgroundColor = UIColor.green
             if certo == 1.0 {
@@ -291,9 +295,10 @@ class Quiz5Resp: UIViewController{
     }
     @IBAction func verificaRespE(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
-        certo += pergunta.respostaE.certo
-        respostasCertas += certo
-        if certo > 0.0 {
+        let tempCerto = pergunta.respostaE.certo
+        respostasCertas += tempCerto
+        if tempCerto > 0.0 {
+            certo += tempCerto
             respostaE.setTitleColor(UIColor.white, for: .normal)
             respostaE.backgroundColor = UIColor.green
             if certo == 1.0 {
