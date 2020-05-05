@@ -25,7 +25,7 @@ struct Pergunta {
     var respostaE = Resposta()
 }
 
-let perguntasQuiz = [Pergunta(perg: "Cartão de Crédito é uma despesa fixa ou variável?",respostaA: Resposta(resp: "Variável", certo: 1.0), respostaB: Resposta(resp: "Fixa", certo: -1.0),respostaC: Resposta(resp: "Nenhum do dois", certo: -1.0)),Pergunta(perg: "A faculdade é uma desepasa...",respostaA: Resposta(resp: "Variável", certo: -1.0), respostaB: Resposta(resp: "Fixa", certo: 1.0),respostaC: Resposta(resp: "Nenhum do dois", certo: -1.0)),Pergunta(perg: "Gastos médicos são despesas...",respostaA: Resposta(resp: "Variáveis", certo: 1.0), respostaB: Resposta(resp: "Fixas", certo: -1.0),respostaC: Resposta(resp: "Nenhum do dois", certo: -1.0)),Pergunta(perg: "Quantos é aconcelhável na reserva de emergência?",respostaA: Resposta(resp: "Entre 4 e 8 salários atuais", certo: -1.0), respostaB: Resposta(resp: "Entre 10 e 12 salários atuais", certo: -1.0),respostaC: Resposta(resp: "7 salários atuais", certo: -1.0),respostaD: Resposta(resp: "Entre 3 e 6 salários atuais", certo: 1.0), respostaE: Resposta(resp: "4 salarios atuais", certo: -1.0)),Pergunta(perg: "Sobre reserva de emergência, qual é correta?",respostaA: Resposta(resp: "Não é para empregados", certo: -1.0), respostaB: Resposta(resp: "Te sustentar por 3 meses", certo: 1.0),respostaC: Resposta(resp: "Comprar eletrodomésticos", certo: -1.0),respostaD: Resposta(resp: "Só para empregos instáveis", certo: -1.0), respostaE: Resposta(resp: "Fazer para sair da firma", certo: -1.0)),Pergunta(perg: "Quais dessas despesas são fixas?",respostaA: Resposta(resp: "Lanches no BK", certo: -1.0), respostaB: Resposta(resp: "Condomíno", certo: 0.5),respostaC: Resposta(resp: "Rolê no posto", certo: -1.0),respostaD: Resposta(resp: "Mensalidade Netflix", certo: 0.5), respostaE: Resposta(resp: "Sorvete", certo: -1.0)), Pergunta(perg: "Quais dessas despesas são variáveis?",respostaA: Resposta(resp: "Bute novo", certo: 0.3), respostaB: Resposta(resp: "Mensalidade da facu", certo: -1.0),respostaC: Resposta(resp: "Bar do bode", certo: 0.3),respostaD: Resposta(resp: "Plano de telefone", certo: -1.0), respostaE: Resposta(resp: "Cineminha com a Kim", certo: 0.4))]
+let perguntasQuiz = [Pergunta(perg: "Cartão de Crédito é uma despesa fixa ou variável?",respostaA: Resposta(resp: "Variável", certo: 1.0), respostaB: Resposta(resp: "Fixa", certo: -1.0),respostaC: Resposta(resp: "Nenhum do dois", certo: -1.0)),Pergunta(perg: "A faculdade é uma desepasa...",respostaA: Resposta(resp: "Variável", certo: -1.0), respostaB: Resposta(resp: "Fixa", certo: 1.0),respostaC: Resposta(resp: "Nenhum do dois", certo: -1.0)),Pergunta(perg: "Gastos médicos são despesas...",respostaA: Resposta(resp: "Variáveis", certo: 1.0), respostaB: Resposta(resp: "Fixas", certo: -1.0),respostaC: Resposta(resp: "Nenhum do dois", certo: -1.0)),Pergunta(perg: "Quanto é aconcelhável na reserva de emergência?",respostaA: Resposta(resp: "Entre 4 e 8 salários atuais", certo: -1.0), respostaB: Resposta(resp: "Entre 10 e 12 salários atuais", certo: -1.0),respostaC: Resposta(resp: "7 salários atuais", certo: -1.0),respostaD: Resposta(resp: "Entre 3 e 6 salários atuais", certo: 1.0), respostaE: Resposta(resp: "4 salarios atuais", certo: -1.0)),Pergunta(perg: "Sobre reserva de emergência, qual é correta?",respostaA: Resposta(resp: "Não é para empregados", certo: -1.0), respostaB: Resposta(resp: "Te sustentar por 3 meses", certo: 1.0),respostaC: Resposta(resp: "Comprar eletrodomésticos", certo: -1.0),respostaD: Resposta(resp: "Só para empregos instáveis", certo: -1.0), respostaE: Resposta(resp: "Fazer para sair da firma", certo: -1.0)),Pergunta(perg: "Quais dessas despesas são fixas?",respostaA: Resposta(resp: "Lanches no BK", certo: -1.0), respostaB: Resposta(resp: "Condomíno", certo: 0.5),respostaC: Resposta(resp: "Rolê no posto", certo: -1.0),respostaD: Resposta(resp: "Mensalidade Netflix", certo: 0.5), respostaE: Resposta(resp: "Sorvete", certo: -1.0)), Pergunta(perg: "Quais dessas despesas são variáveis?",respostaA: Resposta(resp: "Bute novo", certo: 0.3), respostaB: Resposta(resp: "Mensalidade da facu", certo: -1.0),respostaC: Resposta(resp: "Bar do bode", certo: 0.3),respostaD: Resposta(resp: "Plano de telefone", certo: -1.0), respostaE: Resposta(resp: "Cineminha com a Kim", certo: 0.4))]
 
 
 class Quiz3Resp: UIViewController{
@@ -175,9 +175,10 @@ class Quiz5Resp: UIViewController{
     }
     @IBAction func verificaRespA(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
-        certo += pergunta.respostaA.certo
-        respostasCertas += certo
-        if certo > 0.0 {
+        let tempCerto = pergunta.respostaA.certo
+        respostasCertas += tempCerto
+        if tempCerto > 0.0 {
+            certo += tempCerto
             respostaA.setTitleColor(UIColor.white, for: .normal)
             respostaA.backgroundColor = UIColor.green
             if certo == 1.0 {
@@ -204,9 +205,10 @@ class Quiz5Resp: UIViewController{
     }
     @IBAction func verificaRespB(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
-        certo += pergunta.respostaB.certo
-        respostasCertas += certo
-        if certo > 0.0 {
+        let tempCerto = pergunta.respostaB.certo
+        respostasCertas += tempCerto
+        if tempCerto > 0.0 {
+            certo += tempCerto
             respostaB.setTitleColor(UIColor.white, for: .normal)
             respostaB.backgroundColor = UIColor.green
             if certo == 1.0 {
@@ -233,9 +235,10 @@ class Quiz5Resp: UIViewController{
     }
     @IBAction func verificaRespC(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
-        certo += pergunta.respostaC.certo
-        respostasCertas += certo
-        if certo > 0.0 {
+        let tempCerto = pergunta.respostaC.certo
+        respostasCertas += tempCerto
+        if tempCerto > 0.0 {
+            certo += tempCerto
             respostaC.setTitleColor(UIColor.white, for: .normal)
             respostaC.backgroundColor = UIColor.green
             if certo == 1.0 {
@@ -262,9 +265,10 @@ class Quiz5Resp: UIViewController{
     }
     @IBAction func verificaRespD(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
-        certo += pergunta.respostaD.certo
-        respostasCertas += certo
-        if certo > 0.0 {
+        let tempCerto = pergunta.respostaD.certo
+        respostasCertas += tempCerto
+        if tempCerto > 0.0 {
+            certo += tempCerto
             respostaD.setTitleColor(UIColor.white, for: .normal)
             respostaD.backgroundColor = UIColor.green
             if certo == 1.0 {
@@ -291,9 +295,10 @@ class Quiz5Resp: UIViewController{
     }
     @IBAction func verificaRespE(_ sender: Any) {
         let pergunta = perguntasQuiz[perguntaAtual]
-        certo += pergunta.respostaE.certo
-        respostasCertas += certo
-        if certo > 0.0 {
+        let tempCerto = pergunta.respostaE.certo
+        respostasCertas += tempCerto
+        if tempCerto > 0.0 {
+            certo += tempCerto
             respostaE.setTitleColor(UIColor.white, for: .normal)
             respostaE.backgroundColor = UIColor.green
             if certo == 1.0 {

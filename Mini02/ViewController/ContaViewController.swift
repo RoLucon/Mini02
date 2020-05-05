@@ -29,7 +29,6 @@ class ContaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChart()
-        
         //Fase 1
         if prog == 1 && contadorBanco >= 1 {
             viewFrase?.isHidden = false
@@ -47,14 +46,14 @@ class ContaViewController: UIViewController {
             viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
             stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
             //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
-        } else if prog == 3{
+        } else if prog == 3 && contadorBanco >= 1 { // Fase 3
             viewFrase?.isHidden = false
             viewFase2?.isHidden = false
             fase3()
+            self.navigationItem.setHidesBackButton(true, animated: true)
         }
         
-
-        NotificationCenter.default.addObserver(self, selector: #selector(proximoTexto(_:)), name: NSNotification.Name.init("AtualizarView"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(next(_:)), name: NSNotification.Name.init("AtualizarView"), object: nil)
     }
 
     //Gráfico
@@ -101,26 +100,28 @@ class ContaViewController: UIViewController {
      
     //História capítulo 1
     @IBAction func proximoTexto(_ sender: Any) {
-         if prog == 1 && contadorBanco >= 9 && contadorBanco < 11 {
-             contadorBanco += 1
-             textoFase2?.text = textoFase1[contadorBanco]
-            
-            if contadorBanco == 11 {
-                viewFase2?.isHidden = false
-                setaFase2?.isHidden = false
-                gerenciarFase2?.isHidden = false
-                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFala"), object: nil)
-                }
+         
+    }
+    
+    func fase1BttProximo() {
+        if contadorBanco >= 9 && contadorBanco < 11 {
+         contadorBanco += 1
+         textoFase2?.text = textoFase1[contadorBanco]
+        
+        if contadorBanco == 11 {
+            viewFase2?.isHidden = false
+            setaFase2?.isHidden = false
+            gerenciarFase2?.isHidden = false
+            NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFala"), object: nil)
             }
-                    
-            else if prog == 1 && contadorBanco == 14 {
-                //gerenciarButton.isUserInteractionEnabled = true
-                viewFase2?.isHidden = true
-                viewFrase?.isHidden = true
-                gerenciarFase2?.isHidden = true
-                viewInferior?.transform = .identity
-                stkViewInferior?.transform = .identity
-            }
+        } else if contadorBanco == 14 {
+            //gerenciarButton.isUserInteractionEnabled = true
+            viewFase2?.isHidden = true
+            viewFrase?.isHidden = true
+            gerenciarFase2?.isHidden = true
+            viewInferior?.transform = .identity
+            stkViewInferior?.transform = .identity
+        }
     }
     
     //Fase 3
@@ -140,7 +141,7 @@ class ContaViewController: UIViewController {
     }
     
     func fase3AjustaTela(){
-        textoFase2?.text = textoFase1[9]
+        textoFase2?.text = textoFase3[1]
         viewInferior?.transform = CGAffineTransform(translationX: 0, y: -65)
         stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -90)
         gerenciarFase2.isHidden = true
@@ -151,14 +152,14 @@ class ContaViewController: UIViewController {
         viewFase2.layer.addSublayer(gl)
         viewFase2.backgroundColor = .clear
         stkViewInferior.superview?.bringSubviewToFront(stkViewInferior)
-        controleTexto["index"] = 30
-        controleTexto["primeiro"] = 30
-        controleTexto["ultimo"] = 35
+        controleTexto["index"] = 1
+        controleTexto["primeiro"] = 1
+        controleTexto["ultimo"] = 8
     }
     
     func destacaRespostaCorreta(){
         for stack in stkViewInferior.arrangedSubviews {
-            if stack.tag == 0 || stack.tag == 3 {
+            if stack.tag == 1 || stack.tag == 3 {
                 let label = UILabel(frame: stack.frame)
                 label.backgroundColor = .clear
                 label.layer.borderWidth = 3
@@ -174,14 +175,53 @@ class ContaViewController: UIViewController {
         }
     }
     
+    func calculaRespostsa() -> String {
+        var certas = 0
+        var erradas = 0
+        for btt in checkBoxBtts {
+            if btt.tag == 1 {
+                if btt.selecionado {
+                    certas += 1
+                } else {
+                    erradas += 1
+                }
+            } else if btt.tag == 0 {
+                if !btt.selecionado{
+                    certas += 1
+                } else{
+                    erradas += 1
+                }
+            }
+        }
+        if erradas == 0 {
+            return feedBackFase4[1]!
+        } else if ((certas+erradas)/2) > erradas {
+            return feedBackFase4[2]!
+        } else {
+            return feedBackFase4[3]!
+        }
+    }
     
     //Botoes de texto Kim
     @IBAction func next(_ sender: Any) {
-        if prog != 1 {
+        if prog == 1 {
+            fase1BttProximo()
+        } else if prog != 1 {
             if controleTexto["index"]! < controleTexto["ultimo"]! {
                 controleTexto["index"]! += 1
             }
-            textoFase2.text = texto[controleTexto["index"]!]
+            if controleTexto["index"]! == 2 {
+                textoFase2.text = calculaRespostsa()
+                controleTexto["primeiro"] = 3
+            } else if controleTexto["index"]! == 3{
+                 destacaRespostaCorreta()
+                 textoFase2.text = textoFase3[controleTexto["index"]!]
+            } else {
+                textoFase2.text = textoFase3[controleTexto["index"]!]
+            }
+            if controleTexto["index"]! == 8 {
+                self.navigationItem.setHidesBackButton(false, animated: true)
+            }
         }
     }
     
@@ -189,8 +229,9 @@ class ContaViewController: UIViewController {
         if prog != 1 {
             if controleTexto["index"]! > controleTexto["primeiro"]! {
                 controleTexto["index"]! -= 1
+                print(controleTexto["index"]!)
+                textoFase2.text = textoFase3[controleTexto["index"]!]
             }
-            textoFase2.text = texto[controleTexto["index"]!]
         }
     }
     

@@ -14,6 +14,8 @@ class Personagem {
     private(set) var nome: String!
     private var dinheiro: Float!
     private var poupanca: Float!
+    private var fatura: Float!
+    private var cartao: Float!
     private var semestre:  Int!
     private var score: Int!
     private var save: Bool = false
@@ -31,6 +33,12 @@ class Personagem {
         }
         if (UserDefaults.standard.object(forKey: "personagem.poupanca") != nil){
             poupanca = (UserDefaults.standard.object(forKey: "personagem.poupanca") as? Float)!
+        }
+        if (UserDefaults.standard.object(forKey: "personagem.fatura") != nil){
+            fatura = (UserDefaults.standard.object(forKey: "personagem.fatura") as? Float)!
+        }
+        if (UserDefaults.standard.object(forKey: "personagem.cartao") != nil){
+            cartao = (UserDefaults.standard.object(forKey: "personagem.cartao") as? Float)!
         }
         if (UserDefaults.standard.object(forKey: "personagem.semestre") != nil){
             semestre = (UserDefaults.standard.object(forKey: "personagem.semestre") as? Int)!
@@ -53,6 +61,8 @@ class Personagem {
     func salvar(){
         UserDefaults.standard.set(poupanca, forKey: "personagem.poupanca")
         UserDefaults.standard.set(dinheiro, forKey: "personagem.dinheiro")
+        UserDefaults.standard.set(fatura, forKey: "personagem.fatura")
+        UserDefaults.standard.set(cartao, forKey: "personagem.cartao")
         UserDefaults.standard.set(semestre, forKey: "personagem.semestre")
         UserDefaults.standard.set(score, forKey: "personagem.score")
     }
@@ -61,6 +71,8 @@ class Personagem {
         nome = ""
         dinheiro = 10
         poupanca = 0
+        fatura = 300
+        cartao = 500
         semestre = 1
         score = 1000
     }
@@ -104,6 +116,24 @@ class Personagem {
             return nil
         } else {
             return poupanca
+        }
+    }
+    
+    func fatura(_ valor: Float? = nil) -> Float? {
+        if let valor = valor {
+            fatura += valor
+            return nil
+        } else {
+            return fatura
+        }
+    }
+    
+    func cartao(_ valor: Float? = nil) -> Float? {
+        if let valor = valor {
+            cartao += valor
+            return nil
+        } else {
+            return cartao
         }
     }
     
