@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1C24ADCA243FC258000D9B67 /* Investimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24ADC9243FC257000D9B67 /* Investimento.swift */; };
+		1C4FE0162460836F00D99CD1 /* ImpostoDeRenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4FE0152460836F00D99CD1 /* ImpostoDeRenda.swift */; };
 		1CC462B42450DF0600D6CB59 /* InvestimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */; };
 		1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B52450E25300D6CB59 /* InvestirViewController.swift */; };
 		1CC462B82450E30700D6CB59 /* SacarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B72450E30700D6CB59 /* SacarViewController.swift */; };
 		1CDA1896245B53F100A360AF /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA1894245B53F100A360AF /* Quiz.swift */; };
 		1CDA1897245B53F100A360AF /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CDA1895245B53F100A360AF /* Quiz.storyboard */; };
+		1CDA1899245B624C00A360AF /* ImpostoDeRenda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CDA1898245B624C00A360AF /* ImpostoDeRenda.storyboard */; };
 		40B9BDAC245357680087800A /* textos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B9BDAB245357680087800A /* textos.swift */; };
 		40BAA40E2437DAC4002FA0CE /* FeedBack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */; };
 		40BAA40F2437DAC4002FA0CE /* Fase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BAA4082437DAC4002FA0CE /* Fase.storyboard */; };
@@ -64,11 +66,13 @@
 
 /* Begin PBXFileReference section */
 		1C24ADC9243FC257000D9B67 /* Investimento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Investimento.swift; sourceTree = "<group>"; };
+		1C4FE0152460836F00D99CD1 /* ImpostoDeRenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostoDeRenda.swift; sourceTree = "<group>"; };
 		1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoViewController.swift; sourceTree = "<group>"; };
 		1CC462B52450E25300D6CB59 /* InvestirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestirViewController.swift; sourceTree = "<group>"; };
 		1CC462B72450E30700D6CB59 /* SacarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacarViewController.swift; sourceTree = "<group>"; };
 		1CDA1894245B53F100A360AF /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		1CDA1895245B53F100A360AF /* Quiz.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
+		1CDA1898245B624C00A360AF /* ImpostoDeRenda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImpostoDeRenda.storyboard; sourceTree = "<group>"; };
 		40B9BDAB245357680087800A /* textos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textos.swift; sourceTree = "<group>"; };
 		40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FeedBack.storyboard; path = "../Mapa e Fases/FeedBack.storyboard"; sourceTree = "<group>"; };
 		40BAA4082437DAC4002FA0CE /* Fase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Fase.storyboard; path = "../Mapa e Fases/Fase.storyboard"; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				C0DC056E245D1C4100CA893F /* ExtratoViewController.swift */,
 				40BAA4082437DAC4002FA0CE /* Fase.storyboard */,
 				40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */,
+				1CDA1898245B624C00A360AF /* ImpostoDeRenda.storyboard */,
+				1C4FE0152460836F00D99CD1 /* ImpostoDeRenda.swift */,
 				89E3EABA242E98D5007C2CFC /* Info.plist */,
 				89E3EAE6243261B7007C2CFC /* Intro.storyboard */,
 				89E3EAEA24326226007C2CFC /* Investimento.storyboard */,
@@ -342,6 +348,7 @@
 			files = (
 				1CDA1897245B53F100A360AF /* Quiz.storyboard in Resources */,
 				8932CD48243BAB0C00E2BCA4 /* Mapa.storyboard in Resources */,
+				1CDA1899245B624C00A360AF /* ImpostoDeRenda.storyboard in Resources */,
 				89E3EAB9242E98D5007C2CFC /* LaunchScreen.storyboard in Resources */,
 				8932CD4C243BCB9000E2BCA4 /* SideQuest.storyboard in Resources */,
 				89E3EAB6242E98D5007C2CFC /* Assets.xcassets in Resources */,
@@ -390,6 +397,7 @@
 				1CC462B82450E30700D6CB59 /* SacarViewController.swift in Sources */,
 				40BAA4132437DAC4002FA0CE /* aviso.swift in Sources */,
 				8932CD51243D1E1200E2BCA4 /* TextLabel.swift in Sources */,
+				1C4FE0162460836F00D99CD1 /* ImpostoDeRenda.swift in Sources */,
 				1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */,
 				89078E082444EB16002F5CF2 /* Extension.swift in Sources */,
 				89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */,
