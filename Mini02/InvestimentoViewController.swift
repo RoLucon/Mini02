@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var progInv = 1
+
 class Investimentos: UIViewController {
     
     var investimento: Investimento = Investimento()
@@ -71,6 +73,9 @@ class Investimentos: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if progInv != prog {
+            atualizaInvestimentoFase()
+        }
         textoAjuda.text = TextAjuda
         effeito = efeito.effect
         efeito.effect = nil
@@ -79,6 +84,7 @@ class Investimentos: UIViewController {
         atualizaRendimento()
         atualizaMsg()
         observer()
+        
         
         if prog == 4 && c <= 42{
             investFase = true
@@ -97,6 +103,21 @@ class Investimentos: UIViewController {
     @objc func atualizaRendimentoVlr(notificacao: NSNotification){
         print("a notificacao chegou")
         atualizaRendimento()
+    }
+    
+    //funcao para atualizar quando passa a fase
+    func atualizaInvestimentoFase(){
+        investimento = Investimento()
+        
+        for i in 0...3{
+            investimento.investimentoSelecionado = i
+            investimento.setBruto(investimento.getBruto() * 1.05)
+            investimento.setImposto(investimento.getImposto() * 1.025)
+            atualizaRendimento()
+        }
+        investimento.investimentoSelecionado = 0
+        progInv += 1
+        
     }
     
     @IBAction func bCDB(_ sender: UIButton) {
