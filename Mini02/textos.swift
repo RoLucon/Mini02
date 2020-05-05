@@ -157,8 +157,28 @@ let textoFase1 = [
     19:"",
     20:"",
 ]
+//Interacoes Fase 3
+let textoFase3 = [
+    1: "Me diga, o que você considera como despesa fixa aqui?",
+//    [mostrar checks antes dos ítens das contas e um botão de “ok”]
+//    FeedBack do exercicio
+//    [máscara destacando quais as despesas fixas]
+    3: "Veja só. Essas são as contas que nunca variam drasticamente de valor.",
+    4: "Você já sabe o mínimo que precisa reservar para o próximo mês, né?",
+    5: "Mas espera. Não tem só isso para pagar.",
+    6: "Você tem uma despesa variável, que é o cartão de crédito.",
+    7: "O quanto isso vai te prejudicar depende só de você.",
+    8: "Agora vamos voltar!"
+//    [volta para o cenário da visual novel]
+]
+//Ajusatar testos
+let feedBackFase4 = [
+    1: "Você tá pegando o jeito, cara!",
+    2: "Acertou mais da metade",
+    3: "Ta precisando prestar mais atençao"
+]
 
-//Iteracoes Fase 4
+//Interacoes Fase 4
 let perguntaFase4 = [
     1: "Existem alguns tipos de trabalho... Digo, investimentos.",
     2: "Cada uma tem um rendimento específico e riscos, também.",
