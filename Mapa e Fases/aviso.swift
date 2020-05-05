@@ -172,6 +172,7 @@ class selecf: UIViewController{
     @IBOutlet weak var fundoFase: UIImageView!
     @IBOutlet var faseView: UIView!
     @IBOutlet weak var kimRosto: UIImageView!
+    var configView: ConfigView?
     let notificacao = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
     
     
@@ -502,5 +503,21 @@ class selecf: UIViewController{
         else{
             self.performSegue(withIdentifier: "Passa", sender: self)
         }
+    }
+    
+    @IBAction func configBtt(_ sender: Any) {
+        if configView == nil {
+            configView = ConfigView(frame: view.frame, viewController: self)
+        }
+        view.addSubview(configView!)
+        configView?.translatesAutoresizingMaskIntoConstraints = false
+        configView?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        configView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        configView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        configView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        configView?.dismiss()
     }
 }
