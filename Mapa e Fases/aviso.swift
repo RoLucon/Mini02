@@ -220,14 +220,16 @@ class selecf: UIViewController{
         }
     }
     func ApareceSeta(_ c:Int){
-        if(c == 8 || c == 21 || c == 42){
+        if(c == 97 || c == 8 || c == 21 || c == 42){
             setaBanco?.alpha = 0.8
             if c == 8 {
-                setaBanco?.transform = CGAffineTransform(translationX: 165, y: 0)
                 _ = personagem.dinheiro(1000)
+            } else if c == 97 {
+                setaBanco?.transform = CGAffineTransform(translationX: 165, y: 0)
             }
         } else {
             setaBanco?.alpha = 0
+            setaBanco?.transform = .identity
         }
     }
     
@@ -350,6 +352,7 @@ class selecf: UIViewController{
     
     //Vai pra fase 4
     @IBAction func f4(_ sender: AnyObject) {
+        contadorBanco = 1
         switch prog {
         case 4:
             r = 0
@@ -474,10 +477,16 @@ class selecf: UIViewController{
     }
     //Quantidades de caixa de dialogo terão
     @IBAction func telas(_ sender: UIButton) {
-        if c == 101{
+        var fala = true
+        
+        if c == 101 {
             c = 8
+            dialogo()
         }
-        if c != 9 {
+        else if c == 9 { // || c == 21 || c == 43 
+            fala = false
+        }
+        else if fala != false {
             trocaFala()
         }
     }

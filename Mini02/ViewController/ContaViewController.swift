@@ -53,7 +53,7 @@ class ContaViewController: UIViewController {
             self.navigationItem.setHidesBackButton(true, animated: true)
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(proximoTexto(_:)), name: NSNotification.Name.init("AtualizarView"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(next(_:)), name: NSNotification.Name.init("AtualizarView"), object: nil)
     }
 
     //Gráfico
@@ -103,7 +103,7 @@ class ContaViewController: UIViewController {
          
     }
     
-    func fase1BttProximo(){
+    func fase1BttProximo() {
         if contadorBanco >= 9 && contadorBanco < 11 {
          contadorBanco += 1
          textoFase2?.text = textoFase1[contadorBanco]

@@ -80,7 +80,7 @@ class Investimentos: UIViewController {
         atualizaMsg()
         observer()
         
-        if prog == 4 && c <= 42{
+        if prog == 4 && contadorBanco >= 1 {
             investFase = true
         }
         
