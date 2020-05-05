@@ -324,7 +324,7 @@ class selecf: UIViewController{
         case 2:
             r = 0
             p = 13
-            a = 6
+            a = 9
             i = 1
             q = q2
             c = q[0]
@@ -374,7 +374,7 @@ class selecf: UIViewController{
         case 5:
             r = 0
             p = 41
-            a = 33
+            a = 27
             i = 1
             q = q5
             c = q[0]
@@ -390,7 +390,7 @@ class selecf: UIViewController{
         case 6:
             r = 0
             p = 53
-            a = 42
+            a = 36
             i = 1
             q = q6
             c = q[0]
@@ -406,7 +406,7 @@ class selecf: UIViewController{
         case 7:
             r = 0
             p = 61
-            a = 51
+            a = 42
             i = 1
             q = q7
             c = q[0]
