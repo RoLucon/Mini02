@@ -27,6 +27,7 @@
 		8932CD53243D1F4900E2BCA4 /* NarrativaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932CD52243D1F4900E2BCA4 /* NarrativaViewController.swift */; };
 		8932CD5C243F8F7B00E2BCA4 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932CD5B243F8F7B00E2BCA4 /* ConfigView.swift */; };
 		895108A8244A1D140088D7CB /* ContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895108A7244A1D140088D7CB /* ContaViewController.swift */; };
+		895C370A2462006600622754 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C37092462006500622754 /* ScoreView.swift */; };
 		89DF46A92437B75200FB36EB /* Personagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF46A82437B75200FB36EB /* Personagem.swift */; };
 		89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */; };
 		89E3EAAF242E98D3007C2CFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAAE242E98D3007C2CFC /* SceneDelegate.swift */; };
@@ -85,6 +86,7 @@
 		8932CD52243D1F4900E2BCA4 /* NarrativaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarrativaViewController.swift; sourceTree = "<group>"; };
 		8932CD5B243F8F7B00E2BCA4 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		895108A7244A1D140088D7CB /* ContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContaViewController.swift; sourceTree = "<group>"; };
+		895C37092462006500622754 /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		89DF46A82437B75200FB36EB /* Personagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personagem.swift; sourceTree = "<group>"; };
 		89E3EAA9242E98D3007C2CFC /* Mini02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mini02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				8932CD5B243F8F7B00E2BCA4 /* ConfigView.swift */,
+				895C37092462006500622754 /* ScoreView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895C370A2462006600622754 /* ScoreView.swift in Sources */,
 				8932CD5C243F8F7B00E2BCA4 /* ConfigView.swift in Sources */,
 				89E3EAF524328D7C007C2CFC /* CustomizacaoViewController.swift in Sources */,
 				1CC462B42450DF0600D6CB59 /* InvestimentoViewController.swift in Sources */,
