@@ -246,13 +246,13 @@ class selecf: UIViewController{
         switch prog {
         case 1:
             fase1?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "parque-1")
+            fundoFase?.image = UIImage(named: "parque")
             faseView?.backgroundColor = .systemGreen
             setaBanco?.tintColor = .systemRed
             rosto("kimneutra")
         case 2:
             fase2?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "kimTEMPORARIO")
+            fundoFase?.image = UIImage(named: "shopping")
         case 3:
             fase3?.backgroundColor = nil
         case 4:

@@ -22,9 +22,9 @@ let texto = [
     //Inicio cap 1
 1: "\(personagem.nome!)… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE o seu salário caiu.",
 2: "Fala aí, \(personagem.nome!)!\nRecebeu hoje, né?",
-3: "Ehh… Não foi isso que conversamos ontem, \(personagem.nome!)",
+    3: "Ehh… Não foi isso que conversamos ontem, \(personagem.nome!).",
 4: "Olha só, nossa conversa de ontem até que fez efeito!",
-5: "De qualquer forma, sua situação está mesmo caótica.\nDesespero nunca é a saída. Mas eu estaria desesperada no seu lugar!",
+5: "De qualquer forma, sua situação está mesmo caótica. Desespero nunca é a saída. Mas eu estaria desesperada no seu lugar!",
 6: "Pagar conta é massa, mas pensar no futuro também é, sabe?!",
 7: "Dói guardar o dinheiro que não tem, né?",
 8: "Vou te ajudar nessa, cara. Cola aí!", //Seta pro banco
@@ -38,10 +38,10 @@ let texto = [
 15: "E acumular várias dívidas pelos próximos meses!",
 16: "…Você por acaso tem saldo na conta pra passar no débito?",
 17: "Você tem uma arma poderosa aí na sua carteira. Use-a com responsabilidade.",
-18: "O crédito é como se fosse um empréstimo. Você está gastando, em tese, o que não tem!\nDepois, precisa pagar tudo.\nA famosa fatura.",
+18: "O crédito é como se fosse um empréstimo. Você está gastando, em tese, o que não tem! Depois, precisa pagar tudo. A famosa fatura.",
 19: "Mas é bom você não esquecer disso por, pelo menos, 40 dias. Hehe.",
 20: "E é bom pagar o mais rápido possível. Em até 40 dias, para ser mais exata.",
-21: "Isso porque, se passar desse prazo, você corre o risco de ser negativado.\nNão fica perdido que vou te ajudar nisso!", //Seta pro banco
+21: "Isso porque, se passar desse prazo, você corre o risco de ser negativado. Não fica perdido que vou te ajudar nisso!", //Seta pro banco
 22: "Enfim! Vamos voltar para lá! A fome é grande, mas comer em casa sai mais barato.\nInclusive, queeem sabe não te dou umas dicas para gastar menos…",
     //Inicio cap 3
 23: "...\(personagem.nome!).",
@@ -51,8 +51,8 @@ let texto = [
 27: "MUAHAHAH! Eu sei, eu sei! Eu sou demais, mesmo!",
 28: "Calma lá. Super Kim está aqui para te ajudar!",
 29: "Primeiro passo: você precisa saber o que gasta todo mês.\nSó que é impossível saber exatamente, porque tem gasto que conseguimos prever, tem gasto que não.",
-30: "É o que separamos entre despesa fixa e despesa variável.\nVamos ver isso melhor?", //Seta pro banco
-31: "Outra coisa importante é criar uma reserva de emergência.\nVocê só vai usar essa reserva em… emergências! Desemprego, por exemplo.", // volta
+30: "É o que separamos entre despesa fixa e despesa variável. Vamos ver isso melhor?", //Seta pro banco
+31: "Outra coisa importante é criar uma reserva de emergência. Você só vai usar essa reserva em… emergências! Desemprego, por exemplo.", // volta
 
 32: "Essa reserva pode variar entre 3 a 6 salários atuais.\nPara se organizar melhor, você pode usar uma planilha com todas as entradas e saídas de grana.",
 33: "É bom, também, guardar as notinhas para consultar depois. Aí você anota todos os gastos, casuais ou não, e deixa registrado para onde foi seu dinheiro.",
@@ -149,8 +149,8 @@ let textoFase1 = [
     11:"Mas vai piorar! Clica naquele botão ali.",
     12:"Essa é a fatura do seu cartão de crédito. Aqui, você consegue ver todo o seu histórico de gastos.",
     13:"Triste histórico de gastos...",
-    14:"Agora fecha isso, tá me dando gatilho.",
-    15:"Agora pra finalizar...",
+    14:"Agora, fecha isso... Tá me dando gatilho.",
+    15:"Para finalizar...",
     16:"",
     17:"Esse é o extrato, onde mostra todas as transações feitas.",
     18:"Chega!!!",
@@ -303,7 +303,7 @@ let help = [
 "Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
 "Ajuda 1 p23", "Ajuda 2 p23", "Ajuda 3 p23",
 ]
-var prog = 1 // Representa o progresso do jogador
+var prog = 2 // Representa o progresso do jogador
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
 //Colocar 0 caso já tenha acabado
