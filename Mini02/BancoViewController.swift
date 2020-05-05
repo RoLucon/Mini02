@@ -32,10 +32,11 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var faturaTexto: UILabel!
     @IBOutlet weak var setaFatura: UIImageView!
+    @IBOutlet weak var faturaAtual: UILabel!
+    @IBOutlet weak var cartaoLimite: UILabel!
     
     var banco = Personagem.shared.dinheiro(nil)
     let personagem: Personagem = Personagem.shared
-
     
     enum Segues {
         static let dicaFatura = "dicaFatura"
@@ -43,6 +44,7 @@ class BancoViewController: UIViewController {
         static let dicaBanco = "dicaBanco"
         static let guardarPoupanca = "poupGuardar"
         static let retirarPoupanca = "poupRetirar"
+        static let pagarFatura = "pagarFatura"
     }
     
     deinit {
@@ -69,6 +71,7 @@ class BancoViewController: UIViewController {
             faturaTexto?.text = textoFase1[contadorBanco]
             backButton?.isEnabled = false
         }
+        //faturaAtual?.text = "Fatura atual: R$ " + String(format: "%.2f", valorF).replacingOccurrences(of: ".", with: ",")
     }
     
     func observer(){
@@ -91,9 +94,13 @@ class BancoViewController: UIViewController {
     func atualizarLabel() {
         let saldoConta = personagem.dinheiro(nil)
         let poupanca = personagem.poupanca(nil)
+        let saldoFatura = personagem.fatura(nil)
+        let limite = personagem.cartao(nil)! - saldoFatura!
         
         SaldoBanco?.text = "R$ " + String(format: "%.2f", saldoConta!).replacingOccurrences(of: ".", with: ",")
         SaldoPoupanca?.text = "R$ " + String(format: "%.2f", poupanca!).replacingOccurrences(of: ".", with: ",")
+        cartaoLimite?.text = "R$ " + String(format: "%.2f", limite).replacingOccurrences(of: ".", with: ",")
+        faturaAtual?.text = "Fatura atual: R$ " + String(format: "%.2f", saldoFatura!).replacingOccurrences(of: ".", with: ",")
     }
             
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -119,6 +126,12 @@ class BancoViewController: UIViewController {
             let destVC = segue.destination as! PoupancaView
             destVC.action = "guardar"
             destVC.saldo = personagem.dinheiro(nil)!
+        }
+        if segue.identifier == Segues.pagarFatura {
+            let destVC = segue.destination as! PoupancaView
+            destVC.action = "pagar"
+            destVC.saldo = personagem.dinheiro(nil)!
+            destVC.minimo = personagem.fatura(nil)! * 0.1
         }
     }
     
@@ -260,12 +273,15 @@ class PoupancaView: UIViewController {
     @IBOutlet weak var actionLabel: UILabel!
     @IBOutlet weak var SaldoDisponivel: UILabel!
     @IBOutlet weak var ValorTextField: UITextField!
+    @IBOutlet weak var valorMinimo: UILabel!
     
     var saldo: Float = 0
+    var minimo: Float = 0
     var banco = personagem.dinheiro(nil)
     var poupanca = personagem.poupanca(nil)
     var valor: String!
     var valor2: String!
+    var valorFt: String!
     
     var action = "xxxx"
     
@@ -278,6 +294,11 @@ class PoupancaView: UIViewController {
         actionLabel.text = action
         SaldoDisponivel?.text = "Saldo disponível: R$ " + String(format: "%.2f", saldo).replacingOccurrences(of: ".", with: ",")
         ValorTextField?.delegate = self
+        if action == "pagar" {
+            valorMinimo?.isHidden = false
+            valorMinimo?.text = "Pagamento mínimo: R$ " + String(format: "%.2f", minimo).replacingOccurrences(of: ".", with: ",")
+        }
+
         observer()
     }
     func observer(){
@@ -345,7 +366,24 @@ class PoupancaView: UIViewController {
                 alert.addAction(cancelAction)
                 self.present(alert, animated: true, completion: nil)
             }
-        }
+            } else if(ValorTextField.hasText && action == "pagar") {
+                valorFt = ValorTextField.text?.replacingOccurrences(of: ",", with: ".")
+                let total = (valorFt as NSString).floatValue
+                
+                if (total <= banco! && total >= minimo) {
+                    _ = personagem.dinheiro(-total)
+                    _ = personagem.fatura(-total)
+                    NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
+                    self.dismiss(animated: true, completion: nil)
+                    
+                } else if total > banco! {
+                    let alert = UIAlertController(title: "Saldo da conta insuficiente", message: nil, preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
+                    alert.addAction(cancelAction)
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+            }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -359,16 +397,17 @@ class PoupancaView: UIViewController {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         valor = textField.text?.replacingOccurrences(of: ",", with: ".")
         let total = (valor as NSString).floatValue
-        if(total > banco! && action == "guardar") {
-            if (ValorTextField.hasText) {
-                SaldoDisponivel.textColor = .red
-            }
-        } else if(total > poupanca! && action == "retirar") {
-            if (ValorTextField.hasText) {
-                SaldoDisponivel.textColor = .red
-            }
+        if ValorTextField.hasText && total > banco! && action == "guardar" {
+            SaldoDisponivel.textColor = .red
+        } else if ValorTextField.hasText && total > poupanca! && action == "retirar" {
+            SaldoDisponivel.textColor = .red
+        } else if ValorTextField.hasText && total < minimo && action == "pagar" {
+            valorMinimo.textColor = .red
         } else {
             SaldoDisponivel.textColor = .black
+            if action == "pagar" {
+                valorMinimo.textColor = .black
+            }
         }
     }
     
