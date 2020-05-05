@@ -205,7 +205,7 @@ class selecf: UIViewController{
         fala?.text = texto[c]
         print("texto n: " + String(c))
         
-        if c == 8 || c == 21 || c == 23 {
+        if c == 8 || c == 21 || c == 23 || c == 42 {
             banco?.isUserInteractionEnabled = true
             rosto("kimpiscada")
         }else if c == 6 || c == 7{
@@ -220,9 +220,12 @@ class selecf: UIViewController{
         }
     }
     func ApareceSeta(_ c:Int){
-        if(c==21 || c == 8){
+        if(c == 8 || c == 21 || c == 42){
             setaBanco?.alpha = 0.8
-            //alterar o alpha da seta para 1
+            if c == 8 {
+                setaBanco?.transform = CGAffineTransform(translationX: 165, y: 0)
+                _ = personagem.dinheiro(1000)
+            }
         } else {
             setaBanco?.alpha = 0
         }
