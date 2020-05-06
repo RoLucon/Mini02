@@ -81,7 +81,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="rbq-70-VnE" firstAttribute="leading" secondItem="0jv-bL-6zK" secondAttribute="leading" id="0Rm-fw-eEF"/>
                                     <constraint firstAttribute="trailing" secondItem="sJ6-cn-63x" secondAttribute="trailing" id="95K-ke-IGB"/>
@@ -153,14 +153,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma2-aC-zFB">
-                                        <rect key="frame" x="291" y="193" width="44" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma2-aC-zFB">
+                                        <rect key="frame" x="291" y="191" width="44" height="44"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="AAM-WC-tNg"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="DZc-jf-U1O"/>
                                             <constraint firstAttribute="width" constant="44" id="heM-5Z-RKI"/>
                                             <constraint firstAttribute="height" constant="44" id="qO6-Yo-nmH"/>
                                         </constraints>
                                         <color key="tintColor" red="0.51372549020000002" green="0.43921568630000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" backgroundImage="arrowtriangle.down.fill" catalog="system">
+                                        <state key="normal" image="arrowtriangle.down.fill" catalog="system" backgroundImage="arrowtriangle.down.fill">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
@@ -270,6 +272,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowtriangle.down.fill" width="64" height="62"/>
         <image name="arrowtriangle.down.fill" catalog="system" width="64" height="62"/>
         <image name="arrowtriangle.left.fill" catalog="system" width="64" height="56"/>
         <image name="arrowtriangle.right.fill" catalog="system" width="64" height="56"/>
