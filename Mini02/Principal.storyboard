@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xm2-Ad-2bH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,11 +67,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="7Rk-Wq-8sN">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="7Rk-Wq-8sN">
                                 <rect key="frame" x="20" y="60" width="374" height="40"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvj-Cz-Nbj">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bua-6i-kPk">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -86,7 +86,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ XX.XX " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzB-wL-99l">
-                                                <rect key="frame" x="40" y="0.0" width="90" height="40"/>
+                                                <rect key="frame" x="40" y="0.0" width="124" height="40"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="cVv-qj-a9t"/>
@@ -97,17 +97,14 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79Q-fb-izm" userLabel="SerasaScore">
-                                        <rect key="frame" x="182" y="0.0" width="100" height="40"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jp7-ag-ttE" customClass="ScoreView" customModule="Mini02" customModuleProvider="target">
+                                        <rect key="frame" x="209" y="0.0" width="80" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="fO0-wG-oP6"/>
-                                            <constraint firstAttribute="height" constant="40" id="hfi-u8-8Cb"/>
+                                            <constraint firstAttribute="width" constant="80" id="MAn-xL-l7S"/>
+                                            <constraint firstAttribute="height" constant="40" id="c6y-ZI-AZX"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="Score1"/>
-                                        <connections>
-                                            <action selector="scoreInfo:" destination="AsA-4X-mir" eventType="touchUpInside" id="Ghp-xG-ye3"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lb-so-cyD">
                                         <rect key="frame" x="334" y="0.0" width="40" height="40"/>
                                         <constraints>
@@ -435,7 +432,7 @@ Cg
                     <viewLayoutGuide key="safeArea" id="tU8-jv-EHo"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="3109" y="125"/>
+            <point key="canvasLocation" x="3108.6956521739135" y="124.55357142857142"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="HKf-sj-Al2">
