@@ -157,6 +157,7 @@ class popup: UIViewController{
 }
 
 class selecf: UIViewController{
+    @IBOutlet weak var kim: UIImageView!
     @IBOutlet weak var fala: UILabel!
     @IBOutlet weak var fase1: UIButton!
     @IBOutlet weak var fase2: UIButton!
