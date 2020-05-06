@@ -50,6 +50,7 @@ class Personagem {
         if (UserDefaults.standard.object(forKey: "personagem.img") != nil) {
             imgNome = (UserDefaults.standard.object(forKey: "personagem.img") as? String)!
         }
+        
     }
     
     func isSave() -> Bool{
@@ -157,6 +158,7 @@ class Personagem {
     func score(_ valor: Int? =  nil) -> Int? {
         if let valor = valor {
             score += valor
+            NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarScore"), object: nil)
             return nil
         } else {
             return score
@@ -167,6 +169,7 @@ class Personagem {
     func mexerScore(valor: Int? =  nil) -> Int? {
         if let valor = valor {
             score += valor
+            NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarScore"), object: nil)
             return nil
         } else {
             return score

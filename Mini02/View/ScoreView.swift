@@ -10,24 +10,52 @@ import UIKit
 
 class ScoreView: UIView {
     
-    var score: Int! {didSet{update()}}
+    private var score: Int!
     var scoreBackground: UIColor = .lightGray
     var lineWidth = 5
+    let texto: UILabel = UILabel()
     
     init(frame: CGRect, score: Int) {
         super.init(frame: frame)
         self.score = score
-        setupView()
+        self.setupView()
+        self.criaObserver()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        score = Personagem.shared.score()
+        self.score = Personagem.shared.score()
         self.setupView()
+        self.criaObserver()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    func criaObserver(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: NSNotification.Name(rawValue: "AtualizarScore"), object: nil)
     }
     
     func setupView(){
         backgroundColor = .clear
+        update()
+        texto.backgroundColor = .clear
+        addSubview(texto)
+        texto.translatesAutoresizingMaskIntoConstraints = false
+        texto.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        texto.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        texto.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
+        texto.heightAnchor.constraint(equalToConstant: frame.width / 4).isActive = true
+        texto.text = String(score)
+        texto.textAlignment = .center
+        texto.font = UIFont.systemFont(ofSize: frame.width / 4)
+    }
+    
+    @objc func update(){
+        self.score = Personagem.shared.score()
+        self.layer.sublayers = nil
+        
         shapeLayer(soma: 0, valor: 0.5, lineWidth: CGFloat(lineWidth) * 2, color: scoreBackground)
         let cor: [UIColor] = [.red, .yellow, .green]
         let auxDiv = 1000 / 3
@@ -48,22 +76,9 @@ class ScoreView: UIView {
             print(valor)
             shapeLayer(soma: soma, valor: valor, lineWidth: 5, color: cor[numero])
         }
-        
-        let label = UILabel()
-        label.backgroundColor = .clear
-        addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        label.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
-        label.heightAnchor.constraint(equalToConstant: frame.width / 4).isActive = true
-        label.text = String(score)
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: frame.width / 4)
-    }
-    
-    func update(){
-        self.layer.sublayers = nil
+        addSubview(texto)
+        texto.text = String(Personagem.shared.score()!)
+        print("UPDATE")
     }
     
     func shapeLayer(soma: Double, valor: Double, lineWidth: CGFloat, color: UIColor){
@@ -84,7 +99,9 @@ class ScoreView: UIView {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let vc = parentViewController as! ViewController
-        vc.scoreInfo(self)
+        if let vc = parentViewController as? ViewController {
+            vc.scoreInfo(self)
+        }
+        
     }
 }
