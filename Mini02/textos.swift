@@ -306,7 +306,7 @@ var prog = 1 // Representa o progresso do jogador
 //Colocar 0 caso já tenha acabado
 var q = Array(repeating: 0, count:6)
 var q1 = [1, 2, 5, 9, 12, 0]
-var q2 = [13, 13, 18, 22, 0, 0]
+var q2 = [13, 14, 18, 22, 0, 0]
 var q3 = [23, 23, 26, 33, 36, 0]
 var q4 = [37, 37, 43, 0, 0, 0]
 var q5 = [44, 44, 47, 56, 59, 0]
