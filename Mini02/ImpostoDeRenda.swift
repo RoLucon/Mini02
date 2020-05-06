@@ -43,6 +43,7 @@ class ImpRendaSair: UIViewController{
         Sair.isHidden = false
     }
     @IBAction func sairDaTela(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarBotao"), object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     

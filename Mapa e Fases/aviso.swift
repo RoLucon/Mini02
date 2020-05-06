@@ -173,6 +173,10 @@ class selecf: UIViewController{
     @IBOutlet weak var fundoFase: UIImageView!
     @IBOutlet var faseView: UIView!
     @IBOutlet weak var kimRosto: UIImageView!
+    
+    @IBOutlet weak var impRenda: UIButton!
+    @IBOutlet weak var quiz: UIButton!
+    
     var configView: ConfigView?
     let notificacao = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
     
@@ -206,6 +210,15 @@ class selecf: UIViewController{
         ApareceSeta(c)
         fala?.text = texto[c]
         print("texto n: " + String(c))
+        
+        if c == 36 {
+            passaButton.isHidden = true
+            quiz.isHidden = false
+        }
+        if c == 71 {
+            passaButton.isHidden = true
+            impRenda.isHidden = false
+        }
         
         if c == 8 || c == 21 || c == 23 || c == 30 || c == 42 {
             banco?.isUserInteractionEnabled = true
@@ -247,6 +260,7 @@ class selecf: UIViewController{
         super.viewDidLoad()
         dialogo()
         observer()
+
         //Progresso de fases
         switch prog {
         case 1:
@@ -276,8 +290,13 @@ class selecf: UIViewController{
     }
     func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarFala(notificacao:)), name: NSNotification.Name.init("AtualizarTexto"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(atualizaBotao(notificacao:)), name: NSNotification.Name.init("AtualizarBotao"), object: nil)
     }
-    
+    @objc func atualizaBotao(notificacao: NSNotification){
+        quiz?.isHidden = true
+        impRenda?.isHidden = true
+        passaButton?.isHidden = false
+    }
     @objc func atualizarFala(notificacao: NSNotification) {
         /*if prog == 1 {
             c = 9
@@ -297,21 +316,33 @@ class selecf: UIViewController{
             banco?.isUserInteractionEnabled = false
             rosto("kimneutra")
             dialogo()
+            quiz?.isHidden = true
+            impRenda?.isHidden = true
+            passaButton?.isHidden = false
         case 2:
             c = 22
             banco?.isUserInteractionEnabled = false
             rosto("kimneutra")
             dialogo()
+            quiz?.isHidden = true
+            impRenda?.isHidden = true
+            passaButton?.isHidden = false
         case 3:
-            c = 31
-            banco?.isUserInteractionEnabled = false
-            rosto("kimneutra")
-            dialogo()
+                quiz?.isHidden = true
+                impRenda?.isHidden = true
+                passaButton?.isHidden = false
+                c = 31
+                banco?.isUserInteractionEnabled = false
+                rosto("kimneutra")
+                dialogo()
         case 4:
             c = 43
             banco?.isUserInteractionEnabled = false
             rosto("kimneutra")
             dialogo()
+            quiz?.isHidden = true
+            impRenda?.isHidden = true
+            passaButton?.isHidden = false
         default: break
         }
     }

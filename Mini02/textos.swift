@@ -300,7 +300,7 @@ let help = [
     //Cap 7
 "Utilizar o dinheiro que guardou durante a faculdade para garantir um lugar para todos morarem novamente, e deixar para depois a meta de adquirir seu Celta.", "Não contribuir para se reestruturarem por ter o foco em comprar seu Celta o mais rápido possível.", " ",// 42 43 44
 ]
-var prog = 2 // Representa o progresso do jogador
+var prog = 1 // Representa o progresso do jogador
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
 //Colocar 0 caso já tenha acabado
