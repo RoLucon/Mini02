@@ -173,7 +173,7 @@ class Personagem {
         }
     }
     
-    func ajustaNomeImgPersonagem(imgStr: String) -> String {
+    private func ajustaNomeImgPersonagem(imgStr: String) -> String {
         let aux = imgStr.components(separatedBy: "-")
         return aux[0]
     }
