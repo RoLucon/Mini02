@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bhA-NR-hfw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bhA-NR-hfw">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,7 +45,6 @@
                                 </state>
                                 <connections>
                                     <action selector="f1:" destination="F8c-i4-nYd" eventType="touchUpInside" id="mHl-5v-FXd"/>
-                                    <action selector="f3:" destination="F8c-i4-nYd" eventType="touchUpInside" id="d1j-ew-bx3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKk-MQ-i99">
@@ -123,7 +122,6 @@
                                 </state>
                                 <connections>
                                     <action selector="f2:" destination="F8c-i4-nYd" eventType="touchUpInside" id="gH5-OP-2Rl"/>
-                                    <action selector="f3:" destination="F8c-i4-nYd" eventType="touchUpInside" id="1td-aS-vx3"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FvM-nC-kpG">
@@ -220,7 +218,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.up" catalog="system" width="60" height="64"/>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="shopping-blur" width="4500" height="8000"/>
     </resources>
 </document>
