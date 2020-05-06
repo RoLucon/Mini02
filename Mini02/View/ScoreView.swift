@@ -27,6 +27,7 @@ class ScoreView: UIView {
     }
     
     func setupView(){
+        backgroundColor = .clear
         shapeLayer(soma: 0, valor: 0.5, lineWidth: CGFloat(lineWidth) * 2, color: scoreBackground)
         let cor: [UIColor] = [.red, .yellow, .green]
         let auxDiv = 1000 / 3
