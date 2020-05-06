@@ -19,7 +19,7 @@ class Personagem {
     private var semestre: Int!
     private var score: Int!
     private var save: Bool = false
-    private var imgNome: String?
+    private(set) var imgNome: String?
     
     private init() {
         
@@ -59,9 +59,9 @@ class Personagem {
     func salvarNome(nome: String, imgStr: String){
         self.nome = nome
         let named = ajustaNomeImgPersonagem(imgStr: imgStr)
+        self.imgNome = named
         UserDefaults.standard.set(nome, forKey: "personagem.nome")
         UserDefaults.standard.set(named, forKey: "personagem.img")
-        print(named)
         salvar()
     }
     
