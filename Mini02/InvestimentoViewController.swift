@@ -254,6 +254,7 @@ class Investimentos: UIViewController {
             proximoBtt.isEnabled = false
             anteriorBtt.isEnabled = false
             flecha.isHidden = false
+            NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
             self.view.bringSubviewToFront(voltarNavBtt)
         }
     }

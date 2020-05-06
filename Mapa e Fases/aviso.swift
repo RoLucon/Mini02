@@ -206,7 +206,7 @@ class selecf: UIViewController{
         fala?.text = texto[c]
         print("texto n: " + String(c))
         
-        if c == 8 || c == 21 || c == 23 || c == 42 {
+        if c == 8 || c == 21 || c == 23 || c == 30 || c == 42 {
             banco?.isUserInteractionEnabled = true
             rosto("kimpiscada")
         }else if c == 6 || c == 7{
@@ -221,7 +221,7 @@ class selecf: UIViewController{
         }
     }
     func ApareceSeta(_ c:Int){
-        if(c == 97 || c == 8 || c == 21 || c == 42){
+        if(c == 97 || c == 8 || c == 21 || c == 30 || c == 42){
             setaBanco?.alpha = 0.8
             if c == 8 {
                 _ = personagem.dinheiro(1000)
@@ -274,22 +274,45 @@ class selecf: UIViewController{
         }
     }
     func observer(){
-        NotificationCenter.default.addObserver(self, selector: #selector(self.atualizaSetaBanco(notificacao:)), name: notificacao, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarFala(notificacao:)), name: NSNotification.Name.init("AtualizarTexto"), object: nil)
-    }
-    @objc func atualizaSetaBanco(notificacao: NSNotification){
-        setaBanco?.alpha = 1
-        c = 22
-        dialogo()
-        print("a notificacao chegou")
     }
     
     @objc func atualizarFala(notificacao: NSNotification) {
-        c = 9
-        banco?.isUserInteractionEnabled = false
-        rosto("kimneutra")
-        dialogo()
+        /*if prog == 1 {
+            c = 9
+            banco?.isUserInteractionEnabled = false
+            rosto("kimneutra")
+            dialogo()
+        }
+        else if prog == 2 {
+            c = 22
+            banco?.isUserInteractionEnabled = false
+            rosto("kimneutra")
+            dialogo()
+        }*/
+        switch prog {
+        case 1:
+            c = 9
+            banco?.isUserInteractionEnabled = false
+            rosto("kimneutra")
+            dialogo()
+        case 2:
+            c = 22
+            banco?.isUserInteractionEnabled = false
+            rosto("kimneutra")
+            dialogo()
+        case 3:
+            c = 31
+            banco?.isUserInteractionEnabled = false
+            rosto("kimneutra")
+            dialogo()
+        case 4:
+            c = 43
+            banco?.isUserInteractionEnabled = false
+            rosto("kimneutra")
+            dialogo()
+        default: break
+        }
     }
     
     @IBAction func banco(_ sender: Any) {
@@ -484,7 +507,7 @@ class selecf: UIViewController{
             c = 8
             dialogo()
         }
-        else if c == 9 { // || c == 21 || c == 43 
+        else if c == 9 || c == 22 || c == 31 || c == 43 { //
             fala = false
         }
         else if fala != false {
