@@ -67,16 +67,20 @@ class ViewController: UIViewController {
     }
   
     @IBAction func scoreInfo(_ sender: Any) {
-        self.view.addSubview(scorePopover)
+        if !scorePopover.isDescendant(of: self.view){
+            self.view.addSubview(scorePopover)
+            
+            self.tabBarController?.setTabBar(hidden: true, viewController: self)
+            
+            scorePopover.translatesAutoresizingMaskIntoConstraints = false
+            scorePopover.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+            scorePopover.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+            scorePopover.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+            scorePopover.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        } else {
+            print("Ja e filho")
+        }
         
-        self.tabBarController?.setTabBar(hidden: true, viewController: self)
-        
-        scorePopover.translatesAutoresizingMaskIntoConstraints = false
-        scorePopover.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        scorePopover.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        scorePopover.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        scorePopover.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

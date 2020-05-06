@@ -27,6 +27,7 @@ class ScoreView: UIView {
     }
     
     func setupView(){
+        backgroundColor = .clear
         shapeLayer(soma: 0, valor: 0.5, lineWidth: CGFloat(lineWidth) * 2, color: scoreBackground)
         let cor: [UIColor] = [.red, .yellow, .green]
         let auxDiv = 1000 / 3
@@ -81,4 +82,9 @@ class ScoreView: UIView {
         self.layer.addSublayer(semiCircleLayer)
     }
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let vc = parentViewController as! ViewController
+        vc.scoreInfo(self)
+    }
 }
