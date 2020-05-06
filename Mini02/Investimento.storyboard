@@ -72,11 +72,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SEUS RENDIMENTOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEt-xg-mLf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEUS RENDIMENTOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEt-xg-mLf">
                                 <rect key="frame" x="35" y="620" width="207" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="5iu-4o-nk2"/>
-                                    <constraint firstAttribute="width" constant="193" id="70k-Hm-ULS"/>
+                                    <constraint firstAttribute="width" constant="207" id="70k-Hm-ULS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -218,7 +218,7 @@
                                             <constraint firstAttribute="width" constant="25" id="WeQ-82-rTw"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="interactive" editable="NO" text="Aquela explicacao marota" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="68K-TU-2GE">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" text="Aquela explicacao marota" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="68K-TU-2GE">
                                         <rect key="frame" x="5" y="27" width="333" height="302"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -230,11 +230,10 @@
                                     <constraint firstItem="4jH-d4-fGE" firstAttribute="centerX" secondItem="bnu-l6-NRR" secondAttribute="centerX" id="4KW-x5-oOP"/>
                                     <constraint firstAttribute="bottom" secondItem="4jH-d4-fGE" secondAttribute="bottom" constant="30" id="5CD-Z9-x7w"/>
                                     <constraint firstItem="68K-TU-2GE" firstAttribute="top" secondItem="iJE-3C-rd7" secondAttribute="bottom" constant="8" id="6sv-Hf-vpk"/>
-                                    <constraint firstAttribute="trailing" secondItem="68K-TU-2GE" secondAttribute="trailing" constant="5" id="BWb-1p-ujg"/>
+                                    <constraint firstAttribute="trailing" secondItem="68K-TU-2GE" secondAttribute="trailing" constant="6" id="BWb-1p-ujg"/>
                                     <constraint firstItem="4jH-d4-fGE" firstAttribute="top" secondItem="68K-TU-2GE" secondAttribute="bottom" constant="5" id="Wgv-oB-hdu"/>
                                     <constraint firstItem="68K-TU-2GE" firstAttribute="leading" secondItem="bnu-l6-NRR" secondAttribute="leading" constant="5" id="m1k-Hr-qO3"/>
                                     <constraint firstAttribute="trailing" secondItem="iJE-3C-rd7" secondAttribute="trailing" constant="319" id="mIF-fQ-72M"/>
-                                    <constraint firstItem="68K-TU-2GE" firstAttribute="centerX" secondItem="bnu-l6-NRR" secondAttribute="centerX" id="nt3-uX-3tz"/>
                                     <constraint firstItem="iJE-3C-rd7" firstAttribute="top" secondItem="bnu-l6-NRR" secondAttribute="top" constant="-1" id="sfc-n2-zcE"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
