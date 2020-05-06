@@ -81,4 +81,9 @@ class ScoreView: UIView {
         self.layer.addSublayer(semiCircleLayer)
     }
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let vc = parentViewController as! ViewController
+        vc.scoreInfo(self)
+    }
 }

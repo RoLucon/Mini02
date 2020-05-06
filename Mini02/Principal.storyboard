@@ -234,13 +234,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hz-O6-461">
                             <rect key="frame" x="32" y="144" width="319" height="385"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Score1" translatesAutoresizingMaskIntoConstraints="NO" id="eAb-fv-p9t">
-                                    <rect key="frame" x="109.5" y="16" width="100" height="100"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="100" id="TNu-9O-hpJ"/>
-                                        <constraint firstAttribute="width" constant="100" id="djs-s0-NA0"/>
-                                    </constraints>
-                                </imageView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlR-mP-9l4">
                                     <rect key="frame" x="8" y="148" width="303" height="229"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -401,15 +394,23 @@ Cg
                                     </attributedString>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CM-qp-ZQ4" customClass="ScoreView" customModule="Mini02" customModuleProvider="target">
+                                    <rect key="frame" x="84.5" y="16" width="150" height="100"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="150" id="k3H-Ex-roM"/>
+                                        <constraint firstAttribute="height" constant="100" id="sIf-cb-Thl"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="LlR-mP-9l4" secondAttribute="trailing" constant="8" id="42x-B4-Ze6"/>
                                 <constraint firstItem="LlR-mP-9l4" firstAttribute="leading" secondItem="2hz-O6-461" secondAttribute="leading" constant="8" id="6Sq-Yp-zHL"/>
-                                <constraint firstItem="LlR-mP-9l4" firstAttribute="top" secondItem="eAb-fv-p9t" secondAttribute="bottom" constant="32" id="7n7-JT-lEZ"/>
                                 <constraint firstAttribute="bottom" secondItem="LlR-mP-9l4" secondAttribute="bottom" constant="8" id="BkU-Zc-Gj7"/>
-                                <constraint firstItem="eAb-fv-p9t" firstAttribute="centerX" secondItem="2hz-O6-461" secondAttribute="centerX" id="THa-4x-SVC"/>
-                                <constraint firstItem="eAb-fv-p9t" firstAttribute="top" secondItem="2hz-O6-461" secondAttribute="top" constant="16" id="znj-nX-gaL"/>
+                                <constraint firstItem="0CM-qp-ZQ4" firstAttribute="top" secondItem="2hz-O6-461" secondAttribute="top" constant="16" id="JPd-1y-AoL"/>
+                                <constraint firstItem="LlR-mP-9l4" firstAttribute="top" secondItem="0CM-qp-ZQ4" secondAttribute="bottom" constant="32" id="QFY-dd-ObT"/>
+                                <constraint firstItem="0CM-qp-ZQ4" firstAttribute="centerX" secondItem="2hz-O6-461" secondAttribute="centerX" id="n1m-I6-WzA"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
