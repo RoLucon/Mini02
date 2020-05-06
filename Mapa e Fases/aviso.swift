@@ -172,6 +172,7 @@ class selecf: UIViewController{
     @IBOutlet weak var fundoFase: UIImageView!
     @IBOutlet var faseView: UIView!
     @IBOutlet weak var kimRosto: UIImageView!
+    var configView: ConfigView?
     let notificacao = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
     
     
@@ -256,13 +257,13 @@ class selecf: UIViewController{
         switch prog {
         case 1:
             fase1?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "parque-1")
+            fundoFase?.image = UIImage(named: "parque")
             faseView?.backgroundColor = .systemGreen
             setaBanco?.tintColor = .systemRed
             rosto("kimneutra")
         case 2:
             fase2?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "kimTEMPORARIO")
+            fundoFase?.image = UIImage(named: "shopping")
         case 3:
             fase3?.backgroundColor = nil
         case 4:
@@ -353,7 +354,7 @@ class selecf: UIViewController{
         case 2:
             r = 0
             p = 13
-            a = 6
+            a = 9
             i = 1
             q = q2
             c = q[0]
@@ -403,7 +404,7 @@ class selecf: UIViewController{
         case 5:
             r = 0
             p = 41
-            a = 33
+            a = 27
             i = 1
             q = q5
             c = q[0]
@@ -419,7 +420,7 @@ class selecf: UIViewController{
         case 6:
             r = 0
             p = 53
-            a = 42
+            a = 36
             i = 1
             q = q6
             c = q[0]
@@ -435,7 +436,7 @@ class selecf: UIViewController{
         case 7:
             r = 0
             p = 61
-            a = 51
+            a = 42
             i = 1
             q = q7
             c = q[0]
@@ -480,7 +481,7 @@ class selecf: UIViewController{
             a = 0
         case 2:
             p = 13
-            a = 6
+            a = 9
         case 3:
             p = 21
             a = 15
@@ -489,13 +490,13 @@ class selecf: UIViewController{
             a = 24
         case 5:
             p = 41
-            a = 33
+            a = 27
         case 6:
             p = 53
-            a = 42
+            a = 36
         case 7:
             p = 61
-            a = 51
+            a = 42
         case 8:
             p = 81
             a = 60
@@ -532,5 +533,25 @@ class selecf: UIViewController{
         else{
             self.performSegue(withIdentifier: "Passa", sender: self)
         }
+    }
+    
+    @IBAction func configBtt(_ sender: Any) {
+        if configView == nil {
+            configView = ConfigView(frame: view.frame, viewController: self)
+        }
+        configView?.mostrarTabBar(value: false)
+        view.addSubview(configView!)
+        configView?.translatesAutoresizingMaskIntoConstraints = false
+        configView?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        configView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        configView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        configView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        configView?.dismiss()
+        self.tabBarController?.setTabBar(hidden: false, viewController: self)
     }
 }

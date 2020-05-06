@@ -16,18 +16,16 @@ class CustomizacaoViewController: UIViewController {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var confirmBtt: UIButton!
     
-    let images = ["user0", "user1", "user2"]
+    let images = ["kley1-avatar", "kley2-avatar", "kley3-avatar"]
     
     var index = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .darkGray
         
         confirmBtt.isEnabled = false
         
         imgView.image = UIImage(named: images[index])
-        imgView.contentMode = .scaleAspectFill
         
         previous.addTarget(self, action: #selector(previusClick), for: .touchUpInside)
         nextBtt.addTarget(self, action: #selector(nextClick), for: .touchUpInside)
