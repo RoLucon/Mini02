@@ -58,8 +58,10 @@ class Personagem {
     
     func salvarNome(nome: String, imgStr: String){
         self.nome = nome
+        let named = ajustaNomeImgPersonagem(imgStr: imgStr)
         UserDefaults.standard.set(nome, forKey: "personagem.nome")
-        UserDefaults.standard.set(imgStr, forKey: "personagem.img")
+        UserDefaults.standard.set(named, forKey: "personagem.img")
+        print(named)
         salvar()
     }
     
@@ -171,4 +173,8 @@ class Personagem {
         }
     }
     
+    func ajustaNomeImgPersonagem(imgStr: String) -> String {
+        let aux = imgStr.components(separatedBy: "-")
+        return aux[0]
+    }
 }
