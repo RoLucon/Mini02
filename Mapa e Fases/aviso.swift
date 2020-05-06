@@ -289,8 +289,13 @@ class selecf: UIViewController{
     }
     func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarFala(notificacao:)), name: NSNotification.Name.init("AtualizarTexto"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(atualizaBotao(notificacao:)), name: NSNotification.Name.init("AtualizarBotao"), object: nil)
     }
-    
+    @objc func atualizaBotao(notificacao: NSNotification){
+        quiz?.isHidden = true
+        impRenda?.isHidden = true
+        passaButton?.isHidden = false
+    }
     @objc func atualizarFala(notificacao: NSNotification) {
         /*if prog == 1 {
             c = 9
@@ -310,21 +315,33 @@ class selecf: UIViewController{
             banco?.isUserInteractionEnabled = false
             rosto("kimneutra")
             dialogo()
+            quiz?.isHidden = true
+            impRenda?.isHidden = true
+            passaButton?.isHidden = false
         case 2:
             c = 22
             banco?.isUserInteractionEnabled = false
             rosto("kimneutra")
             dialogo()
+            quiz?.isHidden = true
+            impRenda?.isHidden = true
+            passaButton?.isHidden = false
         case 3:
-            c = 31
-            banco?.isUserInteractionEnabled = false
-            rosto("kimneutra")
-            dialogo()
+                quiz?.isHidden = true
+                impRenda?.isHidden = true
+                passaButton?.isHidden = false
+                c = 31
+                banco?.isUserInteractionEnabled = false
+                rosto("kimneutra")
+                dialogo()
         case 4:
             c = 43
             banco?.isUserInteractionEnabled = false
             rosto("kimneutra")
             dialogo()
+            quiz?.isHidden = true
+            impRenda?.isHidden = true
+            passaButton?.isHidden = false
         default: break
         }
     }

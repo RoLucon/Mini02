@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xm2-Ad-2bH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -165,22 +165,6 @@
                                 <rect key="frame" x="20" y="48" width="146" height="52"/>
                                 <connections>
                                     <segue destination="eKD-Yn-BDf" kind="show" id="JMt-2s-C6P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAu-hL-jEf">
-                                <rect key="frame" x="278" y="505" width="120" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Imposto de renda"/>
-                                <connections>
-                                    <segue destination="VKy-do-0i1" kind="show" id="B8K-Fj-1Xa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqw-F7-gCR">
-                                <rect key="frame" x="320" y="448" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="QUIZ"/>
-                                <connections>
-                                    <segue destination="Czy-Zm-E0d" kind="show" id="bK3-i8-lJJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -434,26 +418,6 @@ Cg
                 </view>
             </objects>
             <point key="canvasLocation" x="3108.6956521739135" y="124.55357142857142"/>
-        </scene>
-        <!--Quiz-->
-        <scene sceneID="HKf-sj-Al2">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Quiz" id="Czy-Zm-E0d" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4PW-oN-87n"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yry-mf-FVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3683" y="118"/>
-        </scene>
-        <!--ImpostoDeRenda-->
-        <scene sceneID="XHR-Um-Zde">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ImpostoDeRenda" id="VKy-do-0i1" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="9k8-TR-Mn2"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gah-PN-vjb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3683" y="172"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ps8-ag-jZh">

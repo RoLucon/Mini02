@@ -79,8 +79,7 @@ class BancoViewController: UIViewController {
     }
     
     @IBAction func BackButton(_ sender: Any) {
-        let nome = Notification.Name(rawValue: atualizaFalaNotificationKey)
-        NotificationCenter.default.post(name: nome, object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     
