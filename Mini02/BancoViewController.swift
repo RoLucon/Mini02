@@ -28,7 +28,7 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var viewKim: UIView!
     @IBOutlet weak var textoLabel: UILabel!
     @IBOutlet weak var faturaView: UIView!
-    @IBOutlet weak var textoView: UIView!
+    @IBOutlet weak var faturaKim: UIView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var faturaTexto: UILabel!
     @IBOutlet weak var setaFatura: UIImageView!
@@ -60,24 +60,17 @@ class BancoViewController: UIViewController {
         observer()
         
         //História - Capítulo 1
-        if prog == 1 && contadorBanco >= 1 {
-            fundoView?.isHidden = false
-            viewKim?.isHidden = false
-            textoView?.isHidden = false
-            poupancaView?.transform = CGAffineTransform(translationX: 0, y: -20)
-            StackView?.transform = CGAffineTransform(translationX: 0, y: -90)
-            Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
-            textoLabel?.text = textoFase1[1]!
-            faturaTexto?.text = textoFase1[contadorBanco]
-            backButton?.isEnabled = false
-        }
-        //faturaAtual?.text = "Fatura atual: R$ " + String(format: "%.2f", valorF).replacingOccurrences(of: ".", with: ",")
+        fase1()
+        fase2()
+
     }
     
     func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarSaldo(n:)), name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(proximoTexto(_:)), name: NSNotification.Name.init("AtualizarFala"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(faturaNext(_:)), name: NSNotification.Name.init("AtualizarFatura"), object: nil)
     }
     
     @objc func atualizarSaldo(n:NSNotification) {
@@ -145,6 +138,20 @@ class BancoViewController: UIViewController {
         fundoView?.isHidden = false
         print("ok...")
 
+    }
+    
+    func fase1() {
+        if prog == 1 && contadorBanco >= 1 {
+            fundoView?.isHidden = false
+            viewKim?.isHidden = false
+            faturaKim?.isHidden = false
+            poupancaView?.transform = CGAffineTransform(translationX: 0, y: -20)
+            StackView?.transform = CGAffineTransform(translationX: 0, y: -90)
+            Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
+            textoLabel?.text = textoFase1[1]!
+            faturaTexto?.text = textoFase1[contadorBanco]
+            backButton?.isEnabled = false
+        }
     }
     
     @IBAction func proximoTexto(_ sender: Any) {
@@ -235,9 +242,40 @@ class BancoViewController: UIViewController {
     }
 
     //História - Capítulo 2
-
-    @IBAction func voltarFase(_ sender: Any) {
-        if contadorBanco >= 12 && contadorBanco < 14 {
+    
+    func fase2() {
+        if prog == 2 && contadorBanco >= 1 {
+            if contadorBanco == 1 {
+                fundoView?.isHidden = false
+                view?.addSubview(StackView)
+                Investimento?.isUserInteractionEnabled = false
+                Investimento?.alpha = 0.5
+                Contas?.alpha = 1
+                seta?.isHidden = false
+                seta?.center.x += 190
+                seta?.center.y += 220
+                backButton?.isEnabled = false
+            }
+            faturaKim?.isHidden = false
+            faturaTexto?.text = textoFase2[contadorBanco]
+            backButton?.isEnabled = true
+        }
+    }
+    @IBAction func contas(_ sender: Any) {
+        if prog == 2 && contadorBanco >= 1 {
+            view.sendSubviewToBack(StackView)
+            contadorBanco += 1
+        }
+    }
+    @IBAction func pagar(_ sender: Any) {
+        if prog == 2 && contadorBanco >= 1 {
+            //faturaNext((Any).self)
+            //contadorBanco += 1
+        }
+    }
+    
+    @IBAction func faturaNext(_ sender: Any) {
+        if prog == 1 && contadorBanco >= 12 && contadorBanco < 14 {
             contadorBanco += 1
             faturaTexto?.text = textoFase1[contadorBanco]
             if contadorBanco == 14 {
@@ -245,15 +283,37 @@ class BancoViewController: UIViewController {
                 setaFatura?.isHidden = false
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarView"), object: nil)
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFala"), object: nil)
-
             }
         }
         
-        if prog == 2 {
-            let nome = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
-            NotificationCenter.default.post(name: nome, object: nil)
-            self.dismiss(animated: true, completion: nil)
+        else if prog == 2 && contadorBanco >= 1 && contadorBanco < 14 {
+
+            if contadorBanco <= 5 || contadorBanco > 6 {
+                faturaTexto?.text = textoFase2[contadorBanco]
+                if contadorBanco != 7 {
+                    contadorBanco += 1
+                }
+                print(contadorBanco)
+
+                switch  contadorBanco {
+                case 6:
+                    faturaView?.isHidden = false
+                    setaFatura?.isHidden = false
+                    setaFatura?.center.x += 310
+                    setaFatura?.center.y += 185
+                case 7:
+                    faturaView?.isHidden = true
+                    setaFatura?.isHidden = true
+                    //contadorBanco += 1
+                    print("Fail")
+                case 12:
+                    NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
+                default:
+                    print(".....")
+                }
+            }
         }
+        
     }
     
     
@@ -328,6 +388,7 @@ class PoupancaView: UIViewController {
     
     
     @IBAction func ConfirmarButton(_ sender: Any) {
+
       
             if (ValorTextField.hasText && action == "guardar") {
             valor = ValorTextField.text?.replacingOccurrences(of: ",", with: ".")
@@ -366,15 +427,19 @@ class PoupancaView: UIViewController {
                 alert.addAction(cancelAction)
                 self.present(alert, animated: true, completion: nil)
             }
-            } else if(ValorTextField.hasText && action == "pagar") {
+            } else if ValorTextField.hasText && action == "pagar" {
                 valorFt = ValorTextField.text?.replacingOccurrences(of: ",", with: ".")
                 let total = (valorFt as NSString).floatValue
                 
-                if (total <= banco! && total >= minimo) {
+                if total <= banco! && total >= minimo {
                     _ = personagem.dinheiro(-total)
                     _ = personagem.fatura(-total)
                     NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
-                    self.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true) {
+                        contadorBanco = 7
+                        print("ContadorPoup: \(contadorBanco)")
+                        NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFatura"), object: nil)
+                    }
                     
                 } else if total > banco! {
                     let alert = UIAlertController(title: "Saldo da conta insuficiente", message: nil, preferredStyle: .alert)
@@ -383,6 +448,9 @@ class PoupancaView: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                 }
                 
+            }
+            else if prog == 2 && contadorBanco >= 1 {
+                print("Atualizada")
             }
     }
     

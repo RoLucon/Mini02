@@ -37,15 +37,14 @@ class ContaViewController: UIViewController {
             viewInferior?.transform = CGAffineTransform(translationX: 0, y: -60)
             stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -80)
         } else if prog == 2 && contadorBanco >= 1 {
-            viewFrase?.isHidden = false
+            //viewFrase?.isHidden = false
             viewFase2?.isHidden = false
             setaFase2?.isHidden = false
-            textoFase2?.text = textoFase1[9]
+            //textoFase2?.text = textoFase1[9]
             gerenciarFase2.isHidden = false
             //view.addSubview(gerenciarFase2)
-            viewInferior?.transform = CGAffineTransform(translationX: 0, y: -40)
-            stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -70)
-            //Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
+            //viewInferior?.transform = CGAffineTransform(translationX: 0, y: -60)
+            //stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -80)
         } else if prog == 3 && contadorBanco >= 1 { // Fase 3
             viewFrase?.isHidden = false
             viewFase2?.isHidden = false
@@ -220,6 +219,7 @@ class ContaViewController: UIViewController {
                 textoFase2.text = textoFase3[controleTexto["index"]!]
             }
             if controleTexto["index"]! == 8 {
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
                 self.navigationItem.setHidesBackButton(false, animated: true)
             }
         }

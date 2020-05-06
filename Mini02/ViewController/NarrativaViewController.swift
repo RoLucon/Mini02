@@ -52,12 +52,14 @@ class NarrativaViewController : UIViewController {
     // 6 - Kim mostrando a lingua
     // 7 - Entusiasmado
     func geraCenas(){
-        cenas = [Cena(texto: "Era uma vez menino Kleytinho, um jovem recém-formado do ensino médio que sonha em ser um astronauta.", imgName: "kim"),
-                 Cena(texto: "Todos os dias, ele ficava encostado na casa dos pais, sem ajudar nas tarefas econômicas da família.", imgName: "kimTEMPORARIO"),
-                 Cena(texto: "Mas um dia ele precisou se mudar para outra cidade para estudar Astrofísica.\nPor causa disso, conseguiu seu primeiro emprego e uma moradia em uma república.", imgName: "kim"),
-                 Cena(texto: "Por causa disso, conseguiu seu primeiro emprego e uma moradia em uma república.", imgName: "kimTEMPORARIO"),
-                 Cena(texto: "Mas sua colega de república, Kim, manja muito de economia e vai ajudá-lo a sair dessa!", imgName: "kim"),
-                 Cena(texto: "…Ou tentar.", imgName: "kimTEMPORARIO")]
+        cenas = [Cena(texto: "Era uma vez menino Kleytinho, um jovem recém-formado do ensino médio que sonha em ser um astronauta.", imgName: "01kley1"),
+                 Cena(texto: "Todos os dias, ele ficava encostado na casa dos pais, sem ajudar nas tarefas econômicas da família.", imgName: "02kley1"),
+                 Cena(texto: "Mas um dia ele precisou se mudar para outra cidade para estudar Astrofísica.", imgName: "03kley1"),
+                 Cena(texto: "Por causa disso, conseguiu seu primeiro emprego e uma moradia em uma república.", imgName: "04"),
+                 Cena(texto: "Por nunca ter se sustentado antes, se afundou em dívidas…", imgName: "05kley1"),
+                 Cena(texto: "Mas sua colega de república, Kim, manja muito de economia e vai ajudá-lo a sair dessa!", imgName: "06"),
+                 Cena(texto: "…Ou tentar.", imgName: "07"),
+                 Cena(texto: "Boa sorte, Kleytinho!", imgName: "08kley1")]
     }
     
     struct Cena {
