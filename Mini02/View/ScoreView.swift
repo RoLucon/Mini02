@@ -26,6 +26,14 @@ class ScoreView: UIView {
         self.setupView()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    func criaObserver(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: NSNotification.Name(rawValue: "AtualizarScore"), object: nil)
+    }
+    
     func setupView(){
         backgroundColor = .clear
         shapeLayer(soma: 0, valor: 0.5, lineWidth: CGFloat(lineWidth) * 2, color: scoreBackground)
@@ -62,8 +70,9 @@ class ScoreView: UIView {
         label.font = UIFont.systemFont(ofSize: frame.width / 4)
     }
     
-    func update(){
+    @objc func update(){
         self.layer.sublayers = nil
+        setupView()
     }
     
     func shapeLayer(soma: Double, valor: Double, lineWidth: CGFloat, color: UIColor){
