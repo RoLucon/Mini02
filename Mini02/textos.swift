@@ -302,13 +302,13 @@ let help = [
     //Cap 7
 "Utilizar o dinheiro que guardou durante a faculdade para garantir um lugar para todos morarem novamente, e deixar para depois a meta de adquirir seu Celta.", "Não contribuir para se reestruturarem por ter o foco em comprar seu Celta o mais rápido possível.", " ",// 42 43 44
 ]
-var prog = 2 // Representa o progresso do jogador
+var prog = 1 // Representa o progresso do jogador
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
 //Colocar 0 caso já tenha acabado
 var q = Array(repeating: 0, count:6)
 var q1 = [1, 2, 5, 9, 12, 0]
-var q2 = [13, 13, 18, 22, 0, 0]
+var q2 = [13, 14, 18, 22, 0, 0]
 var q3 = [23, 23, 26, 33, 36, 0]
 var q4 = [37, 37, 43, 0, 0, 0]
 var q5 = [44, 44, 47, 56, 59, 0]

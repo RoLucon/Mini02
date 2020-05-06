@@ -106,7 +106,7 @@ class Investe: UIViewController{
             let temp:Float? = personagem.mexerDinheiro(valor: nil)
         
             if (temp! < investido){
-                saldoIndisponivel.textColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.9)
+                saldoIndisponivel.isHidden = false
             }
             else{
                 investimento.setAplicada(investimento.getAplicada() + Double(investido))

@@ -48,7 +48,7 @@ class CustomizacaoViewController: UIViewController {
     }
     
     @IBAction func confirm(_ sender: Any) {
-        Personagem.shared.salvarNome(nome: self.txtField.text!)
+        Personagem.shared.salvarNome(nome: self.txtField.text!, imgStr: images[index])
     }
     
     @IBAction func Changed(_ sender: Any) {

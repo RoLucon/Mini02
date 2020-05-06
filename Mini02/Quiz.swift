@@ -351,6 +351,7 @@ class QuizFim: UIViewController{
     }
     
     @IBAction func voltarGame(_ sender: UIButton) {
+        NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarBotao"), object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     
