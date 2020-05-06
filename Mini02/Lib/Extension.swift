@@ -74,7 +74,7 @@ extension UITabBarController {
 extension UIImageView {
     
     func changeImage(imageTo: UIImage) {
-        UIView.transition(with: self, duration: 0.3, options: .transitionCurlDown, animations: {
+        UIView.transition(with: self, duration: 0.3, options: .transitionCrossDissolve, animations: {
                    self.image = imageTo
                }, completion: nil)
     }
