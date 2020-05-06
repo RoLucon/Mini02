@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="1NX-0I-bzz">
-                                <rect key="frame" x="116" y="391" width="182.5" height="60"/>
+                                <rect key="frame" x="116" y="-109" width="182.5" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLZ-wu-dhi">
                                         <rect key="frame" x="0.0" y="0.0" width="61" height="60"/>
@@ -81,13 +81,14 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo disponível: R$ X.XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk7-aV-Kf2">
-                                <rect key="frame" x="94" y="471" width="226" height="24"/>
+                                <rect key="frame" x="94" y="-29" width="226" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.51372549020000002" green="0.43921568630000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SALDO INDISPONÍVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfG-Zt-0vG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SALDO INDISPONÍVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfG-Zt-0vG">
                                 <rect key="frame" x="121" y="350.5" width="172.5" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.51372549020000002" green="0.43921568630000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -95,7 +96,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="kVJ-rc-MU9" firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="0dI-zC-onX"/>
+                            <constraint firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="0dI-zC-onX"/>
                             <constraint firstItem="hk7-aV-Kf2" firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="0yQ-qL-CEF"/>
                             <constraint firstItem="xNu-lJ-i7U" firstAttribute="leading" secondItem="Jjn-rt-nyb" secondAttribute="leading" constant="84" id="2UR-J9-wq2"/>
                             <constraint firstItem="BoC-S9-srU" firstAttribute="leading" secondItem="SGQ-k3-PQK" secondAttribute="trailing" constant="1" id="B1l-6L-HE6"/>
@@ -113,7 +114,7 @@
                             <constraint firstItem="Bjt-6j-80t" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="80" id="ruF-Ms-tfa"/>
                             <constraint firstItem="SGQ-k3-PQK" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="124" id="sZ5-Lj-OcT"/>
                             <constraint firstItem="1NX-0I-bzz" firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="tQa-Lc-dzl"/>
-                            <constraint firstItem="kVJ-rc-MU9" firstAttribute="top" secondItem="hk7-aV-Kf2" secondAttribute="bottom" constant="5" id="vF9-ig-82a"/>
+                            <constraint firstAttribute="top" secondItem="hk7-aV-Kf2" secondAttribute="bottom" constant="5" id="vF9-ig-82a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jjn-rt-nyb"/>
                     </view>
@@ -122,7 +123,6 @@
                         <outlet property="SaldoDisponivel" destination="hk7-aV-Kf2" id="NIk-XS-EEk"/>
                         <outlet property="ValorTextField" destination="Eus-IB-57r" id="8fF-vb-to4"/>
                         <outlet property="actionLabel" destination="SGQ-k3-PQK" id="HZr-wM-SiV"/>
-                        <outlet property="valorMinimo" destination="kVJ-rc-MU9" id="rgL-bd-xXL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNP-4R-ayd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1746,9 +1746,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="S9E-Fe-Ghc"/>
         <segue reference="Usl-gZ-DIe"/>
-
         <segue reference="d73-3l-XYX"/>
         <segue reference="sW6-Px-Z69"/>
     </inferredMetricsTieBreakers>
 </document>
-
