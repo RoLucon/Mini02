@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LfF-N0-uim">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LfF-N0-uim">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,16 +64,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="1NX-0I-bzz">
-                                <rect key="frame" x="116" y="-109" width="182.5" height="60"/>
+                                <rect key="frame" x="116" y="390.5" width="182.5" height="61.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLZ-wu-dhi">
-                                        <rect key="frame" x="0.0" y="0.0" width="61" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="61" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="0,00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="Eus-IB-57r">
-                                        <rect key="frame" x="78" y="0.0" width="104.5" height="60"/>
+                                        <rect key="frame" x="78" y="0.0" width="104.5" height="61.5"/>
                                         <color key="textColor" red="0.51372549019607838" green="0.4392156862745098" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -81,12 +81,12 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo disponível: R$ X.XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk7-aV-Kf2">
-                                <rect key="frame" x="94" y="-29" width="226" height="24"/>
+                                <rect key="frame" x="94" y="459" width="226" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.51372549020000002" green="0.43921568630000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SALDO INDISPONÍVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfG-Zt-0vG">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SALDO INDISPONÍVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfG-Zt-0vG">
                                 <rect key="frame" x="121" y="350.5" width="172.5" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -100,10 +100,10 @@
                             <constraint firstItem="hk7-aV-Kf2" firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="0yQ-qL-CEF"/>
                             <constraint firstItem="xNu-lJ-i7U" firstAttribute="leading" secondItem="Jjn-rt-nyb" secondAttribute="leading" constant="84" id="2UR-J9-wq2"/>
                             <constraint firstItem="BoC-S9-srU" firstAttribute="leading" secondItem="SGQ-k3-PQK" secondAttribute="trailing" constant="1" id="B1l-6L-HE6"/>
-                            <constraint firstItem="hk7-aV-Kf2" firstAttribute="top" secondItem="1NX-0I-bzz" secondAttribute="bottom" constant="20" id="HRc-kT-9R5"/>
                             <constraint firstItem="WKA-PM-9A0" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="124" id="O4b-ue-sP2"/>
                             <constraint firstItem="Jjn-rt-nyb" firstAttribute="trailing" secondItem="BoC-S9-srU" secondAttribute="trailing" constant="81" id="Qer-ZH-Cge"/>
                             <constraint firstItem="Bjt-6j-80t" firstAttribute="leading" secondItem="xNu-lJ-i7U" secondAttribute="trailing" constant="8" id="R1B-Ec-bRi"/>
+                            <constraint firstItem="hk7-aV-Kf2" firstAttribute="centerY" secondItem="jRb-et-zQe" secondAttribute="centerY" constant="50" id="Yj3-sy-imo"/>
                             <constraint firstItem="SGQ-k3-PQK" firstAttribute="leading" secondItem="WKA-PM-9A0" secondAttribute="trailing" constant="15" id="ZzG-fA-CtO"/>
                             <constraint firstItem="1NX-0I-bzz" firstAttribute="centerY" secondItem="jRb-et-zQe" secondAttribute="centerY" id="ae2-zY-GBk"/>
                             <constraint firstItem="xNu-lJ-i7U" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="80" id="cD2-W7-2Mh"/>
@@ -114,7 +114,6 @@
                             <constraint firstItem="Bjt-6j-80t" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="80" id="ruF-Ms-tfa"/>
                             <constraint firstItem="SGQ-k3-PQK" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="124" id="sZ5-Lj-OcT"/>
                             <constraint firstItem="1NX-0I-bzz" firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="tQa-Lc-dzl"/>
-                            <constraint firstAttribute="top" secondItem="hk7-aV-Kf2" secondAttribute="bottom" constant="5" id="vF9-ig-82a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jjn-rt-nyb"/>
                     </view>
@@ -140,14 +139,14 @@
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Pt-zk-Xk2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="ks9-Ot-0vO">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ks9-Ot-0vO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1V-RJ-q4F">
                                             <rect key="frame" x="0.0" y="0.0" width="174" height="768"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Dvr-bn-GC8">
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Dvr-bn-GC8">
                                                 <rect key="frame" x="0.0" y="0.0" width="174" height="768"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
@@ -155,7 +154,7 @@
                                                 <blurEffect style="regular"/>
                                             </vibrancyEffect>
                                         </visualEffectView>
-                                        <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-BC-pF8">
+                                        <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-BC-pF8">
                                             <rect key="frame" x="28" y="64" width="358" height="768"/>
                                             <connections>
                                                 <segue destination="fpa-70-BwH" kind="embed" identifier="ToFirstChild" id="60E-Au-h9o"/>
@@ -1734,26 +1733,23 @@
             <point key="canvasLocation" x="3209" y="-541"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="arrow.up" catalog="system" width="60" height="64"/>
-        <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
-        <image name="arrowtriangle.left.fill" catalog="system" width="64" height="56"/>
-        <image name="arrowtriangle.right.fill" catalog="system" width="64" height="56"/>
-        <image name="barcode" catalog="system" width="64" height="46"/>
-        <image name="dollarsign.square" catalog="system" width="64" height="56"/>
-        <image name="kimfb-bom" width="1024" height="1024"/>
-        <image name="kimfb-ruim" width="1024" height="1024"/>
-        <image name="person.fill" width="128" height="120"/>
-        <image name="questionmark" catalog="system" width="48" height="64"/>
-        <image name="tortoise" catalog="system" width="64" height="34"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="S9E-Fe-Ghc"/>
         <segue reference="Usl-gZ-DIe"/>
-
         <segue reference="ENy-2t-sxU"/>
-
         <segue reference="sW6-Px-Z69"/>
-
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
+        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
+        <image name="barcode" catalog="system" width="128" height="93"/>
+        <image name="dollarsign.square" catalog="system" width="128" height="114"/>
+        <image name="kimfb-bom" width="1024" height="1024"/>
+        <image name="kimfb-ruim" width="1024" height="1024"/>
+        <image name="person.fill" width="128" height="120"/>
+        <image name="questionmark" catalog="system" width="96" height="128"/>
+        <image name="tortoise" catalog="system" width="128" height="68"/>
+    </resources>
 </document>
