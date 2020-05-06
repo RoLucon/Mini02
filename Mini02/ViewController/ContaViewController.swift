@@ -205,6 +205,8 @@ class ContaViewController: UIViewController {
     @IBAction func next(_ sender: Any) {
         if prog == 1 {
             fase1BttProximo()
+        } else if prog == 2 && contadorBanco == 3 {
+            viewFase2.isHidden = true
         } else if prog != 1 {
             if controleTexto["index"]! < controleTexto["ultimo"]! {
                 controleTexto["index"]! += 1
@@ -220,6 +222,7 @@ class ContaViewController: UIViewController {
             }
             if controleTexto["index"]! == 8 {
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFatura"), object: nil)
                 self.navigationItem.setHidesBackButton(false, animated: true)
             }
         }

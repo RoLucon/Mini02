@@ -59,9 +59,9 @@ class BancoViewController: UIViewController {
         atualizarLabel()
         observer()
         
-        //História - Capítulo 1
         fase1()
         fase2()
+        fase4()
 
     }
     
@@ -244,7 +244,7 @@ class BancoViewController: UIViewController {
     //História - Capítulo 2
     
     func fase2() {
-        if prog == 2 && contadorBanco >= 1 {
+        if prog == 2 && contadorBanco >= 1 || prog == 3 && contadorBanco >= 1 {
             if contadorBanco == 1 {
                 fundoView?.isHidden = false
                 view?.addSubview(StackView)
@@ -258,7 +258,6 @@ class BancoViewController: UIViewController {
             }
             faturaKim?.isHidden = false
             faturaTexto?.text = textoFase2[contadorBanco]
-            backButton?.isEnabled = true
         }
     }
     @IBAction func contas(_ sender: Any) {
@@ -285,17 +284,18 @@ class BancoViewController: UIViewController {
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFala"), object: nil)
             }
         }
-        
         else if prog == 2 && contadorBanco >= 1 && contadorBanco < 14 {
+            print(contadorBanco)
 
             if contadorBanco <= 5 || contadorBanco > 6 {
                 faturaTexto?.text = textoFase2[contadorBanco]
                 if contadorBanco != 7 {
                     contadorBanco += 1
                 }
-                print(contadorBanco)
 
                 switch  contadorBanco {
+                case 3:
+                    NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarView"), object: nil)
                 case 6:
                     faturaView?.isHidden = false
                     setaFatura?.isHidden = false
@@ -304,16 +304,45 @@ class BancoViewController: UIViewController {
                 case 7:
                     faturaView?.isHidden = true
                     setaFatura?.isHidden = true
-                    //contadorBanco += 1
-                    print("Fail")
-                case 12:
+                    fundoView?.isHidden = true
+                    Investimento?.alpha = 1
+                    Contas?.isUserInteractionEnabled = false
+                    backButton?.isEnabled = true
                     NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
-                default:
-                    print(".....")
+                case 14:
+                    self.dismiss(animated: true, completion: nil)
+                default: break
                 }
             }
         }
+        else if prog == 3 && contadorBanco >= 1 || prog == 4 && contadorBanco >= 1 {
+            seta?.isHidden = true
+            Investimento?.isUserInteractionEnabled = false
+            Contas?.isUserInteractionEnabled = false
+            Contas?.alpha = 1
+            Investimento?.alpha = 1
+            fundoView?.isHidden = true
+            backButton?.isEnabled = true
+        }
         
+    }
+    
+    //História - Capítulo 4
+    
+    func fase4() {
+        if prog == 4 && contadorBanco >= 1 {
+            if contadorBanco == 1 {
+                fundoView?.isHidden = false
+                view?.addSubview(StackView)
+                Investimento?.alpha = 1
+                Contas?.isUserInteractionEnabled = false
+                Contas?.alpha = 0.5
+                seta?.isHidden = false
+                seta?.center.x += 5
+                seta?.center.y += 220
+                backButton?.isEnabled = false
+            }
+        }
     }
     
     

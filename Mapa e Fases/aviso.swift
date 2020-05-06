@@ -198,6 +198,7 @@ class selecf: UIViewController{
             print("DEU BAYBLADE AQUI EM!!!")
         }
     }
+    var teste = false
     
     func dialogo(){
         print(c)
@@ -205,11 +206,17 @@ class selecf: UIViewController{
         fala?.text = texto[c]
         print("texto n: " + String(c))
         
-        if c == 8 || c == 21 || c == 23 || c == 30 || c == 42 {
+        if c == 8 || c == 21 || c == 30 || c == 42 {
             banco?.isUserInteractionEnabled = true
             rosto("kimpiscada")
         }else if c == 6 || c == 7{
             c = 96
+        }else if c == 22 && prog == 2 {
+            if teste == true {
+                contadorBanco = 8
+            }
+            teste = true
+
         }
         
         if pula == true {
@@ -457,7 +464,7 @@ class selecf: UIViewController{
     
     //Refaz a fase
     @IBAction func refazer(_ sender: Any) {
-        if prog == 2 {
+        if prog == 2 || prog == 3 {
             contadorBanco = 1
         }
         

@@ -16,6 +16,8 @@ var i : intmax_t!
 var r = 0 //Salva a resposta escolida
 var c = 0 //Representa a fala inicial da fase
 var contadorBanco = 0
+var fasebug = false
+
 let personagem: Personagem = Personagem.shared
 //Todas as falas do jogo em ordem de aparição
 let texto = [
@@ -162,13 +164,13 @@ let textoFase2 = [
     3:"Mas isso significa que você entrou em crédito rotativo. Ou seja, o valor que você não pagou foi pago pela instituição...",
     4:"E aí você tem que repor depois. É aí que entra os juros.",
     5:"Sai mais caro que a fatura original. Melhor pagar tudo, né?",
+    6:"",
     7:"Boa!",
-    9:"Se você sempre pagar as suas contas em dia, o valor do seu limite aumenta.",
-    10:"O limite é o valor máximo que você pode gastar no cartão de crédito.",
-    11:"É bom que seu limite nunca seja maior que o seu salário!",
-    12:"E a melhor opção é usar o cartão de crédito só em grandes compras. Como uma geladeira, por exemplo, que é cara, mas necessária.",
-    13:"Inclusive, a da república tá precisando de um conserto...",
-    //12:"",
+    8:"Se você sempre pagar as suas contas em dia, o valor do seu limite aumenta.",
+    9:"O limite é o valor máximo que você pode gastar no cartão de crédito.",
+    10:"É bom que seu limite nunca seja maior que o seu salário!",
+    11:"E a melhor opção é usar o cartão de crédito só em grandes compras. Como uma geladeira, por exemplo, que é cara, mas necessária.",
+    12:"Inclusive, a da república tá precisando de um conserto...",
     //13:"",
     14:"",
     15:"",
