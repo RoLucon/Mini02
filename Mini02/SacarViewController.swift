@@ -104,7 +104,7 @@ class Saque: UIViewController{
             let Saque = (Saque1 as NSString).floatValue
             let disp = investimento.getBruto() - investimento.getImposto()
             if (disp < Double(Saque)) {
-                SaldoIndisp.textColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.9)
+                SaldoIndisp.isHidden = false
             }
             else{
                 let percent = 1 - Double(Saque)/(disp)
