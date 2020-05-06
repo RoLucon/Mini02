@@ -172,6 +172,10 @@ class selecf: UIViewController{
     @IBOutlet weak var fundoFase: UIImageView!
     @IBOutlet var faseView: UIView!
     @IBOutlet weak var kimRosto: UIImageView!
+    
+    @IBOutlet weak var impRenda: UIButton!
+    @IBOutlet weak var quiz: UIButton!
+    
     var configView: ConfigView?
     let notificacao = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
     
@@ -205,7 +209,14 @@ class selecf: UIViewController{
         ApareceSeta(c)
         fala?.text = texto[c]
         print("texto n: " + String(c))
-        
+        if c == 36 {
+            passaButton.isHidden = true
+            quiz.isHidden = false
+        }
+        if c == 71 {
+            passaButton.isHidden = true
+            impRenda.isHidden = false
+        }
         if c == 8 || c == 21 || c == 23 || c == 42 {
             banco?.isUserInteractionEnabled = true
             rosto("kimpiscada")
@@ -246,6 +257,7 @@ class selecf: UIViewController{
         super.viewDidLoad()
         dialogo()
         observer()
+
         //Progresso de fases
         switch prog {
         case 1:

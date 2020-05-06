@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZSu-Ir-Nmx">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -113,6 +113,24 @@
                                     <constraint firstAttribute="height" constant="66" id="nGF-Rg-jNa"/>
                                 </constraints>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwy-n5-FoG">
+                                <rect key="frame" x="325" y="786" width="60" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Quiz"/>
+                                <connections>
+                                    <segue destination="VdF-Xn-zkL" kind="show" id="Jvw-tx-HKr"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cT-Bp-n4S">
+                                <rect key="frame" x="307" y="776" width="96" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="App"/>
+                                <connections>
+                                    <segue destination="TFS-Lr-Rhq" kind="show" id="d5y-fB-YMU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -154,8 +172,10 @@
                         <outlet property="fala" destination="Zd8-o1-cvg" id="hFg-R6-1hH"/>
                         <outlet property="faseView" destination="uPe-Ze-HbX" id="MRt-Dn-TGx"/>
                         <outlet property="fundoFase" destination="5Cd-pq-FtR" id="aHL-ca-9N9"/>
+                        <outlet property="impRenda" destination="7cT-Bp-n4S" id="Q47-yP-Wtc"/>
                         <outlet property="kimRosto" destination="p91-AG-i1f" id="NjE-wL-nbh"/>
                         <outlet property="passaButton" destination="8CH-LB-d8e" id="hs8-8E-i0a"/>
+                        <outlet property="quiz" destination="gwy-n5-FoG" id="zDu-9h-UvP"/>
                         <outlet property="setaBanco" destination="hKC-oW-xqW" id="7Vz-8n-dGb"/>
                         <segue destination="y7e-Fm-1rE" kind="presentation" identifier="Passa" modalPresentationStyle="fullScreen" id="bFs-vk-vf2"/>
                         <segue destination="F2i-mQ-rQf" kind="show" identifier="Finalizar" id="PeW-Ou-30F"/>
@@ -174,7 +194,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDB-8C-0g1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="43"/>
+            <point key="canvasLocation" x="1668" y="112"/>
         </scene>
         <!--Fase-->
         <scene sceneID="frT-zZ-gFG">
@@ -185,6 +205,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lwi-Td-cW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1645" y="159"/>
+        </scene>
+        <!--Quiz-->
+        <scene sceneID="2WQ-Fa-Kn8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Quiz" id="VdF-Xn-zkL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jQA-S7-KXO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSu-gV-fkC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1645" y="210"/>
+        </scene>
+        <!--ImpostoDeRenda-->
+        <scene sceneID="cyD-kw-jdC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImpostoDeRenda" id="TFS-Lr-Rhq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gyf-CG-Nac"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSW-bh-0Yj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="247"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7tx-LO-twb">
