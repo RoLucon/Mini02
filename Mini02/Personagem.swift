@@ -16,9 +16,10 @@ class Personagem {
     private var poupanca: Float!
     private var fatura: Float!
     private var cartao: Float!
-    private var semestre:  Int!
+    private var semestre: Int!
     private var score: Int!
     private var save: Bool = false
+    private var imgNome: String?
     
     private init() {
         
@@ -28,23 +29,26 @@ class Personagem {
         } else {
             self.resetAtributos()
         }
-        if (UserDefaults.standard.object(forKey: "personagem.dinheiro") != nil){
+        if (UserDefaults.standard.object(forKey: "personagem.dinheiro") != nil) {
             dinheiro = (UserDefaults.standard.object(forKey: "personagem.dinheiro") as? Float)!
         }
-        if (UserDefaults.standard.object(forKey: "personagem.poupanca") != nil){
+        if (UserDefaults.standard.object(forKey: "personagem.poupanca") != nil) {
             poupanca = (UserDefaults.standard.object(forKey: "personagem.poupanca") as? Float)!
         }
-        if (UserDefaults.standard.object(forKey: "personagem.fatura") != nil){
+        if (UserDefaults.standard.object(forKey: "personagem.fatura") != nil) {
             fatura = (UserDefaults.standard.object(forKey: "personagem.fatura") as? Float)!
         }
-        if (UserDefaults.standard.object(forKey: "personagem.cartao") != nil){
+        if (UserDefaults.standard.object(forKey: "personagem.cartao") != nil) {
             cartao = (UserDefaults.standard.object(forKey: "personagem.cartao") as? Float)!
         }
-        if (UserDefaults.standard.object(forKey: "personagem.semestre") != nil){
+        if (UserDefaults.standard.object(forKey: "personagem.semestre") != nil) {
             semestre = (UserDefaults.standard.object(forKey: "personagem.semestre") as? Int)!
         }
-        if (UserDefaults.standard.object(forKey: "personagem.score") != nil){
+        if (UserDefaults.standard.object(forKey: "personagem.score") != nil) {
             score = (UserDefaults.standard.object(forKey: "personagem.score") as? Int)!
+        }
+        if (UserDefaults.standard.object(forKey: "personagem.img") != nil) {
+            imgNome = (UserDefaults.standard.object(forKey: "personagem.img") as? String)!
         }
     }
     
@@ -52,9 +56,10 @@ class Personagem {
         return self.save
     }
     
-    func salvarNome(nome: String){
+    func salvarNome(nome: String, imgStr: String){
         self.nome = nome
         UserDefaults.standard.set(nome, forKey: "personagem.nome")
+        UserDefaults.standard.set(imgStr, forKey: "personagem.img")
         salvar()
     }
     
@@ -165,4 +170,5 @@ class Personagem {
             return score
         }
     }
+    
 }
