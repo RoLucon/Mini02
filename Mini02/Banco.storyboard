@@ -397,6 +397,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="contas:" destination="k1o-wQ-zpY" eventType="touchUpInside" id="iuI-Rd-prU"/>
                                             <segue destination="ERt-pN-ToC" kind="show" id="V0K-WE-huf"/>
                                         </connections>
                                     </button>
@@ -1552,7 +1553,7 @@
                                             <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="voltarFase:" destination="LEQ-ax-7Ib" eventType="touchUpInside" id="I44-Bs-6ib"/>
+                                            <action selector="faturaNext:" destination="LEQ-ax-7Ib" eventType="touchUpInside" id="I44-Bs-6ib"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kim" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zv4-T7-Jrc">
@@ -1607,6 +1608,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="pagar:" destination="LEQ-ax-7Ib" eventType="touchUpInside" id="3TL-ba-PdP"/>
                                     <segue destination="0Sz-f1-YC4" kind="popoverPresentation" identifier="pagarFatura" popoverAnchorView="2F7-Jr-gRW" id="1qu-fZ-OjY">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
@@ -1653,10 +1655,10 @@
                     <connections>
                         <outlet property="cartaoLimite" destination="TBR-fq-zEK" id="pgA-YO-yMi"/>
                         <outlet property="faturaAtual" destination="8Ql-Ho-M2h" id="eWx-4v-tE2"/>
+                        <outlet property="faturaKim" destination="lfv-h4-Vdp" id="wQi-dA-pfs"/>
                         <outlet property="faturaTexto" destination="bTd-R8-1AW" id="dMs-Cr-tGX"/>
                         <outlet property="faturaView" destination="Hu0-BW-xD3" id="qUJ-lJ-mTh"/>
                         <outlet property="setaFatura" destination="6ik-CW-DBO" id="lJv-ey-O6m"/>
-                        <outlet property="textoView" destination="lfv-h4-Vdp" id="wQi-dA-pfs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rd1-HZ-U8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1726,9 +1728,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="S9E-Fe-Ghc"/>
         <segue reference="Usl-gZ-DIe"/>
-
-        <segue reference="d73-3l-XYX"/>
-        <segue reference="sW6-Px-Z69"/>
+        <segue reference="yTC-S7-h55"/>
+        <segue reference="1qu-fZ-OjY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
@@ -1743,4 +1744,3 @@
         <image name="tortoise" catalog="system" width="128" height="68"/>
     </resources>
 </document>
-

@@ -134,8 +134,6 @@ let texto = [
 
 //Textos das interações da fase no banco
 let textoFase1 = [
-    
-    //Capítulo 1
     1: "Essa é sua conta bancária, \(personagem.nome!). Seu salário já tá na mão! Uhuuul!",
     2:"...Mas não fica empolgado, não.",
     3:"Aqui, você vê o seu saldo corrente.",
@@ -154,6 +152,29 @@ let textoFase1 = [
     16:"",
     17:"Esse é o extrato, onde mostra todas as transações feitas.",
     18:"Chega!!!",
+    19:"",
+    20:"",
+]
+
+let textoFase2 = [
+    1:"Se você não tiver dinheiro o suficiente, ainda pode pagar o mínimo da fatura.",
+    2:"Ou, até mesmo, dividir a fatura para os próximos meses.",
+    3:"Mas isso significa que você entrou em crédito rotativo. Ou seja, o valor que você não pagou foi pago pela instituição...",
+    4:"E aí você tem que repor depois. É aí que entra os juros.",
+    5:"Sai mais caro que a fatura original. Melhor pagar tudo, né?",
+    7:"Boa!",
+    9:"Se você sempre pagar as suas contas em dia, o valor do seu limite aumenta.",
+    10:"O limite é o valor máximo que você pode gastar no cartão de crédito.",
+    11:"É bom que seu limite nunca seja maior que o seu salário!",
+    12:"E a melhor opção é usar o cartão de crédito só em grandes compras. Como uma geladeira, por exemplo, que é cara, mas necessária.",
+    13:"Inclusive, a da república tá precisando de um conserto...",
+    //12:"",
+    //13:"",
+    14:"",
+    15:"",
+    16:"",
+    17:"",
+    18:"",
     19:"",
     20:"",
 ]
