@@ -36,88 +36,99 @@
                                     <action selector="configBtt:" destination="F8c-i4-nYd" eventType="touchUpInside" id="h5F-g5-R9I"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l84-B2-Ah7">
-                                <rect key="frame" x="10" y="224" width="81" height="48"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Fase 1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapa" translatesAutoresizingMaskIntoConstraints="NO" id="sip-tc-eVs">
+                                <rect key="frame" x="7" y="183" width="400" height="530"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="530" id="rLD-Z3-hxP"/>
+                                    <constraint firstAttribute="width" constant="400" id="vSE-bc-EJN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l84-B2-Ah7">
+                                <rect key="frame" x="52" y="228" width="90" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="LIr-iF-nfo"/>
+                                    <constraint firstAttribute="width" secondItem="l84-B2-Ah7" secondAttribute="height" multiplier="9:11" id="jIY-51-eLj"/>
+                                    <constraint firstAttribute="width" constant="90" id="ndW-g5-moA"/>
+                                </constraints>
+                                <state key="normal" title="Fase 1" image="bronze-direita">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="f1:" destination="F8c-i4-nYd" eventType="touchUpInside" id="mHl-5v-FXd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKk-MQ-i99">
-                                <rect key="frame" x="216" y="224" width="86" height="48"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Fase 3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKk-MQ-i99">
+                                <rect key="frame" x="149" y="358" width="90" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="1OU-UZ-4PH"/>
+                                    <constraint firstAttribute="width" constant="90" id="nDA-ap-hxG"/>
+                                </constraints>
+                                <state key="normal" title="Fase 3" image="bronze-direita">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="f3:" destination="F8c-i4-nYd" eventType="touchUpInside" id="gaM-Rc-qsf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXA-Z3-MnK">
-                                <rect key="frame" x="322" y="224" width="86" height="48"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Fase 4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXA-Z3-MnK">
+                                <rect key="frame" x="310" y="305" width="90" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="LHH-iw-c9j"/>
+                                    <constraint firstAttribute="height" constant="110" id="dJV-xc-nwv"/>
+                                </constraints>
+                                <state key="normal" title="Fase 4" image="bronze-direita">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="f4:" destination="F8c-i4-nYd" eventType="touchUpInside" id="gyq-dd-1zk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3M-li-wdE">
-                                <rect key="frame" x="10" y="624" width="86" height="48"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Fase 5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3M-li-wdE">
+                                <rect key="frame" x="62" y="437" width="90" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="T4t-rS-Ig9"/>
+                                    <constraint firstAttribute="height" constant="110" id="win-uM-qPY"/>
+                                </constraints>
+                                <state key="normal" title="Fase 5" image="bronze-esquerda">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="f5:" destination="F8c-i4-nYd" eventType="touchUpInside" id="Wp3-JT-QfX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsh-ZQ-kPF">
-                                <rect key="frame" x="116" y="624" width="86" height="48"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Fase 6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsh-ZQ-kPF">
+                                <rect key="frame" x="213" y="460" width="90" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="fSo-qc-Ujm"/>
+                                    <constraint firstAttribute="height" constant="110" id="nYR-Jg-Pfv"/>
+                                </constraints>
+                                <state key="normal" title="Fase 6" image="bronze-esquerda">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="f6:" destination="F8c-i4-nYd" eventType="touchUpInside" id="E1i-1X-Rqb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gay-yc-i2M">
-                                <rect key="frame" x="222" y="624" width="84" height="48"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Fase 7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gay-yc-i2M">
+                                <rect key="frame" x="112" y="590" width="90" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="ahE-qy-rPA"/>
+                                    <constraint firstAttribute="height" constant="110" id="mSF-Ch-GCr"/>
+                                </constraints>
+                                <state key="normal" title="Fase 7" image="bronze-esquerda">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="f7:" destination="F8c-i4-nYd" eventType="touchUpInside" id="EGD-Uf-iUk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG3-Nu-LBj">
-                                <rect key="frame" x="326" y="624" width="86" height="48"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Fase 8">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="f8:" destination="F8c-i4-nYd" eventType="touchUpInside" id="uKO-zm-Buz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQC-y0-nlu">
-                                <rect key="frame" x="111" y="224" width="85" height="48"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Fase 2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQC-y0-nlu">
+                                <rect key="frame" x="209" y="258" width="90" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="752-At-DXt"/>
+                                    <constraint firstAttribute="height" constant="110" id="LyM-ic-NEk"/>
+                                </constraints>
+                                <state key="normal" title="Fase 2" image="bronze-direita">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
@@ -131,42 +142,56 @@
                                     <constraint firstAttribute="height" constant="56" id="gXl-xA-Psv"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG3-Nu-LBj">
+                                <rect key="frame" x="289" y="540" width="90" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="KK3-Az-NMu"/>
+                                    <constraint firstAttribute="height" constant="110" id="hIL-e7-OOG"/>
+                                </constraints>
+                                <state key="normal" title="Fase 8" image="bronze-esquerda">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="f8:" destination="F8c-i4-nYd" eventType="touchUpInside" id="uKO-zm-Buz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.51372549020000002" green="0.43921568630000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="gsh-ZQ-kPF" firstAttribute="leading" secondItem="J3M-li-wdE" secondAttribute="trailing" constant="61" id="0B4-or-kYw"/>
                             <constraint firstItem="FvM-nC-kpG" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="20" id="1Td-x9-EZN"/>
-                            <constraint firstItem="DXA-Z3-MnK" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" constant="-200" id="2UC-Eb-6xw"/>
-                            <constraint firstItem="l84-B2-Ah7" firstAttribute="top" secondItem="FvM-nC-kpG" secondAttribute="bottom" constant="70" id="6H0-lh-m91"/>
-                            <constraint firstItem="gay-yc-i2M" firstAttribute="leading" secondItem="gsh-ZQ-kPF" secondAttribute="trailing" constant="20" id="83e-Ya-PrP"/>
+                            <constraint firstItem="sFz-TR-K4d" firstAttribute="bottom" secondItem="gsh-ZQ-kPF" secondAttribute="bottom" constant="243" id="56i-89-aaN"/>
+                            <constraint firstItem="BKk-MQ-i99" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="149" id="6bJ-mA-cHL"/>
+                            <constraint firstItem="sip-tc-eVs" firstAttribute="centerX" secondItem="M0v-nZ-1yO" secondAttribute="centerX" id="9dl-8w-ytC"/>
+                            <constraint firstItem="DXA-Z3-MnK" firstAttribute="leading" secondItem="UQC-y0-nlu" secondAttribute="trailing" constant="11" id="BE9-0J-Mal"/>
                             <constraint firstItem="sFz-TR-K4d" firstAttribute="trailing" secondItem="FvM-nC-kpG" secondAttribute="trailing" constant="358" id="CfK-gn-qWY"/>
-                            <constraint firstItem="gay-yc-i2M" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" constant="200" id="Cv2-tE-ap5"/>
+                            <constraint firstItem="l84-B2-Ah7" firstAttribute="top" secondItem="FvM-nC-kpG" secondAttribute="bottom" constant="74" id="DXc-Ex-Ccu"/>
+                            <constraint firstItem="sFz-TR-K4d" firstAttribute="bottom" secondItem="VG3-Nu-LBj" secondAttribute="bottom" constant="163" id="EIU-NO-yLm"/>
                             <constraint firstItem="4UO-g9-oM3" firstAttribute="centerX" secondItem="M0v-nZ-1yO" secondAttribute="centerX" id="EMt-Zw-eiX"/>
                             <constraint firstItem="R3S-1J-sE8" firstAttribute="top" secondItem="sFz-TR-K4d" secondAttribute="top" id="IPG-RD-7Xf"/>
-                            <constraint firstItem="UQC-y0-nlu" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" constant="-200" id="IQG-Aw-GzT"/>
-                            <constraint firstItem="gsh-ZQ-kPF" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" constant="200" id="IrF-JO-mys"/>
-                            <constraint firstItem="VG3-Nu-LBj" firstAttribute="leading" secondItem="gay-yc-i2M" secondAttribute="trailing" constant="20" id="Jac-Mr-l5N"/>
                             <constraint firstItem="Vy2-Kb-8Ef" firstAttribute="top" secondItem="sFz-TR-K4d" secondAttribute="top" id="Jex-I8-A6m"/>
                             <constraint firstItem="ofh-pM-EdX" firstAttribute="top" secondItem="sFz-TR-K4d" secondAttribute="top" id="KSC-zM-rrV"/>
                             <constraint firstItem="R3S-1J-sE8" firstAttribute="centerX" secondItem="M0v-nZ-1yO" secondAttribute="centerX" id="KfC-HL-2qd"/>
                             <constraint firstItem="sFz-TR-K4d" firstAttribute="trailing" secondItem="Vy2-Kb-8Ef" secondAttribute="trailing" constant="33" id="L0b-jU-RG7"/>
-                            <constraint firstItem="BKk-MQ-i99" firstAttribute="leading" secondItem="UQC-y0-nlu" secondAttribute="trailing" constant="20" id="NqR-nA-rcq"/>
-                            <constraint firstItem="gsh-ZQ-kPF" firstAttribute="leading" secondItem="J3M-li-wdE" secondAttribute="trailing" constant="20" id="Qec-bi-XXx"/>
-                            <constraint firstItem="BKk-MQ-i99" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" constant="-200" id="Qsr-go-TI8"/>
-                            <constraint firstItem="J3M-li-wdE" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" constant="200" id="T4c-t5-Gim"/>
+                            <constraint firstItem="gay-yc-i2M" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="112" id="MUL-Yx-Qo0"/>
+                            <constraint firstItem="gsh-ZQ-kPF" firstAttribute="top" secondItem="UQC-y0-nlu" secondAttribute="bottom" constant="92" id="ORe-gL-oxg"/>
+                            <constraint firstItem="UQC-y0-nlu" firstAttribute="leading" secondItem="l84-B2-Ah7" secondAttribute="trailing" constant="67" id="Quf-Ep-WvB"/>
                             <constraint firstItem="4UO-g9-oM3" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" id="VGK-Yr-dP0"/>
+                            <constraint firstItem="VG3-Nu-LBj" firstAttribute="leading" secondItem="gay-yc-i2M" secondAttribute="trailing" constant="87" id="W2U-Ef-4Na"/>
+                            <constraint firstItem="J3M-li-wdE" firstAttribute="top" secondItem="l84-B2-Ah7" secondAttribute="bottom" constant="99" id="WZf-Kp-ndn"/>
                             <constraint firstItem="Vy2-Kb-8Ef" firstAttribute="leading" secondItem="R3S-1J-sE8" secondAttribute="trailing" constant="80" id="ZtF-Jr-fvF"/>
                             <constraint firstItem="sFz-TR-K4d" firstAttribute="bottom" secondItem="4UO-g9-oM3" secondAttribute="bottom" id="abe-kg-C1O"/>
+                            <constraint firstItem="BKk-MQ-i99" firstAttribute="top" secondItem="M0v-nZ-1yO" secondAttribute="top" constant="358" id="bjH-Oo-swb"/>
+                            <constraint firstItem="gay-yc-i2M" firstAttribute="top" secondItem="J3M-li-wdE" secondAttribute="bottom" constant="43" id="d3m-gg-s1v"/>
+                            <constraint firstItem="sip-tc-eVs" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" id="eI0-Xd-CsK"/>
                             <constraint firstItem="ofh-pM-EdX" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="33" id="f2K-Ri-62a"/>
                             <constraint firstItem="FvM-nC-kpG" firstAttribute="top" secondItem="ofh-pM-EdX" secondAttribute="bottom" constant="20" id="gjR-RI-ztv"/>
                             <constraint firstItem="4UO-g9-oM3" firstAttribute="top" secondItem="R3S-1J-sE8" secondAttribute="bottom" constant="7" id="hwV-xE-0Fa"/>
-                            <constraint firstItem="VG3-Nu-LBj" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" constant="200" id="kCw-uC-IOW"/>
+                            <constraint firstItem="J3M-li-wdE" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="62" id="kDK-V7-fvB"/>
                             <constraint firstItem="sFz-TR-K4d" firstAttribute="trailing" secondItem="4UO-g9-oM3" secondAttribute="trailing" id="kYo-5k-nJe"/>
-                            <constraint firstItem="UQC-y0-nlu" firstAttribute="leading" secondItem="l84-B2-Ah7" secondAttribute="trailing" constant="20" id="mpS-Ca-aDn"/>
-                            <constraint firstItem="DXA-Z3-MnK" firstAttribute="leading" secondItem="BKk-MQ-i99" secondAttribute="trailing" constant="20" id="nYq-Xr-RR1"/>
-                            <constraint firstItem="l84-B2-Ah7" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" constant="-200" id="q0N-Sq-uQG"/>
+                            <constraint firstItem="l84-B2-Ah7" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="52" id="kgR-0v-qgW"/>
                             <constraint firstItem="4UO-g9-oM3" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" id="thc-cx-lh2"/>
-                            <constraint firstItem="J3M-li-wdE" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="10" id="vKP-93-pJN"/>
-                            <constraint firstItem="l84-B2-Ah7" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="10" id="xRb-ej-ctY"/>
+                            <constraint firstItem="DXA-Z3-MnK" firstAttribute="top" secondItem="M0v-nZ-1yO" secondAttribute="top" constant="305" id="xVA-4d-zJ9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sFz-TR-K4d"/>
                     </view>
@@ -219,6 +244,9 @@
     </scenes>
     <resources>
         <image name="arrow.up" catalog="system" width="60" height="64"/>
+        <image name="bronze-direita" width="240" height="293"/>
+        <image name="bronze-esquerda" width="241" height="293"/>
+        <image name="mapa" width="1080" height="1920"/>
         <image name="shopping-blur" width="4500" height="8000"/>
     </resources>
 </document>
