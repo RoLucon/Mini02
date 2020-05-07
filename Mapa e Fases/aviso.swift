@@ -281,12 +281,16 @@ class selecf: UIViewController{
             fundoFase?.image = UIImage(named: "shopping")
         case 3:
             fase3?.backgroundColor = nil
+            fundoFase?.image = UIImage(named: "republica")
         case 4:
             fase4?.backgroundColor = nil
+            fundoFase?.image = UIImage(named: "faculdade")
         case 5:
             fase5?.backgroundColor = nil
+            fundoFase?.image = UIImage(named: "quarto")
         case 6:
             fase6?.backgroundColor = nil
+            fundoFase?.image = UIImage(named: "parque")
         case 7:
             fase7?.backgroundColor = nil
         case 8:
