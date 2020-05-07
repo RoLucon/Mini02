@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LfF-N0-uim">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -93,6 +93,12 @@
                                 <color key="textColor" red="0.51372549020000002" green="0.43921568630000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo disponível: R$ X.XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-7h-4CH">
+                                <rect key="frame" x="94" y="488" width="226" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.58665370939999995" green="0.51559019090000002" blue="0.3960559964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -103,12 +109,14 @@
                             <constraint firstItem="WKA-PM-9A0" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="124" id="O4b-ue-sP2"/>
                             <constraint firstItem="Jjn-rt-nyb" firstAttribute="trailing" secondItem="BoC-S9-srU" secondAttribute="trailing" constant="81" id="Qer-ZH-Cge"/>
                             <constraint firstItem="Bjt-6j-80t" firstAttribute="leading" secondItem="xNu-lJ-i7U" secondAttribute="trailing" constant="8" id="R1B-Ec-bRi"/>
+                            <constraint firstItem="jzs-7h-4CH" firstAttribute="top" secondItem="hk7-aV-Kf2" secondAttribute="bottom" constant="5" id="ScF-PE-3FS"/>
                             <constraint firstItem="hk7-aV-Kf2" firstAttribute="centerY" secondItem="jRb-et-zQe" secondAttribute="centerY" constant="50" id="Yj3-sy-imo"/>
                             <constraint firstItem="SGQ-k3-PQK" firstAttribute="leading" secondItem="WKA-PM-9A0" secondAttribute="trailing" constant="15" id="ZzG-fA-CtO"/>
                             <constraint firstItem="1NX-0I-bzz" firstAttribute="centerY" secondItem="jRb-et-zQe" secondAttribute="centerY" id="ae2-zY-GBk"/>
                             <constraint firstItem="xNu-lJ-i7U" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="80" id="cD2-W7-2Mh"/>
                             <constraint firstItem="BoC-S9-srU" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="124" id="eV2-18-fbO"/>
                             <constraint firstItem="Jjn-rt-nyb" firstAttribute="bottom" secondItem="8xD-kM-z7i" secondAttribute="bottom" constant="90" id="nYe-XO-aTC"/>
+                            <constraint firstItem="jzs-7h-4CH" firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="nqZ-I3-dgc"/>
                             <constraint firstItem="BoC-S9-srU" firstAttribute="leading" secondItem="SGQ-k3-PQK" secondAttribute="trailing" constant="1" id="o0d-8g-Xpt"/>
                             <constraint firstItem="8xD-kM-z7i" firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="oY0-7U-YQl"/>
                             <constraint firstItem="Bjt-6j-80t" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="80" id="ruF-Ms-tfa"/>
@@ -122,6 +130,7 @@
                         <outlet property="SaldoDisponivel" destination="hk7-aV-Kf2" id="NIk-XS-EEk"/>
                         <outlet property="ValorTextField" destination="Eus-IB-57r" id="8fF-vb-to4"/>
                         <outlet property="actionLabel" destination="SGQ-k3-PQK" id="HZr-wM-SiV"/>
+                        <outlet property="valorMinimo" destination="jzs-7h-4CH" id="Xen-VE-MXf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNP-4R-ayd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -451,7 +460,6 @@
                                     <imageView hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qf9-mb-A3y">
                                         <rect key="frame" x="59" y="481" width="101" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                 </subviews>
@@ -1526,6 +1534,29 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2F7-Jr-gRW">
+                                <rect key="frame" x="292" y="236" width="90" height="35"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="aWO-An-8cu"/>
+                                    <constraint firstAttribute="height" constant="35" id="hNa-ib-NT7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Pagar">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pagar:" destination="LEQ-ax-7Ib" eventType="touchUpInside" id="3TL-ba-PdP"/>
+                                    <segue destination="0Sz-f1-YC4" kind="popoverPresentation" identifier="pagarFatura" popoverAnchorView="2F7-Jr-gRW" id="1qu-fZ-OjY">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                             <view hidden="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-BW-xD3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
@@ -1599,29 +1630,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2F7-Jr-gRW">
-                                <rect key="frame" x="292" y="236" width="90" height="35"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="aWO-An-8cu"/>
-                                    <constraint firstAttribute="height" constant="35" id="hNa-ib-NT7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Pagar">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="pagar:" destination="LEQ-ax-7Ib" eventType="touchUpInside" id="3TL-ba-PdP"/>
-                                    <segue destination="0Sz-f1-YC4" kind="popoverPresentation" identifier="pagarFatura" popoverAnchorView="2F7-Jr-gRW" id="1qu-fZ-OjY">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1666,6 +1674,7 @@
                         <outlet property="faturaKim" destination="lfv-h4-Vdp" id="wQi-dA-pfs"/>
                         <outlet property="faturaTexto" destination="bTd-R8-1AW" id="dMs-Cr-tGX"/>
                         <outlet property="faturaView" destination="Hu0-BW-xD3" id="qUJ-lJ-mTh"/>
+                        <outlet property="pagarBtn" destination="2F7-Jr-gRW" id="zHc-UV-0ma"/>
                         <outlet property="setaFatura" destination="6ik-CW-DBO" id="lJv-ey-O6m"/>
                     </connections>
                 </viewController>
@@ -1736,8 +1745,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="S9E-Fe-Ghc"/>
         <segue reference="Usl-gZ-DIe"/>
-        <segue reference="ENy-2t-sxU"/>
-        <segue reference="sW6-Px-Z69"/>
+        <segue reference="yTC-S7-h55"/>
+        <segue reference="1qu-fZ-OjY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up" catalog="system" width="120" height="128"/>

@@ -34,6 +34,7 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var setaFatura: UIImageView!
     @IBOutlet weak var faturaAtual: UILabel!
     @IBOutlet weak var cartaoLimite: UILabel!
+    @IBOutlet weak var pagarBtn: UIButton!
     
     var banco = Personagem.shared.dinheiro(nil)
     let personagem: Personagem = Personagem.shared
@@ -257,6 +258,7 @@ class BancoViewController: UIViewController {
             }
             faturaKim?.isHidden = false
             faturaTexto?.text = textoFase2[contadorBanco]
+            pagarBtn?.isUserInteractionEnabled = false
         }
     }
     @IBAction func contas(_ sender: Any) {
@@ -296,11 +298,14 @@ class BancoViewController: UIViewController {
                 case 3:
                     NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarView"), object: nil)
                 case 6:
+                    pagarBtn.isUserInteractionEnabled = true
+                    view.addSubview(pagarBtn)
                     faturaView?.isHidden = false
                     setaFatura?.isHidden = false
                     setaFatura?.center.x += 310
                     setaFatura?.center.y += 185
                 case 7:
+                    pagarBtn?.isUserInteractionEnabled = false
                     faturaView?.isHidden = true
                     setaFatura?.isHidden = true
                     fundoView?.isHidden = true
@@ -500,9 +505,9 @@ class PoupancaView: UIViewController {
         } else if ValorTextField.hasText && total < minimo && action == "pagar" {
             valorMinimo.textColor = .red
         } else {
-            SaldoDisponivel.textColor = .black
+            SaldoDisponivel.textColor = .some(#colorLiteral(red: 0.6011368632, green: 0.5123596191, blue: 0.379470706, alpha: 1))
             if action == "pagar" {
-                valorMinimo.textColor = .black
+                valorMinimo.textColor = .some(#colorLiteral(red: 0.6011368632, green: 0.5123596191, blue: 0.379470706, alpha: 1))
             }
         }
     }
