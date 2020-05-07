@@ -27,6 +27,8 @@ class CustomizacaoViewController: UIViewController {
         
         imgView.image = UIImage(named: images[index])
         
+        confirmBtt.layer.cornerRadius = 12
+        
         previous.addTarget(self, action: #selector(previusClick), for: .touchUpInside)
         nextBtt.addTarget(self, action: #selector(nextClick), for: .touchUpInside)
     }
