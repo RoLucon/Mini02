@@ -34,11 +34,22 @@ class ConfigView: UIView {
         return btt
     }()
     
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "CONFIGURACAO"
+        label.textColor = #colorLiteral(red: 0.9490196078, green: 0.9333333333, blue: 0.9058823529, alpha: 1)
+        label.font = UIFont.boldSystemFont(ofSize: 30)
+        label.textAlignment = .center
+        label.backgroundColor = .clear
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     let versionLabel: UILabel = {
         let label = UILabel()
         label.text = "v0.0"
         label.textColor = #colorLiteral(red: 0.9490196078, green: 0.9333333333, blue: 0.9058823529, alpha: 1)
-        label.backgroundColor = #colorLiteral(red: 0.5137254902, green: 0.4392156863, blue: 0.3215686275, alpha: 1)
+        label.backgroundColor = .clear
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -67,6 +78,7 @@ class ConfigView: UIView {
         bg.addSubview(suporteBtt)
         bg.addSubview(resetBtt)
         bg.addSubview(versionLabel)
+        bg.addSubview(titleLabel)
         
 //        audioConfig()
 //        pushConfig()
@@ -76,6 +88,11 @@ class ConfigView: UIView {
         
         quitBtt.topAnchor.constraint(equalTo: bg.topAnchor, constant: 16).isActive = true
         quitBtt.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
+        
+        titleLabel.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: bg.topAnchor, constant: 16).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: quitBtt.leadingAnchor, constant: -16).isActive = true
         
         versionLabel.heightAnchor.constraint(equalToConstant: 31).isActive = true
         versionLabel.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -8).isActive = true
@@ -97,6 +114,7 @@ class ConfigView: UIView {
         stackView.bottomAnchor.constraint(equalTo: suporteBtt.topAnchor, constant: -16).isActive = true
         stackView.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 16).isActive = true
         stackView.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -16).isActive = true
+        
         
     }
     
