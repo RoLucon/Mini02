@@ -14,7 +14,7 @@ class ConfigView: UIView {
     
     let bg: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = #colorLiteral(red: 0.5137254902, green: 0.4392156863, blue: 0.3215686275, alpha: 1)
         view.layer.cornerRadius = 14
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -23,7 +23,7 @@ class ConfigView: UIView {
     let quitBtt: UIButton = {
         let size = 44
         let btt = UIButton()
-        btt.backgroundColor = .black
+        btt.backgroundColor = #colorLiteral(red: 0.1725490196, green: 0.1098039216, blue: 0.04705882353, alpha: 1)
         btt.layer.borderWidth = 3
         btt.layer.borderColor = UIColor.white.cgColor
         btt.layer.cornerRadius = CGFloat(size / 2)
@@ -37,8 +37,8 @@ class ConfigView: UIView {
     let versionLabel: UILabel = {
         let label = UILabel()
         label.text = "v0.0"
-        label.textColor = .white
-        label.backgroundColor = .black
+        label.textColor = #colorLiteral(red: 0.9490196078, green: 0.9333333333, blue: 0.9058823529, alpha: 1)
+        label.backgroundColor = #colorLiteral(red: 0.5137254902, green: 0.4392156863, blue: 0.3215686275, alpha: 1)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -138,12 +138,14 @@ class ConfigView: UIView {
     
     private func switchesBtt(name: String) -> UIStackView {
         let btt = UISwitch(frame: .init(x: 0, y: 0, width: 51, height: 31))
-        btt.backgroundColor = .gray
+        btt.backgroundColor = #colorLiteral(red: 0.8078431373, green: 0.7843137255, blue: 0.7450980392, alpha: 1)
+        btt.thumbTintColor = #colorLiteral(red: 0.1725490196, green: 0.1098039216, blue: 0.04705882353, alpha: 1)
         btt.layer.cornerRadius = btt.frame.size.height / 2
         
         let label = UILabel()
         label.text = name
-        label.textColor = .white
+        label.textColor = #colorLiteral(red: 0.1725490196, green: 0.1098039216, blue: 0.04705882353, alpha: 1)
+        label.font = UIFont.systemFont(ofSize: 18)
         
         let stackView = UIStackView(arrangedSubviews: [label, UIView(), btt])
         stackView.axis = .horizontal
@@ -154,7 +156,7 @@ class ConfigView: UIView {
     
     private func subConfig(name: String, switcheNames: [String]) -> UIView {
         let view = UIView()
-        view.backgroundColor = .darkGray
+        view.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9333333333, blue: 0.9058823529, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 10
         bg.addSubview(view)
@@ -162,7 +164,8 @@ class ConfigView: UIView {
         let label = UILabel()
         label.backgroundColor = view.backgroundColor
         label.text = name
-        label.textColor = .white
+        label.textColor = #colorLiteral(red: 0.1725490196, green: 0.1098039216, blue: 0.04705882353, alpha: 1)
+        label.font = UIFont.boldSystemFont(ofSize: 25)
         view.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.topAnchor.constraint(equalTo: view.topAnchor, constant: 8).isActive = true
@@ -197,12 +200,12 @@ class ConfigView: UIView {
     private func buttons(name: String) -> UIButton {
         let btt = UIButton()
         btt.setTitle(name, for: .normal)
-        btt.tintColor = .white
-        btt.layer.borderWidth = 3
+        btt.tintColor = #colorLiteral(red: 0.8078431373, green: 0.7843137255, blue: 0.7450980392, alpha: 1)
+        btt.layer.borderWidth = 0
         btt.layer.borderColor = UIColor.white.cgColor
-        btt.layer.cornerRadius = 32
+        btt.layer.cornerRadius = 12
         btt.translatesAutoresizingMaskIntoConstraints = false
-        btt.backgroundColor = .black
+        btt.backgroundColor = #colorLiteral(red: 0.1725490196, green: 0.1098039216, blue: 0.04705882353, alpha: 1)
         return btt
     }
     
