@@ -207,7 +207,8 @@ class selecf: UIViewController{
     var teste = false
     
     func dialogo(){
-        print(c)
+        print(rostos[c]!)
+        rosto(rostos[c]!)
         ApareceSeta(c)
         fala?.text = texto[c]
         print("texto n: " + String(c))
@@ -223,7 +224,6 @@ class selecf: UIViewController{
         
         if c == 8 || c == 21 || c == 30 || c == 42 {
             banco?.isUserInteractionEnabled = true
-            rosto("kimpiscada")
         }else if c == 6 || c == 7{
             c = 96
         }else if c == 22 && prog == 2 {
@@ -267,7 +267,6 @@ class selecf: UIViewController{
         super.viewDidLoad()
         dialogo()
         observer()
-
         //Progresso de fases
         switch prog {
         case 1:
@@ -275,7 +274,6 @@ class selecf: UIViewController{
             fundoFase?.image = UIImage(named: "parque")
             faseView?.backgroundColor = .systemGreen
             setaBanco?.tintColor = .systemRed
-            rosto("kimneutra")
         case 2:
             fase2?.backgroundColor = nil
             fundoFase?.image = UIImage(named: "shopping")
