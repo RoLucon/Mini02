@@ -16,6 +16,7 @@ extension Investe : UITextFieldDelegate {
 }
 
 class Investe: UIViewController{
+    var play = PlayerMusic()
     var valorGuardado:Int = 0
     var contador:Int = 0
     let investimento: Investimento = Investimento()
@@ -109,6 +110,7 @@ class Investe: UIViewController{
                 saldoIndisponivel.isHidden = false
             }
             else{
+                play.toca(music: "coin.mp3")
                 investimento.setAplicada(investimento.getAplicada() + Double(investido))
                 investimento.setBruto(investimento.getBruto() + Double(investido))
                 _ = personagem.mexerDinheiro(valor: -1 * investido)
@@ -119,6 +121,7 @@ class Investe: UIViewController{
             atualizaSaldoDispo()
         }
         else{
+            play.toca(music: "coin.mp3")
             self.dismiss(animated: true, completion: nil)
         }
     }

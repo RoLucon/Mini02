@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -171,6 +172,14 @@
                                 <rect key="frame" x="20" y="49" width="146" height="30"/>
                                 <connections>
                                     <segue destination="eKD-Yn-BDf" kind="show" id="JMt-2s-C6P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Z3-ow-rP6">
+                                <rect key="frame" x="316" y="257" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="TocaMusica"/>
+                                <connections>
+                                    <action selector="tocamusica:" destination="AsA-4X-mir" eventType="touchUpInside" id="1Df-LN-chM"/>
                                 </connections>
                             </button>
                         </subviews>
