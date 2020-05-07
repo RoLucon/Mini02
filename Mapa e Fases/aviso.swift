@@ -218,6 +218,7 @@ class selecf: UIViewController{
         ApareceSeta(c)
         fala?.text = texto[c]
         print("texto n: " + String(c))
+        play1.toca(music: "botao.mp3")
         
         if c == 36 {
             passaButton.isHidden = true

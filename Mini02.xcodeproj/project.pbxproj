@@ -20,6 +20,7 @@
 		1C8B12062464C1D600A073B3 /* neutro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B12052464C1D600A073B3 /* neutro.mp3 */; };
 		1C8B12082464C2D600A073B3 /* feliz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B12072464C2D600A073B3 /* feliz.mp3 */; };
 		1C8B120A2464C3FB00A073B3 /* padrao4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B12092464C3FB00A073B3 /* padrao4.mp3 */; };
+		1C8B120C2464C84E00A073B3 /* botao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B120B2464C84E00A073B3 /* botao.mp3 */; };
 		1CC462B42450DF0600D6CB59 /* InvestimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */; };
 		1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B52450E25300D6CB59 /* InvestirViewController.swift */; };
 		1CC462B82450E30700D6CB59 /* SacarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B72450E30700D6CB59 /* SacarViewController.swift */; };
@@ -90,6 +91,7 @@
 		1C8B12052464C1D600A073B3 /* neutro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = neutro.mp3; sourceTree = "<group>"; };
 		1C8B12072464C2D600A073B3 /* feliz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feliz.mp3; sourceTree = "<group>"; };
 		1C8B12092464C3FB00A073B3 /* padrao4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = padrao4.mp3; sourceTree = "<group>"; };
+		1C8B120B2464C84E00A073B3 /* botao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = botao.mp3; sourceTree = "<group>"; };
 		1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoViewController.swift; sourceTree = "<group>"; };
 		1CC462B52450E25300D6CB59 /* InvestirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestirViewController.swift; sourceTree = "<group>"; };
 		1CC462B72450E30700D6CB59 /* SacarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacarViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				89E3EAE824326209007C2CFC /* Banco.storyboard */,
 				1C8B11F72464A7D800A073B3 /* coin.mp3 */,
 				C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */,
+				1C8B120B2464C84E00A073B3 /* botao.mp3 */,
 				C0DC056E245D1C4100CA893F /* ExtratoViewController.swift */,
 				40BAA4082437DAC4002FA0CE /* Fase.storyboard */,
 				40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */,
@@ -409,6 +412,7 @@
 				1C8B12002464BD0200A073B3 /* padrao3.mp3 in Resources */,
 				40BAA40E2437DAC4002FA0CE /* FeedBack.storyboard in Resources */,
 				1C8B11FE2464B35100A073B3 /* padrao2.mp3 in Resources */,
+				1C8B120C2464C84E00A073B3 /* botao.mp3 in Resources */,
 				40BAA40F2437DAC4002FA0CE /* Fase.storyboard in Resources */,
 				1C8B12022464C09500A073B3 /* incendio.mp3 in Resources */,
 				1C8B11FC2464B1F700A073B3 /* padrao.mp3 in Resources */,
