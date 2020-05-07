@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eJk-59-TAO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -498,27 +498,40 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aquela explicacao marota" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ych-Gm-VEj">
-                            <rect key="frame" x="15" y="40" width="310" height="21.5"/>
+                            <rect key="frame" x="15" y="40" width="310" height="295"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" red="0.17254901960784313" green="0.10980392156862745" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5H-s7-Gl4">
-                            <rect key="frame" x="128" y="71.5" width="84" height="577"/>
-                            <state key="normal" title="Ok, entendi!"/>
+                            <rect key="frame" x="32" y="345" width="276" height="30"/>
+                            <color key="backgroundColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="OFJ-vz-d74"/>
+                            </constraints>
+                            <state key="normal" title="Ok, entendi!">
+                                <color key="titleColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="ajudaFechar:" destination="mSW-eH-V3v" eventType="touchUpInside" id="r7t-5k-dqy"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" red="0.80784313725490198" green="0.78431372549019607" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="t5H-s7-Gl4" firstAttribute="centerY" secondItem="obg-gk-xFe" secondAttribute="centerY" constant="160" id="21n-5y-dYC"/>
                         <constraint firstItem="ych-Gm-VEj" firstAttribute="top" secondItem="obg-gk-xFe" secondAttribute="top" constant="40" id="6eU-hq-NfX"/>
                         <constraint firstItem="ych-Gm-VEj" firstAttribute="leading" secondItem="obg-gk-xFe" secondAttribute="leading" constant="15" id="AVh-8w-OQ3"/>
                         <constraint firstItem="t5H-s7-Gl4" firstAttribute="centerX" secondItem="obg-gk-xFe" secondAttribute="centerX" id="MaD-xm-eYS"/>
                         <constraint firstItem="ych-Gm-VEj" firstAttribute="centerX" secondItem="obg-gk-xFe" secondAttribute="centerX" id="Wph-Zg-tmx"/>
+                        <constraint firstItem="t5H-s7-Gl4" firstAttribute="leading" secondItem="UvV-uf-gzG" secondAttribute="leading" constant="32" id="gVl-dM-ScJ"/>
                         <constraint firstItem="t5H-s7-Gl4" firstAttribute="top" secondItem="ych-Gm-VEj" secondAttribute="bottom" constant="10" id="kJA-MC-Xx5"/>
+                        <constraint firstItem="UvV-uf-gzG" firstAttribute="trailing" secondItem="t5H-s7-Gl4" secondAttribute="trailing" constant="32" id="tK0-WJ-VOA"/>
                         <constraint firstAttribute="trailing" secondItem="ych-Gm-VEj" secondAttribute="trailing" constant="15" id="yE4-EA-had"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="UvV-uf-gzG"/>
