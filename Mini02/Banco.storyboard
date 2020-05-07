@@ -77,6 +77,9 @@
                                         <color key="textColor" red="0.51372549019607838" green="0.4392156862745098" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="alterarValor:" destination="0Sz-f1-YC4" eventType="editingChanged" id="avI-fW-oVO"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -471,7 +474,7 @@
                                 <rect key="frame" x="0.0" y="756" width="414" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é tela do banco" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m4-fx-PK5">
-                                        <rect key="frame" x="115" y="5" width="279" height="95"/>
+                                        <rect key="frame" x="125" y="5" width="269" height="95"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -487,7 +490,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kimfb-bom" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JZS-Xx-jJy">
-                                        <rect key="frame" x="10" y="8" width="85" height="90"/>
+                                        <rect key="frame" x="20" y="8" width="85" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="Wja-BA-9cN"/>
                                             <constraint firstAttribute="width" constant="85" id="wY3-uL-9Z0"/>
@@ -510,12 +513,11 @@
                                     <constraint firstAttribute="trailing" secondItem="SgM-xy-gwG" secondAttribute="trailing" constant="20" id="RUs-Je-8XB"/>
                                     <constraint firstAttribute="height" constant="140" id="ThV-Wl-I1J"/>
                                     <constraint firstItem="SgM-xy-gwG" firstAttribute="leading" secondItem="KEw-5b-loZ" secondAttribute="trailing" constant="10" id="ZZf-eu-Q3N"/>
-                                    <constraint firstItem="JZS-Xx-jJy" firstAttribute="leading" secondItem="mj0-dj-uZW" secondAttribute="leading" id="aO4-6P-7UN"/>
                                     <constraint firstItem="3m4-fx-PK5" firstAttribute="top" secondItem="mj0-dj-uZW" secondAttribute="top" constant="5" id="aY1-e4-VHu"/>
                                     <constraint firstAttribute="bottom" secondItem="SgM-xy-gwG" secondAttribute="bottom" constant="25" id="eq2-kG-8pr"/>
                                     <constraint firstAttribute="bottom" secondItem="3m4-fx-PK5" secondAttribute="bottom" constant="40" id="g6c-Dn-jPJ"/>
                                     <constraint firstAttribute="bottom" secondItem="JZS-Xx-jJy" secondAttribute="bottom" constant="42" id="lNw-jN-S23"/>
-                                    <constraint firstItem="JZS-Xx-jJy" firstAttribute="leading" secondItem="mj0-dj-uZW" secondAttribute="leading" constant="10" id="oqA-ym-hvu"/>
+                                    <constraint firstItem="JZS-Xx-jJy" firstAttribute="leading" secondItem="mj0-dj-uZW" secondAttribute="leading" constant="20" id="oqA-ym-hvu"/>
                                     <constraint firstItem="3m4-fx-PK5" firstAttribute="leading" secondItem="JZS-Xx-jJy" secondAttribute="trailing" constant="20" id="pPp-bQ-P6e"/>
                                     <constraint firstAttribute="trailing" secondItem="3m4-fx-PK5" secondAttribute="trailing" constant="20" id="rfo-Iy-Mgr"/>
                                 </constraints>
@@ -1771,7 +1773,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="S9E-Fe-Ghc"/>
         <segue reference="Usl-gZ-DIe"/>
-        <segue reference="d73-3l-XYX"/>
+        <segue reference="ENy-2t-sxU"/>
         <segue reference="sW6-Px-Z69"/>
     </inferredMetricsTieBreakers>
     <resources>

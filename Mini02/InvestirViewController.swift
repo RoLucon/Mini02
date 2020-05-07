@@ -67,7 +67,7 @@ class Investe: UIViewController{
     
     func atualizaSaldoDispo(){
         let temp:Float? = personagem.mexerDinheiro(valor: nil)
-        saldoDisp.text = String(format: "Saldo disponível: R$ %.2f", temp!)
+        saldoDisp.text = String(format: "Saldo disponível: R$ %.2f", temp!).replacingOccurrences(of: ".", with: ",")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -95,7 +95,7 @@ class Investe: UIViewController{
             }
         }
         let aux: Double = Double(valorGuardado) / 100
-        vlrInvestido.text = String(aux)
+        vlrInvestido.text = String(format: "%.2f", aux).replacingOccurrences(of: ".", with: ",")
         contador = vlrInvestido.text?.count as! Int
     }
     

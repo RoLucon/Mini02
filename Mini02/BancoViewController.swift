@@ -375,6 +375,9 @@ class PoupancaView: UIViewController {
     var valorFt: String!
     
     var action = "xxxx"
+    var contador: Int = 0
+    var valorGuardado: Int = 0
+
     
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -417,6 +420,27 @@ class PoupancaView: UIViewController {
         }
     }
     
+    @IBAction func alterarValor(_ sender: Any) {
+            let last = (ValorTextField.text?.last)!
+            if ValorTextField.text!.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil {
+                let count:Int = ValorTextField.text?.count as! Int
+                if  count > contador {
+                if let valor = Double(String(last)) {
+                    valorGuardado = valorGuardado * 10 + Int(valor)
+                }
+                } else {
+                    if valorGuardado % 10 > 0 {
+                        let mod:Int = valorGuardado % 10
+                        valorGuardado = (valorGuardado - mod) / 10
+                    } else {
+                        valorGuardado = valorGuardado / 10
+                    }
+                }
+            }
+            let aux: Double = Double(valorGuardado) / 100
+            ValorTextField.text = String(format: "%.2f", aux).replacingOccurrences(of: ".", with: ",")
+            contador = ValorTextField.text?.count as! Int
+    }
     
     @IBAction func ConfirmarButton(_ sender: Any) {
 
@@ -461,8 +485,9 @@ class PoupancaView: UIViewController {
             } else if ValorTextField.hasText && action == "pagar" {
                 valorFt = ValorTextField.text?.replacingOccurrences(of: ",", with: ".")
                 let total = (valorFt as NSString).floatValue
+                let fatura = personagem.fatura(nil)
                 
-                if total <= banco! && total >= minimo {
+                if total <= banco! && total >= minimo && minimo > 0 && total <= fatura! {
                     _ = personagem.dinheiro(-total)
                     _ = personagem.fatura(-total)
                     NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
@@ -479,6 +504,13 @@ class PoupancaView: UIViewController {
                     let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
                     alert.addAction(cancelAction)
                     self.present(alert, animated: true, completion: nil)
+                } else if total > fatura! {
+                    let alert = UIAlertController(title: "Valor da fatura: R$ " + String(format: "%.2f", fatura!).replacingOccurrences(of: ".", with: ","), message: nil, preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
+                    alert.addAction(cancelAction)
+                    self.present(alert, animated: true) {
+                        self.ValorTextField.text = String(format: "%.2f", fatura!).replacingOccurrences(of: ".", with: ",")
+                    }
                 }
                 
             }
