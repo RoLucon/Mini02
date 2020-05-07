@@ -222,6 +222,22 @@ class selecf: UIViewController{
             impRenda.isHidden = false
         }
         
+        if c == 61{
+            fundo(fundo: "republica")
+        } else if c == 73{
+            fundo(fundo: "republica-fumaca")
+        } else if c == 74{
+            fundo(fundo: "republica-incendio")
+        } else if c == 77{
+            fundoFase?.image = nil
+        } else if c == 82{
+            fundo(fundo: "mudanca")
+        } else if c == 87{
+            fundo(fundo: "republica-queimada")
+        } else if c == 93{
+            fundo(fundo: "kitnet")
+        }
+        
         if c == 8 || c == 21 || c == 30 || c == 42 {
             banco?.isUserInteractionEnabled = true
         }else if c == 6 || c == 7{
@@ -258,6 +274,10 @@ class selecf: UIViewController{
     func rosto (_ rosto:String) {
         kimRosto?.image = UIImage(named: rosto)
     }
+    
+    func fundo (fundo:String){
+            fundoFase?.image = UIImage(named: fundo)
+    }
         
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -271,28 +291,30 @@ class selecf: UIViewController{
         switch prog {
         case 1:
             fase1?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "parque")
+            fundo(fundo: "parque")
             faseView?.backgroundColor = .systemGreen
             setaBanco?.tintColor = .systemRed
         case 2:
             fase2?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "shopping")
+            fundo(fundo: "shopping")
         case 3:
             fase3?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "republica")
+            fundo(fundo: "republica")
         case 4:
             fase4?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "faculdade")
+            fundo(fundo: "faculdade")
         case 5:
             fase5?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "quarto")
+            fundo(fundo: "quarto")
         case 6:
             fase6?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "parque")
+            fundo(fundo: "parque")
         case 7:
             fase7?.backgroundColor = nil
+            fundoFase?.image = nil
         case 8:
             fase8?.backgroundColor = nil
+            fundoFase?.image = nil
         default:
             print("ERRO")
         }
