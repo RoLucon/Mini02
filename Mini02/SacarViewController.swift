@@ -8,6 +8,8 @@
 
 import UIKit
 
+var play = PlayerMusic()
+
 
 extension Saque : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -17,7 +19,6 @@ extension Saque : UITextFieldDelegate {
 }
 
 class Saque: UIViewController{
-    var play = PlayerMusic()
     var valorGuardado:Int = 0
     var contador:Int = 0
     
