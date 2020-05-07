@@ -24,7 +24,7 @@ let texto = [
     //Inicio cap 1
 1: "\(personagem.nome!)… Hoje é um belo dia.\nOs pássaros estão cantando, o céu está ensolarado…\nE o seu salário caiu.",
 2: "Fala aí, \(personagem.nome!)!\nRecebeu hoje, né?",
-    3: "Ehh… Não foi isso que conversamos ontem, \(personagem.nome!).",
+3: "Ehh… Não foi isso que conversamos ontem, \(personagem.nome!).",
 4: "Olha só, nossa conversa de ontem até que fez efeito!",
 5: "De qualquer forma, sua situação está mesmo caótica. Desespero nunca é a saída. Mas eu estaria desesperada no seu lugar!",
 6: "Pagar conta é massa, mas pensar no futuro também é, sabe?!",
@@ -121,13 +121,14 @@ let texto = [
 87: "\(personagem.nome!)… Você optou por não nos ajudar.\nMas sua grana também é insuficiente para comprar o Celta.",
 88: "Eu respeito sua decisão, amigo. Mas, na próxima, guarde melhor o seu dinheiro.",
     //Cap 8.3 - Escolheu ajudar e tem dinheiro
-89: "Kleytinho…\nEsse foi o seu andamento até aqui.",
+89: "\(personagem.nome!)…\nEsse foi o seu andamento até aqui.",
 90: "Você tem <valor> na conta bancária. <valor> na conta corrente  e <valor> guardado na poupança.",
 91: "Nos investimentos, você aplicou <valor>, que te rendeu <valor> de lucro.",
 92: "Quanto às dívidas, você ficou com <valor> pendentes. <valor> são de contas essenciais, <valor> são da fatura.",
-93: "Kleytinho…\nGraças a você, conseguimos nos reestabelecer em um novo lugar!\nE sem prejudicar na nossa faculdade.",
+93: "\(personagem.nome!)…\nGraças a você, conseguimos nos reestabelecer em um novo lugar!\nE sem prejudicar na nossa faculdade.",
 94: "Obrigada! Graças à sua boa vontade e educação financeira, tudo ficou bem.",
 95: "Não esqueça de manter a disciplina na vida real também, viu?",
+    //Parte score fase 1
 97: "Tá vendo aquele score ali?",
 98: "Ele está vermelho, né?\nÉ… Não é um bom sinal.",
 99: "Gastar todo o seu salário faz parte disso. Sempre guarde um pouco do que você ganha. Para emergências!.",
@@ -274,7 +275,7 @@ let per = [
 53: "Eu não estou feliz com esse dia, sabe…", 54: "Sei, sim…", 55: "Ué, por quê?", 56: " ",
 57: "Serve para que quem ganhe mais, contribua mais e quem ganha menos, contribua menos.", 58: "O que fazem com o dinheiro?", 59: "Não quero contribuir nada, não.", 60: " ",
     //Cap 7
-61: "Kleytinho… O que você quer fazer?", 62: "Vou ajudar vocês!",/*Eu tenho dinheiro guardado, Kim. Vou ajudar vocês!*/ 63: "Desculpa… Mas não irei ajudar", 64: " ",
+61: "\(personagem.nome!)… O que você quer fazer?", 62: "Vou ajudar vocês!",/*Eu tenho dinheiro guardado, Kim. Vou ajudar vocês!*/ 63: "Desculpa… Mas não irei ajudar", 64: " ",
 ]
 
 //Todas as explicações presentes nas fases
@@ -284,7 +285,7 @@ let help = [
 "Optar por utilizar o salário para pagar as dívidas que conseguir.", "Optar por guardar dinheiro para ir pagando as dívidas aos poucos.", " ",// 3 4 5
 "Aceitar o convite.", "Se preocupar com sua situação financeira.", " ",// 6 7 8
     //Cap 2
-"Comprar o que quiser e se virar para pagar as faturas do cartão depois.", "Gastar conforme o dinheiro disponível na conta.", " ",// 9 10 11
+"O crédito é uma espécie de empréstimo que precisa ser pago ao final ou início do mês, dependendo da instituição.\n(Comprar o que quiser e se virar para pagar as faturas do cartão depois.)", "O débito é o valor íntegro da sua conta (geralmente corrente).\n(Gastar conforme o dinheiro disponível na conta.)", " ",// 9 10 11
 "Ajuda 1 p5", "Ajuda 2 p5", " ",// 12 13 14 - RETIRAR
     //Cap 3
 "Está preocupado com as contas.", "Está tranquilo por já ter pago a fatura.", " ",// 15 16 17
@@ -302,6 +303,22 @@ let help = [
     //Cap 7
 "Utilizar o dinheiro que guardou durante a faculdade para garantir um lugar para todos morarem novamente, e deixar para depois a meta de adquirir seu Celta.", "Não contribuir para se reestruturarem por ter o foco em comprar seu Celta o mais rápido possível.", " ",// 42 43 44
 ]
+
+let rostos = [
+0: "kimneutra",1: "kimneutra",2: "kimdentes",3: "kimderp",4: "kimlingua",5: "kimdentes",6: "kimpiscada",7: "kimlingua",8: "kimlingua",9: "kimneutra",
+10: "kimbrava",11: "kimtriste",12: "kimlingua",13: "kimneutra",14: "kimlingua",15: "kimneutra",16: "kimderp",17: "kimlingua",
+18: "kimtriste",19: "kimpiscada",20: "kimneutra",21: "kimpiscada",22: "kimneutra",23: "kimtriste",24: "kimneutra",25: "kimneutra",
+26: "kimpiscada",27: "kimdentes",28: "kimlingua",29: "kimneutra",30: "kimpiscada",31: "kimneutra",32: "kimneutra",33: "kimpiscada",
+34: "kimdentes",35: "kimderp",36: "kimpiscada",37: "kimneutra",38: "kimlingua",39: "kimdentes",40: "kimneutra",41: "kimneutra",
+42: "kimpiscada",43: "kimpiscada",44: "kimlingua",45: "kimlingua",46: "kimtriste2",47: "kimneutra",48: "kimpiscada",49: "kimbrava",
+50: "kimneutra",51: "kimneutra",52: "kimneutra",53: "kimpiscada",54: "kimneutra",55: "kimneutra",56: "kimpiscada",57: "kimpiscada",
+58: "kimneutra",59: "kimpiscada",60: "kimneutra",61: "kimtriste",62: "kimtriste2",63: "kimtriste",64: "kimneutra",65: "kimneutra",
+66: "kimneutra",67: "kimpiscada",68: "kimderp",69: "kimneutra",70: "kimpiscada",71: "kimneutra",72: "kimneutra",73: "kimneutra",
+74: "kimneutra",75: "kimtriste2",76: "kimtriste",77: "kimtriste",78: "kimneutra",79: "kimneutra",80: "kimneutra",81: "kimneutra",
+82: "kimtriste",83: "kimneutra",84: "kimneutra",85: "kimneutra",86: "kimneutra",87: "kimtriste2",88: "kimtriste",89: "kimneutra",
+90: "kimneutra",91: "kimneutra",92: "kimneutra",93: "kimdentes",94: "kimneutra",95: "kimpiscada",97: "kimneutra",98: "kimtriste",
+99: "kimneutra",100: "kimneutra"]
+
 var prog = 1 // Representa o progresso do jogador
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
