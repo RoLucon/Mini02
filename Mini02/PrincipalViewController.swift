@@ -20,7 +20,6 @@ let atualizaFalaNotificationKey = "co.gusrigor.atualizaFala"
 let atualizaSetaBancoNotificationKey = "co.gusrigor.atualizaSetaBanco"
 
 class ViewController: UIViewController {
-    var playSound = PlayerMusic()
     @IBOutlet weak var personagemSituacao: UIImageView!
     @IBOutlet var scorePopover: UIView!
     //Fala da personagem no campo da tela de intro
@@ -50,7 +49,7 @@ class ViewController: UIViewController {
         atualizaSituacao()
         observer()
         zeraContadorBanco()
-        playSound.toca(music: "padrao2.mp3")
+        play.toca(music: "padrao2.mp3")
         // Do any additional setup after loading the view.
     }
   
@@ -131,7 +130,7 @@ class ViewController: UIViewController {
         Situacao.text = situacao
     }
     @IBAction func tocamusica(_ sender: Any) {
-        playSound.toca(music: "coin.mp3")
+        play.toca(music: "coin.mp3")
     }
 }
 

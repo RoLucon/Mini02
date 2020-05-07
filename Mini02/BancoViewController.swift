@@ -9,8 +9,8 @@
 import UIKit
 import AVFoundation
 
+
 class BancoViewController: UIViewController {
-    var play = PlayerMusic()
     //Banco
     @IBOutlet weak var SaldoBanco: UILabel!
     @IBOutlet weak var SaldoPoupanca: UILabel!
@@ -362,7 +362,6 @@ extension PoupancaView : UITextFieldDelegate {
 
 
 class PoupancaView: UIViewController {
-    var play = PlayerMusic()
     @IBOutlet weak var actionLabel: UILabel!
     @IBOutlet weak var SaldoDisponivel: UILabel!
     @IBOutlet weak var ValorTextField: UITextField!

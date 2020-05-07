@@ -16,7 +16,6 @@ extension Investe : UITextFieldDelegate {
 }
 
 class Investe: UIViewController{
-    var play = PlayerMusic()
     var valorGuardado:Int = 0
     var contador:Int = 0
     let investimento: Investimento = Investimento()
