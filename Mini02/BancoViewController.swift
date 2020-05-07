@@ -16,6 +16,7 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var SaldoPoupanca: UILabel!
     @IBOutlet weak var nome: UILabel!
     @IBOutlet weak var foto: UIImageView!
+    @IBOutlet weak var rendimento: UILabel!
     
     //Banco História
     @IBOutlet weak var saldoConta: UIView!
@@ -89,11 +90,13 @@ class BancoViewController: UIViewController {
     func atualizarLabel() {
         let saldoConta = personagem.dinheiro(nil)
         let poupanca = personagem.poupanca(nil)
+        let rendido = 0.0
         let saldoFatura = personagem.fatura(nil)
         let limite = personagem.cartao(nil)! - saldoFatura!
         
         SaldoBanco?.text = "R$ " + String(format: "%.2f", saldoConta!).replacingOccurrences(of: ".", with: ",")
         SaldoPoupanca?.text = "R$ " + String(format: "%.2f", poupanca!).replacingOccurrences(of: ".", with: ",")
+        rendimento?.text = "R$ " + String(format: "%.2f", rendido).replacingOccurrences(of: ".", with: ",")
         cartaoLimite?.text = "R$ " + String(format: "%.2f", limite).replacingOccurrences(of: ".", with: ",")
         faturaAtual?.text = "Fatura atual: R$ " + String(format: "%.2f", saldoFatura!).replacingOccurrences(of: ".", with: ",")
     }
@@ -103,26 +106,25 @@ class BancoViewController: UIViewController {
             let destVC = segue.destination as! DicasView
             destVC.fatura = "ToFirstChild"
         }
-        if segue.identifier == Segues.dicaConta {
+        else if segue.identifier == Segues.dicaConta {
             let destVC = segue.destination as! DicasView
-            destVC.contas = "ToFirstChild"
-            
+            destVC.conta = "ToFirstChild"
         }
-        if segue.identifier == Segues.dicaBanco {
+        else if segue.identifier == Segues.dicaBanco {
             let destVC = segue.destination as! DicasView
             destVC.banco = "ToFirstChild"
         }
-        if segue.identifier == Segues.retirarPoupanca {
+        else if segue.identifier == Segues.retirarPoupanca {
             let destVC = segue.destination as! PoupancaView
             destVC.action = "retirar"
             destVC.saldo = personagem.poupanca(nil)!
         }
-        if segue.identifier == Segues.guardarPoupanca {
+        else if segue.identifier == Segues.guardarPoupanca {
             let destVC = segue.destination as! PoupancaView
             destVC.action = "guardar"
             destVC.saldo = personagem.dinheiro(nil)!
         }
-        if segue.identifier == Segues.pagarFatura {
+        else if segue.identifier == Segues.pagarFatura {
             let destVC = segue.destination as! PoupancaView
             destVC.action = "pagar"
             destVC.saldo = personagem.dinheiro(nil)!
@@ -194,6 +196,8 @@ class BancoViewController: UIViewController {
                 Investimento.alpha = 1
             case 17:
                 view.addSubview(Extrato)
+            case 18:
+                view.sendSubviewToBack(Extrato)
             case 19:
                 viewKim?.isHidden = true
                 fundoView?.isHidden = true
@@ -267,12 +271,6 @@ class BancoViewController: UIViewController {
         if prog == 2 && contadorBanco >= 1 {
             view.sendSubviewToBack(StackView)
             contadorBanco += 1
-        }
-    }
-    @IBAction func pagar(_ sender: Any) {
-        if prog == 2 && contadorBanco >= 1 {
-            //faturaNext((Any).self)
-            //contadorBanco += 1
         }
     }
     
@@ -475,9 +473,11 @@ class PoupancaView: UIViewController {
                     NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
                     play.toca(music: "coin.mp3")
                     self.dismiss(animated: true) {
-                        contadorBanco = 7
-                        print("ContadorPoup: \(contadorBanco)")
-                        NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFatura"), object: nil)
+                        if prog == 2 {
+                            contadorBanco = 7
+                            print("ContadorPoup: \(contadorBanco)")
+                            NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarFatura"), object: nil)
+                        }
                     }
                     
                 } else if total > banco! {
@@ -526,25 +526,25 @@ class DicasView: UIViewController {
     
     enum dicas {
        static let banco = [
-                            "nome": "Banco",
-                            "desc": "Texto...Banco..."
+                            "nome": "Conta corrente",
+                            "desc": "Trata-se de uma conta de depósito, geralmente mantida em um banco, que pode ser gratuita ou ter taxas, ser individual ou conjunta, ou até mesmo ter tarifas especiais dependendo da sua idade."
                           ]
        static let poupanca = [
                                 "nome": "Poupança",
-                                "desc": "Texto...Poupança..."
+                                "desc": "É um investimento com risco baixo, isento de imposto de renda para pessoa física e fácil de resgatar. Ela conta com a garantia do Fundo Garantidor de Crédito (FGC). Em caso de não pagamento pelo banco em que você investiu, você pode acionar o FGC, garante até R$250 mil por CPF e/ou CNPJ, por instituição financeira e possui um limite de R$1 milhão durante 4 anos. \nO rendimento da poupança, para aplicações realizadas a partir de maio de 2012, é calculado com base na taxa Selic (a taxa básica de juros). Se a Selic estiver acima de 8,5%, o rendimento da poupança será 0,5% ao mês + a taxa referencial. Mas, a se a Selic estiver igual ou abaixo de 8,5%, o rendimento da poupança passa para 70% da taxa Selic + a taxa referencial.\nA Taxa Referencial é uma taxa de juros básica divulgada mensalmente pelo Banco Central e calculada a partir do rendimento mensal médio dos CDB e RDB."
                              ]
        static let contas = [
                             "nome": "Contas",
                             "desc": "Texto...Contas..."
                           ]
        static let fatura = [
-                            "nome": "Fatura",
-                            "desc": "Texto...Fatura..."
+                            "nome": "Cartão de Crédito",
+                            "desc": "Os gastos que você tiver no cartão de crédito não serão pagos no momento da compra, mas sim quando a fatura for paga. \n\nÉ preciso ter um controle rígido dos gastos no cartão para garantir que, no mês seguinte, será possível pagar todas as compras. Quem não conseguir, pode entrar no crédito rotativo ou parcelar a fatura – e, em ambos os casos, são cobrados juros altos. \nO juros rotativo está entre os mais altos do mercado, cerca de 298,6% ao ano. \n\nPor outro lado, ao pagar no crédito, o consumidor, em tese, tem tempo para deixar o dinheiro render."
                             ]
     }
         
     var fatura: String = "dicaFatura"
-    var contas: String = "dicaConta"
+    var conta: String = "dicaConta"
     var banco: String = "dicaBanco"
     var poupanca: String = "dicaPoupanca"
     
@@ -556,25 +556,23 @@ class DicasView: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == banco {
             let destVC = segue.destination as! DicasChildView
-            destVC.view.backgroundColor = .lightGray
+            destVC.view.backgroundColor = .some(#colorLiteral(red: 0.8078431373, green: 0.7843137255, blue: 0.7450980392, alpha: 1))
             destVC.tituloLabel?.text = dicas.banco["nome"]!
             destVC.textLabel?.text = dicas.banco["desc"]!
+            destVC.tituloLabel2?.isHidden = false
+            destVC.textLabel2?.isHidden = false
+            destVC.tituloLabel2?.text = dicas.poupanca["nome"]!
+            destVC.textLabel2?.text = dicas.poupanca["desc"]!
         }
-        if segue.identifier == poupanca {
+        else if segue.identifier == conta {
             let destVC = segue.destination as! DicasChildView
-            destVC.view.backgroundColor = .darkGray
-            destVC.tituloLabel?.text = dicas.poupanca["nome"]!
-            destVC.textLabel?.text = dicas.poupanca["desc"]!
-        }
-        if segue.identifier == contas {
-            let destVC = segue.destination as! DicasChildView
-            destVC.view.backgroundColor = .yellow
+            destVC.view.backgroundColor = .some(#colorLiteral(red: 0.8078431373, green: 0.7843137255, blue: 0.7450980392, alpha: 1))
             destVC.tituloLabel?.text = dicas.contas["nome"]!
             destVC.textLabel?.text = dicas.contas["desc"]!
         }
-        if segue.identifier == fatura {
+        else if segue.identifier == fatura {
             let destVC = segue.destination as! DicasChildView
-            destVC.view.backgroundColor = .green
+            destVC.view.backgroundColor = .some(#colorLiteral(red: 0.8078431373, green: 0.7843137255, blue: 0.7450980392, alpha: 1))
             destVC.tituloLabel?.text = dicas.fatura["nome"]!
             destVC.textLabel?.text = dicas.fatura["desc"]!
         }
@@ -586,11 +584,13 @@ class DicasView: UIViewController {
 class DicasChildView: UIViewController {
     @IBOutlet weak var tituloLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var tituloLabel2: UILabel!
+    @IBOutlet weak var textLabel2: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
-        tituloLabel?.text = "Padrão"
+        view.backgroundColor = .some(#colorLiteral(red: 0.8078431373, green: 0.7843137255, blue: 0.7450980392, alpha: 1))
+        tituloLabel?.text = "Conta"
         textLabel?.backgroundColor = .none
     }
     
