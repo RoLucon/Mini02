@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1C24ADCA243FC258000D9B67 /* Investimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24ADC9243FC257000D9B67 /* Investimento.swift */; };
 		1C4FE0162460836F00D99CD1 /* ImpostoDeRenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4FE0152460836F00D99CD1 /* ImpostoDeRenda.swift */; };
+		1C5A685C24648CA600E5F4CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A685B24648CA600E5F4CA /* AppDelegate.swift */; };
+		1C8B11F82464A7D800A073B3 /* coin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B11F72464A7D800A073B3 /* coin.mp3 */; };
+		1C8B11FA2464A8AF00A073B3 /* playerMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8B11F92464A8AF00A073B3 /* playerMusic.swift */; };
+		1C8B11FC2464B1F700A073B3 /* padrao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B11FB2464B1F600A073B3 /* padrao.mp3 */; };
+		1C8B11FE2464B35100A073B3 /* padrao2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B11FD2464B35100A073B3 /* padrao2.mp3 */; };
 		1CC462B42450DF0600D6CB59 /* InvestimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */; };
 		1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B52450E25300D6CB59 /* InvestirViewController.swift */; };
 		1CC462B82450E30700D6CB59 /* SacarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B72450E30700D6CB59 /* SacarViewController.swift */; };
@@ -29,7 +34,6 @@
 		895108A8244A1D140088D7CB /* ContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895108A7244A1D140088D7CB /* ContaViewController.swift */; };
 		895C370A2462006600622754 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C37092462006500622754 /* ScoreView.swift */; };
 		89DF46A92437B75200FB36EB /* Personagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF46A82437B75200FB36EB /* Personagem.swift */; };
-		89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */; };
 		89E3EAAF242E98D3007C2CFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAAE242E98D3007C2CFC /* SceneDelegate.swift */; };
 		89E3EAB1242E98D3007C2CFC /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAB0242E98D3007C2CFC /* PrincipalViewController.swift */; };
 		89E3EAB4242E98D3007C2CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAB2242E98D3007C2CFC /* Main.storyboard */; };
@@ -68,6 +72,12 @@
 /* Begin PBXFileReference section */
 		1C24ADC9243FC257000D9B67 /* Investimento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Investimento.swift; sourceTree = "<group>"; };
 		1C4FE0152460836F00D99CD1 /* ImpostoDeRenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpostoDeRenda.swift; sourceTree = "<group>"; };
+		1C5A685B24648CA600E5F4CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1C5A685F2464960600E5F4CA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1C8B11F72464A7D800A073B3 /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
+		1C8B11F92464A8AF00A073B3 /* playerMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerMusic.swift; sourceTree = "<group>"; };
+		1C8B11FB2464B1F600A073B3 /* padrao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = padrao.mp3; sourceTree = "<group>"; };
+		1C8B11FD2464B35100A073B3 /* padrao2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = padrao2.mp3; sourceTree = "<group>"; };
 		1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoViewController.swift; sourceTree = "<group>"; };
 		1CC462B52450E25300D6CB59 /* InvestirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestirViewController.swift; sourceTree = "<group>"; };
 		1CC462B72450E30700D6CB59 /* SacarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacarViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +99,6 @@
 		895C37092462006500622754 /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		89DF46A82437B75200FB36EB /* Personagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personagem.swift; sourceTree = "<group>"; };
 		89E3EAA9242E98D3007C2CFC /* Mini02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mini02.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89E3EAAE242E98D3007C2CFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89E3EAB0242E98D3007C2CFC /* PrincipalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
 		89E3EAB3242E98D3007C2CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,12 +147,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C5A685E2464960500E5F4CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C5A685F2464960600E5F4CA /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8932CD4F243D1DF500E2BCA4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
 				89FD50902459ED0C0057A1B0 /* CheckBoxButton.swift */,
-				8932CD50243D1E1200E2BCA4 /* TextLabel.swift */,
 				89078E072444EB16002F5CF2 /* Extension.swift */,
+				8932CD50243D1E1200E2BCA4 /* TextLabel.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -164,6 +181,7 @@
 				89E3EAC2242E98D6007C2CFC /* Mini02Tests */,
 				89E3EACD242E98D6007C2CFC /* Mini02UITests */,
 				89E3EAAA242E98D3007C2CFC /* Products */,
+				1C5A685E2464960500E5F4CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,10 +201,11 @@
 				89E3EAEE24328716007C2CFC /* ViewController */,
 				8932CD5A243F8F3300E2BCA4 /* View */,
 				8932CD4F243D1DF500E2BCA4 /* Lib */,
-				89E3EAAC242E98D3007C2CFC /* AppDelegate.swift */,
+				1C5A685B24648CA600E5F4CA /* AppDelegate.swift */,
 				40BAA40D2437DAC4002FA0CE /* aviso.swift */,
 				89E3EAB5242E98D5007C2CFC /* Assets.xcassets */,
 				89E3EAE824326209007C2CFC /* Banco.storyboard */,
+				1C8B11F72464A7D800A073B3 /* coin.mp3 */,
 				C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */,
 				C0DC056E245D1C4100CA893F /* ExtratoViewController.swift */,
 				40BAA4082437DAC4002FA0CE /* Fase.storyboard */,
@@ -202,6 +221,9 @@
 				89E3EAB7242E98D5007C2CFC /* LaunchScreen.storyboard */,
 				89E3EAB2242E98D3007C2CFC /* Main.storyboard */,
 				8932CD46243BAA8800E2BCA4 /* Mapa.storyboard */,
+				1C8B11FB2464B1F600A073B3 /* padrao.mp3 */,
+				1C8B11FD2464B35100A073B3 /* padrao2.mp3 */,
+				1C8B11F92464A8AF00A073B3 /* playerMusic.swift */,
 				89DF46A82437B75200FB36EB /* Personagem.swift */,
 				89E3EAEC24326E35007C2CFC /* Principal.storyboard */,
 				89E3EAB0242E98D3007C2CFC /* PrincipalViewController.swift */,
@@ -352,6 +374,7 @@
 				1CDA1897245B53F100A360AF /* Quiz.storyboard in Resources */,
 				8932CD48243BAB0C00E2BCA4 /* Mapa.storyboard in Resources */,
 				1CDA1899245B624C00A360AF /* ImpostoDeRenda.storyboard in Resources */,
+				1C8B11F82464A7D800A073B3 /* coin.mp3 in Resources */,
 				89E3EAB9242E98D5007C2CFC /* LaunchScreen.storyboard in Resources */,
 				8932CD4C243BCB9000E2BCA4 /* SideQuest.storyboard in Resources */,
 				89E3EAB6242E98D5007C2CFC /* Assets.xcassets in Resources */,
@@ -362,7 +385,9 @@
 				89E3EAE7243261B7007C2CFC /* Intro.storyboard in Resources */,
 				89E3EAEB24326226007C2CFC /* Investimento.storyboard in Resources */,
 				40BAA40E2437DAC4002FA0CE /* FeedBack.storyboard in Resources */,
+				1C8B11FE2464B35100A073B3 /* padrao2.mp3 in Resources */,
 				40BAA40F2437DAC4002FA0CE /* Fase.storyboard in Resources */,
+				1C8B11FC2464B1F700A073B3 /* padrao.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +414,7 @@
 			files = (
 				895C370A2462006600622754 /* ScoreView.swift in Sources */,
 				8932CD5C243F8F7B00E2BCA4 /* ConfigView.swift in Sources */,
+				1C8B11FA2464A8AF00A073B3 /* playerMusic.swift in Sources */,
 				89E3EAF524328D7C007C2CFC /* CustomizacaoViewController.swift in Sources */,
 				1CC462B42450DF0600D6CB59 /* InvestimentoViewController.swift in Sources */,
 				8932CD53243D1F4900E2BCA4 /* NarrativaViewController.swift in Sources */,
@@ -404,12 +430,12 @@
 				1C4FE0162460836F00D99CD1 /* ImpostoDeRenda.swift in Sources */,
 				1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */,
 				89078E082444EB16002F5CF2 /* Extension.swift in Sources */,
-				89E3EAAD242E98D3007C2CFC /* AppDelegate.swift in Sources */,
 				89FD50912459ED0C0057A1B0 /* CheckBoxButton.swift in Sources */,
 				C0DC056F245D1C4100CA893F /* ExtratoViewController.swift in Sources */,
 				89DF46A92437B75200FB36EB /* Personagem.swift in Sources */,
 				C0CDCA00243BCBEB0057014D /* BancoViewController.swift in Sources */,
 				89E3EAAF242E98D3007C2CFC /* SceneDelegate.swift in Sources */,
+				1C5A685C24648CA600E5F4CA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
