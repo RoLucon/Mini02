@@ -60,30 +60,93 @@ class ExtratoViewController: UIViewController {
     @IBOutlet weak var Sinal10: UILabel!
     @IBOutlet weak var Valor10: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        Label1?.text = "Salário"
-        Valor1?.text = "R$ 1000,00"
-        
-        stack3?.isHidden = true
-        stack7?.isHidden = false
-        stack8?.isHidden = false
-        stack9?.isHidden = false
-        stack10?.isHidden = false
+    @IBOutlet weak var mesAtual: UILabel!
+    @IBOutlet weak var mesAnterior: UILabel!
+    
+    let mes = ["Dezembro 2019", "Janeiro 2020", "Fevereiro 2020", "Março 2020", "Abril 2020","Maio 2020", "Junho 2020", "Julho 2020", "Agosto 2020", "Setembro 2020", "Outubro 2020", "Novembro 2020", "Dezembro 2020"]
+    
+    let nome = ["Salário", "App Store", "App Store","App Store", "App Store", "App Store", "App Store", "App Store", "App Store", "Salário"]
+    
+    let valor = ["R$ 1000,00", "R$ 300,00", "R$ 50,00","R$ 10,00", "R$ 1,00", "R$ 65,00", "R$ 20,00", "R$ 100,00", "R$ 200,00", "R$ 1000,00"]
 
-        // Do any additional setup after loading the view.
-    }
     
 
-    /*
-    // MARK: - Navigation
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if prog == 1 && contadorBanco == 0 {
+            stack1?.isHidden = true
+        }
+        else if prog > 2 {
+            atual()
+            anterior()
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
     }
-    */
+    
+    func atual() {
+        
+        mesAtual?.text = mes[prog+1]
+        
+        Label1?.text = nome[0]
+        Sinal1?.text = "+ "
+        Sinal1?.textColor = .systemGreen
+        Valor1?.text = valor[0]
+        
+        Label2?.text = nome[1]
+        Sinal2?.text = "- "
+        Sinal2?.textColor = .systemRed
+        Valor2?.text = valor[1]
+        
+        Label3?.text = nome[2]
+        Sinal3?.text = "- "
+        Sinal3?.textColor = .systemRed
+        Valor3?.text = valor[2]
+        
+        Label4?.text = nome[3]
+        Sinal4?.text = "- "
+        Sinal4?.textColor = .systemRed
+        Valor4?.text = valor[3]
+        
+        Label5?.text = nome[4]
+        Sinal5?.text = "- "
+        Sinal5?.textColor = .systemRed
+        Valor5?.text = valor[4]
+        
+    }
+    
+    func anterior() {
+        
+        mesAnterior?.text = mes[prog]
+ 
+        Label6?.text = nome[5]
+        Sinal6?.text = "- "
+        Sinal6?.textColor = .systemRed
+        Valor6?.text = valor[5]
+        
+        Label7?.text = nome[6]
+        Sinal7?.text = "- "
+        Sinal7?.textColor = .systemRed
+        Valor7?.text = valor[6]
+        
+        Label8?.text = nome[7]
+        Sinal8?.text = "- "
+        Sinal8?.textColor = .systemRed
+        Valor8?.text = valor[7]
+        
+        Label9?.text = nome[8]
+        Sinal9?.text = "- "
+        Sinal9?.textColor = .systemRed
+        Valor9?.text = valor[8]
+        
+        Label10?.text = nome[9]
+        Sinal10?.text = "+ "
+        Sinal10?.textColor = .systemGreen
+        Valor10?.text = valor[9]
+        
+    }
+
+
 
 }

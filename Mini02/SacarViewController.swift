@@ -17,6 +17,7 @@ extension Saque : UITextFieldDelegate {
 }
 
 class Saque: UIViewController{
+    var play = PlayerMusic()
     var valorGuardado:Int = 0
     var contador:Int = 0
     
@@ -116,11 +117,13 @@ class Saque: UIViewController{
                 _=personagem.mexerDinheiro(valor: Saque)
                 let nome = Notification.Name(rawValue: atualizaRendimentosNotificationKey)
                 NotificationCenter.default.post(name: nome, object: nil)
+                play.toca(music: "coin.mp3")
                 self.dismiss(animated: true, completion: nil)
             }
             atualizaSaldoDispo()
         }
         else{
+            play.toca(music: "coin.mp3")
             self.dismiss(animated: true, completion: nil)
         }
     }
