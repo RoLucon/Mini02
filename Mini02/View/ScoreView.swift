@@ -48,8 +48,9 @@ class ScoreView: UIView {
         texto.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
         texto.heightAnchor.constraint(equalToConstant: frame.width / 4).isActive = true
         texto.text = String(score)
+        texto.textColor = #colorLiteral(red: 0.1725490196, green: 0.1098039216, blue: 0.04705882353, alpha: 1)
         texto.textAlignment = .center
-        texto.font = UIFont.systemFont(ofSize: frame.width / 4)
+        texto.font = UIFont.boldSystemFont(ofSize: frame.width / 4)
     }
     
     @objc func update(){
