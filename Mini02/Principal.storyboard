@@ -206,6 +206,7 @@
                         <outlet property="Semestre" destination="1QW-iz-3Zu" id="7G1-F9-DIf"/>
                         <outlet property="Situacao" destination="T4C-mT-OGQ" id="Myv-Og-iQM"/>
                         <outlet property="dinheiro" destination="WzB-wL-99l" id="auK-hY-j2M"/>
+                        <outlet property="personagemSituacao" destination="uJ6-wU-sig" id="YcK-Fw-9wE"/>
                         <outlet property="scorePopover" destination="nZy-ha-UuB" id="v5R-yG-dTA"/>
                     </connections>
                 </viewController>
