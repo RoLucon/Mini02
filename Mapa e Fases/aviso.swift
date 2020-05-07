@@ -196,10 +196,16 @@ class selecf: UIViewController{
         switch fim {
         case 1:
             q = q81
+            play.para()
+            play.toca(music: "neutro.mp3")
         case 2:
             q = q82
+            play.para()
+            play.toca(music: "ruim.mp3")
         case 3:
             q = q83
+            play.para()
+            play.toca(music: "feliz.mp3")
         default:
             print("DEU BAYBLADE AQUI EM!!!")
         }
@@ -267,6 +273,8 @@ class selecf: UIViewController{
         super.viewDidLoad()
         dialogo()
         observer()
+        play.para()
+        play.toca(music: "padrao4.mp3")
         //Progresso de fases
         switch prog {
         case 1:
@@ -290,6 +298,8 @@ class selecf: UIViewController{
             fase6?.backgroundColor = nil
             fundoFase?.image = UIImage(named: "parque")
         case 7:
+            play.para()
+            play.toca(music: "incendio.mp3")
             fase7?.backgroundColor = nil
         case 8:
             fase8?.backgroundColor = nil

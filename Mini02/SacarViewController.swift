@@ -9,7 +9,7 @@
 import UIKit
 
 var play = PlayerMusic()
-
+var play1 = PlayerMusic()
 
 extension Saque : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -118,7 +118,9 @@ class Saque: UIViewController{
                 _=personagem.mexerDinheiro(valor: Saque)
                 let nome = Notification.Name(rawValue: atualizaRendimentosNotificationKey)
                 NotificationCenter.default.post(name: nome, object: nil)
-                play.toca(music: "coin.mp3")
+                play.para()
+                play1.toca(music: "coin.mp3")
+                play.toca(music: "padrao.mp3")
                 self.dismiss(animated: true, completion: nil)
             }
             atualizaSaldoDispo()

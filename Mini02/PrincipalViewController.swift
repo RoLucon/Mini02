@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         atualizaSituacao()
         observer()
         zeraContadorBanco()
+        //play.para()
         play.toca(music: "padrao2.mp3")
         // Do any additional setup after loading the view.
     }
@@ -98,10 +99,11 @@ class ViewController: UIViewController {
         print("a notificacao chegou")
         atualizaSaldo()
         atualizaFala()
+        
+        
     }
     //Funcao para atualizar o saldo ao iniciar a tela
     func atualizaSaldo(){
-        print("FOI")
         personagem = Personagem.shared
         Dinheiro.text = String(format:"R$ %.2f", personagem.dinheiro(nil)!)
     }
@@ -130,7 +132,9 @@ class ViewController: UIViewController {
         Situacao.text = situacao
     }
     @IBAction func tocamusica(_ sender: Any) {
-        play.toca(music: "coin.mp3")
+        play.para()
+        play1.toca(music: "coin.mp3")
+        play.toca(music: "padrao.mp3")
     }
 }
 
