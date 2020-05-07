@@ -20,6 +20,7 @@ let atualizaSetaBancoNotificationKey = "co.gusrigor.atualizaSetaBanco"
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var personagemSituacao: UIImageView!
     
     @IBOutlet var scorePopover: UIView!
     //Fala da personagem no campo da tela de intro
@@ -110,10 +111,13 @@ class ViewController: UIViewController {
         let temp:Int? = personagem.score(nil)
         if(temp!>650){
             FalaPrsonagem.text = "Está na situação boa!"
+            personagemSituacao.image=UIImage(named:"\(Personagem.shared.imgNome!)feliz")
         }else if(temp!>350){
             FalaPrsonagem.text = "Está na situação Mais ou menos!"
+            personagemSituacao.image=UIImage(named:"\(Personagem.shared.imgNome!)neutro")
         }else{
             FalaPrsonagem.text = "Está na situação Ruim!"
+            personagemSituacao.image=UIImage(named:"\(Personagem.shared.imgNome!)triste")
         }
     }
     func atualizaNome(){
