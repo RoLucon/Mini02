@@ -55,7 +55,7 @@ class BancoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        foto?.image = UIImage(named: "kleytinho")
+        foto?.image = UIImage(named:"\(Personagem.shared.imgNome!)-avatar")
         nome?.text = personagem.nome!
         atualizarLabel()
         observer()
