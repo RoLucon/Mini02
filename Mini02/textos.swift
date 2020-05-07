@@ -280,24 +280,24 @@ let per = [
 //Todas as explicações presentes nas fases
 let help = [
     //Cap 1
-"Optar por gastar todo o dinheiro que recebeu. O que importa é aproveitar o presente.", "Ser mais conservador com o dinheiro e utiliza-lo de forma inteligente para não ficar com mais dívidas", " ",// 0 1 2
+"Optar por gastar todo o dinheiro que recebeu. O que importa é aproveitar o presente.", "Ser mais conservador com o dinheiro e utilizá-lo de forma inteligente para não ficar com mais dívidas", " ",// 0 1 2
 "Optar por utilizar o salário para pagar as dívidas que conseguir.", "Optar por guardar dinheiro para ir pagando as dívidas aos poucos.", " ",// 3 4 5
 "Aceitar o convite.", "Se preocupar com sua situação financeira.", " ",// 6 7 8
     //Cap 2
 "Comprar o que quiser e se virar para pagar as faturas do cartão depois.", "Gastar conforme o dinheiro disponível na conta.", " ",// 9 10 11
 "Ajuda 1 p5", "Ajuda 2 p5", " ",// 12 13 14 - RETIRAR
     //Cap 3
-"Está preocupado com as contas.", "Está tranquilo por ja ter pago a fatura.", " ",// 15 16 17
+"Está preocupado com as contas.", "Está tranquilo por já ter pago a fatura.", " ",// 15 16 17
 "Colocar toda responsabilidade nas mãos da Kim.", "Ainda não possui entendimento sobre.", " ",// 18 19 20
 "Compreendeu tudo que foi passado e sabe aplicar.", "Ainda não entendeu tudo completamente.", " ",// 21 22 23
     //Cap 4
 "Ajuda 1 p9", "Ajuda 2 p9", " ",// 24 25 26 - Retirar
     //Cap 5
 "Ajuda 1 p10", "Ajuda 2 p10", " ",// 27 28 29 - Retirar
-"Ainda é jovem e tem muito pela frente.", "Já é velho e nào tem muito mais o que passar.", " ",// 30 31 32
+"Ainda é jovem e tem muito pela frente.", "Já é velho e não tem muito mais o que passar.", " ",// 30 31 32
 "Guardar dinheiro para a previdência privada.", "Manter, inicialmente, o foco para comprar o Celta.", " ",//33 34 35
     //Cap 6
-"Compreende o motivo do dia não ser muito agradável.", "Nào sabe o motivo do dia não ser bom.", " ",// 36 37 38
+"Compreende o motivo do dia não ser muito agradável.", "Não sabe o motivo do dia não ser bom.", " ",// 36 37 38
 "Perguntar sobre o que é gerado com o todo dinheiro dado", "Optar por nào contribuir", " ",// 39 40 41
     //Cap 7
 "Utilizar o dinheiro que guardou durante a faculdade para garantir um lugar para todos morarem novamente, e deixar para depois a meta de adquirir seu Celta.", "Não contribuir para se reestruturarem por ter o foco em comprar seu Celta o mais rápido possível.", " ",// 42 43 44
