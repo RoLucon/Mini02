@@ -591,6 +591,7 @@
                         <outlet property="fundoView" destination="TQk-JS-N0D" id="cg4-gn-JUG"/>
                         <outlet property="nome" destination="RNm-xX-q0A" id="hLt-p8-1sj"/>
                         <outlet property="poupancaView" destination="iez-fV-sME" id="tIy-Tb-Wzr"/>
+                        <outlet property="rendimento" destination="wAM-gB-cpX" id="DnG-vH-c8P"/>
                         <outlet property="saldoConta" destination="XWn-j5-BCc" id="C5f-Im-7KV"/>
                         <outlet property="seta" destination="qf9-mb-A3y" id="UTL-Pn-C4z"/>
                         <outlet property="textoLabel" destination="3m4-fx-PK5" id="ArF-KW-r9p"/>
@@ -1288,7 +1289,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZyD-Ft-oQa" firstAttribute="trailing" secondItem="PRu-Kv-fCr" secondAttribute="trailing" id="09g-O8-7AU"/>
                             <constraint firstItem="ZyD-Ft-oQa" firstAttribute="leading" secondItem="PRu-Kv-fCr" secondAttribute="leading" id="2Wa-a4-dt6"/>
@@ -1551,7 +1552,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="pagar:" destination="LEQ-ax-7Ib" eventType="touchUpInside" id="3TL-ba-PdP"/>
                                     <segue destination="0Sz-f1-YC4" kind="popoverPresentation" identifier="pagarFatura" popoverAnchorView="2F7-Jr-gRW" id="1qu-fZ-OjY">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
@@ -1696,6 +1696,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5P3-ws-DWY">
+                                <rect key="frame" x="48" y="124" width="262" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="l6B-1N-ArV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqx-N0-m7b">
+                                <rect key="frame" x="32" y="346" width="294" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-03-xcy">
                                 <rect key="frame" x="146" y="706" width="66" height="30"/>
                                 <state key="normal" title="Fechar"/>
@@ -1703,26 +1718,31 @@
                                     <action selector="back:" destination="fpa-70-BwH" eventType="touchUpInside" id="zqn-mG-mrv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5P3-ws-DWY">
-                                <rect key="frame" x="48" y="136" width="262" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="l6B-1N-ArV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Er-Mb-01X">
+                                <rect key="frame" x="32" y="394" width="294" height="264"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rIz-oJ-rdK" firstAttribute="leading" secondItem="VYv-mX-U9K" secondAttribute="leadingMargin" constant="32" id="0o8-Hj-PIy"/>
                             <constraint firstItem="5P3-ws-DWY" firstAttribute="leading" secondItem="VYv-mX-U9K" secondAttribute="leadingMargin" constant="32" id="20c-rU-5bC"/>
+                            <constraint firstItem="3Er-Mb-01X" firstAttribute="top" secondItem="uqx-N0-m7b" secondAttribute="bottom" constant="20" id="6ra-IP-muW"/>
+                            <constraint firstItem="CUX-03-xcy" firstAttribute="top" secondItem="3Er-Mb-01X" secondAttribute="bottom" constant="48" id="7hC-l3-AxX"/>
+                            <constraint firstItem="uqx-N0-m7b" firstAttribute="leading" secondItem="VYv-mX-U9K" secondAttribute="leading" constant="32" id="BIf-Fy-uKe"/>
                             <constraint firstItem="rIz-oJ-rdK" firstAttribute="top" secondItem="VYv-mX-U9K" secondAttribute="topMargin" constant="32" id="NJu-jL-jz3"/>
+                            <constraint firstItem="uqx-N0-m7b" firstAttribute="top" secondItem="5P3-ws-DWY" secondAttribute="bottom" constant="22" id="QWL-PO-Evx"/>
                             <constraint firstItem="CUX-03-xcy" firstAttribute="leading" secondItem="VYv-mX-U9K" secondAttribute="leadingMargin" constant="130" id="Rfd-m3-oec"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CUX-03-xcy" secondAttribute="trailing" constant="130" id="TtG-gO-p91"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5P3-ws-DWY" secondAttribute="trailing" constant="32" id="VRR-Z4-brJ"/>
-                            <constraint firstItem="5P3-ws-DWY" firstAttribute="top" secondItem="rIz-oJ-rdK" secondAttribute="bottom" constant="32" id="k6F-23-bYs"/>
+                            <constraint firstItem="3Er-Mb-01X" firstAttribute="leading" secondItem="46V-N6-yXu" secondAttribute="leading" constant="32" id="XU8-zj-pDT"/>
+                            <constraint firstAttribute="trailing" secondItem="uqx-N0-m7b" secondAttribute="trailing" constant="32" id="YOP-a2-k5O"/>
+                            <constraint firstItem="5P3-ws-DWY" firstAttribute="top" secondItem="rIz-oJ-rdK" secondAttribute="bottom" constant="20" id="k6F-23-bYs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rIz-oJ-rdK" secondAttribute="trailing" constant="32" id="lSJ-qG-mxI"/>
+                            <constraint firstItem="46V-N6-yXu" firstAttribute="trailing" secondItem="3Er-Mb-01X" secondAttribute="trailing" constant="32" id="ter-8z-e05"/>
                             <constraint firstAttribute="bottomMargin" secondItem="CUX-03-xcy" secondAttribute="bottom" constant="32" id="xIW-Q9-oE5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="46V-N6-yXu"/>
@@ -1734,7 +1754,9 @@
                     </view>
                     <connections>
                         <outlet property="textLabel" destination="5P3-ws-DWY" id="arS-8J-FVY"/>
+                        <outlet property="textLabel2" destination="3Er-Mb-01X" id="UWj-UT-Zgp"/>
                         <outlet property="tituloLabel" destination="rIz-oJ-rdK" id="7QY-WU-nB1"/>
+                        <outlet property="tituloLabel2" destination="uqx-N0-m7b" id="MI4-hG-MuQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryg-eY-Xbk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
