@@ -194,6 +194,8 @@ class BancoViewController: UIViewController {
                 Investimento.alpha = 1
             case 17:
                 view.addSubview(Extrato)
+            case 18:
+                view.sendSubviewToBack(Extrato)
             case 19:
                 viewKim?.isHidden = true
                 fundoView?.isHidden = true
