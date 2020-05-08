@@ -574,7 +574,7 @@ class DicasView: UIViewController {
                              ]
        static let contas = [
                             "nome": "Contas",
-                            "desc": "Quem atrasa o pagamento de uma conta normalmente paga juros de mora. \n\nOs juros de mora são cobrados sobre o valor em aberto e aumentam conforme o atraso no pagamento – em outras palavras, quanto mais tempo uma conta ficar em aberto depois de seu vencimento, mais a pessoa pagará de juros.\n\nA taxa dos juros de mora é limitado, por lei, a 1% do valor da dívida ao mês; quando o atraso é inferior a 30 dias, o cálculo considera 0,0333% por dia de atraso, a ser aplicado sobre o valor da conta."
+                            "desc": "Texto...Contas..."
                           ]
        static let fatura = [
                             "nome": "Cartão de Crédito",
@@ -629,8 +629,7 @@ class DicasChildView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .some(#colorLiteral(red: 0.8078431373, green: 0.7843137255, blue: 0.7450980392, alpha: 1))
-        tituloLabel?.text = "Contas"
-        textLabel?.text = DicasView.dicas.contas["desc"]
+        tituloLabel?.text = "Conta"
         textLabel?.backgroundColor = .none
     }
     
