@@ -105,7 +105,7 @@ class ViewController: UIViewController {
     //Funcao para atualizar o saldo ao iniciar a tela
     func atualizaSaldo(){
         personagem = Personagem.shared
-        Dinheiro.text = String(format:"R$ %.2f", personagem.dinheiro(nil)!)
+        Dinheiro.text = String(format:"R$ %.2f", personagem.dinheiro(nil)!).replacingOccurrences(of: ".", with: ",")
     }
     //Funcao para atualizar a fala da personagem ao carregar a tela
     func atualizaFala(){

@@ -319,7 +319,9 @@ let rostos = [
 90: "kimneutra",91: "kimneutra",92: "kimneutra",93: "kimdentes",94: "kimneutra",95: "kimpiscada",96: "kimneutra",97: "kimneutra",98: "kimtriste",
 99: "kimneutra",100: "kimneutra"]
 
+
 var prog = 1 // Representa o progresso do jogador [AQUI]
+
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
 //Colocar 0 caso já tenha acabado
