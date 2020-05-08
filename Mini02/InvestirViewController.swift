@@ -109,6 +109,9 @@ class Investe: UIViewController{
                 saldoIndisponivel.isHidden = false
             }
             else{
+                play.para()
+                play1.toca(music: "coin.mp3")
+                play.toca(music: "padrao3.mp3")
                 investimento.setAplicada(investimento.getAplicada() + Double(investido))
                 investimento.setBruto(investimento.getBruto() + Double(investido))
                 _ = personagem.mexerDinheiro(valor: -1 * investido)
@@ -119,6 +122,7 @@ class Investe: UIViewController{
             atualizaSaldoDispo()
         }
         else{
+            play.toca(music: "coin.mp3")
             self.dismiss(animated: true, completion: nil)
         }
     }

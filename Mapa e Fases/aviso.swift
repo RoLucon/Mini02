@@ -196,10 +196,16 @@ class selecf: UIViewController{
         switch fim {
         case 1:
             q = q81
+            play.para()
+            play.toca(music: "neutro.mp3")
         case 2:
             q = q82
+            play.para()
+            play.toca(music: "ruim.mp3")
         case 3:
             q = q83
+            play.para()
+            play.toca(music: "feliz.mp3")
         default:
             print("DEU BAYBLADE AQUI EM!!!")
         }
@@ -212,6 +218,7 @@ class selecf: UIViewController{
         ApareceSeta(c)
         fala?.text = texto[c]
         print("texto n: " + String(c))
+        play1.toca(music: "botao.mp3")
         
         if c == 36 {
             passaButton.isHidden = true
@@ -220,6 +227,22 @@ class selecf: UIViewController{
         if c == 71 {
             passaButton.isHidden = true
             impRenda.isHidden = false
+        }
+        
+        if c == 61{
+            fundo(fundo: "republica")
+        } else if c == 73{
+            fundo(fundo: "republica-fumaca")
+        } else if c == 74{
+            fundo(fundo: "republica-incendio")
+        } else if c == 77{
+            fundoFase?.image = nil
+        } else if c == 82{
+            fundo(fundo: "mudanca")
+        } else if c == 87{
+            fundo(fundo: "republica-queimada")
+        } else if c == 93{
+            fundo(fundo: "kitnet")
         }
         
         if c == 8 || c == 21 || c == 30 || c == 42 {
@@ -258,6 +281,10 @@ class selecf: UIViewController{
     func rosto (_ rosto:String) {
         kimRosto?.image = UIImage(named: rosto)
     }
+    
+    func fundo (fundo:String){
+            fundoFase?.image = UIImage(named: fundo)
+    }
         
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -267,32 +294,38 @@ class selecf: UIViewController{
         super.viewDidLoad()
         dialogo()
         observer()
+        play.para()
+        play.toca(music: "padrao4.mp3")
         //Progresso de fases
         switch prog {
         case 1:
             fase1?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "parque")
+            fundo(fundo: "parque")
             faseView?.backgroundColor = .systemGreen
             setaBanco?.tintColor = .systemRed
         case 2:
             fase2?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "shopping")
+            fundo(fundo: "shopping")
         case 3:
             fase3?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "republica")
+            fundo(fundo: "republica")
         case 4:
             fase4?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "faculdade")
+            fundo(fundo: "faculdade")
         case 5:
             fase5?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "quarto")
+            fundo(fundo: "quarto")
         case 6:
             fase6?.backgroundColor = nil
-            fundoFase?.image = UIImage(named: "parque")
+            fundo(fundo: "parque")
         case 7:
+            play.para()
+            play.toca(music: "incendio.mp3")
             fase7?.backgroundColor = nil
+            fundoFase?.image = nil
         case 8:
             fase8?.backgroundColor = nil
+            fundoFase?.image = nil
         default:
             print("ERRO")
         }

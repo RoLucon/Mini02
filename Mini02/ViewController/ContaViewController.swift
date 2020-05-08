@@ -29,6 +29,8 @@ class ContaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChart()
+        prog = 3
+        contadorBanco = 1
         //Fase 1
         if prog == 1 && contadorBanco >= 1 {
             viewFrase?.isHidden = false
@@ -144,11 +146,6 @@ class ContaViewController: UIViewController {
         viewInferior?.transform = CGAffineTransform(translationX: 0, y: -65)
         stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -90)
         gerenciarFase2.isHidden = true
-        let gl = CAGradientLayer()
-        gl.colors = [viewFase2.backgroundColor!.cgColor,viewFase2.backgroundColor!.cgColor, UIColor.clear.cgColor, UIColor.clear.cgColor]
-        gl.locations = [0.4, 0.55, 0.6, 1.0]
-        gl.frame = viewFase2.frame
-        viewFase2.layer.addSublayer(gl)
         viewFase2.backgroundColor = .clear
         stkViewInferior.superview?.bringSubviewToFront(stkViewInferior)
         controleTexto["index"] = 1
@@ -213,6 +210,9 @@ class ContaViewController: UIViewController {
             }
             if controleTexto["index"]! == 2 {
                 textoFase2.text = calculaRespostsa()
+                for btt in checkBoxBtts {
+                    btt.isEnabled = false
+                }
                 controleTexto["primeiro"] = 3
             } else if controleTexto["index"]! == 3{
                  destacaRespostaCorreta()
