@@ -181,6 +181,7 @@
                     <navigationItem key="navigationItem" id="gh6-6Z-5J9"/>
                     <connections>
                         <outlet property="banco" destination="6Ng-Wc-MHr" id="SOW-LU-TEM"/>
+                        <outlet property="corpo" destination="phd-VR-KKR" id="g5N-kS-kkf"/>
                         <outlet property="fala" destination="Zd8-o1-cvg" id="hFg-R6-1hH"/>
                         <outlet property="faseView" destination="uPe-Ze-HbX" id="MRt-Dn-TGx"/>
                         <outlet property="fundoFase" destination="5Cd-pq-FtR" id="aHL-ca-9N9"/>
