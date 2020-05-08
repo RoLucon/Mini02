@@ -235,6 +235,7 @@ class selecf: UIViewController{
             fundo(fundo: "republica-fumaca")
         } else if c == 74{
             fundo(fundo: "republica-incendio")
+            play1.toca(music: "fogo.mp3")
         } else if c == 77{
             fundoFase?.image = nil
         } else if c == 82{
