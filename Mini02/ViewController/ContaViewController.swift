@@ -30,8 +30,6 @@ class ContaViewController: UIViewController {
         super.viewDidLoad()
         updateChart()
         textoFase2.speed = 4
-        prog = 1
-        contadorBanco = 1
         //Fase 1
         if prog == 1 && contadorBanco >= 1 {
             viewFrase?.isHidden = false
