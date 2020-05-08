@@ -105,20 +105,20 @@ class ViewController: UIViewController {
     //Funcao para atualizar o saldo ao iniciar a tela
     func atualizaSaldo(){
         personagem = Personagem.shared
-        Dinheiro.text = String(format:"R$ %.2f", personagem.dinheiro(nil)!)
+        Dinheiro.text = String(format:"R$ %.2f", personagem.dinheiro(nil)!).replacingOccurrences(of: ".", with: ",")
     }
     //Funcao para atualizar a fala da personagem ao carregar a tela
     func atualizaFala(){
         personagem = Personagem.shared
         let temp:Int? = personagem.score(nil)
         if(temp!>650){
-            FalaPrsonagem.text = "Está na situação boa!"
+            FalaPrsonagem.text = bom[Int.random(in: 0 ... 3)]
             personagemSituacao.image=UIImage(named:"\(Personagem.shared.imgNome!)feliz")
         }else if(temp!>350){
-            FalaPrsonagem.text = "Está na situação Mais ou menos!"
+            FalaPrsonagem.text = medio[Int.random(in: 0 ... 4)]
             personagemSituacao.image=UIImage(named:"\(Personagem.shared.imgNome!)neutro")
         }else{
-            FalaPrsonagem.text = "Está na situação Ruim!"
+            FalaPrsonagem.text = ruim[Int.random(in: 0 ... 4)]
             personagemSituacao.image=UIImage(named:"\(Personagem.shared.imgNome!)triste")
         }
     }
