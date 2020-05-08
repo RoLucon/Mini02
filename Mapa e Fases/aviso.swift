@@ -329,10 +329,13 @@ class selecf: UIViewController{
         default:
             print("ERRO")
         }
+        
+        iconeFases()
     }
     func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarFala(notificacao:)), name: NSNotification.Name.init("AtualizarTexto"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(atualizaBotao(notificacao:)), name: NSNotification.Name.init("AtualizarBotao"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(iconeFases), name: NSNotification.Name.init("AtualizarIconeFase"), object: nil)
     }
     @objc func atualizaBotao(notificacao: NSNotification){
         quiz?.isHidden = true
@@ -620,5 +623,38 @@ class selecf: UIViewController{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         configView?.dismiss()
         self.tabBarController?.setTabBar(hidden: false, viewController: self)
+    }
+    
+    @objc func iconeFases(){
+        let bronzeD = UIImage(named:"bronze-direita")
+        let bronzeE = UIImage(named:"bronze-esquerda")
+        let prataD = UIImage(named: "prata-direita")
+        let prataE = UIImage(named: "prata-esquerda")
+        let ouroD = UIImage(named: "ouro-direita")
+        let ouroE = UIImage(named: "ouro-esquerda")
+        
+        let btts = [fase1, fase2, fase3,fase4, fase5, fase6, fase7,fase8]
+        
+        for i in 1...btts.count {
+            if i > prog {
+                if i == 1 || i == 2 || i == 3 || i == 4 {
+                    btts[i-1]?.setImage(bronzeD, for: .normal)
+                } else {
+                    btts[i-1]?.setImage(bronzeE, for: .normal)
+                }
+            } else if i < prog {
+                if i == 1 || i == 2 || i == 3 || i == 4 {
+                    btts[i-1]?.setImage(ouroD, for: .normal)
+                } else {
+                    btts[i-1]?.setImage(ouroE, for: .normal)
+                }
+            } else {
+                if i == 1 || i == 2 || i == 3 || i == 4 {
+                    btts[i-1]?.setImage(prataD, for: .normal)
+                } else {
+                    btts[i-1]?.setImage(prataE, for: .normal)
+                }
+            }
+        }
     }
 }
