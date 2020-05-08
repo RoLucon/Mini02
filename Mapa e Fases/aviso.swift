@@ -267,7 +267,7 @@ class selecf: UIViewController{
     func ApareceSeta(_ c:Int){
         if(c == 97 || c == 8 || c == 21 || c == 30 || c == 42){
             setaBanco?.alpha = 0.8
-            if c == 8 {
+            if c == 8 || c == 21 {
                 _ = personagem.dinheiro(1000)
             } else if c == 97 {
                 setaBanco?.transform = CGAffineTransform(translationX: 165, y: 0)
