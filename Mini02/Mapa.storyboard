@@ -192,6 +192,9 @@
         <scene sceneID="T07-KJ-a0E">
             <objects>
                 <navigationController title="Mapa" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="bhA-NR-hfw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mapa" image="book.fill" catalog="system" id="4Ba-z2-t8W">
+                        <color key="badgeColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2lA-RX-yx7">
@@ -210,6 +213,7 @@
     <resources>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="banco" width="100" height="101"/>
+        <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="bronze-direita" width="240" height="293"/>
         <image name="bronze-esquerda" width="241" height="293"/>
         <image name="configurar" width="32" height="34"/>

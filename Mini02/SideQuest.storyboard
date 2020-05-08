@@ -76,11 +76,13 @@
         <scene sceneID="vLg-qL-NoO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="e5k-cN-CGY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Side Quest" id="VNS-oo-n2a"/>
+                    <tabBarItem key="tabBarItem" title="Side Quest" image="gamecontroller.fill" catalog="system" id="VNS-oo-n2a"/>
+
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ltx-2K-TbX">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -93,6 +95,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gamecontroller.fill" catalog="system" width="64" height="40"/>
         <image name="kimfb-ruim" width="1024" height="1024"/>
     </resources>
 </document>
