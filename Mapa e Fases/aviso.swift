@@ -158,7 +158,7 @@ class popup: UIViewController{
 
 class selecf: UIViewController{
     @IBOutlet weak var kim: UIImageView!
-    @IBOutlet weak var fala: UILabel!
+    @IBOutlet weak var fala: TextLabel!
     @IBOutlet weak var fase1: UIButton!
     @IBOutlet weak var fase2: UIButton!
     @IBOutlet weak var fase3: UIButton!
@@ -216,7 +216,8 @@ class selecf: UIViewController{
         print(rostos[c]!)
         rosto(rostos[c]!)
         ApareceSeta(c)
-        fala?.text = texto[c]
+        fala?.speed = 4
+        fala?.texto = texto[c]!
         print("texto n: " + String(c))
         play1.toca(music: "botao.mp3")
         
