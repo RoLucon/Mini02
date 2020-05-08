@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xm2-Ad-2bH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xm2-Ad-2bH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -172,14 +171,6 @@
                                 <rect key="frame" x="20" y="49" width="146" height="30"/>
                                 <connections>
                                     <segue destination="eKD-Yn-BDf" kind="show" id="JMt-2s-C6P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Z3-ow-rP6">
-                                <rect key="frame" x="316" y="257" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="TocaMusica"/>
-                                <connections>
-                                    <action selector="tocamusica:" destination="AsA-4X-mir" eventType="touchUpInside" id="1Df-LN-chM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -790,15 +781,15 @@ Cg
             <point key="canvasLocation" x="2334.7826086956525" y="124.55357142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EnH-U6-gi6"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Score1" width="338" height="124"/>
         <image name="banco" width="100" height="101"/>
         <image name="configurar" width="32" height="34"/>
-        <image name="eject" catalog="system" width="64" height="56"/>
+        <image name="eject" catalog="system" width="128" height="112"/>
         <image name="kley1neutro" width="1080" height="1920"/>
         <image name="parque-blur" width="4500" height="8000"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="EnH-U6-gi6"/>
-    </inferredMetricsTieBreakers>
 </document>
