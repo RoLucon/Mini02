@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kimfb-ruim" translatesAutoresizingMaskIntoConstraints="NO" id="3gF-a3-aMm">
-                                <rect key="frame" x="87" y="258" width="240" height="240"/>
+                                <rect key="frame" x="87" y="214" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="1ul-sy-y86"/>
                                     <constraint firstAttribute="height" constant="240" id="5qH-oq-Wdn"/>
@@ -75,13 +75,13 @@
         <!--Side Quest-->
         <scene sceneID="vLg-qL-NoO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e5k-cN-CGY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Side Quest" id="VNS-oo-n2a"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="e5k-cN-CGY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Side Quest" image="gamecontroller.fill" catalog="system" id="VNS-oo-n2a"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ltx-2K-TbX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -94,6 +94,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gamecontroller.fill" catalog="system" width="64" height="40"/>
         <image name="kimfb-ruim" width="1024" height="1024"/>
     </resources>
 </document>
