@@ -17,8 +17,11 @@ var r = 0 //Salva a resposta escolida
 var c = 0 //Representa a fala inicial da fase
 var contadorBanco = 0
 var fasebug = false
-
+var semcorpo = 0
 let personagem: Personagem = Personagem.shared
+
+let semkim = [1,13,60,72]
+
 //Todas as falas do jogo em ordem de aparição
 let texto = [
     //Inicio cap 1
@@ -320,7 +323,7 @@ let rostos = [
 99: "kimneutra",100: "kimneutra"]
 
 
-var prog = 1 // Representa o progresso do jogador [AQUI]
+var prog = 7 // Representa o progresso do jogador [AQUI]
 
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
