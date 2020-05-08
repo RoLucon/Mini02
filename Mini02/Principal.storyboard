@@ -168,6 +168,23 @@
                                 </connections>
                             </button>
 
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Z3-ow-rP6">
+                                <rect key="frame" x="316" y="257" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="TocaMusica"/>
+                                <connections>
+                                    <action selector="tocamusica:" destination="AsA-4X-mir" eventType="touchUpInside" id="1Df-LN-chM"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jp7-ag-ttE" customClass="ScoreView" customModule="Mini02" customModuleProvider="target">
+                                <rect key="frame" x="167" y="54" width="80" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="MAn-xL-l7S"/>
+                                    <constraint firstAttribute="height" constant="40" id="c6y-ZI-AZX"/>
+                                </constraints>
+                            </view>
+
                         </subviews>
                         <color key="backgroundColor" red="0.51372549020000002" green="0.43921568630000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -792,3 +809,4 @@ Cg
         <image name="parque-blur" width="4500" height="8000"/>
     </resources>
 </document>
+
