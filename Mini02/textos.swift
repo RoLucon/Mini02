@@ -172,7 +172,7 @@ let textoFase2 = [
     10:"É bom que seu limite nunca seja maior que o seu salário!",
     11:"E a melhor opção é usar o cartão de crédito só em grandes compras. Como uma geladeira, por exemplo, que é cara, mas necessária.",
     12:"Inclusive, a da república tá precisando de um conserto...",
-    //13:"",
+    13:"",
     14:"",
     15:"",
     16:"",
@@ -320,7 +320,7 @@ let rostos = [
 99: "kimneutra",100: "kimneutra"]
 
 
-var prog = 1 // Representa o progresso do jogador [AQUI]
+var prog = 2 // Representa o progresso do jogador [AQUI]
 
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
