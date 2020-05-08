@@ -28,11 +28,11 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var StackView: UIStackView!
     @IBOutlet weak var seta: UIImageView!
     @IBOutlet weak var viewKim: UIView!
-    @IBOutlet weak var textoLabel: UILabel!
+    @IBOutlet weak var textoLabel: TextLabel!
     @IBOutlet weak var faturaView: UIView!
     @IBOutlet weak var faturaKim: UIView!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var faturaTexto: UILabel!
+    @IBOutlet weak var faturaTexto: TextLabel!
     @IBOutlet weak var setaFatura: UIImageView!
     @IBOutlet weak var faturaAtual: UILabel!
     @IBOutlet weak var cartaoLimite: UILabel!
@@ -155,8 +155,8 @@ class BancoViewController: UIViewController {
             poupancaView?.transform = CGAffineTransform(translationX: 0, y: -20)
             StackView?.transform = CGAffineTransform(translationX: 0, y: -90)
             Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
-            textoLabel?.text = textoFase1[1]!
-            faturaTexto?.text = textoFase1[contadorBanco]
+            textoLabel?.texto = textoFase1[1]!
+            faturaTexto?.texto = textoFase1[contadorBanco]!
             backButton?.isEnabled = false
         }
     }
@@ -165,7 +165,7 @@ class BancoViewController: UIViewController {
         if contadorBanco >= 1 && contadorBanco <= 20 {
             if contadorBanco != 9  {
                 contadorBanco += 1
-                textoLabel?.text = textoFase1[contadorBanco]!
+                textoLabel?.texto = textoFase1[contadorBanco]!
             }
             
             switch  contadorBanco {
@@ -220,7 +220,7 @@ class BancoViewController: UIViewController {
     @IBAction func voltarTexto(_ sender: Any) {
         if contadorBanco > 1 && contadorBanco <= 9 {
             contadorBanco -= 1
-            textoLabel?.text = textoFase1[contadorBanco]!
+            textoLabel?.texto = textoFase1[contadorBanco]!
             switch  contadorBanco {
             case 1:
                 view.sendSubviewToBack(saldoConta)
@@ -239,7 +239,7 @@ class BancoViewController: UIViewController {
                 seta?.center.x -= 190
                 seta?.center.y -= 130
             case 8:
-                textoLabel?.text = textoFase1[contadorBanco - 1]!
+                textoLabel?.texto = textoFase1[contadorBanco - 1]!
                 Investimento.alpha = 1
                 Contas.alpha = 0.5
                 seta?.isHidden = true
@@ -266,7 +266,7 @@ class BancoViewController: UIViewController {
                 backButton?.isEnabled = false
             }
             faturaKim?.isHidden = false
-            faturaTexto?.text = textoFase2[contadorBanco]
+            faturaTexto?.texto = textoFase2[contadorBanco]!
             pagarBtn?.isUserInteractionEnabled = false
         }
     }
@@ -280,7 +280,7 @@ class BancoViewController: UIViewController {
     @IBAction func faturaNext(_ sender: Any) {
         if prog == 1 && contadorBanco >= 12 && contadorBanco < 14 {
             contadorBanco += 1
-            faturaTexto?.text = textoFase1[contadorBanco]
+            faturaTexto?.texto = textoFase1[contadorBanco]!
             if contadorBanco == 14 {
                 faturaView?.isHidden = false
                 setaFatura?.isHidden = false
@@ -292,7 +292,7 @@ class BancoViewController: UIViewController {
             print(contadorBanco)
 
             if contadorBanco <= 5 || contadorBanco > 6 {
-                faturaTexto?.text = textoFase2[contadorBanco]
+                faturaTexto?.texto = textoFase2[contadorBanco]!
                 if contadorBanco != 7 {
                     contadorBanco += 1
                 }
@@ -574,7 +574,7 @@ class DicasView: UIViewController {
                              ]
        static let contas = [
                             "nome": "Contas",
-                            "desc": "Texto...Contas..."
+                            "desc": "Quem atrasa o pagamento de uma conta normalmente paga juros de mora. \n\nOs juros de mora são cobrados sobre o valor em aberto e aumentam conforme o atraso no pagamento – em outras palavras, quanto mais tempo uma conta ficar em aberto depois de seu vencimento, mais a pessoa pagará de juros.\n\nA taxa dos juros de mora é limitado, por lei, a 1% do valor da dívida ao mês; quando o atraso é inferior a 30 dias, o cálculo considera 0,0333% por dia de atraso, a ser aplicado sobre o valor da conta."
                           ]
        static let fatura = [
                             "nome": "Cartão de Crédito",
@@ -629,7 +629,8 @@ class DicasChildView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .some(#colorLiteral(red: 0.8078431373, green: 0.7843137255, blue: 0.7450980392, alpha: 1))
-        tituloLabel?.text = "Conta"
+        tituloLabel?.text = "Contas"
+        textLabel?.text = DicasView.dicas.contas["desc"]
         textLabel?.backgroundColor = .none
     }
     

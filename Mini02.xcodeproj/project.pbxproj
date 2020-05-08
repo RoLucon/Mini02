@@ -21,6 +21,7 @@
 		1C8B12082464C2D600A073B3 /* feliz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B12072464C2D600A073B3 /* feliz.mp3 */; };
 		1C8B120A2464C3FB00A073B3 /* padrao4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B12092464C3FB00A073B3 /* padrao4.mp3 */; };
 		1C8B120C2464C84E00A073B3 /* botao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B120B2464C84E00A073B3 /* botao.mp3 */; };
+		1C94C9352465A80200AF0F56 /* fogo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C94C9342465A80200AF0F56 /* fogo.mp3 */; };
 		1CC462B42450DF0600D6CB59 /* InvestimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */; };
 		1CC462B62450E25300D6CB59 /* InvestirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B52450E25300D6CB59 /* InvestirViewController.swift */; };
 		1CC462B82450E30700D6CB59 /* SacarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC462B72450E30700D6CB59 /* SacarViewController.swift */; };
@@ -92,6 +93,7 @@
 		1C8B12072464C2D600A073B3 /* feliz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feliz.mp3; sourceTree = "<group>"; };
 		1C8B12092464C3FB00A073B3 /* padrao4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = padrao4.mp3; sourceTree = "<group>"; };
 		1C8B120B2464C84E00A073B3 /* botao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = botao.mp3; sourceTree = "<group>"; };
+		1C94C9342465A80200AF0F56 /* fogo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fogo.mp3; sourceTree = "<group>"; };
 		1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoViewController.swift; sourceTree = "<group>"; };
 		1CC462B52450E25300D6CB59 /* InvestirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestirViewController.swift; sourceTree = "<group>"; };
 		1CC462B72450E30700D6CB59 /* SacarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacarViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				40BAA4082437DAC4002FA0CE /* Fase.storyboard */,
 				40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */,
 				1C8B12072464C2D600A073B3 /* feliz.mp3 */,
+				1C94C9342465A80200AF0F56 /* fogo.mp3 */,
 				1CDA1898245B624C00A360AF /* ImpostoDeRenda.storyboard */,
 				1C4FE0152460836F00D99CD1 /* ImpostoDeRenda.swift */,
 				1C8B12012464C09500A073B3 /* incendio.mp3 */,
@@ -408,6 +411,7 @@
 				1C8B12042464C14100A073B3 /* ruim.mp3 in Resources */,
 				89E3EAE7243261B7007C2CFC /* Intro.storyboard in Resources */,
 				1C8B12062464C1D600A073B3 /* neutro.mp3 in Resources */,
+				1C94C9352465A80200AF0F56 /* fogo.mp3 in Resources */,
 				89E3EAEB24326226007C2CFC /* Investimento.storyboard in Resources */,
 				1C8B12002464BD0200A073B3 /* padrao3.mp3 in Resources */,
 				40BAA40E2437DAC4002FA0CE /* FeedBack.storyboard in Resources */,

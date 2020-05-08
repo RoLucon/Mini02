@@ -17,7 +17,7 @@ class ContaViewController: UIViewController {
     @IBOutlet weak var viewFase2: UIView!
     @IBOutlet weak var setaFase2: UIImageView!
     @IBOutlet weak var viewFrase: UIView!
-    @IBOutlet weak var textoFase2: UILabel!
+    @IBOutlet weak var textoFase2: TextLabel!
     @IBOutlet weak var kimFase2: UIImageView!
     @IBOutlet weak var gerenciarFase2: UIButton!
     @IBOutlet weak var viewInferior: UIView!
@@ -29,10 +29,11 @@ class ContaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChart()
+        textoFase2.speed = 4
         //Fase 1
         if prog == 1 && contadorBanco >= 1 {
             viewFrase?.isHidden = false
-            textoFase2?.text = textoFase1[contadorBanco]
+            textoFase2?.texto = textoFase1[contadorBanco]!
             gerenciarButton.isUserInteractionEnabled = false
             viewInferior?.transform = CGAffineTransform(translationX: 0, y: -60)
             stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -80)
@@ -105,7 +106,7 @@ class ContaViewController: UIViewController {
     func fase1BttProximo() {
         if contadorBanco >= 9 && contadorBanco < 11 {
          contadorBanco += 1
-         textoFase2?.text = textoFase1[contadorBanco]
+            textoFase2?.texto = textoFase1[contadorBanco]!
         
         if contadorBanco == 11 {
             viewFase2?.isHidden = false
@@ -140,7 +141,7 @@ class ContaViewController: UIViewController {
     }
     
     func fase3AjustaTela(){
-        textoFase2?.text = textoFase3[1]
+        textoFase2?.texto = textoFase3[1]!
         viewInferior?.transform = CGAffineTransform(translationX: 0, y: -65)
         stkViewInferior?.transform = CGAffineTransform(translationX: 0, y: -90)
         gerenciarFase2.isHidden = true
@@ -207,16 +208,16 @@ class ContaViewController: UIViewController {
                 controleTexto["index"]! += 1
             }
             if controleTexto["index"]! == 2 {
-                textoFase2.text = calculaRespostsa()
+                textoFase2.texto = calculaRespostsa()
                 for btt in checkBoxBtts {
                     btt.isEnabled = false
                 }
                 controleTexto["primeiro"] = 3
             } else if controleTexto["index"]! == 3{
                  destacaRespostaCorreta()
-                 textoFase2.text = textoFase3[controleTexto["index"]!]
+                textoFase2.texto = textoFase3[controleTexto["index"]!]!
             } else {
-                textoFase2.text = textoFase3[controleTexto["index"]!]
+                textoFase2.texto = textoFase3[controleTexto["index"]!]!
             }
             if controleTexto["index"]! == 8 {
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
@@ -231,7 +232,7 @@ class ContaViewController: UIViewController {
             if controleTexto["index"]! > controleTexto["primeiro"]! {
                 controleTexto["index"]! -= 1
                 print(controleTexto["index"]!)
-                textoFase2.text = textoFase3[controleTexto["index"]!]
+                textoFase2.texto = textoFase3[controleTexto["index"]!]!
             }
         }
     }
