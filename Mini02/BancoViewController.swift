@@ -32,7 +32,7 @@ class BancoViewController: UIViewController {
     @IBOutlet weak var faturaView: UIView!
     @IBOutlet weak var faturaKim: UIView!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var faturaTexto: UILabel!
+    @IBOutlet weak var faturaTexto: TextLabel!
     @IBOutlet weak var setaFatura: UIImageView!
     @IBOutlet weak var faturaAtual: UILabel!
     @IBOutlet weak var cartaoLimite: UILabel!
@@ -156,7 +156,7 @@ class BancoViewController: UIViewController {
             StackView?.transform = CGAffineTransform(translationX: 0, y: -90)
             Extrato?.transform = CGAffineTransform(translationX: 0, y: -130)
             textoLabel?.text = textoFase1[1]!
-            faturaTexto?.text = textoFase1[contadorBanco]
+            faturaTexto?.texto = textoFase1[contadorBanco]!
             backButton?.isEnabled = false
         }
     }
@@ -266,7 +266,7 @@ class BancoViewController: UIViewController {
                 backButton?.isEnabled = false
             }
             faturaKim?.isHidden = false
-            faturaTexto?.text = textoFase2[contadorBanco]
+            faturaTexto?.texto = textoFase2[contadorBanco]!
             pagarBtn?.isUserInteractionEnabled = false
         }
     }
@@ -280,7 +280,7 @@ class BancoViewController: UIViewController {
     @IBAction func faturaNext(_ sender: Any) {
         if prog == 1 && contadorBanco >= 12 && contadorBanco < 14 {
             contadorBanco += 1
-            faturaTexto?.text = textoFase1[contadorBanco]
+            faturaTexto?.texto = textoFase1[contadorBanco]!
             if contadorBanco == 14 {
                 faturaView?.isHidden = false
                 setaFatura?.isHidden = false
@@ -292,7 +292,7 @@ class BancoViewController: UIViewController {
             print(contadorBanco)
 
             if contadorBanco <= 5 || contadorBanco > 6 {
-                faturaTexto?.text = textoFase2[contadorBanco]
+                faturaTexto?.texto = textoFase2[contadorBanco]!
                 if contadorBanco != 7 {
                     contadorBanco += 1
                 }
