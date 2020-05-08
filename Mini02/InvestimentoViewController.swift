@@ -153,6 +153,7 @@ class Investimentos: UIViewController {
     
     
     @IBAction func backBtt(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     
