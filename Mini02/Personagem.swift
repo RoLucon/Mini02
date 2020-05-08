@@ -82,7 +82,7 @@ class Personagem {
         fatura = 300
         cartao = 500
         semestre = 1
-        score = 1000
+        score = 190
     }
     
     func resetSave(){
