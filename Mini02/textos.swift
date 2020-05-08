@@ -17,8 +17,11 @@ var r = 0 //Salva a resposta escolida
 var c = 0 //Representa a fala inicial da fase
 var contadorBanco = 0
 var fasebug = false
-
+var semcorpo = 0
 let personagem: Personagem = Personagem.shared
+
+let semkim = [1,13,60,72]
+
 //Todas as falas do jogo em ordem de aparição
 let texto = [
     //Inicio cap 1
@@ -172,7 +175,7 @@ let textoFase2 = [
     10:"É bom que seu limite nunca seja maior que o seu salário!",
     11:"E a melhor opção é usar o cartão de crédito só em grandes compras. Como uma geladeira, por exemplo, que é cara, mas necessária.",
     12:"Inclusive, a da república tá precisando de um conserto...",
-    //13:"",
+    13:"",
     14:"",
     15:"",
     16:"",
@@ -318,6 +321,7 @@ let rostos = [
 82: "kimtriste",83: "kimneutra",84: "kimneutra",85: "kimneutra",86: "kimneutra",87: "kimtriste2",88: "kimtriste",89: "kimneutra",
 90: "kimneutra",91: "kimneutra",92: "kimneutra",93: "kimdentes",94: "kimneutra",95: "kimpiscada",96: "kimneutra",97: "kimneutra",98: "kimtriste",
 99: "kimneutra",100: "kimneutra"]
+
 
 
 var prog = 1 // Representa o progresso do jogador [AQUI]

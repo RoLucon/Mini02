@@ -266,7 +266,7 @@ class BancoViewController: UIViewController {
                 backButton?.isEnabled = false
             }
             faturaKim?.isHidden = false
-            faturaTexto?.texto = textoFase2[contadorBanco]!
+            faturaTexto?.texto = textoFase2[1]!
             pagarBtn?.isUserInteractionEnabled = false
         }
     }
