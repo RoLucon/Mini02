@@ -326,7 +326,7 @@ class selecf: UIViewController{
             fase1?.backgroundColor = nil
             fundo(fundo: "parque")
             faseView?.backgroundColor = .systemGreen
-            setaBanco?.tintColor = .systemRed
+            //setaBanco?.tintColor = .systemRed
         case 2:
             fase2?.backgroundColor = nil
             fundo(fundo: "shopping")
