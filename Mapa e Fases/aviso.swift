@@ -216,6 +216,7 @@ class selecf: UIViewController{
         print(rostos[c]!)
         rosto(rostos[c]!)
         ApareceSeta(c)
+        fala?.speed = 4
         fala?.texto = texto[c]!
         print("texto n: " + String(c))
         play1.toca(music: "botao.mp3")
@@ -293,7 +294,6 @@ class selecf: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fala.speed = 4
         dialogo()
         observer()
         play.para()
