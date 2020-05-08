@@ -40,7 +40,7 @@
                                 </constraints>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zd8-o1-cvg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zd8-o1-cvg" customClass="TextLabel" customModule="Mini02" customModuleProvider="target">
                                 <rect key="frame" x="20" y="736" width="374" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="B53-y8-S9d"/>
@@ -182,6 +182,7 @@
                     <navigationItem key="navigationItem" id="gh6-6Z-5J9"/>
                     <connections>
                         <outlet property="banco" destination="6Ng-Wc-MHr" id="SOW-LU-TEM"/>
+                        <outlet property="corpo" destination="phd-VR-KKR" id="g5N-kS-kkf"/>
                         <outlet property="fala" destination="Zd8-o1-cvg" id="hFg-R6-1hH"/>
                         <outlet property="faseView" destination="uPe-Ze-HbX" id="MRt-Dn-TGx"/>
                         <outlet property="fundoFase" destination="5Cd-pq-FtR" id="aHL-ca-9N9"/>

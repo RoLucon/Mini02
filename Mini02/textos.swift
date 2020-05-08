@@ -17,8 +17,11 @@ var r = 0 //Salva a resposta escolida
 var c = 0 //Representa a fala inicial da fase
 var contadorBanco = 0
 var fasebug = false
-
+var semcorpo = 0
 let personagem: Personagem = Personagem.shared
+
+let semkim = [1,13,60,72]
+
 //Todas as falas do jogo em ordem de aparição
 let texto = [
     //Inicio cap 1
@@ -320,7 +323,8 @@ let rostos = [
 99: "kimneutra",100: "kimneutra"]
 
 
-var prog = 2 // Representa o progresso do jogador [AQUI]
+
+var prog = 1 // Representa o progresso do jogador [AQUI]
 
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
@@ -369,4 +373,8 @@ Debêntures - Debêntures é um tipo de investimento em renda fixa oferecidos po
     Sendo que o Imposto de renda é de 15% (na vida real este valor varia com o tempo em que a pessoa fica com o CDB Variando de 22,5 a 15%) em cima do lucro que você tiver neste investimento.
 """
 
+let bom = ["Tudo o que se precisa é fé e confiança.","Os sonhos existem para tornar-se realidade","É divertido fazer o impossível", "Assim, depois de muito esperar, um dia como qualquer outro decidi triunfar"]
 
+let medio = ["Ate que as coisas nao ta ruins.","Pensando pelo lado bom, poderia estar pior.","Ate que estou conseguindo levar as coisas.","As coisas nao estao ruins, mas tbm nao estam boas.","Alegre-se, criança. Tudo terminará bem."]
+
+let ruim = ["Eu achei q ja tava ruim, mas agora ta pior.","Apenas continue nadando","Eu rio na cara do perigo!","A diferença entre ganhar e perder é muitas vezes… não desistir","Para começar, pare de falar e comece a fazer"]

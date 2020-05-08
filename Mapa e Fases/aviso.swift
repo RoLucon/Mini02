@@ -158,7 +158,7 @@ class popup: UIViewController{
 
 class selecf: UIViewController{
     @IBOutlet weak var kim: UIImageView!
-    @IBOutlet weak var fala: UILabel!
+    @IBOutlet weak var fala: TextLabel!
     @IBOutlet weak var fase1: UIButton!
     @IBOutlet weak var fase2: UIButton!
     @IBOutlet weak var fase3: UIButton!
@@ -173,7 +173,7 @@ class selecf: UIViewController{
     @IBOutlet weak var fundoFase: UIImageView!
     @IBOutlet var faseView: UIView!
     @IBOutlet weak var kimRosto: UIImageView!
-    
+    @IBOutlet weak var corpo: UIImageView!
     @IBOutlet weak var impRenda: UIButton!
     @IBOutlet weak var quiz: UIButton!
     
@@ -212,11 +212,34 @@ class selecf: UIViewController{
     }
     var teste = false
     
+    func quemaparece(){
+        for i in semkim{
+            if c == i{
+                corpo?.image = nil
+                kimRosto?.image = nil
+                semcorpo = 1
+            }
+        }
+        if c != 1 && c != 13 && c != 60 && c != 72{
+            if c == 73{
+                corpo?.image = UIImage(named: "\(Personagem.shared.imgNome!)triste")
+                kimRosto?.image = nil
+            }else if c == 74{
+                corpo?.image = UIImage(named: "faustao")
+                kimRosto?.image = nil
+            }else if semcorpo == 1{
+                corpo?.image = UIImage(named: "kimcorpo")
+                semcorpo = 0
+            }
+        }
+    }
+    
     func dialogo(){
-        print(rostos[c]!)
         rosto(rostos[c]!)
+        quemaparece()
         ApareceSeta(c)
-        fala?.text = texto[c]
+        fala?.speed = 4
+        fala?.texto = texto[c]!
         print("texto n: " + String(c))
         play1.toca(music: "botao.mp3")
         

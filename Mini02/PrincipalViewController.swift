@@ -112,13 +112,13 @@ class ViewController: UIViewController {
         personagem = Personagem.shared
         let temp:Int? = personagem.score(nil)
         if(temp!>650){
-            FalaPrsonagem.text = "Está na situação boa!"
+            FalaPrsonagem.text = bom[Int.random(in: 0 ... 3)]
             personagemSituacao.image=UIImage(named:"\(Personagem.shared.imgNome!)feliz")
         }else if(temp!>350){
-            FalaPrsonagem.text = "Está na situação Mais ou menos!"
+            FalaPrsonagem.text = medio[Int.random(in: 0 ... 4)]
             personagemSituacao.image=UIImage(named:"\(Personagem.shared.imgNome!)neutro")
         }else{
-            FalaPrsonagem.text = "Está na situação Ruim!"
+            FalaPrsonagem.text = ruim[Int.random(in: 0 ... 4)]
             personagemSituacao.image=UIImage(named:"\(Personagem.shared.imgNome!)triste")
         }
     }
