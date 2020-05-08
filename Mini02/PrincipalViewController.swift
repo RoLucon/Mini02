@@ -92,7 +92,7 @@ class ViewController: UIViewController {
     }
     
     func observer(){
-        NotificationCenter.default.addObserver(self, selector: #selector(self.atualizarFala(notificacao:)), name: notificacao, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.atualizarFala(notificacao:)), name: NSNotification.Name.init("AtualizarTexto"), object: nil)
     }
   
     @objc func atualizarFala(notificacao: NSNotification){

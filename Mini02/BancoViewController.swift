@@ -73,6 +73,8 @@ class BancoViewController: UIViewController {
     func observer(){
         NotificationCenter.default.addObserver(self, selector: #selector(atualizarSaldo(n:)), name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(atualizarSaldo(n:)), name: NSNotification.Name.init("AtualizarTexto"), object: nil)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(proximoTexto(_:)), name: NSNotification.Name.init("AtualizarFala"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(faturaNext(_:)), name: NSNotification.Name.init("AtualizarFatura"), object: nil)
