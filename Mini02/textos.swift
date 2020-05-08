@@ -378,3 +378,7 @@ let bom = ["Tudo o que se precisa é fé e confiança.","Os sonhos existem para 
 let medio = ["Ate que as coisas nao ta ruins.","Pensando pelo lado bom, poderia estar pior.","Ate que estou conseguindo levar as coisas.","As coisas nao estao ruins, mas tbm nao estam boas.","Alegre-se, criança. Tudo terminará bem."]
 
 let ruim = ["Eu achei q ja tava ruim, mas agora ta pior.","Apenas continue nadando","Eu rio na cara do perigo!","A diferença entre ganhar e perder é muitas vezes… não desistir","Para começar, pare de falar e comece a fazer"]
+
+let feedbackBom = ["Tá manjando do paranauês!","Tá 10/10, hein, \(personagem.nome!)?","O próprio mito das finanças! Estou orgulhosa de você."]
+
+let feedbackRuim = ["Parece que você não está prestando atenção nas dicas da Kim…", "Tu tá na Disney? Acho melhor prestar mais atenção.", "Deu ruim, hein? É melhor estudar um pouco mais…"]
