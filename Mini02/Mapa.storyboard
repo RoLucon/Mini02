@@ -15,24 +15,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shopping-blur" translatesAutoresizingMaskIntoConstraints="NO" id="DRR-mE-rqq">
-                                <rect key="frame" x="0.0" y="83" width="414" height="730"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3S-1J-sE8" userLabel="SCORE">
-                                <rect key="frame" x="167" y="44" width="80" height="32"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shopping-blur" translatesAutoresizingMaskIntoConstraints="NO" id="4UO-g9-oM3" userLabel="MAPA">
-                                <rect key="frame" x="0.0" y="83" width="414" height="730"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping-blur" translatesAutoresizingMaskIntoConstraints="NO" id="ukq-bR-BXr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-pM-EdX">
-                                <rect key="frame" x="33" y="44" width="51" height="34"/>
-                                <state key="normal" title="Banco"/>
+                                <rect key="frame" x="33" y="44" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Eor-40-6Wc"/>
+                                    <constraint firstAttribute="width" constant="40" id="Yc9-MY-1AM"/>
+                                </constraints>
+                                <state key="normal" title="Banco" image="banco"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy2-Kb-8Ef">
-                                <rect key="frame" x="327" y="44" width="54" height="34"/>
-                                <state key="normal" title="Config"/>
+                                <rect key="frame" x="349" y="44" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LPF-0b-MJ2"/>
+                                    <constraint firstAttribute="width" constant="40" id="v68-pm-Qjx"/>
+                                </constraints>
+                                <state key="normal" image="configurar"/>
                                 <connections>
                                     <action selector="configBtt:" destination="F8c-i4-nYd" eventType="touchUpInside" id="h5F-g5-R9I"/>
                                 </connections>
@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FvM-nC-kpG">
-                                <rect key="frame" x="20" y="99.333333333333314" width="36" height="53.666666666666686"/>
+                                <rect key="frame" x="20" y="227.33333333333334" width="36" height="53.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="ZKq-hc-0hY"/>
                                     <constraint firstAttribute="height" constant="56" id="gXl-xA-Psv"/>
@@ -131,21 +131,32 @@
                                     <action selector="f8:" destination="F8c-i4-nYd" eventType="touchUpInside" id="uKO-zm-Buz"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9v-Oo-YdN" customClass="ScoreView" customModule="Mini02" customModuleProvider="target">
+                                <rect key="frame" x="167" y="44" width="80" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="if0-dX-ks7"/>
+                                    <constraint firstAttribute="height" constant="40" id="lYg-Kr-WGt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.51372549020000002" green="0.43921568630000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="FvM-nC-kpG" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="20" id="1Td-x9-EZN"/>
                             <constraint firstItem="sip-tc-eVs" firstAttribute="centerX" secondItem="M0v-nZ-1yO" secondAttribute="centerX" id="9dl-8w-ytC"/>
                             <constraint firstItem="sFz-TR-K4d" firstAttribute="trailing" secondItem="FvM-nC-kpG" secondAttribute="trailing" constant="358" id="CfK-gn-qWY"/>
-                            <constraint firstItem="R3S-1J-sE8" firstAttribute="top" secondItem="sFz-TR-K4d" secondAttribute="top" id="IPG-RD-7Xf"/>
+                            <constraint firstItem="U9v-Oo-YdN" firstAttribute="top" secondItem="ofh-pM-EdX" secondAttribute="top" id="ETg-lr-NcE"/>
+                            <constraint firstItem="U9v-Oo-YdN" firstAttribute="centerX" secondItem="ukq-bR-BXr" secondAttribute="centerX" id="F3q-5z-pUa"/>
                             <constraint firstItem="Vy2-Kb-8Ef" firstAttribute="top" secondItem="sFz-TR-K4d" secondAttribute="top" id="Jex-I8-A6m"/>
                             <constraint firstItem="ofh-pM-EdX" firstAttribute="top" secondItem="sFz-TR-K4d" secondAttribute="top" id="KSC-zM-rrV"/>
-                            <constraint firstItem="R3S-1J-sE8" firstAttribute="centerX" secondItem="M0v-nZ-1yO" secondAttribute="centerX" id="KfC-HL-2qd"/>
-                            <constraint firstItem="sFz-TR-K4d" firstAttribute="trailing" secondItem="Vy2-Kb-8Ef" secondAttribute="trailing" constant="33" id="L0b-jU-RG7"/>
-                            <constraint firstItem="Vy2-Kb-8Ef" firstAttribute="leading" secondItem="R3S-1J-sE8" secondAttribute="trailing" constant="80" id="ZtF-Jr-fvF"/>
+                            <constraint firstItem="sFz-TR-K4d" firstAttribute="trailing" secondItem="Vy2-Kb-8Ef" secondAttribute="trailing" constant="25" id="L0b-jU-RG7"/>
                             <constraint firstItem="sip-tc-eVs" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" id="eI0-Xd-CsK"/>
                             <constraint firstItem="ofh-pM-EdX" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="33" id="f2K-Ri-62a"/>
-                            <constraint firstItem="FvM-nC-kpG" firstAttribute="top" secondItem="ofh-pM-EdX" secondAttribute="bottom" constant="20" id="gjR-RI-ztv"/>
+                            <constraint firstItem="FvM-nC-kpG" firstAttribute="top" secondItem="ofh-pM-EdX" secondAttribute="bottom" constant="142" id="gjR-RI-ztv"/>
+                            <constraint firstItem="ukq-bR-BXr" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" id="hij-pT-Sz0"/>
+                            <constraint firstItem="ukq-bR-BXr" firstAttribute="top" secondItem="M0v-nZ-1yO" secondAttribute="topMargin" constant="-44" id="mIk-qK-BYl"/>
+                            <constraint firstItem="U9v-Oo-YdN" firstAttribute="centerX" secondItem="sip-tc-eVs" secondAttribute="centerX" id="o53-pz-vcJ"/>
+                            <constraint firstItem="ukq-bR-BXr" firstAttribute="bottom" secondItem="sFz-TR-K4d" secondAttribute="bottom" id="vnF-TK-UbO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sFz-TR-K4d"/>
                     </view>
@@ -198,8 +209,10 @@
     </scenes>
     <resources>
         <image name="arrow.up" catalog="system" width="60" height="64"/>
+        <image name="banco" width="100" height="101"/>
         <image name="bronze-direita" width="240" height="293"/>
         <image name="bronze-esquerda" width="241" height="293"/>
+        <image name="configurar" width="32" height="34"/>
         <image name="mapa" width="1080" height="1920"/>
         <image name="shopping-blur" width="4500" height="8000"/>
     </resources>
