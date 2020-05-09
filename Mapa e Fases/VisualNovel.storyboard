@@ -39,23 +39,22 @@
                                     <constraint firstAttribute="height" constant="160" id="5PW-ob-3Q6"/>
                                 </constraints>
                                 <blurEffect style="regular"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zd8-o1-cvg" customClass="TextLabel" customModule="Mini02" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primeira fala" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zd8-o1-cvg" customClass="TextLabel" customModule="Mini02" customModuleProvider="target">
                                 <rect key="frame" x="20" y="736" width="374" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="B53-y8-S9d"/>
                                     <constraint firstAttribute="height" constant="160" id="mMG-VB-x4N"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Primeira fala">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="18"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.25383052230000003" green="0.18550273780000001" blue="0.1019409075" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.25383052230000003" green="0.18550273780000001" blue="0.1019409075" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CH-LB-d8e">
                                 <rect key="frame" x="377.33333333333331" y="840" width="16.666666666666686" height="22"/>
@@ -88,26 +87,15 @@
                                     <constraint firstAttribute="height" constant="66" id="nGF-Rg-jNa"/>
                                 </constraints>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwy-n5-FoG">
-                                <rect key="frame" x="325" y="788" width="61" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <state key="normal" title="Quiz">
-                                    <color key="titleColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="VdF-Xn-zkL" kind="show" id="Jvw-tx-HKr"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cT-Bp-n4S">
-                                <rect key="frame" x="307" y="776" width="96" height="68"/>
+                                <rect key="frame" x="318" y="811" width="96" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <state key="normal" title="App">
                                     <color key="titleColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TFS-Lr-Rhq" kind="show" id="d5y-fB-YMU"/>
+                                    <segue destination="TFS-Lr-Rhq" kind="presentation" modalPresentationStyle="overFullScreen" id="d5y-fB-YMU"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="left" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GiI-4J-fPZ">
@@ -149,6 +137,17 @@
                                     <constraint firstAttribute="height" constant="40" id="H6z-38-fYS"/>
                                 </constraints>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwy-n5-FoG">
+                                <rect key="frame" x="336" y="822" width="61" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <state key="normal" title="Quiz">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VdF-Xn-zkL" kind="presentation" modalPresentationStyle="overFullScreen" id="Jvw-tx-HKr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

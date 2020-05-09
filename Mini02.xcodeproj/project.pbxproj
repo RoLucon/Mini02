@@ -113,7 +113,7 @@
 		895108A7244A1D140088D7CB /* ContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContaViewController.swift; sourceTree = "<group>"; };
 		895C37092462006500622754 /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		89DF46A82437B75200FB36EB /* Personagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personagem.swift; sourceTree = "<group>"; };
-		89E3EAA9242E98D3007C2CFC /* Mini02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mini02.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89E3EAA9242E98D3007C2CFC /* KINTALE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINTALE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E3EAAE242E98D3007C2CFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89E3EAB0242E98D3007C2CFC /* PrincipalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
 		89E3EAB3242E98D3007C2CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		89E3EAAA242E98D3007C2CFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				89E3EAA9242E98D3007C2CFC /* Mini02.app */,
+				89E3EAA9242E98D3007C2CFC /* KINTALE.app */,
 				89E3EABF242E98D6007C2CFC /* Mini02Tests.xctest */,
 				89E3EACA242E98D6007C2CFC /* Mini02UITests.xctest */,
 			);
@@ -313,7 +313,7 @@
 			);
 			name = Mini02;
 			productName = Mini02;
-			productReference = 89E3EAA9242E98D3007C2CFC /* Mini02.app */;
+			productReference = 89E3EAA9242E98D3007C2CFC /* KINTALE.app */;
 			productType = "com.apple.product-type.application";
 		};
 		89E3EABE242E98D6007C2CFC /* Mini02Tests */ = {
@@ -653,7 +653,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = academy.Mini02;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KINTALE;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -672,7 +672,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = academy.Mini02;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KINTALE;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
