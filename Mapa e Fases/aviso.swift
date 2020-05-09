@@ -63,6 +63,7 @@ class popup: UIViewController{
             resposta6[r] = x
         case 8:
             resposta7[r] = x
+            Progresso.shared.resposta7 = resposta7[r]
         default:
             print("n era para isso acontecer")
         }
