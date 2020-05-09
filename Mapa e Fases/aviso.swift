@@ -422,6 +422,7 @@ class selecf: UIViewController{
     
     //Avança uma fase
     @IBAction func avanca(_ sender: AnyObject) {
+        
     }
     
     //Vai pra fase 1
