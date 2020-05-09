@@ -49,7 +49,6 @@
 		89E3EAB9242E98D5007C2CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAB7242E98D5007C2CFC /* LaunchScreen.storyboard */; };
 		89E3EAC4242E98D6007C2CFC /* Mini02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EAC3242E98D6007C2CFC /* Mini02Tests.swift */; };
 		89E3EACF242E98D6007C2CFC /* Mini02UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3EACE242E98D6007C2CFC /* Mini02UITests.swift */; };
-		89E3EAE7243261B7007C2CFC /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAE6243261B7007C2CFC /* Intro.storyboard */; };
 		89E3EAE924326209007C2CFC /* Banco.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAE824326209007C2CFC /* Banco.storyboard */; };
 		89E3EAEB24326226007C2CFC /* Investimento.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAEA24326226007C2CFC /* Investimento.storyboard */; };
 		89E3EAED24326E35007C2CFC /* Principal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E3EAEC24326E35007C2CFC /* Principal.storyboard */; };
@@ -127,7 +126,6 @@
 		89E3EACA242E98D6007C2CFC /* Mini02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mini02UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E3EACE242E98D6007C2CFC /* Mini02UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini02UITests.swift; sourceTree = "<group>"; };
 		89E3EAD0242E98D6007C2CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89E3EAE6243261B7007C2CFC /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		89E3EAE824326209007C2CFC /* Banco.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Banco.storyboard; sourceTree = "<group>"; };
 		89E3EAEA24326226007C2CFC /* Investimento.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Investimento.storyboard; sourceTree = "<group>"; };
 		89E3EAEC24326E35007C2CFC /* Principal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Principal.storyboard; sourceTree = "<group>"; };
@@ -190,6 +188,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8979074B246626740024F8FC /* Musicas */ = {
+			isa = PBXGroup;
+			children = (
+				1C8B12032464C14100A073B3 /* ruim.mp3 */,
+				1C8B12012464C09500A073B3 /* incendio.mp3 */,
+				1C8B12072464C2D600A073B3 /* feliz.mp3 */,
+				1C94C9342465A80200AF0F56 /* fogo.mp3 */,
+				1C8B11F72464A7D800A073B3 /* coin.mp3 */,
+				1C8B120B2464C84E00A073B3 /* botao.mp3 */,
+				1C8B12052464C1D600A073B3 /* neutro.mp3 */,
+				1C8B11FB2464B1F600A073B3 /* padrao.mp3 */,
+				1C8B11FD2464B35100A073B3 /* padrao2.mp3 */,
+				1C8B11FF2464BD0200A073B3 /* padrao3.mp3 */,
+				1C8B12092464C3FB00A073B3 /* padrao4.mp3 */,
+			);
+			path = Musicas;
+			sourceTree = "<group>";
+		};
 		89E3EAA0242E98D3007C2CFC = {
 			isa = PBXGroup;
 			children = (
@@ -221,39 +237,22 @@
 				40BAA40D2437DAC4002FA0CE /* aviso.swift */,
 				89E3EAB5242E98D5007C2CFC /* Assets.xcassets */,
 				89E3EAE824326209007C2CFC /* Banco.storyboard */,
-				1C8B11F72464A7D800A073B3 /* coin.mp3 */,
-				C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */,
-				1C8B120B2464C84E00A073B3 /* botao.mp3 */,
-				C0DC056E245D1C4100CA893F /* ExtratoViewController.swift */,
 				40BAA4082437DAC4002FA0CE /* Fase.storyboard */,
 				40BAA4072437DAC4002FA0CE /* FeedBack.storyboard */,
-				1C8B12072464C2D600A073B3 /* feliz.mp3 */,
-				1C94C9342465A80200AF0F56 /* fogo.mp3 */,
 				1CDA1898245B624C00A360AF /* ImpostoDeRenda.storyboard */,
 				1C4FE0152460836F00D99CD1 /* ImpostoDeRenda.swift */,
-				1C8B12012464C09500A073B3 /* incendio.mp3 */,
 				89E3EABA242E98D5007C2CFC /* Info.plist */,
-				89E3EAE6243261B7007C2CFC /* Intro.storyboard */,
 				89E3EAEA24326226007C2CFC /* Investimento.storyboard */,
 				1C24ADC9243FC257000D9B67 /* Investimento.swift */,
-				1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */,
-				1CC462B52450E25300D6CB59 /* InvestirViewController.swift */,
 				89E3EAB7242E98D5007C2CFC /* LaunchScreen.storyboard */,
 				89E3EAB2242E98D3007C2CFC /* Main.storyboard */,
 				8932CD46243BAA8800E2BCA4 /* Mapa.storyboard */,
-				1C8B12052464C1D600A073B3 /* neutro.mp3 */,
-				1C8B11FB2464B1F600A073B3 /* padrao.mp3 */,
-				1C8B11FD2464B35100A073B3 /* padrao2.mp3 */,
-				1C8B11FF2464BD0200A073B3 /* padrao3.mp3 */,
-				1C8B12092464C3FB00A073B3 /* padrao4.mp3 */,
+				8979074B246626740024F8FC /* Musicas */,
 				1C8B11F92464A8AF00A073B3 /* playerMusic.swift */,
 				89DF46A82437B75200FB36EB /* Personagem.swift */,
 				89E3EAEC24326E35007C2CFC /* Principal.storyboard */,
-				89E3EAB0242E98D3007C2CFC /* PrincipalViewController.swift */,
 				1CDA1895245B53F100A360AF /* Quiz.storyboard */,
 				1CDA1894245B53F100A360AF /* Quiz.swift */,
-				1C8B12032464C14100A073B3 /* ruim.mp3 */,
-				1CC462B72450E30700D6CB59 /* SacarViewController.swift */,
 				89E3EAAE242E98D3007C2CFC /* SceneDelegate.swift */,
 				8932CD4B243BCB9000E2BCA4 /* SideQuest.storyboard */,
 				40B9BDAB245357680087800A /* textos.swift */,
@@ -283,10 +282,16 @@
 		89E3EAEE24328716007C2CFC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */,
-				89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */,
-				8932CD52243D1F4900E2BCA4 /* NarrativaViewController.swift */,
+				C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */,
 				895108A7244A1D140088D7CB /* ContaViewController.swift */,
+				89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */,
+				C0DC056E245D1C4100CA893F /* ExtratoViewController.swift */,
+				89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */,
+				1CC462B32450DF0600D6CB59 /* InvestimentoViewController.swift */,
+				1CC462B52450E25300D6CB59 /* InvestirViewController.swift */,
+				8932CD52243D1F4900E2BCA4 /* NarrativaViewController.swift */,
+				89E3EAB0242E98D3007C2CFC /* PrincipalViewController.swift */,
+				1CC462B72450E30700D6CB59 /* SacarViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -409,7 +414,6 @@
 				1C8B120A2464C3FB00A073B3 /* padrao4.mp3 in Resources */,
 				40BAA4102437DAC4002FA0CE /* VisualNovel.storyboard in Resources */,
 				1C8B12042464C14100A073B3 /* ruim.mp3 in Resources */,
-				89E3EAE7243261B7007C2CFC /* Intro.storyboard in Resources */,
 				1C8B12062464C1D600A073B3 /* neutro.mp3 in Resources */,
 				1C94C9352465A80200AF0F56 /* fogo.mp3 in Resources */,
 				89E3EAEB24326226007C2CFC /* Investimento.storyboard in Resources */,
