@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e5k-cN-CGY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ABB-nf-DQv">
+            <objects>
+                <viewController id="5st-Em-Vr9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eme-iS-GmS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kimfb-ruim" translatesAutoresizingMaskIntoConstraints="NO" id="3gF-a3-aMm">
+                                <rect key="frame" x="87" y="214" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="1ul-sy-y86"/>
+                                    <constraint firstAttribute="height" constant="240" id="5qH-oq-Wdn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Em breve!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eye-kq-QvQ">
+                                <rect key="frame" x="115" y="520" width="184" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="MTf-tU-Zao"/>
+                                    <constraint firstAttribute="height" constant="48" id="bPQ-Q9-SLy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paciência e empatia com os" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5z-FH-9AY">
+                                <rect key="frame" x="75.5" y="576" width="263" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="5fW-2E-hiW"/>
+                                    <constraint firstAttribute="width" constant="263" id="StN-IU-AwB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="desenvolvedores, por favor..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh8-me-60b">
+                                <rect key="frame" x="71" y="611" width="272" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="3EL-eH-cLv"/>
+                                    <constraint firstAttribute="width" constant="272" id="5Vc-2Q-OXD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V5z-FH-9AY" firstAttribute="centerX" secondItem="eye-kq-QvQ" secondAttribute="centerX" id="D9O-hD-nmk"/>
+                            <constraint firstItem="V5z-FH-9AY" firstAttribute="top" secondItem="eye-kq-QvQ" secondAttribute="bottom" constant="8" id="Fhz-cc-Oww"/>
+                            <constraint firstItem="V5z-FH-9AY" firstAttribute="centerX" secondItem="eme-iS-GmS" secondAttribute="centerX" id="N0x-Ad-dem"/>
+                            <constraint firstItem="V5z-FH-9AY" firstAttribute="centerX" secondItem="Gh8-me-60b" secondAttribute="centerX" id="NTp-7O-G5J"/>
+                            <constraint firstAttribute="bottom" secondItem="V5z-FH-9AY" secondAttribute="bottom" constant="293" id="OIB-vR-o46"/>
+                            <constraint firstItem="Gh8-me-60b" firstAttribute="top" secondItem="V5z-FH-9AY" secondAttribute="bottom" constant="8" id="Woz-GY-vdu"/>
+                            <constraint firstItem="3gF-a3-aMm" firstAttribute="top" secondItem="4tu-Mv-so1" secondAttribute="top" constant="170" id="cM4-z1-nHd"/>
+                            <constraint firstItem="V5z-FH-9AY" firstAttribute="centerX" secondItem="3gF-a3-aMm" secondAttribute="centerX" id="dp0-G0-Ygu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4tu-Mv-so1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Fj-0a-X9B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5G-9Q-FfI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="82.366071428571431"/>
+        </scene>
+        <!--Side Quest-->
+        <scene sceneID="vLg-qL-NoO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="e5k-cN-CGY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Side Quest" image="gamecontroller.fill" catalog="system" id="VNS-oo-n2a"/>
+
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ltx-2K-TbX">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5st-Em-Vr9" kind="relationship" relationship="rootViewController" id="4Eh-Kp-TtE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTU-yh-V06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="82.366071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gamecontroller.fill" catalog="system" width="64" height="40"/>
+        <image name="kimfb-ruim" width="1024" height="1024"/>
+    </resources>
+</document>

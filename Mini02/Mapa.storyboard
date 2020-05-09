@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bhA-NR-hfw">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selecf-->
+        <scene sceneID="inZ-a8-1Nf">
+            <objects>
+                <viewController id="F8c-i4-nYd" customClass="selecf" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M0v-nZ-1yO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping-blur" translatesAutoresizingMaskIntoConstraints="NO" id="ukq-bR-BXr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-pM-EdX">
+                                <rect key="frame" x="33" y="56" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Eor-40-6Wc"/>
+                                    <constraint firstAttribute="width" constant="40" id="Yc9-MY-1AM"/>
+                                </constraints>
+                                <state key="normal" title="Banco" image="banco"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy2-Kb-8Ef">
+                                <rect key="frame" x="354" y="56" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LPF-0b-MJ2"/>
+                                    <constraint firstAttribute="width" constant="40" id="v68-pm-Qjx"/>
+                                </constraints>
+                                <state key="normal" image="configurar"/>
+                                <connections>
+                                    <action selector="configBtt:" destination="F8c-i4-nYd" eventType="touchUpInside" id="h5F-g5-R9I"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapa" translatesAutoresizingMaskIntoConstraints="NO" id="sip-tc-eVs">
+                                <rect key="frame" x="7" y="183" width="400" height="530"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="530" id="rLD-Z3-hxP"/>
+                                    <constraint firstAttribute="width" constant="400" id="vSE-bc-EJN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l84-B2-Ah7">
+                                <rect key="frame" x="52" y="228" width="90" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fase 1" image="bronze-direita">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="f1:" destination="F8c-i4-nYd" eventType="touchUpInside" id="mHl-5v-FXd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKk-MQ-i99">
+                                <rect key="frame" x="309" y="306" width="90" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fase 3" image="bronze-direita">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="f3:" destination="F8c-i4-nYd" eventType="touchUpInside" id="gaM-Rc-qsf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXA-Z3-MnK">
+                                <rect key="frame" x="149" y="359" width="90" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fase 4" image="bronze-direita">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="f4:" destination="F8c-i4-nYd" eventType="touchUpInside" id="gyq-dd-1zk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3M-li-wdE">
+                                <rect key="frame" x="62" y="437" width="90" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fase 5" image="bronze-esquerda">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="f5:" destination="F8c-i4-nYd" eventType="touchUpInside" id="Wp3-JT-QfX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsh-ZQ-kPF">
+                                <rect key="frame" x="213" y="460" width="90" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fase 6" image="bronze-esquerda">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="f6:" destination="F8c-i4-nYd" eventType="touchUpInside" id="E1i-1X-Rqb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gay-yc-i2M">
+                                <rect key="frame" x="289" y="539" width="90" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fase 7" image="bronze-esquerda">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="f7:" destination="F8c-i4-nYd" eventType="touchUpInside" id="EGD-Uf-iUk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQC-y0-nlu">
+                                <rect key="frame" x="209" y="258" width="90" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fase 2" image="bronze-direita">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="f2:" destination="F8c-i4-nYd" eventType="touchUpInside" id="gH5-OP-2Rl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG3-Nu-LBj">
+                                <rect key="frame" x="113" y="590" width="90" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fase 8" image="bronze-esquerda">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="f8:" destination="F8c-i4-nYd" eventType="touchUpInside" id="uKO-zm-Buz"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9v-Oo-YdN" customClass="ScoreView" customModule="Mini02" customModuleProvider="target">
+                                <rect key="frame" x="167" y="56" width="80" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="if0-dX-ks7"/>
+                                    <constraint firstAttribute="height" constant="40" id="lYg-Kr-WGt"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FvM-nC-kpG">
+                                <rect key="frame" x="79" y="334.33333333333331" width="36" height="53.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="ZKq-hc-0hY"/>
+                                    <constraint firstAttribute="height" constant="56" id="gXl-xA-Psv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51372549020000002" green="0.43921568630000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sip-tc-eVs" firstAttribute="centerX" secondItem="M0v-nZ-1yO" secondAttribute="centerX" id="9dl-8w-ytC"/>
+                            <constraint firstItem="ofh-pM-EdX" firstAttribute="top" secondItem="sFz-TR-K4d" secondAttribute="top" constant="12" id="DKd-tM-WN5"/>
+                            <constraint firstItem="FvM-nC-kpG" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="79" id="DsI-ud-bfw"/>
+                            <constraint firstItem="U9v-Oo-YdN" firstAttribute="top" secondItem="ofh-pM-EdX" secondAttribute="top" id="ETg-lr-NcE"/>
+                            <constraint firstItem="U9v-Oo-YdN" firstAttribute="centerX" secondItem="ukq-bR-BXr" secondAttribute="centerX" id="F3q-5z-pUa"/>
+                            <constraint firstItem="sFz-TR-K4d" firstAttribute="trailing" secondItem="Vy2-Kb-8Ef" secondAttribute="trailing" constant="20" id="L0b-jU-RG7"/>
+                            <constraint firstItem="U9v-Oo-YdN" firstAttribute="top" secondItem="sFz-TR-K4d" secondAttribute="top" constant="12" id="TBk-oq-JuL"/>
+                            <constraint firstItem="sip-tc-eVs" firstAttribute="centerY" secondItem="M0v-nZ-1yO" secondAttribute="centerY" id="eI0-Xd-CsK"/>
+                            <constraint firstItem="ofh-pM-EdX" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" constant="33" id="f2K-Ri-62a"/>
+                            <constraint firstItem="ukq-bR-BXr" firstAttribute="leading" secondItem="sFz-TR-K4d" secondAttribute="leading" id="hij-pT-Sz0"/>
+                            <constraint firstItem="Vy2-Kb-8Ef" firstAttribute="top" secondItem="sFz-TR-K4d" secondAttribute="top" constant="12" id="lN4-Vb-mWB"/>
+                            <constraint firstItem="ukq-bR-BXr" firstAttribute="top" secondItem="M0v-nZ-1yO" secondAttribute="topMargin" constant="-44" id="mIk-qK-BYl"/>
+                            <constraint firstItem="U9v-Oo-YdN" firstAttribute="centerX" secondItem="sip-tc-eVs" secondAttribute="centerX" id="o53-pz-vcJ"/>
+                            <constraint firstItem="FvM-nC-kpG" firstAttribute="top" secondItem="sFz-TR-K4d" secondAttribute="top" constant="289" id="pSY-WY-YMT"/>
+                            <constraint firstItem="ukq-bR-BXr" firstAttribute="bottom" secondItem="sFz-TR-K4d" secondAttribute="bottom" id="vnF-TK-UbO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sFz-TR-K4d"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i6s-DE-C1Q"/>
+                    <connections>
+                        <outlet property="fase1" destination="l84-B2-Ah7" id="zrd-tH-Gar"/>
+                        <outlet property="fase2" destination="UQC-y0-nlu" id="7u9-JP-7Ju"/>
+                        <outlet property="fase3" destination="BKk-MQ-i99" id="P36-SV-4PT"/>
+                        <outlet property="fase4" destination="DXA-Z3-MnK" id="cLA-Ho-4Aw"/>
+                        <outlet property="fase5" destination="J3M-li-wdE" id="CmO-wG-6wy"/>
+                        <outlet property="fase6" destination="gsh-ZQ-kPF" id="KV0-J6-Q8P"/>
+                        <outlet property="fase7" destination="gay-yc-i2M" id="0pL-pp-3wE"/>
+                        <outlet property="fase8" destination="VG3-Nu-LBj" id="iv9-eS-p0h"/>
+                        <outlet property="setaBanco" destination="FvM-nC-kpG" id="ZOq-zO-FYB"/>
+                        <segue destination="Sq6-9L-XzZ" kind="show" identifier="fase" id="lCT-qh-gu8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QV6-gO-fj9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295.6521739130435" y="158.70535714285714"/>
+        </scene>
+        <!--VisualNovel-->
+        <scene sceneID="SGW-eb-cq9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VisualNovel" id="Sq6-9L-XzZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="PIv-9n-W3i"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EgN-U9-tbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1875" y="159"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="T07-KJ-a0E">
+            <objects>
+                <navigationController title="Mapa" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="bhA-NR-hfw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mapa" image="book.fill" catalog="system" id="4Ba-z2-t8W">
+                        <color key="badgeColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2lA-RX-yx7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="F8c-i4-nYd" kind="relationship" relationship="rootViewController" id="n3t-8I-Ref"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8p7-Ux-VdI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="403" y="159"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="banco" width="100" height="101"/>
+        <image name="book.fill" catalog="system" width="64" height="50"/>
+        <image name="bronze-direita" width="240" height="293"/>
+        <image name="bronze-esquerda" width="241" height="293"/>
+        <image name="configurar" width="32" height="34"/>
+        <image name="mapa" width="1080" height="1920"/>
+        <image name="shopping-blur" width="4500" height="8000"/>
+    </resources>
+</document>
