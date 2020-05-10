@@ -8,8 +8,16 @@
 
 import Foundation
 
+var progresso = Investimento()
+
 class Investimento {
     //0-CDB, 1-LCI, 2-CRI, 3-Deb
+    var progresso: Int = 0 {
+        didSet {
+            UserDefaults.standard.set(progresso, forKey: "progresso")
+        }
+        
+    }
     var investimentoSelecionado: Int = 0 {
         didSet {
             UserDefaults.standard.set(investimentoSelecionado, forKey: "Investimento.investimentoSelecionado")
@@ -47,6 +55,9 @@ class Investimento {
         if (UserDefaults.standard.object(forKey: "Investimento.investimentoSelecionado") != nil) {
             investimentoSelecionado = (UserDefaults.standard.object(forKey: "Investimento.investimentoSelecionado") as? Int)!
             save = true
+        }
+        if (UserDefaults.standard.object(forKey: "progresso") != nil){
+            progresso = (UserDefaults.standard.object(forKey: "progresso") as? Int)!
         }
         if (UserDefaults.standard.object(forKey: "Investimento.aplicada") != nil){
             aplicada = (UserDefaults.standard.object(forKey: "Investimento.aplicada") as? [Double])!

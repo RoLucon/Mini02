@@ -424,7 +424,7 @@ class selecf: UIViewController{
     
     //Avança uma fase
     @IBAction func avanca(_ sender: AnyObject) {
-        Progresso.shared.progresso = prog
+        progresso.progresso = prog
     }
     
     //Vai pra fase 1
