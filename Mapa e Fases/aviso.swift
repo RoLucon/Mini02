@@ -317,7 +317,7 @@ class selecf: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prog = Progresso.shared.progresso
+        //prog = Progresso.shared.progresso
         dialogo()
         observer()
         play.para()
