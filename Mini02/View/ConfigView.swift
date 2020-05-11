@@ -10,6 +10,9 @@ import UIKit
 
 class ConfigView: UIView {
     
+    static var isMusic = true
+    var switchTag = 0
+    
     let vc: UIViewController?
     
     let bg: UIView = {
@@ -138,6 +141,7 @@ class ConfigView: UIView {
             personagem.resetSave()
             let investimento = Investimento()
             investimento.resetSave()
+            Progresso.shared.resetSave()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "Inicio")
             viewController.modalPresentationStyle = .fullScreen
@@ -146,7 +150,6 @@ class ConfigView: UIView {
             })
         }))
         vc?.present(alert, animated: true, completion: nil)
-        
     }
     
     @objc func dismiss(){
@@ -159,6 +162,13 @@ class ConfigView: UIView {
         btt.backgroundColor = #colorLiteral(red: 0.8078431373, green: 0.7843137255, blue: 0.7450980392, alpha: 1)
         btt.thumbTintColor = #colorLiteral(red: 0.1725490196, green: 0.1098039216, blue: 0.04705882353, alpha: 1)
         btt.layer.cornerRadius = btt.frame.size.height / 2
+        btt.tag = switchTag
+        //Demosntracao Temporario
+        if btt.tag == 0 || btt.tag == 1 {
+            btt.isOn = true
+        }
+        switchTag += 1
+        btt.addTarget(self, action: #selector(bttClick(_:)), for: .touchUpInside)
         
         let label = UILabel()
         label.text = name
@@ -265,5 +275,31 @@ class ConfigView: UIView {
             self.removeFromSuperview()
         })
     }
+    
+    @objc func bttClick(_ sender: UISwitch){
+        //Musica Campanha
+        if sender.tag == 0 {
+            ConfigView.isMusic = sender.isOn
+            play.para()
+            play1.para()
+            if !taTocando{
+                play.toca(music: "padrao.mp3")
+            }
+            taTocando = !taTocando
+        }
+        //Musica Sidequest
+        if sender.tag == 1 {
+            print(2)
+        }
+        //Notifications
+        if sender.tag == 2 {
+            print(3)
+        }
+        if sender.tag == 3 {
+            print(4)
+        }
+        
+    }
 }
+var taTocando = true //se false é pq não tá tocando.
 

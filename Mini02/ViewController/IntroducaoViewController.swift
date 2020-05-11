@@ -13,7 +13,9 @@ class IntroducaoViewController: UIViewController {
     @IBOutlet weak var imginicial: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        play.toca(music: "padrao4.mp3")
+        if ConfigView.isMusic{
+            play.toca(music: "padrao4.mp3")
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(salvar), name: UIApplication.willResignActiveNotification, object: nil)
     }
     

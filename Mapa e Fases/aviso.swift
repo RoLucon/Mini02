@@ -198,16 +198,22 @@ class selecf: UIViewController{
         switch fim {
         case 1:
             q = q81
-            play.para()
-            play.toca(music: "neutro.mp3")
+            if ConfigView.isMusic{
+                play.para()
+                play.toca(music: "neutro.mp3")
+            }
         case 2:
             q = q82
-            play.para()
-            play.toca(music: "ruim.mp3")
+            if ConfigView.isMusic{
+                play.para()
+                play.toca(music: "ruim.mp3")
+            }
         case 3:
             q = q83
-            play.para()
-            play.toca(music: "feliz.mp3")
+            if ConfigView.isMusic{
+                play.para()
+                play.toca(music: "feliz.mp3")
+            }
         default:
             print("DEU BAYBLADE AQUI EM!!!")
         }
@@ -243,7 +249,9 @@ class selecf: UIViewController{
         fala?.speed = 4
         fala?.texto = texto[c]!
         print("texto n: " + String(c))
-        play1.toca(music: "botao.mp3")
+        if ConfigView.isMusic{
+            play1.toca(music: "botao.mp3")
+        }
         
         if c == 36 {
             passaButton.isHidden = true
@@ -260,7 +268,9 @@ class selecf: UIViewController{
             fundo(fundo: "republica-fumaca")
         } else if c == 74{
             fundo(fundo: "republica-incendio")
-            play1.toca(music: "fogo.mp3")
+            if ConfigView.isMusic{
+                play1.toca(music: "fogo.mp3")
+            }
         } else if c == 77{
             fundoFase?.image = nil
         } else if c == 82{
@@ -322,10 +332,13 @@ class selecf: UIViewController{
         super.viewDidLoad()
         //prog = Progresso.shared.progresso
         trocafeed()
+        prog = Progresso.shared.progresso
         dialogo()
         observer()
-        play.para()
-        play.toca(music: "padrao4.mp3")
+        if ConfigView.isMusic{
+            play.para()
+            play.toca(music: "padrao4.mp3")
+        }
         //Progresso de fases
         switch prog {
         case 1:
@@ -353,8 +366,10 @@ class selecf: UIViewController{
                 fundo(fundo: "republica")
             }
         case 7:
-            play.para()
-            play.toca(music: "incendio.mp3")
+            if ConfigView.isMusic{
+                play.para()
+                play.toca(music: "incendio.mp3")
+            }
             fase7?.backgroundColor = nil
             fundoFase?.image = nil
         case 8:
@@ -432,7 +447,7 @@ class selecf: UIViewController{
     
     //Avança uma fase
     @IBAction func avanca(_ sender: AnyObject) {
-        progresso.progresso = prog
+        Progresso.shared.progresso = prog + 1
     }
     
     //Vai pra fase 1
@@ -455,6 +470,7 @@ class selecf: UIViewController{
     //Vai pra fase 2
     @IBAction func f2(_ sender: Any) {
         contadorBanco = 1
+        _ = personagem.dinheiro(2000)
         switch prog {
         case 2:
             r = 0
@@ -471,7 +487,12 @@ class selecf: UIViewController{
     
     //Vai pra fase 3
     @IBAction func f3(_ sender: AnyObject) {
+        let fatura = personagem.fatura(nil)!
         contadorBanco = 1
+        _ = personagem.dinheiro(2000)
+        if personagem.fatura() != 0 {
+            _ = personagem.fatura(fatura * 0.2488)
+        }
         switch prog {
         case 3:
             r = 0
@@ -488,7 +509,13 @@ class selecf: UIViewController{
     
     //Vai pra fase 4
     @IBAction func f4(_ sender: AnyObject) {
+        let fatura = personagem.fatura()!
         contadorBanco = 1
+        _ = personagem.score(10)
+        _ = personagem.dinheiro(2000)
+        if personagem.fatura() != 0 {
+            _ = personagem.fatura(fatura * 0.2488)
+        }
         switch prog {
         case 4:
             r = 0
@@ -505,6 +532,8 @@ class selecf: UIViewController{
     
     //Vai pra fase 5
     @IBAction func f5(_ sender: AnyObject) {
+        _ = personagem.score(20)
+        _ = personagem.dinheiro(2000)
         switch prog {
         case 5:
             r = 0
@@ -521,6 +550,8 @@ class selecf: UIViewController{
     
     //Vai pra fase 6
     @IBAction func f6(_ sender: AnyObject) {
+        _ = personagem.score(20)
+        _ = personagem.dinheiro(2000)
         switch prog {
         case 6:
             r = 0
@@ -537,6 +568,8 @@ class selecf: UIViewController{
     
     //Vai pra fase 7
     @IBAction func f7(_ sender: AnyObject) {
+        _ = personagem.score(30)
+        _ = personagem.dinheiro(2000)
         switch prog {
         case 7:
             r = 0
@@ -553,6 +586,8 @@ class selecf: UIViewController{
     
     //Vai pra fase 8
     @IBAction func f8(_ sender: AnyObject) {
+        _ = personagem.score(30)
+        _ = personagem.dinheiro(2000)
         switch prog {
         case 8:
             fim = 3

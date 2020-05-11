@@ -56,8 +56,10 @@ class BancoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        play.para()
-        play.toca(music: "padrao2.mp3")
+        if ConfigView.isMusic{
+            play.para()
+            play.toca(music: "padrao2.mp3")
+        }
         
         foto?.image = UIImage(named:"\(Personagem.shared.imgNome!)-avatar")
         nome?.text = personagem.nome!
@@ -93,7 +95,7 @@ class BancoViewController: UIViewController {
     func atualizarLabel() {
         let saldoConta = personagem.dinheiro(nil)
         let poupanca = personagem.poupanca(nil)
-        let rendido = 0.0
+        let rendido = poupanca! * 0.005
         let saldoFatura = personagem.fatura(nil)
         let limite = personagem.cartao(nil)! - saldoFatura!
         
@@ -264,6 +266,11 @@ class BancoViewController: UIViewController {
                 seta?.center.x += 190
                 seta?.center.y += 220
                 backButton?.isEnabled = false
+                if personagem.fatura(nil)! == 0 {
+                   _ = personagem.cartao(-150)
+                   _ = personagem.fatura(150)
+                }
+
             }
             faturaKim?.isHidden = false
             faturaTexto?.texto = textoFase2[1]!
@@ -307,6 +314,9 @@ class BancoViewController: UIViewController {
                     setaFatura?.isHidden = false
                     setaFatura?.center.x += 310
                     setaFatura?.center.y += 185
+                    personagem.score(200)
+
+
                 case 7:
                     pagarBtn?.isUserInteractionEnabled = false
                     faturaView?.isHidden = true
@@ -318,6 +328,7 @@ class BancoViewController: UIViewController {
                     NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
                 case 14:
                     self.dismiss(animated: true, completion: nil)
+                    reloadInputViews()
                 default: break
                 }
             }
@@ -389,8 +400,10 @@ class PoupancaView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        play.para()
-        play.toca(music: "padrao2.mp3")
+        if ConfigView.isMusic{
+            play.para()
+            play.toca(music: "padrao2.mp3")
+        }
         actionLabel.text = action
         SaldoDisponivel?.text = "Saldo disponível: R$ " + String(format: "%.2f", saldo).replacingOccurrences(of: ".", with: ",")
         ValorTextField?.delegate = self
@@ -456,9 +469,11 @@ class PoupancaView: UIViewController {
             let total = (valor as NSString).floatValue
             
             if (total <= banco!) {
-                play.para()
-                play1.toca(music: "coin.mp3")
-                play.toca(music: "padrao2.mp3")
+                if ConfigView.isMusic{
+                    play.para()
+                    play1.toca(music: "coin.mp3")
+                    play.toca(music: "padrao2.mp3")
+                }
                 _ = personagem.dinheiro(-total)
                  _ = personagem.poupanca(total)
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
@@ -478,9 +493,11 @@ class PoupancaView: UIViewController {
                 let poup = personagem.poupanca(nil)
             
             if (total2 <= poup!) {
-                play.para()
-                play1.toca(music: "coin.mp3")
-                play.toca(music: "padrao3.mp3")
+                if ConfigView.isMusic{
+                    play.para()
+                    play1.toca(music: "coin.mp3")
+                    play.toca(music: "padrao3.mp3")
+                }
                  _ = personagem.dinheiro(total2)
                  _ = personagem.poupanca(-total2)
                 NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
@@ -503,7 +520,9 @@ class PoupancaView: UIViewController {
                     _ = personagem.dinheiro(-total)
                     _ = personagem.fatura(-total)
                     NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarSaldo"), object: nil)
-                    play.toca(music: "coin.mp3")
+                    if ConfigView.isMusic{
+                        play.toca(music: "coin.mp3")
+                    }
                     self.dismiss(animated: true) {
                         if prog == 2 {
                             contadorBanco = 7

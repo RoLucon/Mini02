@@ -49,13 +49,13 @@ class Quiz3Resp: UIViewController{
     func atualizaResposta(){
         let pergunta = perguntasQuiz[perguntaAtual]
         respostaA.setTitle(pergunta.respostaA.resp, for: .normal)
-        respostaA.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaA.setTitleColor(#colorLiteral(red: 0.5137254902, green: 0.4392156863, blue: 0.3215686275, alpha: 1), for: .normal)
         respostaA.backgroundColor = UIColor.white
         respostaB.setTitle(pergunta.respostaB.resp, for: .normal)
-        respostaB.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaB.setTitleColor(#colorLiteral(red: 0.5137254902, green: 0.4392156863, blue: 0.3215686275, alpha: 1), for: .normal)
         respostaB.backgroundColor = UIColor.white
         respostaC.setTitle(pergunta.respostaC.resp, for: .normal)
-        respostaC.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaC.setTitleColor(#colorLiteral(red: 0.5137254902, green: 0.4392156863, blue: 0.3215686275, alpha: 1), for: .normal)
         respostaC.backgroundColor = UIColor.white
     }
     @IBAction func verificaRespA(_ sender: UIButton) {
@@ -158,19 +158,19 @@ class Quiz5Resp: UIViewController{
     func atualizaResposta(){
         let pergunta = perguntasQuiz[perguntaAtual]
         respostaA.setTitle(pergunta.respostaA.resp, for: .normal)
-        respostaA.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaA.setTitleColor(#colorLiteral(red: 0.5137254902, green: 0.4392156863, blue: 0.3215686275, alpha: 1), for: .normal)
         respostaA.backgroundColor = UIColor.white
         respostaB.setTitle(pergunta.respostaB.resp, for: .normal)
-        respostaB.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaB.setTitleColor(#colorLiteral(red: 0.5137254902, green: 0.4392156863, blue: 0.3215686275, alpha: 1), for: .normal)
         respostaB.backgroundColor = UIColor.white
         respostaC.setTitle(pergunta.respostaC.resp, for: .normal)
-        respostaC.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaC.setTitleColor(#colorLiteral(red: 0.5137254902, green: 0.4392156863, blue: 0.3215686275, alpha: 1), for: .normal)
         respostaC.backgroundColor = UIColor.white
         respostaD.setTitle(pergunta.respostaD.resp, for: .normal)
-        respostaD.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaD.setTitleColor(#colorLiteral(red: 0.5137254902, green: 0.4392156863, blue: 0.3215686275, alpha: 1), for: .normal)
         respostaD.backgroundColor = UIColor.white
         respostaE.setTitle(pergunta.respostaE.resp, for: .normal)
-        respostaE.setTitleColor(UIColor.systemTeal, for: .normal)
+        respostaE.setTitleColor(#colorLiteral(red: 0.5137254902, green: 0.4392156863, blue: 0.3215686275, alpha: 1), for: .normal)
         respostaE.backgroundColor = UIColor.white
     }
     @IBAction func verificaRespA(_ sender: Any) {
@@ -334,19 +334,19 @@ class QuizFim: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultado.text = String(format:"%1.0f",respostasCertas+2) + " de 10"
+        resultado.text = String(format:"%1.0f",respostasCertas+3) + " de 10"
     }
     
     func imagemResultado(){
         if respostasCertas < 5 {
             //kim triste
-            kimResultado.changeImage(imageTo: UIImage(named: "kim")!)
-        }else if respostasCertas < 7 {
+            kimResultado.changeImage(imageTo: UIImage(named: "kimfb-bom")!)
+        }else if respostasCertas > 6 {
             //kim feliz
-            kimResultado.changeImage(imageTo: UIImage(named: "kim")!)
+            kimResultado.changeImage(imageTo: UIImage(named: "kimfb-bom")!)
         }else{
             //kim muito feliz
-            kimResultado.changeImage(imageTo: UIImage(named: "kim")!)
+            kimResultado.changeImage(imageTo: UIImage(named: "kimfb-ruim")!)
         }
     }
     
