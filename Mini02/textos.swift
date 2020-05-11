@@ -324,7 +324,7 @@ let rostos = [
 
 
 
-var prog = progresso.progresso // Representa o progresso do jogador [AQUI]
+var prog = Progresso.shared.progresso // Representa o progresso do jogador [AQUI]
 
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...
