@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LfF-N0-uim">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Poupanca View-->
         <scene sceneID="sMn-gD-nEB">
             <objects>
-                <viewController id="0Sz-f1-YC4" customClass="PoupancaView" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Sz-f1-YC4" customClass="PoupancaView" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jRb-et-zQe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,12 +106,22 @@
                                 <color key="textColor" red="0.58665370939999995" green="0.51559019090000002" blue="0.3960559964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enM-Wj-hRj">
+                                <rect key="frame" x="20" y="20" width="17.5" height="22"/>
+                                <color key="tintColor" red="0.2256228924" green="0.14632904529999999" blue="0.050947926939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="fechar:" destination="0Sz-f1-YC4" eventType="touchUpInside" id="7Sg-8G-Sas"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="0dI-zC-onX"/>
                             <constraint firstItem="hk7-aV-Kf2" firstAttribute="centerX" secondItem="jRb-et-zQe" secondAttribute="centerX" id="0yQ-qL-CEF"/>
+                            <constraint firstItem="enM-Wj-hRj" firstAttribute="leading" secondItem="Jjn-rt-nyb" secondAttribute="leading" constant="20" id="1FV-7g-xIR"/>
                             <constraint firstItem="xNu-lJ-i7U" firstAttribute="leading" secondItem="Jjn-rt-nyb" secondAttribute="leading" constant="84" id="2UR-J9-wq2"/>
+                            <constraint firstItem="enM-Wj-hRj" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="20" id="97y-Jd-44i"/>
                             <constraint firstItem="BoC-S9-srU" firstAttribute="leading" secondItem="SGQ-k3-PQK" secondAttribute="trailing" constant="1" id="B1l-6L-HE6"/>
                             <constraint firstItem="WKA-PM-9A0" firstAttribute="top" secondItem="Jjn-rt-nyb" secondAttribute="top" constant="124" id="O4b-ue-sP2"/>
                             <constraint firstItem="Jjn-rt-nyb" firstAttribute="trailing" secondItem="BoC-S9-srU" secondAttribute="trailing" constant="81" id="Qer-ZH-Cge"/>
@@ -142,12 +152,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNP-4R-ayd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1354" y="-541"/>
+            <point key="canvasLocation" x="1353.6231884057972" y="-541.07142857142856"/>
         </scene>
         <!--Dicas View-->
         <scene sceneID="bLw-3z-D8I">
             <objects>
-                <viewController storyboardIdentifier="Dicas" id="XrD-7e-aLR" customClass="DicasView" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dicas" id="XrD-7e-aLR" customClass="DicasView" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TK9-vS-3mz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,7 +208,7 @@
         <!--Banco-->
         <scene sceneID="zb4-Bp-DyD">
             <objects>
-                <viewController id="k1o-wQ-zpY" customClass="BancoViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="k1o-wQ-zpY" customClass="BancoViewController" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="buo-pj-IUe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -477,7 +487,7 @@
                             <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mj0-dj-uZW">
                                 <rect key="frame" x="0.0" y="756" width="414" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é tela do banco" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m4-fx-PK5" customClass="TextLabel" customModule="Mini02" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é tela do banco" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m4-fx-PK5" customClass="TextLabel" customModule="KINTALE" customModuleProvider="target">
                                         <rect key="frame" x="125" y="5" width="269" height="95"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -613,7 +623,7 @@
         <!--Extrato-->
         <scene sceneID="HhW-P0-SPu">
             <objects>
-                <viewController title="Extrato" id="zea-1n-9Wa" customClass="ExtratoViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Extrato" id="zea-1n-9Wa" customClass="ExtratoViewController" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mPU-Pk-m48">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -912,6 +922,18 @@
                                     <constraint firstAttribute="trailing" secondItem="BHs-um-6lA" secondAttribute="trailing" id="tVF-eE-ngl"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDv-jh-cCA">
+                                <rect key="frame" x="20" y="20" width="19" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="UnO-kJ-LHn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="tintColor" red="0.2256228924" green="0.14632904529999999" blue="0.050947926939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="fechar:" destination="zea-1n-9Wa" eventType="touchUpInside" id="Eb4-gT-RuQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -923,13 +945,16 @@
                             <constraint firstItem="fQr-Pp-68I" firstAttribute="top" secondItem="wxd-3D-7YR" secondAttribute="bottom" constant="32" id="F7J-9v-JVI"/>
                             <constraint firstItem="wxd-3D-7YR" firstAttribute="centerY" secondItem="mPU-Pk-m48" secondAttribute="centerY" constant="-105.25" id="I3B-QU-bNx"/>
                             <constraint firstItem="wxd-3D-7YR" firstAttribute="leading" secondItem="JFD-L0-eYX" secondAttribute="leading" constant="40" id="IYp-7e-Jqq"/>
+                            <constraint firstItem="JFD-L0-eYX" firstAttribute="trailing" secondItem="RDv-jh-cCA" secondAttribute="trailing" constant="375" id="Iu8-1m-EBw"/>
                             <constraint firstItem="fQr-Pp-68I" firstAttribute="leading" secondItem="XQ1-nR-Fzy" secondAttribute="leading" id="ODE-J1-a7z"/>
                             <constraint firstItem="JFD-L0-eYX" firstAttribute="trailing" secondItem="wxd-3D-7YR" secondAttribute="trailing" constant="40" id="QJS-Zh-qXf"/>
                             <constraint firstItem="M9n-nA-yim" firstAttribute="leading" secondItem="JFD-L0-eYX" secondAttribute="leading" constant="32" id="V23-H4-po1"/>
                             <constraint firstItem="XQ1-nR-Fzy" firstAttribute="leading" secondItem="mPU-Pk-m48" secondAttribute="leading" id="XAI-iI-D1Q"/>
+                            <constraint firstItem="RDv-jh-cCA" firstAttribute="top" secondItem="JFD-L0-eYX" secondAttribute="top" constant="20" id="Zfj-dJ-hIm"/>
                             <constraint firstItem="JFD-L0-eYX" firstAttribute="trailing" secondItem="f2K-wv-uyJ" secondAttribute="trailing" constant="149" id="dZ5-xP-fi8"/>
                             <constraint firstItem="wxd-3D-7YR" firstAttribute="top" secondItem="XQ1-nR-Fzy" secondAttribute="bottom" constant="10" id="hRQ-Cd-xUt"/>
                             <constraint firstAttribute="trailing" secondItem="XQ1-nR-Fzy" secondAttribute="trailing" id="kJx-rK-lBc"/>
+                            <constraint firstItem="RDv-jh-cCA" firstAttribute="leading" secondItem="mPU-Pk-m48" secondAttribute="leadingMargin" id="n0F-UT-NgY"/>
                             <constraint firstItem="M9n-nA-yim" firstAttribute="top" secondItem="fQr-Pp-68I" secondAttribute="bottom" constant="10" id="pab-WK-rFm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JFD-L0-eYX"/>
@@ -1021,7 +1046,7 @@
         <!--Contas-->
         <scene sceneID="cpe-eM-fba">
             <objects>
-                <viewController storyboardIdentifier="Contas" id="ERt-pN-ToC" customClass="ContaViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Contas" id="ERt-pN-ToC" customClass="ContaViewController" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tfa-4h-t44">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1244,7 +1269,7 @@
                             <view hidden="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPA-0r-pwf">
                                 <rect key="frame" x="0.0" y="756" width="414" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique em gerenciar para pagar a fatura do cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVU-Rb-LUQ" customClass="TextLabel" customModule="Mini02" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique em gerenciar para pagar a fatura do cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVU-Rb-LUQ" customClass="TextLabel" customModule="KINTALE" customModuleProvider="target">
                                         <rect key="frame" x="125" y="5" width="269" height="95"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1360,7 +1385,7 @@
         <!--Fatura-->
         <scene sceneID="lB3-hf-XLD">
             <objects>
-                <viewController id="LEQ-ax-7Ib" customClass="BancoViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LEQ-ax-7Ib" customClass="BancoViewController" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="itM-zk-Nac">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1592,7 +1617,7 @@
                             <view hidden="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfv-h4-Vdp">
                                 <rect key="frame" x="0.0" y="756" width="414" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui você poderá pagar a sua fatura do cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTd-R8-1AW" customClass="TextLabel" customModule="Mini02" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui você poderá pagar a sua fatura do cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTd-R8-1AW" customClass="TextLabel" customModule="KINTALE" customModuleProvider="target">
                                         <rect key="frame" x="125" y="5" width="269" height="95"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1698,7 +1723,7 @@
         <!--Dicas Child View-->
         <scene sceneID="Hq5-dO-m3T">
             <objects>
-                <viewController id="fpa-70-BwH" customClass="DicasChildView" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fpa-70-BwH" customClass="DicasChildView" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VYv-mX-U9K">
                         <rect key="frame" x="0.0" y="0.0" width="358" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1793,7 +1818,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="S9E-Fe-Ghc"/>
         <segue reference="Usl-gZ-DIe"/>
-        <segue reference="yTC-S7-h55"/>
+        <segue reference="BP6-tq-Gz9"/>
         <segue reference="1qu-fZ-OjY"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1808,5 +1833,6 @@
         <image name="person.fill" width="128" height="120"/>
         <image name="poico" width="100" height="77"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>

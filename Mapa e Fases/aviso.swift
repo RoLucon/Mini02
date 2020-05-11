@@ -317,7 +317,7 @@ class selecf: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prog = Progresso.shared.progresso
+        //prog = Progresso.shared.progresso
         dialogo()
         observer()
         play.para()
@@ -424,7 +424,7 @@ class selecf: UIViewController{
     
     //Avança uma fase
     @IBAction func avanca(_ sender: AnyObject) {
-        Progresso.shared.progresso = prog
+        progresso.progresso = prog
     }
     
     //Vai pra fase 1
