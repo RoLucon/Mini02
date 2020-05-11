@@ -178,6 +178,7 @@ class selecf: UIViewController{
     @IBOutlet weak var impRenda: UIButton!
     @IBOutlet weak var quiz: UIButton!
     @IBOutlet weak var feedback: UILabel!
+    @IBOutlet weak var rostofeed: UIImageView!
     
     var configView: ConfigView?
     let notificacao = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
@@ -668,6 +669,7 @@ class selecf: UIViewController{
                 feedback?.text = "Obrigado por jogar nossa versão de testes =D"
             }else if !verificafeed(){
                 feedback?.text = feedbackRuim[Int.random(in: 0...2)]
+                rostofeed?.image = UIImage(named: "kimfb-ruim")
             }else{
                 feedback?.text = feedbackBom[Int.random(in: 0...2)]
             }
