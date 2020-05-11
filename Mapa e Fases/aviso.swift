@@ -177,6 +177,7 @@ class selecf: UIViewController{
     @IBOutlet weak var corpo: UIImageView!
     @IBOutlet weak var impRenda: UIButton!
     @IBOutlet weak var quiz: UIButton!
+    @IBOutlet weak var feedback: UILabel!
     
     var configView: ConfigView?
     let notificacao = Notification.Name(rawValue: atualizaSetaBancoNotificationKey)
@@ -272,7 +273,9 @@ class selecf: UIViewController{
         
         if c == 8 || c == 21 || c == 30 || c == 42 {
             banco?.isUserInteractionEnabled = true
-        }else if c == 6 || c == 7{
+        }else if c == 6{
+            c = 95
+        }else if c == 7{
             c = 96
         }else if c == 22 && prog == 2 {
             if teste == true {
@@ -343,7 +346,11 @@ class selecf: UIViewController{
             fundo(fundo: "quarto")
         case 6:
             fase6?.backgroundColor = nil
-            fundo(fundo: "parque")
+            if c == 61{
+                fundo(fundo: "parque")
+            }else {
+                fundo(fundo: "republica")
+            }
         case 7:
             play.para()
             play.toca(music: "incendio.mp3")
@@ -399,13 +406,13 @@ class selecf: UIViewController{
             impRenda?.isHidden = true
             passaButton?.isHidden = false
         case 3:
-                quiz?.isHidden = true
-                impRenda?.isHidden = true
-                passaButton?.isHidden = false
-                c = 31
-                banco?.isUserInteractionEnabled = false
-                rosto("kimneutra")
-                dialogo()
+            quiz?.isHidden = true
+            impRenda?.isHidden = true
+            passaButton?.isHidden = false
+            c = 31
+            banco?.isUserInteractionEnabled = false
+            rosto("kimneutra")
+            dialogo()
         case 4:
             c = 43
             banco?.isUserInteractionEnabled = false
@@ -618,12 +625,19 @@ class selecf: UIViewController{
             trocaFala()
         }
     }
+    
+    func verificafeed() -> Bool{
+        return false
+    }
+    
     func trocaFala(){
         if c <= q[i] || c >= 97{
             dialogo()
         }
         else if c == 13 || c == 23 || c == 37 || c == 44 || c == 60 || c == 72 || c == 78 || c == 83 || c == 89 || c == 96{
-
+            if !verificafeed(){
+                feedback?.text = "teste"
+            }
             self.performSegue(withIdentifier: "Finalizar", sender: self)
             prog += 1
         }
