@@ -17,7 +17,7 @@ class Personagem {
     private var fatura: Float!
     private var cartao: Float!
     private var semestre: Int!
-    private var score: Int!
+    private(set) var score: Int!
     private var save: Bool = false
     private(set) var imgNome: String?
     

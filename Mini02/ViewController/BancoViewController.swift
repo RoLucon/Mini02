@@ -323,7 +323,7 @@ class BancoViewController: UIViewController {
                     NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
                 case 14:
                     self.dismiss(animated: true, completion: nil)
-                    NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarScore"), object: nil)
+//                    NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarScore"), object: nil)
                 default: break
                 }
             }
