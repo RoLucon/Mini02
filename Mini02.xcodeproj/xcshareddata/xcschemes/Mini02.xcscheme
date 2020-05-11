@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "89E3EAA8242E98D3007C2CFC"
-               BuildableName = "KINTALE.app"
+               BuildableName = "Mini02.app"
                BlueprintName = "Mini02"
                ReferencedContainer = "container:Mini02.xcodeproj">
             </BuildableReference>
