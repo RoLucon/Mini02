@@ -17,7 +17,7 @@ class Personagem {
     private var fatura: Float!
     private var cartao: Float!
     private var semestre: Int!
-    private var score: Int!
+    private(set) var score: Int!
     private var save: Bool = false
     private(set) var imgNome: String?
     
@@ -158,7 +158,7 @@ class Personagem {
     func score(_ valor: Int? =  nil) -> Int? {
         if let valor = valor {
             score += valor
-            NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarScore"), object: nil)
+            //NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarScore"), object: nil)
             return nil
         } else {
             return score

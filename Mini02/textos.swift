@@ -33,7 +33,7 @@ let texto = [
 6: "Pagar conta é massa, mas pensar no futuro também é, sabe?!",
 7: "Dói guardar o dinheiro que não tem, né?",
 8: "Vou te ajudar nessa, cara. Cola aí!", //Seta pro banco
-9: "Mas isso é história para mais tarde.\nAprenda com leveza, \(personagem.nome!).", //Volta do banco
+9: "Aprenda com leveza, \(personagem.nome!).", //Volta do banco
 10: "…PARA DE GASTAR SEM NECESSIDADE!",
 11: "Oh? Coitadinho…",
 12: "Mas relaxa, dessa vez eu pago pra gente.",
@@ -323,8 +323,8 @@ let rostos = [
 99: "kimneutra",100: "kimneutra"]
 
 
-
 var prog = Progresso.shared.progresso // Representa o progresso do jogador [AQUI]
+
 
 //Arrays que definem o posicionamento das perguntas durante os dialogos
 //Casa 0: Fala inicial; Casa 1: Última fala antes da primeira pergunta; Casa 2: Última casa antes da segunda pergunta...

@@ -93,7 +93,7 @@ class BancoViewController: UIViewController {
     func atualizarLabel() {
         let saldoConta = personagem.dinheiro(nil)
         let poupanca = personagem.poupanca(nil)
-        let rendido = 0.0
+        let rendido = poupanca! * 0.005
         let saldoFatura = personagem.fatura(nil)
         let limite = personagem.cartao(nil)! - saldoFatura!
         
@@ -264,6 +264,11 @@ class BancoViewController: UIViewController {
                 seta?.center.x += 190
                 seta?.center.y += 220
                 backButton?.isEnabled = false
+                if personagem.fatura(nil)! == 0 {
+                   _ = personagem.cartao(-150)
+                   _ = personagem.fatura(150)
+                }
+
             }
             faturaKim?.isHidden = false
             faturaTexto?.texto = textoFase2[1]!
@@ -307,6 +312,9 @@ class BancoViewController: UIViewController {
                     setaFatura?.isHidden = false
                     setaFatura?.center.x += 310
                     setaFatura?.center.y += 185
+                    personagem.score(200)
+
+
                 case 7:
                     pagarBtn?.isUserInteractionEnabled = false
                     faturaView?.isHidden = true
@@ -318,6 +326,7 @@ class BancoViewController: UIViewController {
                     NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
                 case 14:
                     self.dismiss(animated: true, completion: nil)
+                    reloadInputViews()
                 default: break
                 }
             }

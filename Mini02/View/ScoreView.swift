@@ -24,7 +24,7 @@ class ScoreView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.score = Personagem.shared.score()
+        self.score = Personagem.shared.score
         self.setupView()
         self.criaObserver()
     }
@@ -54,7 +54,7 @@ class ScoreView: UIView {
     }
     
     @objc func update(){
-        self.score = Personagem.shared.score()
+        self.score = Personagem.shared.score
         self.layer.sublayers = nil
         
         shapeLayer(soma: 0, valor: 0.5, lineWidth: CGFloat(lineWidth) * 2, color: scoreBackground)
@@ -78,7 +78,7 @@ class ScoreView: UIView {
             shapeLayer(soma: soma, valor: valor, lineWidth: 5, color: cor[numero])
         }
         addSubview(texto)
-        texto.text = String(Personagem.shared.score()!)
+        texto.text = String(score)
         print("UPDATE")
     }
     

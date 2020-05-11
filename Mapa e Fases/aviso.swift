@@ -447,6 +447,7 @@ class selecf: UIViewController{
     //Vai pra fase 2
     @IBAction func f2(_ sender: Any) {
         contadorBanco = 1
+        _ = personagem.dinheiro(2000)
         switch prog {
         case 2:
             r = 0
@@ -463,7 +464,12 @@ class selecf: UIViewController{
     
     //Vai pra fase 3
     @IBAction func f3(_ sender: AnyObject) {
+        let fatura = personagem.fatura(nil)!
         contadorBanco = 1
+        _ = personagem.dinheiro(2000)
+        if personagem.fatura() != 0 {
+            _ = personagem.fatura(fatura * 0.2488)
+        }
         switch prog {
         case 3:
             r = 0
@@ -480,7 +486,13 @@ class selecf: UIViewController{
     
     //Vai pra fase 4
     @IBAction func f4(_ sender: AnyObject) {
+        let fatura = personagem.fatura()!
         contadorBanco = 1
+        _ = personagem.score(10)
+        _ = personagem.dinheiro(2000)
+        if personagem.fatura() != 0 {
+            _ = personagem.fatura(fatura * 0.2488)
+        }
         switch prog {
         case 4:
             r = 0
@@ -497,6 +509,8 @@ class selecf: UIViewController{
     
     //Vai pra fase 5
     @IBAction func f5(_ sender: AnyObject) {
+        _ = personagem.score(20)
+        _ = personagem.dinheiro(2000)
         switch prog {
         case 5:
             r = 0
@@ -513,6 +527,8 @@ class selecf: UIViewController{
     
     //Vai pra fase 6
     @IBAction func f6(_ sender: AnyObject) {
+        _ = personagem.score(20)
+        _ = personagem.dinheiro(2000)
         switch prog {
         case 6:
             r = 0
@@ -529,6 +545,8 @@ class selecf: UIViewController{
     
     //Vai pra fase 7
     @IBAction func f7(_ sender: AnyObject) {
+        _ = personagem.score(30)
+        _ = personagem.dinheiro(2000)
         switch prog {
         case 7:
             r = 0
@@ -545,6 +563,8 @@ class selecf: UIViewController{
     
     //Vai pra fase 8
     @IBAction func f8(_ sender: AnyObject) {
+        _ = personagem.score(30)
+        _ = personagem.dinheiro(2000)
         switch prog {
         case 8:
             fim = 3
