@@ -341,7 +341,7 @@ class QuizFim: UIViewController{
         if respostasCertas < 5 {
             //kim triste
             kimResultado.changeImage(imageTo: UIImage(named: "kimfb-ruim")!)
-        }else if respostasCertas < 7 {
+        }else if respostasCertas < 6 {
             //kim feliz
             kimResultado.changeImage(imageTo: UIImage(named: "kimfb-bom")!)
         }else{
