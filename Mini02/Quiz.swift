@@ -334,7 +334,7 @@ class QuizFim: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultado.text = String(format:"%1.0f",respostasCertas+2) + " de 10"
+        resultado.text = String(format:"%1.0f",respostasCertas+3) + " de 10"
     }
     
     func imagemResultado(){
