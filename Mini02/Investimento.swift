@@ -12,7 +12,7 @@ var progresso = Investimento()
 
 class Investimento {
     //0-CDB, 1-LCI, 2-CRI, 3-Deb
-    var progresso: Int = 0 {
+    var progresso: Int = 1 {
         didSet {
             UserDefaults.standard.set(progresso, forKey: "progresso")
         }
