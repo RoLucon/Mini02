@@ -252,6 +252,7 @@
 				8979074B246626740024F8FC /* Musicas */,
 				1C8B11F92464A8AF00A073B3 /* playerMusic.swift */,
 				89DF46A82437B75200FB36EB /* Personagem.swift */,
+				8979074C246635620024F8FC /* Progresso.swift */,
 				89E3EAEC24326E35007C2CFC /* Principal.storyboard */,
 				1CDA1895245B53F100A360AF /* Quiz.storyboard */,
 				1CDA1894245B53F100A360AF /* Quiz.swift */,
@@ -286,7 +287,6 @@
 			children = (
 				C0CDC9FF243BCBEB0057014D /* BancoViewController.swift */,
 				895108A7244A1D140088D7CB /* ContaViewController.swift */,
-				8979074C246635620024F8FC /* Progresso.swift */,
 				89E3EAF424328D7C007C2CFC /* CustomizacaoViewController.swift */,
 				C0DC056E245D1C4100CA893F /* ExtratoViewController.swift */,
 				89E3EAEF24328755007C2CFC /* IntroducaoViewController.swift */,
