@@ -340,13 +340,13 @@ class QuizFim: UIViewController{
     func imagemResultado(){
         if respostasCertas < 5 {
             //kim triste
-            kimResultado.changeImage(imageTo: UIImage(named: "kimfb-ruim")!)
+            kimResultado.changeImage(imageTo: UIImage(named: "kimfb-bom")!)
         }else if respostasCertas > 6 {
             //kim feliz
             kimResultado.changeImage(imageTo: UIImage(named: "kimfb-bom")!)
         }else{
             //kim muito feliz
-            kimResultado.changeImage(imageTo: UIImage(named: "kimfb-bom")!)
+            kimResultado.changeImage(imageTo: UIImage(named: "kimfb-ruim")!)
         }
     }
     
