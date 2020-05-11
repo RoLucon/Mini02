@@ -264,8 +264,11 @@ class BancoViewController: UIViewController {
                 seta?.center.x += 190
                 seta?.center.y += 220
                 backButton?.isEnabled = false
-                personagem.cartao(-150)
-                personagem.fatura(150)
+                if personagem.fatura(nil)! == 0 {
+                   _ = personagem.cartao(-150)
+                   _ = personagem.fatura(150)
+                }
+
             }
             faturaKim?.isHidden = false
             faturaTexto?.texto = textoFase2[1]!
@@ -323,7 +326,7 @@ class BancoViewController: UIViewController {
                     NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarTexto"), object: nil)
                 case 14:
                     self.dismiss(animated: true, completion: nil)
-//                    NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarScore"), object: nil)
+                    reloadInputViews()
                 default: break
                 }
             }
