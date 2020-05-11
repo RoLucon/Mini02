@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LfF-N0-uim">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LfF-N0-uim">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,16 +68,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="1NX-0I-bzz">
-                                <rect key="frame" x="116" y="390.5" width="182.5" height="61.5"/>
+                                <rect key="frame" x="116" y="391" width="182.5" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLZ-wu-dhi">
-                                        <rect key="frame" x="0.0" y="0.5" width="61" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="0,00" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="Eus-IB-57r">
-                                        <rect key="frame" x="78" y="0.0" width="104.5" height="61.5"/>
+                                        <rect key="frame" x="78" y="0.0" width="104.5" height="60"/>
                                         <color key="textColor" red="0.51372549019607838" green="0.4392156862745098" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -165,14 +165,14 @@
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Pt-zk-Xk2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ks9-Ot-0vO">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="ks9-Ot-0vO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1V-RJ-q4F">
                                             <rect key="frame" x="0.0" y="0.0" width="174" height="768"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Dvr-bn-GC8">
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Dvr-bn-GC8">
                                                 <rect key="frame" x="0.0" y="0.0" width="174" height="768"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
@@ -180,7 +180,7 @@
                                                 <blurEffect style="regular"/>
                                             </vibrancyEffect>
                                         </visualEffectView>
-                                        <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-BC-pF8">
+                                        <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-BC-pF8">
                                             <rect key="frame" x="28" y="64" width="358" height="768"/>
                                             <connections>
                                                 <segue destination="fpa-70-BwH" kind="embed" identifier="ToFirstChild" id="60E-Au-h9o"/>
@@ -489,7 +489,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é tela do banco" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m4-fx-PK5" customClass="TextLabel" customModule="KINTALE" customModuleProvider="target">
                                         <rect key="frame" x="125" y="5" width="269" height="95"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1271,7 +1271,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique em gerenciar para pagar a fatura do cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVU-Rb-LUQ" customClass="TextLabel" customModule="KINTALE" customModuleProvider="target">
                                         <rect key="frame" x="125" y="5" width="269" height="95"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1619,7 +1619,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui você poderá pagar a sua fatura do cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTd-R8-1AW" customClass="TextLabel" customModule="KINTALE" customModuleProvider="target">
                                         <rect key="frame" x="125" y="5" width="269" height="95"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1815,24 +1815,24 @@
             <point key="canvasLocation" x="3209" y="-541"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="S9E-Fe-Ghc"/>
-        <segue reference="Usl-gZ-DIe"/>
-        <segue reference="BP6-tq-Gz9"/>
-        <segue reference="1qu-fZ-OjY"/>
-    </inferredMetricsTieBreakers>
     <resources>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <image name="arrow.up" catalog="system" width="120" height="128"/>
-        <image name="arrowtriangle.down.fill" catalog="system" width="128" height="124"/>
-        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
-        <image name="barcode" catalog="system" width="128" height="93"/>
-        <image name="dollarsign.square" catalog="system" width="128" height="114"/>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="arrow.up" catalog="system" width="60" height="64"/>
+        <image name="arrowtriangle.down.fill" catalog="system" width="64" height="62"/>
+        <image name="arrowtriangle.left.fill" catalog="system" width="64" height="56"/>
+        <image name="barcode" catalog="system" width="64" height="46"/>
+        <image name="dollarsign.square" catalog="system" width="64" height="56"/>
         <image name="kimfb-bom" width="1024" height="1024"/>
         <image name="kimfb-ruim" width="1024" height="1024"/>
         <image name="person.fill" width="128" height="120"/>
         <image name="poico" width="100" height="77"/>
-        <image name="questionmark" catalog="system" width="96" height="128"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="questionmark" catalog="system" width="48" height="64"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="S9E-Fe-Ghc"/>
+        <segue reference="Usl-gZ-DIe"/>
+        <segue reference="yTC-S7-h55"/>
+        <segue reference="1qu-fZ-OjY"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -10,7 +10,7 @@
         <!--Quiz3 Resp-->
         <scene sceneID="FVw-0A-Q6W">
             <objects>
-                <viewController storyboardIdentifier="3Resp" id="LNj-9O-edg" customClass="Quiz3Resp" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="3Resp" id="LNj-9O-edg" customClass="Quiz3Resp" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WVr-cR-5qk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,6 +28,7 @@
                                         <rect key="frame" x="50" y="127.5" width="274" height="41"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="  RespostaA  ">
                                             <color key="titleColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -46,6 +47,7 @@
                                         <rect key="frame" x="50" y="289.5" width="274" height="44"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="tintColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="  RespostaC  ">
                                             <color key="titleColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -64,6 +66,7 @@
                                         <rect key="frame" x="50" y="208.5" width="274" height="41"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="  RespostaB  ">
                                             <color key="titleColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -79,8 +82,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartao de Credito e uma despexa fixa ou variavel?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwI-v2-iPF">
-                                        <rect key="frame" x="10" y="22" width="354" height="72"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <rect key="frame" x="10" y="22" width="354" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <color key="textColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -175,7 +178,7 @@
         <!--Quiz5 Resp-->
         <scene sceneID="Qz0-GD-KPr">
             <objects>
-                <viewController storyboardIdentifier="5Resp" modalPresentationStyle="fullScreen" id="I60-ru-AgR" customClass="Quiz5Resp" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="5Resp" modalPresentationStyle="fullScreen" id="I60-ru-AgR" customClass="Quiz5Resp" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dKq-He-Zwc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,6 +206,7 @@
                                         <rect key="frame" x="25" y="117.5" width="324" height="41"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="  RespostaA  ">
                                             <color key="titleColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -221,6 +225,7 @@
                                         <rect key="frame" x="25" y="259.5" width="324" height="41"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="  RespostaC  ">
                                             <color key="titleColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -239,6 +244,7 @@
                                         <rect key="frame" x="25" y="188.5" width="324" height="41"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="  RespostaB  ">
                                             <color key="titleColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -254,8 +260,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartao de Credito e uma despexa fixa ou variavel?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyD-cG-p73">
-                                        <rect key="frame" x="10" y="22" width="354" height="72"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <rect key="frame" x="10" y="22" width="354" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <color key="textColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -270,6 +276,7 @@
                                         <rect key="frame" x="25" y="330.5" width="324" height="41"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="  RespostaD  ">
                                             <color key="titleColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -288,6 +295,7 @@
                                         <rect key="frame" x="25" y="401.5" width="324" height="41"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="  RespostaE  ">
                                             <color key="titleColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -368,7 +376,7 @@
         <!--Quiz Fim-->
         <scene sceneID="N7X-z5-i2p">
             <objects>
-                <viewController storyboardIdentifier="QuizFim" modalPresentationStyle="fullScreen" id="hM0-bu-tMo" customClass="QuizFim" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizFim" modalPresentationStyle="fullScreen" id="hM0-bu-tMo" customClass="QuizFim" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EmF-eh-fCC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -383,7 +391,7 @@
                                 <rect key="frame" x="111" y="754" width="192" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Voltar ao game">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.80784313730000001" green="0.7843137255" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="voltarGame:" destination="hM0-bu-tMo" eventType="touchUpInside" id="fDc-ZX-CeN"/>
