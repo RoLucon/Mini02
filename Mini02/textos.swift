@@ -19,8 +19,15 @@ var contadorBanco = 0
 var fasebug = false
 var semcorpo = 0
 let personagem: Personagem = Personagem.shared
-
+let fimfase = [13, 23, 37, 44, 60, 72, 78, 83, 89, 96]
 let semkim = [1,13,60,72]
+let fimbom1 = [2, 2, 2]
+let fimbom2 = [2, 2]
+let fimbom3 = [2, 1, 2]
+let fimbom4 = [2]
+let fimbom5 = [1, 1, 2]
+let fimbom6 = [1, 1]
+let fimbom7 = [1]
 
 //Todas as falas do jogo em ordem de aparição
 let texto = [

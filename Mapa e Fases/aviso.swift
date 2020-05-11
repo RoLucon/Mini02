@@ -321,6 +321,7 @@ class selecf: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         //prog = Progresso.shared.progresso
+        trocafeed()
         dialogo()
         observer()
         play.para()
@@ -626,8 +627,82 @@ class selecf: UIViewController{
         }
     }
     
-    func verificafeed() -> Bool{
+    func trocafeed(){
+        if podemudar(){
+            if prog == 9{
+                feedback?.text = "Obrigado por jogar nossa versão de testes =D"
+            }else if !verificafeed(){
+                feedback?.text = feedbackRuim[Int.random(in: 0...2)]
+            }else{
+                feedback?.text = feedbackBom[Int.random(in: 0...2)]
+            }
+        }
+    }
+    
+    func podemudar() -> Bool{
+        for i in fimfase{
+            if c == i{
+                return true
+            }
+        }
         return false
+    }
+    
+    func gabarito(gab: [Int], resp: [Int]) -> Bool{
+        var j = 0
+        var contador = 0
+        for i in gab{
+            if i == resp[j]{
+                contador += 1
+            }
+            j += 1
+        }
+        if contador >= 1{
+            return true
+        } else{
+            return false
+        }
+    }
+    
+    func verificafeed() -> Bool{
+        var deubom = 0
+        switch prog {
+        case 2:
+            if gabarito(gab: fimbom1, resp: resposta1){
+            deubom = 1
+            }
+        case 3:
+            if gabarito(gab: fimbom2, resp: resposta2){
+            deubom = 1
+            }
+        case 4:
+            if gabarito(gab: fimbom3, resp: resposta3){
+            deubom = 1
+            }
+        case 5:
+            if gabarito(gab: fimbom4, resp: resposta4){
+            deubom = 1
+            }
+        case 6:
+            if gabarito(gab: fimbom5, resp: resposta5){
+            deubom = 1
+            }
+        case 7:
+            if gabarito(gab: fimbom6, resp: resposta6){
+            deubom = 1
+            }
+        case 8:
+            if gabarito(gab: fimbom7, resp: resposta7){
+            deubom = 1
+            }
+        default:
+            print("ue")
+        }
+        if deubom == 1{
+            return true
+        }else{
+            return false
+        }
     }
     
     func trocaFala(){
@@ -635,9 +710,6 @@ class selecf: UIViewController{
             dialogo()
         }
         else if c == 13 || c == 23 || c == 37 || c == 44 || c == 60 || c == 72 || c == 78 || c == 83 || c == 89 || c == 96{
-            if !verificafeed(){
-                feedback?.text = "teste"
-            }
             self.performSegue(withIdentifier: "Finalizar", sender: self)
             prog += 1
         }
