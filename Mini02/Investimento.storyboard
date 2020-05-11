@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eJk-59-TAO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Investimento-->
         <scene sceneID="vNv-bt-K8A">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="mSW-eH-V3v" customClass="Investimentos" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="mSW-eH-V3v" customClass="Investimentos" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bta-Np-5So">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -535,7 +535,7 @@
         <!--Investe-->
         <scene sceneID="hxv-IZ-Ejj">
             <objects>
-                <viewController id="aoU-Qn-GU2" customClass="Investe" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aoU-Qn-GU2" customClass="Investe" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJn-Pn-ARz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -624,6 +624,14 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A07-hu-lcb">
+                                <rect key="frame" x="20" y="20" width="17.5" height="22"/>
+                                <color key="tintColor" red="0.2256228924" green="0.14632904529999999" blue="0.050947926939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="fechar:" destination="aoU-Qn-GU2" eventType="touchUpInside" id="ZQ5-5h-YkP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -632,6 +640,8 @@
                             <constraint firstItem="frb-Wn-QIB" firstAttribute="top" secondItem="la4-2F-eNY" secondAttribute="top" constant="124" id="92M-y4-ZDv"/>
                             <constraint firstItem="oae-sx-Ls2" firstAttribute="leading" secondItem="3gt-Hj-Smq" secondAttribute="trailing" constant="8" id="EHZ-uM-ePu"/>
                             <constraint firstItem="6fO-pS-7E1" firstAttribute="centerX" secondItem="eJn-Pn-ARz" secondAttribute="centerX" id="En1-Mv-OuD"/>
+                            <constraint firstItem="A07-hu-lcb" firstAttribute="leading" secondItem="la4-2F-eNY" secondAttribute="leading" constant="20" id="FKW-c8-8gb"/>
+                            <constraint firstItem="A07-hu-lcb" firstAttribute="top" secondItem="la4-2F-eNY" secondAttribute="top" constant="20" id="P68-Wi-Tcr"/>
                             <constraint firstItem="jQA-7g-Ago" firstAttribute="top" secondItem="la4-2F-eNY" secondAttribute="top" constant="124" id="Pp5-IT-C01"/>
                             <constraint firstItem="la4-2F-eNY" firstAttribute="trailing" secondItem="JBe-Ja-MD6" secondAttribute="trailing" constant="81" id="Va9-SA-cgv"/>
                             <constraint firstItem="oae-sx-Ls2" firstAttribute="top" secondItem="la4-2F-eNY" secondAttribute="top" constant="80" id="YAS-oN-bxt"/>
@@ -682,7 +692,7 @@
         <!--Saque-->
         <scene sceneID="xcf-wH-Sah">
             <objects>
-                <viewController id="1AX-JT-mP3" customClass="Saque" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1AX-JT-mP3" customClass="Saque" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TyW-oT-NsI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -771,6 +781,14 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-gG-puo">
+                                <rect key="frame" x="20" y="20" width="17.5" height="22"/>
+                                <color key="tintColor" red="0.2256228924" green="0.14632904529999999" blue="0.050947926939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="fechar:" destination="1AX-JT-mP3" eventType="touchUpInside" id="KMd-pP-ElW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -787,7 +805,9 @@
                             <constraint firstItem="aYf-Ob-XIK" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="124" id="SUE-4N-qgP"/>
                             <constraint firstItem="YYE-C5-UMz" firstAttribute="centerX" secondItem="TyW-oT-NsI" secondAttribute="centerX" id="U5b-Dr-2rg"/>
                             <constraint firstItem="C0V-Kn-eUd" firstAttribute="centerX" secondItem="TyW-oT-NsI" secondAttribute="centerX" id="Uc8-TH-dPE"/>
+                            <constraint firstItem="fVV-gG-puo" firstAttribute="leading" secondItem="kcL-l5-xft" secondAttribute="leading" constant="20" id="ZO6-Um-dcu"/>
                             <constraint firstItem="kcL-l5-xft" firstAttribute="bottom" secondItem="C0V-Kn-eUd" secondAttribute="bottom" constant="90" id="fix-gn-e7t"/>
+                            <constraint firstItem="fVV-gG-puo" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="20" id="jBP-2H-Fg0"/>
                             <constraint firstItem="yV3-XU-bjw" firstAttribute="leading" secondItem="iJ4-b1-DRA" secondAttribute="trailing" constant="1" id="rk6-MW-EPc"/>
                             <constraint firstItem="iJ4-b1-DRA" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="124" id="sqD-dR-0uP"/>
                             <constraint firstItem="bic-hh-Q4Y" firstAttribute="top" secondItem="kcL-l5-xft" secondAttribute="top" constant="80" id="uiy-LU-899"/>
@@ -813,5 +833,6 @@
         <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
         <image name="kimfb-bom" width="1024" height="1024"/>
         <image name="triangulo" width="351" height="316"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>

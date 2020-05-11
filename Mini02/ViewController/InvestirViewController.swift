@@ -126,4 +126,7 @@ class Investe: UIViewController{
             self.dismiss(animated: true, completion: nil)
         }
     }
+    @IBAction func fechar(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
