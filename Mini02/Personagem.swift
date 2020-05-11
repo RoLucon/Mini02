@@ -158,7 +158,7 @@ class Personagem {
     func score(_ valor: Int? =  nil) -> Int? {
         if let valor = valor {
             score += valor
-            NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarScore"), object: nil)
+            //NotificationCenter.default.post(name: NSNotification.Name.init("AtualizarScore"), object: nil)
             return nil
         } else {
             return score

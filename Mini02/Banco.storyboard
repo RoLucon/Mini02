@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LfF-N0-uim">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Poupanca View-->
         <scene sceneID="sMn-gD-nEB">
             <objects>
-                <viewController id="0Sz-f1-YC4" customClass="PoupancaView" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Sz-f1-YC4" customClass="PoupancaView" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jRb-et-zQe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +147,7 @@
         <!--Dicas View-->
         <scene sceneID="bLw-3z-D8I">
             <objects>
-                <viewController storyboardIdentifier="Dicas" id="XrD-7e-aLR" customClass="DicasView" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dicas" id="XrD-7e-aLR" customClass="DicasView" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TK9-vS-3mz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,7 +198,7 @@
         <!--Banco-->
         <scene sceneID="zb4-Bp-DyD">
             <objects>
-                <viewController id="k1o-wQ-zpY" customClass="BancoViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="k1o-wQ-zpY" customClass="BancoViewController" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="buo-pj-IUe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -477,7 +477,7 @@
                             <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mj0-dj-uZW">
                                 <rect key="frame" x="0.0" y="756" width="414" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é tela do banco" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m4-fx-PK5" customClass="TextLabel" customModule="Mini02" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é tela do banco" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m4-fx-PK5" customClass="TextLabel" customModule="KINTALE" customModuleProvider="target">
                                         <rect key="frame" x="125" y="5" width="269" height="95"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -613,7 +613,7 @@
         <!--Extrato-->
         <scene sceneID="HhW-P0-SPu">
             <objects>
-                <viewController title="Extrato" id="zea-1n-9Wa" customClass="ExtratoViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Extrato" id="zea-1n-9Wa" customClass="ExtratoViewController" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mPU-Pk-m48">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1021,7 +1021,7 @@
         <!--Contas-->
         <scene sceneID="cpe-eM-fba">
             <objects>
-                <viewController storyboardIdentifier="Contas" id="ERt-pN-ToC" customClass="ContaViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Contas" id="ERt-pN-ToC" customClass="ContaViewController" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tfa-4h-t44">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1244,7 +1244,7 @@
                             <view hidden="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPA-0r-pwf">
                                 <rect key="frame" x="0.0" y="756" width="414" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique em gerenciar para pagar a fatura do cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVU-Rb-LUQ" customClass="TextLabel" customModule="Mini02" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique em gerenciar para pagar a fatura do cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVU-Rb-LUQ" customClass="TextLabel" customModule="KINTALE" customModuleProvider="target">
                                         <rect key="frame" x="125" y="5" width="269" height="95"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1360,7 +1360,7 @@
         <!--Fatura-->
         <scene sceneID="lB3-hf-XLD">
             <objects>
-                <viewController id="LEQ-ax-7Ib" customClass="BancoViewController" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LEQ-ax-7Ib" customClass="BancoViewController" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="itM-zk-Nac">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1592,7 +1592,7 @@
                             <view hidden="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfv-h4-Vdp">
                                 <rect key="frame" x="0.0" y="756" width="414" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui você poderá pagar a sua fatura do cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTd-R8-1AW" customClass="TextLabel" customModule="Mini02" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui você poderá pagar a sua fatura do cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTd-R8-1AW" customClass="TextLabel" customModule="KINTALE" customModuleProvider="target">
                                         <rect key="frame" x="125" y="5" width="269" height="95"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.10980392160000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1698,7 +1698,7 @@
         <!--Dicas Child View-->
         <scene sceneID="Hq5-dO-m3T">
             <objects>
-                <viewController id="fpa-70-BwH" customClass="DicasChildView" customModule="Mini02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fpa-70-BwH" customClass="DicasChildView" customModule="KINTALE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VYv-mX-U9K">
                         <rect key="frame" x="0.0" y="0.0" width="358" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1793,8 +1793,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="S9E-Fe-Ghc"/>
         <segue reference="Usl-gZ-DIe"/>
-        <segue reference="yTC-S7-h55"/>
-        <segue reference="1qu-fZ-OjY"/>
+        <segue reference="ENy-2t-sxU"/>
+        <segue reference="1be-4G-auF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
