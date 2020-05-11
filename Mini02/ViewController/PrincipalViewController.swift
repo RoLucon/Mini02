@@ -50,7 +50,9 @@ class ViewController: UIViewController {
         observer()
         zeraContadorBanco()
         //play.para()
-        play.toca(music: "padrao2.mp3")
+        if ConfigView.isMusic{
+            play.toca(music: "padrao2.mp3")
+        }
         // Do any additional setup after loading the view.
     }
   
@@ -132,9 +134,11 @@ class ViewController: UIViewController {
         Situacao.text = situacao
     }
     @IBAction func tocamusica(_ sender: Any) {
-        play.para()
-        play1.toca(music: "coin.mp3")
-        play.toca(music: "padrao.mp3")
+        if ConfigView.isMusic{
+            play.para()
+            play1.toca(music: "coin.mp3")
+            play.toca(music: "padrao.mp3")
+        }
     }
 }
 

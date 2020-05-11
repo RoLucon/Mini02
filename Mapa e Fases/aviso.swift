@@ -197,16 +197,22 @@ class selecf: UIViewController{
         switch fim {
         case 1:
             q = q81
-            play.para()
-            play.toca(music: "neutro.mp3")
+            if ConfigView.isMusic{
+                play.para()
+                play.toca(music: "neutro.mp3")
+            }
         case 2:
             q = q82
-            play.para()
-            play.toca(music: "ruim.mp3")
+            if ConfigView.isMusic{
+                play.para()
+                play.toca(music: "ruim.mp3")
+            }
         case 3:
             q = q83
-            play.para()
-            play.toca(music: "feliz.mp3")
+            if ConfigView.isMusic{
+                play.para()
+                play.toca(music: "feliz.mp3")
+            }
         default:
             print("DEU BAYBLADE AQUI EM!!!")
         }
@@ -242,7 +248,9 @@ class selecf: UIViewController{
         fala?.speed = 4
         fala?.texto = texto[c]!
         print("texto n: " + String(c))
-        play1.toca(music: "botao.mp3")
+        if ConfigView.isMusic{
+            play1.toca(music: "botao.mp3")
+        }
         
         if c == 36 {
             passaButton.isHidden = true
@@ -259,7 +267,9 @@ class selecf: UIViewController{
             fundo(fundo: "republica-fumaca")
         } else if c == 74{
             fundo(fundo: "republica-incendio")
-            play1.toca(music: "fogo.mp3")
+            if ConfigView.isMusic{
+                play1.toca(music: "fogo.mp3")
+            }
         } else if c == 77{
             fundoFase?.image = nil
         } else if c == 82{
@@ -320,8 +330,10 @@ class selecf: UIViewController{
         prog = Progresso.shared.progresso
         dialogo()
         observer()
-        play.para()
-        play.toca(music: "padrao4.mp3")
+        if ConfigView.isMusic{
+            play.para()
+            play.toca(music: "padrao4.mp3")
+        }
         //Progresso de fases
         switch prog {
         case 1:
@@ -345,8 +357,10 @@ class selecf: UIViewController{
             fase6?.backgroundColor = nil
             fundo(fundo: "parque")
         case 7:
-            play.para()
-            play.toca(music: "incendio.mp3")
+            if ConfigView.isMusic{
+                play.para()
+                play.toca(music: "incendio.mp3")
+            }
             fase7?.backgroundColor = nil
             fundoFase?.image = nil
         case 8:

@@ -27,7 +27,7 @@ class PlayerMusic {
     }
     
     func para(){
-        audioPlayer.stop()
+        audioPlayer?.stop()
     }
     
     

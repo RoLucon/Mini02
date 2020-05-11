@@ -280,6 +280,12 @@ class ConfigView: UIView {
         //Musica Campanha
         if sender.tag == 0 {
             ConfigView.isMusic = sender.isOn
+            play.para()
+            play1.para()
+            if !taTocando{
+                play.toca(music: "padrao.mp3")
+            }
+            taTocando = !taTocando
         }
         //Musica Sidequest
         if sender.tag == 1 {
@@ -295,4 +301,5 @@ class ConfigView: UIView {
         
     }
 }
+var taTocando = true //se false é pq não tá tocando.
 
