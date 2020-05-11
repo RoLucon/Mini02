@@ -138,6 +138,7 @@ class ConfigView: UIView {
             personagem.resetSave()
             let investimento = Investimento()
             investimento.resetSave()
+            Progresso.shared.resetSave()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "Inicio")
             viewController.modalPresentationStyle = .fullScreen
@@ -146,7 +147,6 @@ class ConfigView: UIView {
             })
         }))
         vc?.present(alert, animated: true, completion: nil)
-        
     }
     
     @objc func dismiss(){

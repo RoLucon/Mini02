@@ -565,6 +565,10 @@ class PoupancaView: UIViewController {
             }
         }
     }
+    @IBAction func fechar(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     
 }

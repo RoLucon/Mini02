@@ -63,6 +63,7 @@ class popup: UIViewController{
             resposta6[r] = x
         case 8:
             resposta7[r] = x
+            Progresso.shared.resposta7 = resposta7[r]
         default:
             print("n era para isso acontecer")
         }
@@ -316,6 +317,7 @@ class selecf: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        prog = Progresso.shared.progresso
         dialogo()
         observer()
         play.para()
@@ -422,6 +424,7 @@ class selecf: UIViewController{
     
     //Avança uma fase
     @IBAction func avanca(_ sender: AnyObject) {
+        Progresso.shared.progresso = prog + 1
     }
     
     //Vai pra fase 1

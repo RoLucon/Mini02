@@ -19,6 +19,7 @@ class IntroducaoViewController: UIViewController {
     
     @objc func salvar(){
         Personagem.shared.salvar()
+        Progresso.shared.save()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
